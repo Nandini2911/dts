@@ -5,90 +5,129 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-[170px] pb-[120px]">
-      {/* Soft Background Glow */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#6288B9]/10 blur-3xl rounded-full" />
+    <section className="relative overflow-hidden min-h-screen">
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="
+          absolute
+          inset-0
+        
+          bg-center
+          scale-[1.02]
+          brightness-[0.80]
+        "
+        style={{
+          backgroundImage: "url('/hero_img.png')", // YOUR IMAGE
+        }}
+      />
 
-      <div className="max-w-[1280px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+     
+
+      {/* SOFT GRADIENT */}
+
+      {/* GLOW */}
+
+
+      <div className="relative z-10 max-w-[1240px] mx-auto px-6 pt-[145px] pb-[90px]">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            {/* SMALL LABEL */}
+            {/* LABEL */}
             <div
               className="
                 inline-flex
                 items-center
+                gap-2
                 px-4
                 py-2
                 rounded-full
                 border
-                border-slate-200
-                bg-white
-                text-[13px]
-                tracking-[1px]
-                uppercase
-                text-slate-500
-                font-medium
-                mb-8
+                border-white/10
+            backdrop-blur-xl
+                mb-6
               "
             >
-              Premium Digital Agency
+              <div className="w-2 h-2 rounded-full " />
+
+              <span
+                className="
+                  text-[10px]
+                  uppercase
+                  tracking-[2px]
+                  text-white/70
+                  font-medium
+                "
+              >
+                Creative Digital Studio
+              </span>
             </div>
 
             {/* HEADING */}
             <h1
               className="
-                text-[52px]
-                md:text-[72px]
-                leading-[0.95]
+                text-[40px]
+                md:text-[58px]
+                leading-[1]
                 tracking-[-3px]
-                text-[#0F172A]
-                font-black
-                max-w-[700px]
+                font-bold
+                text-white
+                max-w-[580px]
               "
               style={{
                 fontFamily:
-                  'New York, ui-serif, Georgia, serif',
+                  "New York, ui-serif, Georgia, serif",
               }}
             >
-              Building Digital
-              <span className="block text-[#6288B9]">
-                Experiences
+              Building
+
+              <span
+                className="
+                  block
+                  text-transparent
+                  bg-clip-text
+                  bg-gradient-to-r
+                  from-[#A8BEDB]
+                  via-white
+                  to-[#6288B9]
+                "
+              >
+                Cultural Brands
               </span>
-              For Modern Brands
+
+              With Presence
             </h1>
 
             {/* DESCRIPTION */}
             <p
               className="
-                mt-8
-                text-[18px]
-                leading-[34px]
-                text-slate-600
-                max-w-[620px]
+                mt-5
+                text-[15px]
+                leading-[29px]
+                text-white/65
+                max-w-[520px]
               "
             >
-              We create premium websites, branding systems
-              and digital experiences that help modern
-              businesses grow with clarity, trust and strong
-              visual positioning.
+              Premium websites, branding and digital
+              experiences crafted for hospitality,
+              lifestyle and luxury businesses with
+              modern visual direction.
             </p>
 
-            {/* CTA */}
-            <div className="flex items-center gap-5 mt-10">
-              {/* PRIMARY */}
+            {/* BUTTONS */}
+            <div className="flex flex-wrap gap-4 mt-9">
               <button
                 className="
-                  h-[58px]
-                  px-8
-                  rounded-[16px]
-                  bg-[#0D2444]
-                  text-white
-                  text-[15px]
+                  group
+                  h-[52px]
+                  px-7
+                  rounded-full
+                  bg-white
+                  text-[#0D2444]
+                  text-[14px]
                   font-semibold
                   flex
                   items-center
@@ -96,30 +135,28 @@ export default function Hero() {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#16345C]
-                  shadow-[0_10px_30px_rgba(13,36,68,0.18)]
                 "
               >
                 Start Project
 
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
-              {/* SECONDARY */}
               <button
                 className="
-                  h-[58px]
-                  px-8
-                  rounded-[16px]
+                  h-[52px]
+                  px-7
+                  rounded-full
                   border
-                  border-slate-200
-                  bg-white
-                  text-slate-700
-                  text-[15px]
+                  border-white/10
+                  bg-white/10
+                  backdrop-blur-xl
+                  text-white
+                  text-[14px]
                   font-medium
                   transition-all
                   duration-300
-                  hover:-translate-y-1
+                  hover:bg-white/15
                 "
               >
                 View Work
@@ -127,152 +164,190 @@ export default function Hero() {
             </div>
 
             {/* STATS */}
-            <div className="flex gap-14 mt-16">
+            <div className="flex gap-8 flex-wrap mt-12">
               <div>
-                <h3 className="text-[34px] font-black text-[#0D2444]">
+                <h3 className="text-[26px] font-bold text-white">
                   120+
                 </h3>
 
-                <p className="text-slate-500 mt-1 text-sm">
-                  Projects Delivered
+                <p className="text-white/45 text-xs mt-1">
+                  Projects
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[34px] font-black text-[#0D2444]">
+                <h3 className="text-[26px] font-bold text-white">
                   98%
                 </h3>
 
-                <p className="text-slate-500 mt-1 text-sm">
-                  Client Satisfaction
+                <p className="text-white/45 text-xs mt-1">
+                  Satisfaction
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[34px] font-black text-[#0D2444]">
-                  7+
+                <h3 className="text-[26px] font-bold text-white">
+                  8+
                 </h3>
 
-                <p className="text-slate-500 mt-1 text-sm">
-                  Years Experience
+                <p className="text-white/45 text-xs mt-1">
+                  Experience
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* RIGHT FORM */}
+          {/* RIGHT CONTACT FORM */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="relative flex justify-end"
           >
             <div
               className="
-                bg-white
+                relative
+                overflow-hidden
+                rounded-[30px]
                 border
-                border-slate-200
-                rounded-[32px]
-                p-8
-                shadow-[0_20px_60px_rgba(15,23,42,0.06)]
+                border-white/10
+                bg-white/10
+                backdrop-blur-2xl
+                p-7
+                md:p-8
+                w-full
+                max-w-[460px]
+                
               "
             >
-              {/* FORM TITLE */}
-              <div className="mb-8">
+              {/* INNER GLOW */}
+
+              <div className="relative z-10">
+                {/* SMALL TEXT */}
+                <p
+                  className="
+                    uppercase
+                    tracking-[2px]
+                    text-[10px]
+                    text-white/45
+                    font-medium
+                  "
+                >
+                  Contact Us
+                </p>
+
+                {/* TITLE */}
                 <h2
                   className="
-                    text-[38px]
-                    leading-[1]
+                    mt-3
+                    text-[30px]
+                    leading-[1.05]
                     tracking-[-2px]
-                    font-black
-                    text-[#0F172A]
+                    font-bold
+                    text-white
+                    max-w-[320px]
                   "
                   style={{
                     fontFamily:
-                      'New York, ui-serif, Georgia, serif',
+                      "New York, ui-serif, Georgia, serif",
                   }}
                 >
-                  Let’s Build
-                  <span className="block text-[#6288B9]">
-                    Something Great
-                  </span>
+                  Let’s Create Something Beautiful
                 </h2>
 
-                <p className="mt-4 text-slate-500 leading-[30px]">
-                  Tell us about your brand, project or
-                  business goals.
+                {/* TEXT */}
+                <p className="mt-4 text-[14px] leading-7 text-white/55">
+                  Share your project vision and business
+                  goals with our creative team.
                 </p>
+
+                {/* FORM */}
+                <form className="space-y-4 mt-7">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="
+                      w-full
+                      h-[52px]
+                      px-5
+                      rounded-2xl
+                      border
+                      border-white/10
+                      bg-white/10
+                      backdrop-blur-xl
+                      text-white
+                      text-[14px]
+                      outline-none
+                      placeholder:text-white/30
+                      focus:border-[#A8BEDB]
+                    "
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="
+                      w-full
+                      h-[52px]
+                      px-5
+                      rounded-2xl
+                      border
+                      border-white/10
+                      bg-white/10
+                      backdrop-blur-xl
+                      text-white
+                      text-[14px]
+                      outline-none
+                      placeholder:text-white/30
+                      focus:border-[#A8BEDB]
+                    "
+                  />
+
+                  <textarea
+                    rows={4}
+                    placeholder="Tell us about your project..."
+                    className="
+                      w-full
+                      p-5
+                      rounded-[22px]
+                      border
+                      border-white/10
+                      bg-white/10
+                      backdrop-blur-xl
+                      text-white
+                      text-[14px]
+                      outline-none
+                      resize-none
+                      placeholder:text-white/30
+                      focus:border-[#A8BEDB]
+                    "
+                  />
+
+                  <button
+                    className="
+                      group
+                      w-full
+                      h-[54px]
+                      rounded-2xl
+                      bg-white
+                      text-[#0D2444]
+                      text-[14px]
+                      font-semibold
+                      flex
+                      items-center
+                      justify-center
+                      gap-3
+                      transition-all
+                      duration-300
+                      hover:-translate-y-1
+                    "
+                  >
+                    Send Inquiry
+
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </button>
+                </form>
               </div>
-
-              {/* FORM */}
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="
-                    w-full
-                    h-[58px]
-                    px-5
-                    rounded-[16px]
-                    border
-                    border-slate-200
-                    bg-[#F8FAFC]
-                    outline-none
-                    text-slate-700
-                    focus:border-[#6288B9]
-                  "
-                />
-
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="
-                    w-full
-                    h-[58px]
-                    px-5
-                    rounded-[16px]
-                    border
-                    border-slate-200
-                    bg-[#F8FAFC]
-                    outline-none
-                    text-slate-700
-                    focus:border-[#6288B9]
-                  "
-                />
-
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your project..."
-                  className="
-                    w-full
-                    p-5
-                    rounded-[20px]
-                    border
-                    border-slate-200
-                    bg-[#F8FAFC]
-                    outline-none
-                    resize-none
-                    text-slate-700
-                    focus:border-[#6288B9]
-                  "
-                />
-
-                <button
-                  className="
-                    w-full
-                    h-[58px]
-                    rounded-[16px]
-                    bg-[#0D2444]
-                    text-white
-                    font-semibold
-                    transition-all
-                    duration-300
-                    hover:bg-[#16345C]
-                    hover:-translate-y-1
-                  "
-                >
-                  Send Inquiry
-                </button>
-              </form>
             </div>
           </motion.div>
         </div>

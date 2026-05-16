@@ -24,18 +24,17 @@ export default function Navbar() {
             px-10
             rounded-[28px]
             border
-            border-white/20
-            bg-white/10
-            backdrop-blur-2xl
+            border-slate-200
+            bg-white
             shadow-[0_10px_60px_rgba(15,23,42,0.12)]
             overflow-hidden
           "
         >
-          {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0D2444]/10 via-[#6288B9]/10 to-[#A4B8D2]/10" />
+          {/* Background */}
+          <div className="absolute inset-0 bg-white" />
 
-          {/* Blur Glow */}
-          <div className="absolute top-[-60px] left-[20%] w-[260px] h-[260px] bg-[#6288B9]/20 rounded-full blur-3xl" />
+          {/* Soft Glow */}
+          <div className="absolute top-[-60px] left-[20%] w-[260px] h-[260px] bg-[#6288B9]/10 rounded-full blur-3xl" />
 
           {/* LEFT LOGO */}
           <div className="relative z-10 flex items-center gap-4">
@@ -48,8 +47,9 @@ export default function Navbar() {
               className="object-contain"
             />
 
-        {/* BRAND TEXT */}
-            {/* <h1
+            {/* BRAND TEXT */}
+            {/* 
+            <h1
               className="
                 text-[38px]
                 font-black
@@ -67,7 +67,8 @@ export default function Navbar() {
               }}
             >
               VELORA
-            </h1>*/}
+            </h1>
+            */}
           </div>
 
           {/* NAV ITEMS */}
