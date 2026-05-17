@@ -90,9 +90,9 @@ export default function Hero() {
                   text-transparent
                   bg-clip-text
                   bg-gradient-to-r
-                  from-[#A8BEDB]
-                  via-white
-                  to-[#6288B9]
+                  from-[#162537]
+                  via-[#334d6d]
+                  to-[#5e94db]
                 "
               >
                 Cultural Brands
