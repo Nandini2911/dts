@@ -31,7 +31,7 @@ const steps = [
 
 export default function StudioMethod() {
   return (
-    <section className="relative overflow-hidden py-32">
+    <section className="relative overflow-hidden py-15">
       {/* BG IMAGE */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -103,9 +103,9 @@ export default function StudioMethod() {
           {/* HEADING */}
           <h2
             className="
-              text-[48px]
-              md:text-[72px]
-              leading-[0.92]
+              text-[40px]
+              md:text-[58px]
+              leading-[1.1]
               tracking-[-4px]
               font-bold
               text-white

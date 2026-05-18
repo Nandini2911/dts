@@ -71,7 +71,7 @@ export default function Hero() {
               className="
                 text-[40px]
                 md:text-[58px]
-                leading-[1]
+                leading-[1.1]
                 tracking-[-3px]
                 font-bold
                 text-white
@@ -111,10 +111,7 @@ export default function Hero() {
                 max-w-[520px]
               "
             >
-              Premium websites, branding and digital
-              experiences crafted for hospitality,
-              lifestyle and luxury businesses with
-              modern visual direction.
+            We build high-performance websites, branding systems, PR campaigns and digital experiences for hospitality, luxury, restaurant and lifestyle brands across India.
             </p>
 
             {/* BUTTONS */}

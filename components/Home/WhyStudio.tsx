@@ -8,7 +8,7 @@ import {
 
 export default function AboutStudio() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F7FB] py-32">
+    <section className="relative overflow-hidden bg-[#F6F7FB] py-20">
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(98,136,185,0.12),transparent_30%)]" />
 
@@ -114,9 +114,7 @@ export default function AboutStudio() {
                 max-w-[420px]
               "
             >
-              A creative studio crafting luxury digital
-              experiences, elevated identities and modern
-              storytelling for ambitious brands.
+              Double Trouble Studio is a Mumbai-based branding and digital marketing agency helping hospitality, luxury, lifestyle and event brands build stronger online presence through strategy, design and storytelling.
             </p>
           </motion.div>
         </div>
@@ -172,7 +170,7 @@ export default function AboutStudio() {
 
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">
-                  Premium Creative Agency
+                 Strategic Creative Agency
                 </span>
 
                 <div
@@ -208,7 +206,7 @@ export default function AboutStudio() {
               </p>
 
               <p className="mt-4 text-[15px] leading-8 text-slate-500">
-                We believe premium brands are built through
+                We believe growth-driven brands are built through
                 clarity, timeless aesthetics and emotional
                 storytelling.
               </p>
@@ -284,7 +282,7 @@ export default function AboutStudio() {
                   text-slate-600
                 "
               >
-                We create premium visual systems,
+                We create impactful visual systems,
                 elevated digital experiences and modern
                 storytelling designed for ambitious
                 lifestyle and luxury brands.
@@ -343,7 +341,7 @@ export default function AboutStudio() {
                   </h4>
 
                   <p className="mt-2 text-[14px] leading-7 text-slate-500">
-                    Premium digital experiences with modern
+                high-performance digital experiences with modern
                     visual direction.
                   </p>
                 </div>

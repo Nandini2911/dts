@@ -23,7 +23,7 @@ const features = [
 
 export default function PremiumSection() {
   return (
-  <section className="relative overflow-hidden py-24">
+  <section className="relative overflow-hidden py-20">
 
   {/* BG IMAGE */}
   <div className="absolute inset-0">
@@ -93,10 +93,10 @@ export default function PremiumSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="
-              text-4xl
-              md:text-6xl
+            text-[40px]
+              md:text-[58px]
               font-semibold
-              tracking-[-2px]
+              tracking-[-3px]
               leading-[1]
               text-[#0D2444]
             
@@ -173,8 +173,12 @@ export default function PremiumSection() {
                   tracking-[-2px]
                   text-[#0F172A]
                   font-semibold
-                  font-[family:var(--font-sora)]
+               
                 "
+                style={{
+                fontFamily:
+                  "New York, ui-serif, Georgia, serif",
+              }}
               >
                 Elegant design
 

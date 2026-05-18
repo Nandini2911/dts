@@ -47,7 +47,7 @@ const works = [
 ];
 export default function FeaturedWork() {
   return (
-    <section className="relative overflow-hidden py-32 bg-[#EEF3F8]">
+    <section className="relative overflow-hidden py-20 bg-[#EEF3F8]">
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(49,80,122,0.14),transparent_28%)]" />
 
@@ -107,10 +107,10 @@ export default function FeaturedWork() {
           {/* HEADING */}
           <h2
             className="
-              text-[50px]
-              md:text-[82px]
-              leading-[0.9]
-              tracking-[-5px]
+              text-[40px]
+              md:text-[58px]
+              leading-[1.1]
+              tracking-[-3px]
               font-bold
               text-[#10213D]
             "

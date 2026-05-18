@@ -10,7 +10,7 @@ import {
 
 export default function AboutStudio() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-32">
+    <section className="relative overflow-hidden bg-[#F8FAFC] py-20">
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(98,136,185,0.16),transparent_28%)]" />
 
@@ -69,7 +69,7 @@ export default function AboutStudio() {
                   text-[#31507A]
                 "
               >
-                Premium Creative Studio
+                strategic Creative Studio
               </span>
             </div>
 
@@ -89,7 +89,7 @@ export default function AboutStudio() {
                   "New York, ui-serif, Georgia, serif",
               }}
             >
-              We Create
+We Build Brands  
 
               <span
                 className="
@@ -102,10 +102,10 @@ export default function AboutStudio() {
                   to-[#A8BEDB]
                 "
               >
-                Luxury Digital
+That Look Premium 
               </span>
 
-              Experiences
+              And Perform Better
             </h2>
 
             {/* TEXT */}
@@ -117,9 +117,9 @@ export default function AboutStudio() {
                   text-slate-600
                 "
               >
-                We build premium visual identities,
-                elevated websites and modern storytelling
-                systems for ambitious brands.
+                Double Trouble Studio is a Mumbai-based branding and digital marketing agency helping hospitality, luxury, lifestyle and event brands build stronger online presence through strategy, design and storytelling.
+
+                
               </p>
 
               <p
@@ -230,7 +230,7 @@ export default function AboutStudio() {
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-slate-500">
-                      Premium experiences designed for
+                     growth-driven experiences designed for
                       modern audiences.
                     </p>
                   </div>

@@ -42,7 +42,7 @@ const services = [
   {
     title: "PR & Marketing",
     tag: "Popular",
-    desc: "Narratives and digital growth systems designed for authority and attention.",
+    desc: "PR campaigns, social media marketing, influencer collaborations and paid advertising strategies designed for modern brand growth.",
     features: [
       "Press & Features",
       "Brand Narrative",
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "Web Development",
-    desc: "Modern websites and premium digital systems built for growth and conversion.",
+    desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase visibility, leads and conversions.",
     features: [
       "Next.js Websites",
       "UI/UX Design",
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: "AI Video & VFX",
-    desc: "Cinematic AI visuals and premium campaigns designed to stop scrolling instantly.",
+    desc: "AI-generated video ads, cinematic brand visuals and VFX content created for social media campaigns, launches and digital promotions.",
     features: [
       "AI Video Ads",
       "Product Films",
@@ -74,7 +74,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative overflow-hidden py-32 bg-[#EEF3F8]">
+    <section className="relative overflow-hidden py-20 bg-[#EEF3F8]">
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(49,80,122,0.18),transparent_30%)]" />
 
@@ -175,7 +175,7 @@ export default function ServicesSection() {
             "
           >
             Every service is designed to work together —
-            creating a premium brand experience with
+            creating a scalable brand experience with
             consistency, visibility and cultural relevance.
           </p>
         </motion.div>

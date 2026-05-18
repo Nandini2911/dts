@@ -45,8 +45,8 @@ export default function StudioDNA() {
 
           <h2
             className="
-              text-[42px]
-              md:text-[64px]
+              text-[40px]
+              md:text-[58px]
               leading-[1]
               tracking-[-3px]
               font-bold
