@@ -103,14 +103,14 @@ export default function StudioDNA() {
                     w-14
                     h-14
                     rounded-2xl
-                    bg-[#EEF4FA]
+                    bg-[#12375c]
                     flex
                     items-center
                     justify-center
                     mb-6
                   "
                 >
-                  <Icon className="w-5 h-5 text-[#31507A]" />
+                  <Icon className="w-5 h-5 text-[#f7f8f9]" />
                 </div>
 
                 <span className="text-[10px] uppercase tracking-[2px] text-slate-400">

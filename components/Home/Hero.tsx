@@ -17,7 +17,7 @@ export default function Hero() {
           brightness-[0.80]
         "
         style={{
-          backgroundImage: "url('/hero_img.png')", // YOUR IMAGE
+          backgroundImage: "url('/abouthero.jpg')", // YOUR IMAGE
         }}
       />
 
@@ -90,9 +90,9 @@ export default function Hero() {
                   text-transparent
                   bg-clip-text
                   bg-gradient-to-r
-                  from-[#162537]
-                  via-[#334d6d]
-                  to-[#5e94db]
+                  from-[#e8edf4]
+                  via-[#032753]
+                  to-[#020b15]
                 "
               >
                 Cultural Brands

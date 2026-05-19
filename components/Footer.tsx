@@ -210,10 +210,7 @@ export default function Footer() {
                 max-w-[360px]
               "
             >
-              Premium branding, websites and digital
-              experiences crafted with strategy,
-              aesthetics and performance.
-            </p>
+India-based branding, website design and digital marketing agency helping modern businesses grow through strategy, storytelling and performance-driven experiences.            </p>
 
             {/* SOCIALS */}
             <div className="flex items-center gap-3 mt-9 flex-wrap">
