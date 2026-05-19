@@ -41,7 +41,7 @@ const projects = [
       "High-impact video editing and premium creative assets developed for India Today to enhance digital storytelling and audience engagement across media platforms.",
     impact:
       "Cinematic editing crafted for modern digital audiences.",
-    image: "/aboutthree.jpg",
+    image: "/india today.png",
   },
 
   {
@@ -65,7 +65,7 @@ const projects = [
       "Social media management and content direction focused on creating stronger engagement, aesthetic consistency and modern digital brand presence.",
     impact:
       "Crafted to improve audience interaction and brand recall.",
-    image: "/hero.png",
+    image: "/brownie.jpeg",
   },
 
   {
@@ -77,7 +77,7 @@ const projects = [
       "AI-generated cinematic visuals and modern storytelling campaigns developed to create high-impact digital content and premium audience engagement.",
     impact:
       "Built for visually immersive digital campaigns.",
-    image: "/abouthero.jpg",
+    image: "/bharat reshma.jpg",
   },
 
   {
@@ -92,17 +92,7 @@ const projects = [
     image: "/xiimba.png",
   },
 
-  {
-    industry: "Creative Media Brand",
-    title: "Spice",
-    services:
-      "Video Editing • Creative Assets",
-    description:
-      "Premium video editing and creative production developed to deliver stronger visual storytelling and engaging digital content experiences.",
-    impact:
-      "Modern edits crafted for digital-first audiences.",
-    image: "/hero-img.png",
-  },
+
 
   {
     industry: "Beauty & E-commerce Platform",
@@ -125,7 +115,7 @@ const projects = [
       "Social media campaigns and content strategy designed to increase restaurant visibility, customer engagement and modern food brand perception.",
     impact:
       "Crafted for stronger local digital presence.",
-    image: "/abouthero.jpg",
+    image: "/bcf.jpeg",
   },
 
   {
@@ -137,13 +127,13 @@ const projects = [
       "Creative storytelling and social media direction developed for a modern wedding planning brand focused on luxury experiences and emotional visual identity.",
     impact:
       "Designed to create timeless wedding brand perception.",
-    image: "/aboutthree.jpg",
+    image: "/vowstory.jpeg",
   },
 ];
 
 export default function FeaturedWork() {
   return (
-    <section className="relative overflow-hidden py-[120px] bg-[#f7fafc]">
+    <section className="relative overflow-hidden py-[60px] bg-[#f7fafc]">
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#eef3f9] via-[#f7fafc] to-white" />
