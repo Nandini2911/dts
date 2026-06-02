@@ -1,363 +1,202 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Users,
-  CheckCircle2,
-} from "lucide-react";
+
+const flowSteps = [
+  "Guest List",
+  "Segmentation",
+  "Coordination",
+  "Premium Entry",
+];
 
 export default function GuestManagementHero() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC]">
-      {/* Background */}
-
+    <section className="relative min-h-screen overflow-hidden bg-[#F6F8FC] px-5 py-24 sm:px-8 lg:px-16">
+      {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 80, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            -top-40
-            -left-40
-            h-[500px]
-            w-[500px]
-            rounded-full
-            bg-[#6288B9]/20
-            blur-[120px]
-          "
-        />
-
-        <motion.div
-          animate={{
-            x: [0, -60, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            right-0
-            top-0
-            h-[450px]
-            w-[450px]
-            rounded-full
-            bg-[#0D2444]/10
-            blur-[120px]
-          "
-        />
+        <div className="hero-glow hero-glow-one" />
+        <div className="hero-glow hero-glow-two" />
+        <div className="hero-grid" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid min-h-screen items-center gap-14 py-28 lg:grid-cols-2">
-          {/* LEFT */}
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.7 }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D8E3F3] bg-white/70 px-4 py-2 text-sm font-medium text-[#0D2444] shadow-sm backdrop-blur-xl"
+          >
+            <span className="h-2 w-2 rounded-full bg-[#6288B9]" />
+            Guest Management Services
+          </motion.div>
 
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="
-                glass
-                inline-flex
-                items-center
-                gap-2
-                rounded-full
-                px-4
-                py-2
-                text-xs
-                font-semibold
-                uppercase
-                tracking-[3px]
-                text-[#6288B9]
-              "
-            >
-              <CheckCircle2 size={14} />
-              Guest Management Services
-            </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.8 }}
+            className="max-w-4xl text-[46px] leading-[0.95] tracking-[-0.04em] text-[#0F172A] sm:text-[64px] lg:text-[84px]"
+            style={{
+              fontFamily:
+                'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
+            }}
+          >
+            Guest Entry,
+            <span className="block bg-gradient-to-r from-[#0D2444] to-[#6288B9] bg-clip-text text-transparent">
+              Done Like A System.
+            </span>
+          </motion.h1>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              className="
-                mt-8
-                text-5xl
-                font-bold
-                leading-[1]
-                text-[#0D2444]
-                sm:text-6xl
-                lg:text-7xl
-              "
-            >
-              Guest Entry,
-              <br />
-              Done Like A
-              <span className="block text-[#6288B9]">
-                System.
-              </span>
-            </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.38, duration: 0.8 }}
+            className="mt-7 max-w-2xl text-base leading-8 text-[#475569] sm:text-lg"
+          >
+            We plan, segment, coordinate and control guest flow across weddings,
+            celebrity events, corporate gatherings and brand launches — ensuring
+            every arrival feels seamless, organised and premium.
+          </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="
-                mt-8
-                max-w-xl
-                text-lg
-                leading-relaxed
-                text-slate-600
-              "
-            >
-              We plan, segment, coordinate and control guest
-              flow across weddings, celebrity events,
-              corporate gatherings and brand launches—
-              ensuring every arrival feels seamless,
-              organised and premium.
-            </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.52, duration: 0.8 }}
+            className="mt-9 flex flex-col gap-4 sm:flex-row"
+          >
+            <a href="#contact" className="primary-btn text-center">
+              Start A Project
+            </a>
 
-            {/* CTA */}
+            <a href="#discussion" className="secondary-btn text-center">
+              Discuss Your Event
+            </a>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45 }}
-              className="mt-10 flex flex-wrap gap-4"
-            >
-              <button className="primary-btn flex items-center gap-2">
-                Start A Project
-                <ArrowRight size={18} />
-              </button>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.72, duration: 0.8 }}
+            className="mt-8 flex flex-wrap items-center gap-3 text-sm font-medium text-[#64748B]"
+          >
+            <div className="flex -space-x-3">
+              <span className="trust-dot">D</span>
+              <span className="trust-dot">T</span>
+              <span className="trust-dot">S</span>
+            </div>
+            <p>
+              Trusted by brands, founders, celebrities and premium events across
+              India.
+            </p>
+          </motion.div>
+        </motion.div>
 
-              <button className="secondary-btn">
-                Discuss Your Event
-              </button>
-            </motion.div>
+        {/* Right Visual */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, y: 35 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.9, ease: "easeOut" }}
+          className="relative"
+        >
+          <div className="absolute -inset-6 rounded-[40px] bg-gradient-to-br from-[#0D2444]/10 to-[#6288B9]/20 blur-2xl" />
 
-            {/* Trust */}
+          <div className="glass relative rounded-[36px] p-5 shadow-[0_30px_90px_rgba(13,36,68,0.16)] sm:p-7">
+            <div className="rounded-[28px] bg-white p-6 shadow-[inset_0_0_0_1px_rgba(226,232,240,0.9)] sm:p-8">
+              <div className="mb-7 flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#6288B9]">
+                    Live Flow
+                  </p>
+                  <h3 className="mt-2 text-2xl font-bold text-[#0F172A]">
+                    Guest Entry Control
+                  </h3>
+                </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-10 flex items-center gap-3"
-            >
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((item) => (
-                  <div
-                    key={item}
-                    className="
-                      h-11
-                      w-11
-                      rounded-full
-                      border-2
-                      border-white
-                      bg-gradient-to-br
-                      from-[#6288B9]
-                      to-[#0D2444]
-                    "
-                  />
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 18,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="grid h-16 w-16 place-items-center rounded-full border border-[#D8E3F3] bg-[#F8FAFC]"
+                >
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-[#0D2444] to-[#6288B9]" />
+                </motion.div>
+              </div>
+
+              <div className="space-y-4">
+                {flowSteps.map((step, index) => (
+                  <motion.div
+                    key={step}
+                    initial={{ opacity: 0, x: 24 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.7 + index * 0.16,
+                      duration: 0.6,
+                    }}
+                    className="guest-step"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="step-number">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h4 className="font-semibold text-[#0F172A]">
+                          {step}
+                        </h4>
+                        <p className="text-sm text-[#64748B]">
+                          {index === 0 && "Verified lists and RSVP tracking"}
+                          {index === 1 && "VIP, family, media and team groups"}
+                          {index === 2 && "On-ground teams with live updates"}
+                          {index === 3 && "Smooth, premium arrival experience"}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="step-pulse" />
+                  </motion.div>
                 ))}
               </div>
 
-              <p className="max-w-md text-sm text-slate-500">
-                Trusted by brands, founders, celebrities and
-                premium events across India.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* RIGHT SIDE */}
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.95,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 0.7,
-            }}
-            className="relative"
-          >
-            <div className="premium-card relative overflow-hidden">
-              {/* Glow */}
-
-              <div
-                className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-br
-                  from-[#6288B9]/10
-                  via-transparent
-                  to-[#0D2444]/10
-                "
-              />
-
-              <div className="relative z-10">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-slate-500">
-                      Live Guest Tracking
-                    </p>
-
-                    <h3 className="mt-2 text-2xl font-bold text-[#0D2444]">
-                      Event Dashboard
-                    </h3>
-                  </div>
-
-                  <div
-                    className="
-                      flex
-                      h-16
-                      w-16
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      bg-[#0D2444]
-                      text-white
-                    "
-                  >
-                    <Users size={30} />
-                  </div>
+              <div className="mt-7 grid grid-cols-3 gap-3">
+                <div className="mini-stat">
+                  <strong>VIP</strong>
+                  <span>Priority Flow</span>
                 </div>
-
-                <div className="mt-10 space-y-5">
-                  {[
-                    "VIP Guest Segmentation",
-                    "Real-Time Check-In Flow",
-                    "RSVP Management",
-                    "Access Control & Verification",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="
-                        flex
-                        items-center
-                        gap-3
-                        rounded-xl
-                        border
-                        border-slate-200
-                        bg-white
-                        p-4
-                      "
-                    >
-                      <CheckCircle2
-                        size={18}
-                        className="text-[#6288B9]"
-                      />
-
-                      <span className="font-medium text-slate-700">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
+                <div className="mini-stat">
+                  <strong>360°</strong>
+                  <span>Coordination</span>
                 </div>
-
-                <div className="mt-10 grid grid-cols-3 gap-4">
-                  <div className="glass rounded-2xl p-5 text-center">
-                    <h4 className="text-3xl font-bold text-[#0D2444]">
-                      5K+
-                    </h4>
-                    <p className="mt-1 text-xs text-slate-500">
-                      Guests Managed
-                    </p>
-                  </div>
-
-                  <div className="glass rounded-2xl p-5 text-center">
-                    <h4 className="text-3xl font-bold text-[#0D2444]">
-                      100+
-                    </h4>
-                    <p className="mt-1 text-xs text-slate-500">
-                      Events
-                    </p>
-                  </div>
-
-                  <div className="glass rounded-2xl p-5 text-center">
-                    <h4 className="text-3xl font-bold text-[#0D2444]">
-                      99%
-                    </h4>
-                    <p className="mt-1 text-xs text-slate-500">
-                      Accuracy
-                    </p>
-                  </div>
+                <div className="mini-stat">
+                  <strong>Live</strong>
+                  <span>Updates</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Floating Cards */}
-
-            <motion.div
-              animate={{
-                y: [0, -12, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-              }}
-              className="
-                glass
-                absolute
-                -left-8
-                top-16
-                hidden
-                rounded-2xl
-                p-4
-                lg:block
-              "
-            >
-              <p className="text-xs text-slate-500">
-                VIP Arrival
-              </p>
-
-              <h4 className="mt-1 font-semibold text-[#0D2444]">
-                Successfully Checked In
-              </h4>
-            </motion.div>
-
-            <motion.div
-              animate={{
-                y: [0, 15, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-              }}
-              className="
-                glass
-                absolute
-                -right-8
-                bottom-12
-                hidden
-                rounded-2xl
-                p-4
-                lg:block
-              "
-            >
-              <p className="text-xs text-slate-500">
-                Guest Flow
-              </p>
-
-              <h4 className="mt-1 font-semibold text-[#0D2444]">
-                Running Smoothly
-              </h4>
-            </motion.div>
+          <motion.div
+            animate={{ y: [0, -14, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="floating-badge left-3 top-6 sm:-left-8"
+          >
+            RSVP Sorted
           </motion.div>
-        </div>
+
+          <motion.div
+            animate={{ y: [0, 14, 0] }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+            className="floating-badge bottom-8 right-2 sm:-right-8"
+          >
+            Entry Seamless
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
