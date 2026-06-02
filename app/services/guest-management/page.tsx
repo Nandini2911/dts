@@ -1,7 +1,8 @@
 import Footer from "@/components/Footer";
+import GuestFeaturedWork from "@/components/GuestManagement/GuestFeaturedWork";
 import GuestManagementHero from "@/components/GuestManagement/GuestManagementHero";
 import GuestServiceOverview from "@/components/GuestManagement/GuestServiceOverview";
-import WhyItMatters from "@/components/GuestManagement/WhyItMatters";
+import WhyItMatters from "@/components/GuestManagement/GuestWhyItMatters";
 import Navbar from "@/components/Navbar";
 import { GitPullRequestClosed } from "lucide-react";
 
@@ -14,6 +15,7 @@ export default function GuestManagement() {
       <GuestManagementHero/>
       <GuestServiceOverview/>
       <WhyItMatters/>
+      <GuestFeaturedWork/>
      
 
       <Footer/>
