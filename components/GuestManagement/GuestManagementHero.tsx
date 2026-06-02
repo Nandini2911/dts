@@ -19,13 +19,11 @@ export default function GuestManagementHero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 rounded-full border border-[#DCE6F2] bg-white px-5 py-3 shadow-[0_14px_40px_rgba(13,36,68,0.08)]"
             >
-              <span className="h-2.5 w-2.5 rounded-full bg-[#6288B9] shadow-[0_0_0_7px_rgba(98,136,185,0.16)]" />
 
-              <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#0D2444]">
-                Guest Management Services
-              </span>
+              <span className="inline-flex rounded-full border border-white/20 bg-gradient-to-r from-[#0D2444] via-[#16365F] to-[#1F4B7A] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-[0_10px_40px_rgba(13,36,68,0.25)] backdrop-blur-xl">
+                  Guest Management Services
+</span>
             </motion.div>
 
             <motion.h1
