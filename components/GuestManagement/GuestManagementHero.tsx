@@ -33,7 +33,7 @@ export default function GuestManagementHero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1 }}
-              className="mt-8 max-w-[820px] text-[48px] font-semibold leading-[0.95] tracking-[-0.06em] text-[#0D2444] sm:text-[64px] md:text-[82px] lg:text-[96px]"
+              className="mt-8 max-w-[820px] text-[35px] font-semibold leading-[0.95] tracking-[-0.06em] text-[#0D2444] sm:text-[64px] md:text-[62px] "
               style={{
                 fontFamily:
                   'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
