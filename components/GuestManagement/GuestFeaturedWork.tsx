@@ -25,12 +25,12 @@ export default function FeaturedWork() {
       desc: "Managed delegate verification, guest registration and real-time support for a premium corporate gathering.",
     },
     {
-      image: "/guest/brand.jpg",
+      image: "/guest/brand2.jpg",
       title: "VIP Movement Coordination",
       desc: "Created a controlled guest route for celebrities, founders and special invitees with discreet handling.",
     },
     {
-      image: "/guest/brand2.jpg",
+      image: "/guest/brand.jpg",
       title: "Destination Event Arrival Flow",
       desc: "Coordinated arrivals, hotel movement, venue entry and guest assistance across multiple event touchpoints.",
     },
