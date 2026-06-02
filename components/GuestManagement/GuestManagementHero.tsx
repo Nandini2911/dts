@@ -105,7 +105,7 @@ export default function GuestManagementHero() {
 
             <div className="relative overflow-hidden rounded-[40px] border border-[#DCE6F2] bg-white p-6 shadow-[0_30px_90px_rgba(13,36,68,0.12)]">
               <div className="rounded-[30px] bg-gradient-to-br from-[#0D2444] via-[#173B66] to-[#6288B9] p-7 text-white">
-                <div className="mb-16 flex items-center justify-between">
+                <div className=" flex items-center justify-between">
                   <div className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-xl">
                     <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/85">
                       Live Entry Flow
