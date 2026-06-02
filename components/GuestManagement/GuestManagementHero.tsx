@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 
 export default function GuestManagementHero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-white px-5 py-24 flex items-center justify-center">
-      {/* SOFT BACKGROUND ELEMENTS */}
+<section className="relative w-full overflow-hidden bg-white px-5 pt-20 pb-4 lg:pt-24 lg:pb-6 flex items-center justify-center">      {/* SOFT BACKGROUND ELEMENTS */}
       <div className="absolute top-[-180px] left-[-140px] h-[420px] w-[420px] rounded-full bg-[#6288B9]/20 blur-3xl" />
       <div className="absolute bottom-[-200px] right-[-160px] h-[520px] w-[520px] rounded-full bg-[#0D2444]/10 blur-3xl" />
 
