@@ -7,58 +7,71 @@ import { Plus } from "lucide-react";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
 const faqs = [
   {
-    question: "How can I contact Double Trouble Studio?",
+    question:
+      "What branding services does Double Trouble Studio offer in Mumbai?",
     answer:
-      "You can contact Double Trouble Studio through our website contact form, email, phone number, or WhatsApp. Simply submit your inquiry and our team will respond as quickly as possible.",
+      "Double Trouble Studio helps businesses build memorable brands through strategic brand development, visual identity design, brand positioning, messaging, creative direction and integrated marketing solutions designed for long-term growth.",
   },
   {
-    question: "How quickly can I expect a response?",
+    question:
+      "Why should I hire a branding agency in Mumbai?",
     answer:
-      "Most inquiries receive a response within 24 business hours. For urgent projects, we recommend contacting us directly via phone or WhatsApp for faster communication.",
+      "A professional branding agency helps businesses create a strong market presence, improve customer trust, communicate their value effectively and stand out from competitors through strategy-led branding and marketing.",
   },
   {
-    question: "Do you work with clients outside Mumbai?",
+    question:
+      "How much does professional website design cost in Mumbai?",
     answer:
-      "Yes. Double Trouble Studio works with businesses across Mumbai, India, and international markets through structured online collaboration, virtual meetings, and streamlined project management processes.",
+      "Website design costs vary depending on project scope, functionality, design requirements and business goals. We provide customized website solutions tailored to your brand, objectives and budget.",
   },
   {
-    question: "Can I schedule a consultation before starting a project?",
+    question:
+      "Do you provide website design and branding services together?",
     answer:
-      "Absolutely. We offer discovery calls and consultation sessions to understand your goals, discuss project requirements, and recommend the most suitable creative solutions for your business.",
+      "Yes. We offer complete branding and website design services to create a seamless brand experience across every customer touchpoint, ensuring consistency in design, messaging and user experience.",
   },
   {
-    question: "What information should I provide when contacting your team?",
+    question:
+      "What digital marketing services does Double Trouble Studio provide?",
     answer:
-      "To help us understand your needs, include details about your business, project goals, timeline, budget expectations, and any specific services you are interested in.",
+      "Our services include social media marketing, content creation, performance marketing, PR campaigns, media outreach, brand strategy, digital consulting and growth-focused marketing solutions.",
   },
   {
-    question: "Do you provide custom proposals and pricing?",
+    question:
+      "Do you work with startups and growing businesses?",
     answer:
-      "Yes. Every project is unique, so we create customized proposals based on your objectives, scope of work, deliverables, and long-term business goals.",
+      "Yes. We work with startups, founders, hospitality brands, luxury businesses and growing companies looking to build stronger brands, launch websites and scale their digital presence.",
   },
   {
-    question: "Can I contact Double Trouble Studio for branding and marketing services?",
+    question:
+      "How long does it take to complete a branding or website project?",
     answer:
-      "Yes. We provide branding, creative strategy, content creation, social media marketing, visual identity design, website experiences, and digital growth solutions tailored to modern businesses.",
+      "Project timelines depend on the scope and complexity of the work. Most branding and website projects are completed within a few weeks following the discovery, planning, design and development phases.",
   },
   {
-    question: "Which industries do you work with?",
+    question:
+      "Do you work with clients outside Mumbai and India?",
     answer:
-      "We work with hospitality brands, restaurants, cafés, luxury businesses, lifestyle brands, wedding companies, startups, creators, personal brands, and service-based businesses seeking premium positioning and growth.",
+      "Absolutely. We collaborate with businesses across Mumbai, Navi Mumbai, Thane, Pune, India and international markets through remote meetings, streamlined workflows and dedicated project management.",
   },
   {
-    question: "Do you offer ongoing support after project completion?",
+    question:
+      "Why choose Double Trouble Studio for branding, website design and marketing?",
     answer:
-      "Yes. Depending on the engagement, we can provide ongoing creative support, content creation, marketing assistance, brand management, and long-term strategic guidance.",
+      "Double Trouble Studio combines strategy, creativity, technology and marketing expertise to create premium brands, websites and digital experiences that drive visibility, engagement and long-term business growth.",
   },
   {
-    question: "Why should I choose Double Trouble Studio?",
+    question:
+      "How can I get a quote for branding, website design or digital marketing services?",
     answer:
-      "Double Trouble Studio combines strategy, storytelling, branding, content, and digital experiences to help businesses build stronger brand perception, connect with audiences, and achieve sustainable growth."
-  }
+      "Simply contact us through our website, email, phone or WhatsApp. Our team will understand your requirements, discuss your goals and provide a customized proposal tailored to your business needs.",
+  },
 ];
+
+
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
