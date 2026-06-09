@@ -1,17 +1,21 @@
 import Footer from "@/components/Footer";
-import { EventTypes } from "@/components/GuestManagement/EventTypes";
+
 import GuestChallengesWeSolve from "@/components/GuestManagement/GuestChallengesWeSolve";
 import GuestFeaturedWork from "@/components/GuestManagement/GuestFeaturedWork";
+import GuestManagementFaq from "@/components/GuestManagement/GuestManagementFaq";
 import GuestManagementHero from "@/components/GuestManagement/GuestManagementHero";
+import GuestManagementServices from "@/components/GuestManagement/GuestManagementServices";
 import { OurProcess } from "@/components/GuestManagement/GuestProcess";
 import GuestServiceOverview from "@/components/GuestManagement/GuestServiceOverview";
-import { WhatYouGet } from "@/components/GuestManagement/GuestWhatYouGet";
+
 import WhyItMatters from "@/components/GuestManagement/GuestWhyItMatters";
 import { IndustriesWeServe } from "@/components/GuestManagement/IndustriesWeServe";
+import LocalSeoSection from "@/components/GuestManagement/LocalSeoSection";
 import { ResultsOutcomes } from "@/components/GuestManagement/ResultOutcomes";
 import { WhyDoubleTroubleStudio } from "@/components/GuestManagement/WhyDoubleTrouble";
+import WhyGuestManagementMatters from "@/components/GuestManagement/WhyGuestManagementMatters";
 import Navbar from "@/components/Navbar";
-import { GitPullRequestClosed } from "lucide-react";
+
 
 
 
@@ -21,15 +25,20 @@ export default function GuestManagement() {
       <Navbar />
       <GuestManagementHero/>
       <GuestServiceOverview/>
+      <GuestManagementServices/>
       <WhyItMatters/>
       <GuestFeaturedWork/>
       <GuestChallengesWeSolve/>
-      <IndustriesWeServe/>
+     
       <OurProcess/>
-      <WhatYouGet/>
+
       <ResultsOutcomes/>
-     <EventTypes/>
+       <IndustriesWeServe/>
+   
      <WhyDoubleTroubleStudio/>
+     <WhyGuestManagementMatters/>
+     <GuestManagementFaq/>
+     <LocalSeoSection/>
 
       <Footer/>
     </main>

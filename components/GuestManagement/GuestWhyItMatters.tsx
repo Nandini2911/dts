@@ -48,7 +48,7 @@ export default function WhyItMatters() {
               textShadow: "0 8px 35px rgba(255,255,255,0.75)",
             }}
           >
-            Experience Begins Before The Venue.
+            Why Guest Management Matters
           </h2>
 
           <p className="mx-auto mt-7 max-w-[850px] text-[15px] font-semibold leading-[1.85] text-[#203B5C] md:text-[18px]">
