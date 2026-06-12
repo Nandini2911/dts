@@ -5,21 +5,24 @@ import { motion } from "framer-motion";
 const principles = [
   {
     title: "Strategic Thinking",
-    desc: "Every creative decision is backed by positioning, audience understanding and long-term brand direction.",
+    desc: "Every creative decision is backed by brand positioning, audience research, category understanding, SEO intent and long-term digital growth direction.",
   },
   {
     title: "Premium Execution",
-    desc: "From visuals to interactions, every detail is refined to feel elevated, modern and intentional.",
+    desc: "From brand visuals to websites, PR communication, social media content and digital campaigns, every detail is refined to feel elevated, modern and intentional.",
   },
   {
     title: "Cultural Relevance",
-    desc: "We build brands that connect emotionally with modern audiences across digital platforms.",
+    desc: "We build brands that connect emotionally with modern audiences across websites, social media, PR, events, digital platforms and premium brand touchpoints.",
   },
 ];
 
 export default function AboutStory() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-[70px]">
+    <section
+      className="relative overflow-hidden bg-[#F8FAFC] py-[70px]"
+      aria-label="Double Trouble Studio philosophy for brand strategy, premium execution, cultural relevance and digital growth"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[#F8FAFC]" />
 
@@ -51,20 +54,20 @@ export default function AboutStory() {
             className="inline-flex"
           >
             <div
-  className="
-    px-6
-    py-3
-    rounded-full
-    border
-    border-[#0D2444]/10
-    bg-gradient-to-r
-    from-[#0D2444]
-    via-[#16365F]
-    to-[#1F4B7A]
-    backdrop-blur-xl
-    shadow-[0_10px_40px_rgba(13,36,68,0.25)]
-  "
->
+              className="
+                px-6
+                py-3
+                rounded-full
+                border
+                border-[#0D2444]/10
+                bg-gradient-to-r
+                from-[#0D2444]
+                via-[#16365F]
+                to-[#1F4B7A]
+                backdrop-blur-xl
+                shadow-[0_10px_40px_rgba(13,36,68,0.25)]
+              "
+            >
               <span
                 className="
                   text-[12px]
@@ -74,7 +77,7 @@ export default function AboutStory() {
                   text-white
                 "
               >
-                Our Philosophy
+                Our Brand Philosophy
               </span>
             </div>
           </motion.div>
@@ -102,8 +105,6 @@ export default function AboutStory() {
               Clarity
             </span>
 
-           
-
             <span
               className="
                 text-transparent
@@ -114,6 +115,7 @@ export default function AboutStory() {
                 to-[#A4B8D2]
               "
             >
+              {" "}
               Over Chaos
             </span>
           </motion.h2>
@@ -133,16 +135,17 @@ export default function AboutStory() {
               max-w-[760px]
             "
           >
-            We believe modern brands are built through intentional
-            design, strategic clarity and emotional storytelling —
-            not noise, trends or temporary attention.
+            We believe modern brands are built through intentional design,
+            strategic clarity, premium brand positioning, digital marketing
+            intelligence, SEO-ready structure and emotional storytelling — not
+            noise, trends or temporary attention.
           </motion.p>
         </div>
 
         {/* CARDS */}
         <div className="grid sm:grid-cols-3 gap-7 mt-15">
           {principles.map((item, index) => (
-            <motion.div
+            <motion.article
               key={item.title}
               initial={{
                 opacity: 0,
@@ -161,6 +164,7 @@ export default function AboutStory() {
                 y: -10,
               }}
               className="group relative"
+              aria-label={`${item.title} principle by Double Trouble Studio`}
             >
               {/* OUTER GLOW */}
               <div
@@ -235,26 +239,25 @@ export default function AboutStory() {
                 />
 
                 {/* NUMBER */}
-                {/* NUMBER */}
-<motion.div
-  whileHover={{
-    rotate: 8,
-    scale: 1.05,
-  }}
-  className="
-    w-[58px]
-    h-[58px]
-    rounded-[18px]
-    flex
-    items-center
-    justify-center
-    bg-gradient-to-br
-    from-[#0D2444]
-    via-[#6288B9]
-    to-[#A4B8D2]
-    shadow-[0_8px_30px_rgba(98,136,185,0.22)]
-  "
->
+                <motion.div
+                  whileHover={{
+                    rotate: 8,
+                    scale: 1.05,
+                  }}
+                  className="
+                    w-[58px]
+                    h-[58px]
+                    rounded-[18px]
+                    flex
+                    items-center
+                    justify-center
+                    bg-gradient-to-br
+                    from-[#0D2444]
+                    via-[#6288B9]
+                    to-[#A4B8D2]
+                    shadow-[0_8px_30px_rgba(98,136,185,0.22)]
+                  "
+                >
                   <span
                     className="
                       text-white
@@ -359,8 +362,41 @@ export default function AboutStory() {
                   "
                 />
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio philosophy is built on strategic thinking,
+            premium execution and cultural relevance for modern branding,
+            digital marketing, PR, website development, SEO, guest management,
+            event marketing, AI video production and VFX in India.
+          </h2>
+
+          <p>
+            The agency builds brands through brand strategy, audience research,
+            market positioning, luxury brand positioning, visual identity,
+            website design, website development, SEO foundations, social media
+            marketing, public relations, media campaigns, event branding, guest
+            management, celebrity management, influencer marketing, AI video
+            production, VFX and premium content systems.
+          </p>
+
+          <p>
+            Double Trouble Studio works with hospitality brands, luxury brands,
+            restaurants, cafés, fashion labels, lifestyle businesses, wedding
+            planners, event companies, creators, influencers, corporate brands,
+            founders and modern startups across Mumbai, Delhi, Chandigarh,
+            Bangalore, Hyderabad, Pune, Ahmedabad, Goa and across India.
+          </p>
+
+          <p>
+            The studio helps businesses build clarity, digital presence, brand
+            authority, SEO visibility, premium positioning, cultural relevance,
+            long-term growth and emotional connection with modern audiences.
+          </p>
         </div>
       </div>
     </section>

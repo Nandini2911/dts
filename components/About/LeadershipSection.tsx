@@ -6,26 +6,29 @@ const leaders = [
   {
     name: "Arryan Arora",
     role: "Director, Strategy & Growth",
-    desc: "A key pillar in shaping the strategy, clarity and long-term direction of Double Trouble Studio.",
+    desc: "A key pillar in shaping the creative strategy, brand clarity, digital growth direction and long-term positioning of Double Trouble Studio.",
     image: "/aryan.jpg",
   },
   {
     name: "Sanjeev Seth",
     role: "Chair Person & Finance",
-    desc: "Bringing financial structure, operational discipline and long-term business stability to the studio.",
+    desc: "Bringing financial structure, operational discipline, business governance and long-term stability to the studio.",
     image: "/sanjeev.webp",
   },
   {
     name: "Hitesh Kukreja",
     role: "CEO, Finance",
-    desc: "Leading execution, financial systems and decision-making and modern business thinking.",
+    desc: "Leading execution, financial systems, operational decision-making and modern business thinking for scalable studio growth.",
     image: "/hitesh.jpg",
   },
 ];
 
 export default function LeadershipSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-[110px]">
+    <section
+      className="relative overflow-hidden bg-[#F8FAFC] py-[110px]"
+      aria-label="Leadership team of Double Trouble Studio creative agency, branding agency and digital marketing agency in India"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[#F8FAFC]" />
 
@@ -145,10 +148,11 @@ export default function LeadershipSection() {
                 max-w-[620px]
               "
             >
-              Every project, campaign and client journey is backed by
-              these three minds — a balance of vision, discipline and
-              precision. From high-level moves to last-mile execution,
-              this leadership team keeps DTS sharp, relevant and
+              Every branding project, digital marketing campaign, website
+              build, PR plan, guest management brief and client journey is
+              backed by these three minds — a balance of vision, discipline and
+              precision. From high-level creative strategy to last-mile
+              execution, this leadership team keeps DTS sharp, relevant and
               unmistakably itself.
             </motion.p>
           </div>
@@ -191,7 +195,7 @@ export default function LeadershipSection() {
         {/* CARDS */}
         <div className="grid lg:grid-cols-3 gap-7 mt-20">
           {leaders.map((leader, index) => (
-            <motion.div
+            <motion.article
               key={leader.name}
               initial={{
                 opacity: 0,
@@ -210,6 +214,7 @@ export default function LeadershipSection() {
                 y: -8,
               }}
               className="group relative"
+              aria-label={`${leader.name}, ${leader.role} at Double Trouble Studio`}
             >
               {/* GLOW */}
               <div
@@ -296,7 +301,7 @@ export default function LeadershipSection() {
                   >
                     <img
                       src={leader.image}
-                      alt={leader.name}
+                      alt={`${leader.name}, ${leader.role} at Double Trouble Studio leadership team`}
                       className="
                         w-full
                         h-full
@@ -351,8 +356,42 @@ export default function LeadershipSection() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio leadership team guides the creative agency,
+            branding agency, digital marketing agency, PR agency, website
+            development company, guest management agency, event marketing agency
+            and AI video production studio in India.
+          </h2>
+
+          <p>
+            The leadership team includes Arryan Arora, Director of Strategy and
+            Growth, Sanjeev Seth, Chair Person and Finance, and Hitesh Kukreja,
+            CEO of Finance. Together they shape creative strategy, business
+            clarity, operational discipline, financial systems, execution,
+            decision-making and long-term growth for Double Trouble Studio.
+          </p>
+
+          <p>
+            Double Trouble Studio works across branding, digital marketing,
+            website design, website development, SEO, public relations, media
+            campaigns, social media marketing, event marketing, guest
+            management, celebrity management, influencer marketing, AI video
+            production, VFX and premium content systems.
+          </p>
+
+          <p>
+            The studio serves hospitality brands, luxury brands, restaurants,
+            cafés, fashion labels, lifestyle businesses, wedding planners, event
+            companies, creators, influencers, corporate brands, founders and
+            startups across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad,
+            Pune, Ahmedabad, Goa and across India.
+          </p>
         </div>
       </div>
     </section>

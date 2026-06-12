@@ -10,34 +10,39 @@ const steps = [
   {
     number: "01",
     title: "Discover",
-    desc: "Brand truth, audience behaviour and category positioning.",
+    desc: "Brand truth, audience behaviour, market research and category positioning for stronger brand strategy.",
   },
   {
     number: "02",
     title: "Design",
-    desc: "Narrative, systems and strategic digital direction.",
+    desc: "Brand narrative, visual systems, content direction and strategic digital experience planning.",
   },
   {
     number: "03",
     title: "Develop",
-    desc: "Websites, campaigns and elevated brand experiences.",
+    desc: "SEO-friendly websites, digital campaigns, PR assets and elevated brand experiences built for growth.",
   },
   {
     number: "04",
     title: "Deploy",
-    desc: "Amplification, optimisation and long-term growth.",
+    desc: "Campaign launch, amplification, performance optimisation and long-term digital growth across India.",
   },
 ];
 
 export default function StudioMethod() {
   return (
-    <section className="relative overflow-hidden py-15">
+    <section
+      className="relative overflow-hidden py-15"
+      aria-label="Double Trouble Studio creative agency process for branding, digital marketing, websites, PR and AI video production"
+    >
       {/* BG IMAGE */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: "url('/methode.jpg')",
         }}
+        role="img"
+        aria-label="Premium creative studio method background for branding, digital marketing, PR campaigns and website development"
       />
 
       {/* PREMIUM OVERLAY */}
@@ -85,7 +90,10 @@ export default function StudioMethod() {
               shadow-[0_8px_30px_rgba(0,0,0,0.18)]
             "
           >
-            <Sparkles className="w-4 h-4 text-[#A8BEDB]" />
+            <Sparkles
+              className="w-4 h-4 text-[#A8BEDB]"
+              aria-hidden="true"
+            />
 
             <span
               className="
@@ -129,7 +137,7 @@ export default function StudioMethod() {
                 to-[#6288B9]
               "
             >
-              For Modern Brands
+              For Modern Brand Growth
             </span>
           </h2>
 
@@ -144,9 +152,9 @@ export default function StudioMethod() {
               [text-shadow:0_2px_20px_rgba(0,0,0,0.35)]
             "
           >
-            A premium framework designed for brands that
-            value clarity, consistency and meaningful
-            long-term growth.
+            A premium creative agency framework designed for brands that value
+            clarity, brand strategy, digital consistency, cultural relevance,
+            performance marketing and meaningful long-term growth.
           </p>
         </motion.div>
 
@@ -172,7 +180,7 @@ export default function StudioMethod() {
           {/* ITEMS */}
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-10 relative z-10">
             {steps.map((step, index) => (
-              <motion.div
+              <motion.article
                 key={step.title}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -182,6 +190,7 @@ export default function StudioMethod() {
                 }}
                 viewport={{ once: true }}
                 className="group relative"
+                aria-label={`Step ${step.number}: ${step.title} in the Double Trouble Studio creative agency process`}
               >
                 {/* TOP */}
                 <div className="flex items-center gap-5">
@@ -233,7 +242,10 @@ export default function StudioMethod() {
                       group-hover:translate-x-1
                     "
                   >
-                    <ArrowUpRight className="w-4 h-4 text-white" />
+                    <ArrowUpRight
+                      className="w-4 h-4 text-white"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
 
@@ -299,9 +311,36 @@ export default function StudioMethod() {
                     group-hover:opacity-100
                   "
                 />
-              </motion.div>
+              </motion.article>
             ))}
           </div>
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio follows a strategic creative agency process
+            for branding, digital marketing, PR campaigns, website development,
+            event marketing, guest management, AI video production and VFX in
+            India.
+          </h2>
+
+          <p>
+            The studio method includes brand discovery, audience research,
+            competitor analysis, category positioning, brand strategy, visual
+            identity design, content systems, website development, SEO planning,
+            PR campaign planning, social media marketing, AI video production,
+            campaign deployment, performance optimisation and long-term brand
+            growth.
+          </p>
+
+          <p>
+            This process helps hospitality brands, luxury brands, restaurants,
+            cafes, fashion labels, lifestyle brands, corporate companies,
+            founders, event brands and wedding brands across Mumbai, Delhi,
+            Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and India
+            build stronger online presence and premium brand positioning.
+          </p>
         </div>
       </div>
     </section>
