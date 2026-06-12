@@ -6,7 +6,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutCTA() {
   return (
-    <section className="relative overflow-hidden py-[60px] bg-[#8abdf0]">
+    <section
+      className="relative overflow-hidden py-[60px] bg-[#8abdf0]"
+      aria-label="Start a branding, digital marketing, PR, website development or AI video project with Double Trouble Studio"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[#F8FAFC]" />
 
@@ -28,41 +31,42 @@ export default function AboutCTA() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-5 text-center">
         {/* LABEL */}
-       <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  viewport={{ once: true }}
-  className="inline-flex mb-8"
->
-  <div
-    className="
-      px-6
-      py-3
-      rounded-full
-      border
-      border-[#0D2444]/10
-      bg-gradient-to-r
-      from-[#0D2444]
-      via-[#16365F]
-      to-[#1F4B7A]
-      backdrop-blur-xl
-      shadow-[0_10px_40px_rgba(13,36,68,0.25)]
-    "
-  >
-    <span
-      className="
-        text-[12px]
-        uppercase
-        tracking-[0.22em]
-        font-semibold
-        text-white
-      "
-    >
-      Let’s Build Something Iconic
-    </span>
-  </div>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="inline-flex mb-8"
+        >
+          <div
+            className="
+              px-6
+              py-3
+              rounded-full
+              border
+              border-[#0D2444]/10
+              bg-gradient-to-r
+              from-[#0D2444]
+              via-[#16365F]
+              to-[#1F4B7A]
+              backdrop-blur-xl
+              shadow-[0_10px_40px_rgba(13,36,68,0.25)]
+            "
+          >
+            <span
+              className="
+                text-[12px]
+                uppercase
+                tracking-[0.22em]
+                font-semibold
+                text-white
+              "
+            >
+              Let’s Build Something Iconic
+            </span>
+          </div>
+        </motion.div>
+
         {/* HEADING */}
         <motion.h2
           initial={{ opacity: 0, y: 35 }}
@@ -120,10 +124,10 @@ export default function AboutCTA() {
             text-slate-500
           "
         >
-          We partner with ambitious brands looking to build premium
-          digital presence, timeless positioning and meaningful
-          long-term growth through strategy, storytelling and refined
-          creative execution.
+          We partner with ambitious brands looking to build premium digital
+          presence, luxury brand positioning, SEO visibility, PR authority,
+          website performance, AI-powered storytelling and meaningful long-term
+          growth through strategy, storytelling and refined creative execution.
         </motion.p>
 
         {/* BUTTONS */}
@@ -144,25 +148,60 @@ export default function AboutCTA() {
             mt-14
           "
         >
-          <Link href="/contact">
+          <Link
+            href="/contact"
+            aria-label="Start a branding, digital marketing, PR, website development or AI video project with Double Trouble Studio"
+          >
             <button className="primary-btn flex items-center gap-2">
               Start Project
-              <ArrowRight size={18} />
+              <ArrowRight size={18} aria-hidden="true" />
             </button>
           </Link>
 
-          <Link href="/projects">
+          <Link
+            href="/projects"
+            aria-label="View Double Trouble Studio branding, PR, website development, events and AI video portfolio"
+          >
             <button className="secondary-btn">
               View Work
             </button>
           </Link>
         </motion.div>
 
-        
-              </div>
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Start a project with Double Trouble Studio, a creative agency,
+            branding agency, digital marketing agency, PR agency, website
+            development company, event marketing agency, guest management agency
+            and AI video production studio in India.
+          </h2>
+
+          <p>
+            Double Trouble Studio helps brands build premium positioning,
+            stronger digital presence, SEO visibility, PR authority, social
+            media growth, website performance, event visibility, guest
+            experience systems, AI video campaigns and long-term brand
+            architecture.
+          </p>
+
+          <p>
+            Services include brand strategy, visual identity, website design,
+            website development, SEO, digital marketing, social media marketing,
+            public relations, media campaigns, influencer marketing, event
+            branding, guest management, celebrity management, AI video
+            production, VFX and premium storytelling.
+          </p>
+
+          <p>
+            The studio works with hospitality brands, luxury brands,
+            restaurants, cafés, fashion labels, lifestyle businesses, wedding
+            planners, event companies, creators, influencers, corporate brands,
+            founders and startups across Mumbai, Delhi, Chandigarh, Bangalore,
+            Hyderabad, Pune, Ahmedabad, Goa and across India.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
-        
-          
- 

@@ -12,23 +12,26 @@ const principles = [
   {
     icon: ShieldCheck,
     title: "Category Intelligence",
-    desc: "Strong research, market mapping and audience behaviour before execution begins.",
+    desc: "Deep market research, competitor mapping, audience behaviour and category positioning before branding, PR, digital marketing or campaign execution begins.",
   },
   {
     icon: Layers3,
     title: "Signature Identity",
-    desc: "Sharper visuals and sharper communication designed to feel instantly recognisable.",
+    desc: "Premium visual identity, brand communication and digital systems designed to feel recognisable across websites, social media, PR, events and campaigns.",
   },
   {
     icon: LineChart,
     title: "Long-Term Value",
-    desc: "Systems designed for sustainable growth — not temporary attention.",
+    desc: "Brand architecture, SEO-ready systems and growth-focused marketing frameworks designed for sustainable visibility, leads and reputation.",
   },
 ];
 
 export default function StudioDNA() {
   return (
-    <section className="relative overflow-hidden py-20 bg-[#F7FAFC]">
+    <section
+      className="relative overflow-hidden py-20 bg-[#F7FAFC]"
+      aria-label="Double Trouble Studio DNA for brand strategy, premium branding, digital marketing, PR, SEO and long-term brand growth"
+    >
       {/* BG */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(49,80,122,0.08),transparent_30%)]" />
 
@@ -36,7 +39,10 @@ export default function StudioDNA() {
         {/* TOP */}
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#DCE5F0] bg-white mb-6">
-            <Sparkles className="w-4 h-4 text-[#31507A]" />
+            <Sparkles
+              className="w-4 h-4 text-[#31507A]"
+              aria-hidden="true"
+            />
 
             <span className="text-[10px] tracking-[2px] uppercase text-[#31507A] font-medium">
               The Double Trouble Studio DNA
@@ -62,9 +68,9 @@ export default function StudioDNA() {
           </h2>
 
           <p className="mt-5 text-[15px] leading-[28px] text-slate-500 max-w-[650px]">
-            We build brands with intention — where
-            creativity comes with structure, research and
-            premium execution.
+            We build brands with intention — where creative strategy, category
+            research, premium brand identity, digital marketing, PR, SEO and
+            execution work together to create long-term visibility and trust.
           </p>
         </div>
 
@@ -74,7 +80,7 @@ export default function StudioDNA() {
             const Icon = item.icon;
 
             return (
-              <motion.div
+              <motion.article
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -96,6 +102,7 @@ export default function StudioDNA() {
                   duration-300
                   hover:shadow-[0_15px_40px_rgba(15,23,42,0.05)]
                 "
+                aria-label={`${item.title} principle for Double Trouble Studio brand strategy and digital growth`}
               >
                 {/* ICON */}
                 <div
@@ -110,7 +117,10 @@ export default function StudioDNA() {
                     mb-6
                   "
                 >
-                  <Icon className="w-5 h-5 text-[#f7f8f9]" />
+                  <Icon
+                    className="w-5 h-5 text-[#f7f8f9]"
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <span className="text-[10px] uppercase tracking-[2px] text-slate-400">
@@ -137,7 +147,7 @@ export default function StudioDNA() {
                 <p className="mt-4 text-[14px] leading-[26px] text-slate-500">
                   {item.desc}
                 </p>
-              </motion.div>
+              </motion.article>
             );
           })}
         </div>
@@ -174,10 +184,38 @@ export default function StudioDNA() {
             This isn’t just marketing.
             <span className="text-[#A8BEDB]">
               {" "}
-              It’s brand architecture.
+              It’s brand architecture for sustainable growth.
             </span>
           </p>
         </motion.div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio builds premium brand architecture through
+            brand strategy, creative direction, digital marketing, public
+            relations, SEO, website development, event marketing, guest
+            management, AI video production and VFX in India.
+          </h2>
+
+          <p>
+            The studio DNA is built on category intelligence, signature identity
+            and long-term value. Services include market research, audience
+            behaviour analysis, competitor mapping, luxury brand positioning,
+            visual identity design, brand communication, website strategy,
+            social media marketing, PR campaigns, influencer marketing, SEO
+            planning, performance marketing, event branding, guest experience
+            design, AI video ads and VFX-led campaign assets.
+          </p>
+
+          <p>
+            Double Trouble Studio works with hospitality brands, luxury brands,
+            restaurants, cafés, fashion labels, lifestyle businesses, media
+            companies, corporate brands, founders, creators, event companies and
+            wedding brands across Mumbai, Delhi, Chandigarh, Bangalore,
+            Hyderabad, Pune, Ahmedabad, Goa and across India.
+          </p>
+        </div>
       </div>
     </section>
   );

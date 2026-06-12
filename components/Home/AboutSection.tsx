@@ -10,7 +10,10 @@ import {
 
 export default function AboutStudio() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-20">
+    <section
+      className="relative overflow-hidden bg-[#F8FAFC] py-20"
+      aria-label="About Double Trouble Studio creative branding and digital marketing agency in India"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(98,136,185,0.16),transparent_28%)]" />
 
@@ -69,7 +72,7 @@ export default function AboutStudio() {
                   text-[#31507A]
                 "
               >
-                strategic Creative Studio
+                Strategic Creative Agency India
               </span>
             </div>
 
@@ -82,14 +85,14 @@ export default function AboutStudio() {
                 tracking-[-3px]
                 font-bold
                 text-[#10213D]
-                   max-w-[580px]
+                max-w-[580px]
               "
               style={{
                 fontFamily:
                   "New York, ui-serif, Georgia, serif",
               }}
             >
-We Build Brands  
+              We Build Brands
 
               <span
                 className="
@@ -102,7 +105,7 @@ We Build Brands
                   to-[#A8BEDB]
                 "
               >
-That Look Premium 
+                That Look Premium
               </span>
 
               And Perform Better
@@ -117,9 +120,12 @@ That Look Premium
                   text-slate-600
                 "
               >
-                Double Trouble Studio is a Mumbai-based branding and digital marketing agency helping hospitality, luxury, lifestyle and event brands build stronger online presence through strategy, design and storytelling.
-
-                
+                Double Trouble Studio is a Mumbai-based creative branding
+                agency and digital marketing agency in India, helping
+                hospitality, luxury, restaurant, lifestyle and event brands
+                build stronger online presence through brand strategy, visual
+                identity, PR campaigns, social media marketing, website
+                development and performance-led storytelling.
               </p>
 
               <p
@@ -129,9 +135,11 @@ That Look Premium
                   text-slate-500
                 "
               >
-                Every detail is designed to feel timeless,
-                emotional and culturally relevant across
-                digital experiences and brand touchpoints.
+                We create premium brand systems, digital experiences and
+                marketing communication that feel timeless, emotional and
+                culturally relevant across websites, social media, events,
+                public relations, guest management and every important brand
+                touchpoint.
               </p>
             </div>
           </motion.div>
@@ -168,7 +176,7 @@ That Look Premium
                 {/* HERO PANEL */}
                 <div className="rounded-[30px] p-8 bg-white shadow-[0_15px_50px_rgba(15,23,42,0.06)]">
                   <p className="text-[11px] uppercase tracking-[2px] text-slate-400">
-                    Creative Philosophy
+                    Creative Brand Philosophy
                   </p>
 
                   <h3
@@ -192,9 +200,9 @@ That Look Premium
                   </h3>
 
                   <p className="mt-5 text-[15px] leading-8 text-slate-500">
-                    We merge design, storytelling and
-                    culture into experiences that feel
-                    elevated and unforgettable.
+                    We merge brand strategy, digital design, storytelling,
+                    culture and marketing intelligence into premium experiences
+                    that feel elevated, memorable and built for growth.
                   </p>
                 </div>
 
@@ -222,16 +230,19 @@ That Look Premium
                         justify-center
                       "
                     >
-                      <Globe className="w-5 h-5 text-[#6288B9]" />
+                      <Globe
+                        className="w-5 h-5 text-[#6288B9]"
+                        aria-hidden="true"
+                      />
                     </div>
 
                     <h4 className="mt-5 text-[16px] font-semibold text-[#10213D]">
-                      Global Presence
+                      India-Wide Presence
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-slate-500">
-                     growth-driven experiences designed for
-                      modern audiences.
+                      Growth-driven branding, PR, digital marketing and web
+                      experiences designed for modern audiences across India.
                     </p>
                   </div>
 
@@ -256,16 +267,19 @@ That Look Premium
                         justify-center
                       "
                     >
-                      <Layers3 className="w-5 h-5 text-white" />
+                      <Layers3
+                        className="w-5 h-5 text-white"
+                        aria-hidden="true"
+                      />
                     </div>
 
                     <h4 className="mt-5 text-[16px] font-semibold">
-                      Brand Systems
+                      Premium Brand Systems
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-white/60">
-                      Timeless digital identity with
-                      clarity and consistency.
+                      Timeless visual identity, website design, content systems
+                      and brand communication with clarity and consistency.
                     </p>
                   </div>
                 </div>
@@ -296,15 +310,41 @@ That Look Premium
 
               <div>
                 <h5 className="text-[15px] font-semibold text-[#10213D]">
-                  Luxury Positioning
+                  Luxury Brand Positioning
                 </h5>
 
                 <p className="text-xs text-slate-500 mt-1">
-                  Modern Creative Agency
+                  Mumbai Creative Agency
                 </p>
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            About Double Trouble Studio, a Mumbai based creative branding
+            agency, digital marketing agency, PR agency, event management
+            company, guest management agency, website development company and AI
+            video production studio in India.
+          </h2>
+
+          <p>
+            Double Trouble Studio provides brand strategy, logo design, visual
+            identity, luxury brand positioning, digital marketing, social media
+            marketing, SEO, public relations, media campaigns, event management,
+            wedding management, guest management, celebrity management, website
+            development, AI video production and VFX services.
+          </p>
+
+          <p>
+            The agency works with hospitality brands, luxury brands, restaurants,
+            cafes, fashion labels, lifestyle businesses, corporate brands,
+            founders, creators, event companies and premium experiences across
+            Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad,
+            Goa and India.
+          </p>
         </div>
       </div>
     </section>

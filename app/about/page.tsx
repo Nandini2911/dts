@@ -10,6 +10,7 @@ import AboutStudio from "@/components/Home/AboutSection";
 import Navbar from "@/components/Navbar";
 import WhatWeBelieve from "@/components/About/WhatWeBelive";
 import LeadershipSection from "@/components/About/LeadershipSection";
+import OurTeamSection from "@/components/About/OurTeamSection";
 
 
 export default function About() {
@@ -21,6 +22,7 @@ export default function About() {
       <AboutExperience/>
     <WhatWeBelieve/>
     <LeadershipSection/>
+    <OurTeamSection/>
       <AboutFaq/>
       <AboutCTA/>
 
