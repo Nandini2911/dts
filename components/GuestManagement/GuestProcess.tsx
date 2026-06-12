@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+const serifFont = {
+  fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
+};
 
 export function OurProcess() {
   const steps = [
@@ -49,12 +52,13 @@ export function OurProcess() {
             </span>
 
             <h2
-              className="mt-7 text-[42px] font-semibold leading-[0.95] tracking-[-0.06em] text-[#0D2444] sm:text-[58px] md:text-[72px]"
+              className="mt-7 text-[42px] font-semibold leading-[0.95] tracking-[-0.06em] text-[#0D2444] sm:text-[34px] md:text-[54px]"
+                 style={serifFont}
              
             >
-              How It{" "}
+              Our Guest Management{" "}
               <span className="bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                Works
+               Process
               </span>
             </h2>
 

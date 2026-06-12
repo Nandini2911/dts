@@ -1,12 +1,6 @@
-
-
 "use client";
 
 import { motion } from "framer-motion";
-
-
-const badgeClass =
-  "inline-flex rounded-full border border-white/20 bg-gradient-to-r from-[#0D2444] via-[#16365F] to-[#1F4B7A] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-[0_10px_40px_rgba(13,36,68,0.25)] backdrop-blur-xl";
 
 const serifFont = {
   fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -37,9 +31,23 @@ export function WhyDoubleTroubleStudio() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#07182E] px-5 py-16 md:py-24">
-      <div className="absolute left-[-180px] top-[-160px] h-[460px] w-[460px] rounded-full bg-[#6288B9]/22 blur-3xl" />
-      <div className="absolute right-[-200px] bottom-[-180px] h-[520px] w-[520px] rounded-full bg-white/10 blur-3xl" />
+    <section
+      className="relative overflow-hidden px-5 py-16 md:py-24"
+      style={{
+        background:
+          "radial-gradient(circle at 12% 18%, rgba(210, 223, 238, 0.24), transparent 30%), radial-gradient(circle at 88% 78%, rgba(255, 255, 255, 0.38), transparent 34%), linear-gradient(135deg, #1d4880 0%, #6d8fba 38%, #173257 68%, #1e3453 100%)",
+      }}
+    >
+      {/* Soft light wash */}
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255, 255, 255, 0.61),transparent_35%,rgba(191, 215, 242, 0.31)_100%)]" />
+
+      {/* Premium glow elements */}
+      <div className="absolute left-[-180px] top-[-160px] h-[460px] w-[460px] rounded-full bg-[#BFD7F2]/20 blur-3xl" />
+      <div className="absolute right-[-220px] bottom-[-180px] h-[540px] w-[540px] rounded-full bg-white/14 blur-3xl" />
+      <div className="absolute right-[8%] top-[8%] h-[220px] w-[220px] rounded-full bg-[#6288B9]/18 blur-2xl" />
+
+      {/* Light diagonal premium layer */}
+      <div className="absolute right-[-120px] top-[-80px] h-[120%] w-[42%] rotate-[-10deg] bg-gradient-to-b from-white/18 via-[#BFD7F2]/10 to-transparent blur-xl" />
 
       <div className="relative z-10 mx-auto max-w-[1250px]">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -49,21 +57,21 @@ export function WhyDoubleTroubleStudio() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+            <span className="inline-flex rounded-full border border-white/18 bg-white/12 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-[0_10px_40px_rgba(0,0,0,0.22)] backdrop-blur-xl">
               Why Double Trouble Studio
             </span>
 
             <h2
-              className="mt-7 max-w-[690px] text-[40px] font-semibold leading-[0.98] tracking-[-0.06em] text-white sm:text-[56px] md:text-[68px]"
+              className="mt-7 max-w-[690px] text-[40px] font-semibold leading-[0.98] tracking-[-0.06em] text-white sm:text-[56px]"
               style={serifFont}
             >
               We Don&apos;t Run Guest Lists.{" "}
-              <span className="bg-gradient-to-r from-white via-[#BFD7F2] to-[#6288B9] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-[#D9E8F7] to-[#8FB7E8] bg-clip-text text-transparent">
                 We Run Rooms.
               </span>
             </h2>
 
-            <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.8] text-white/65 md:text-[17px]">
+            <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.8] text-white/72 md:text-[17px]">
               From the first confirmation to the final guest movement, we bring
               structure, calm and control to rooms where perception matters.
             </p>
@@ -77,12 +85,14 @@ export function WhyDoubleTroubleStudio() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.07 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-[26px] border border-white/12 bg-white/8 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:bg-white/14"
+                className="group relative overflow-hidden rounded-[26px] border border-white/14 bg-gradient-to-r from-white/15 via-white/9 to-[#BFD7F2]/10 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-300 hover:border-white/25 hover:bg-white/16"
               >
-                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-white via-[#BFD7F2] to-[#6288B9]" />
+                <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.12),transparent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                <div className="flex gap-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[12px] font-bold text-[#0D2444]">
+                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-white via-[#D9E8F7] to-[#6288B9]" />
+
+                <div className="relative z-10 flex gap-5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-white to-[#D9E8F7] text-[12px] font-bold text-[#0D2444] shadow-[0_10px_30px_rgba(255,255,255,0.16)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -94,7 +104,7 @@ export function WhyDoubleTroubleStudio() {
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-[14px] font-medium leading-[1.65] text-white/65 md:text-[15px]">
+                    <p className="mt-2 text-[14px] font-medium leading-[1.65] text-white/68 md:text-[15px]">
                       {item.desc}
                     </p>
                   </div>
