@@ -2,52 +2,57 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+
 const works = [
   {
     logo: "/logos/rnk.png",
     category: "Digital • Web • PR",
     title: "RNK Rentals",
-    desc: "A complete transformation of India’s premier automotive rental network through performance storytelling, digital systems and premium web experience.",
+    desc: "A complete digital transformation for India’s premier luxury car rental network through brand storytelling, PR communication, SEO-friendly website development, performance systems and premium web experience.",
   },
 
   {
     logo: "/logos/hos.png",
     category: "Brand • Web • PR",
     title: "House of Stars",
-    desc: "Positioning, website and narrative system for a celebrity engagement platform connecting brands with India’s top talent.",
+    desc: "Brand positioning, website development and narrative system for a celebrity management and talent engagement platform connecting brands with India’s top celebrities, influencers and creators.",
   },
 
   {
     logo: "/logos/cafe.png",
     category: "Social • Events",
     title: "Café Holiday",
-    desc: "Three-month brand revamp focused on storytelling, café experiences and modern community-driven growth.",
+    desc: "A three-month hospitality brand revamp focused on social media marketing, café storytelling, event-led experiences, community engagement and modern digital growth.",
   },
 
   {
     logo: "/logos/indiatoday.png",
     category: "Digital • Media • AI",
     title: "India Today",
-    desc: "AI-powered visual campaigns and premium creative assets designed for one of India’s leading media platforms.",
+    desc: "AI-powered visual campaigns, premium creative assets and digital media storytelling designed for one of India’s leading media platforms.",
   },
 
   {
     logo: "/logos/golf.png",
     category: "Events • Branding • Production",
     title: "All India Police Golf Tournament",
-    desc: "Creative support and premium event branding for the prestigious Chandigarh 2026 tournament.",
+    desc: "Creative support, event branding, sponsor communication and premium production identity for the prestigious All India Police Golf Tournament Chandigarh 2026.",
   },
 
   {
     logo: "/logos/bhart.png",
     category: "AI Video • VFX • Campaigns",
     title: "Bhart Rehma",
-    desc: "AI-generated cinematic visuals and high-impact storytelling designed for premium digital campaigns.",
+    desc: "AI-generated cinematic visuals, VFX-led storytelling and high-impact digital campaign assets designed for premium brand communication.",
   },
 ];
+
 export default function FeaturedWork() {
   return (
-    <section className="relative overflow-hidden py-20 bg-[#EEF3F8]">
+    <section
+      className="relative overflow-hidden py-20 bg-[#EEF3F8]"
+      aria-label="Featured work by Double Trouble Studio including branding, PR, web development, events, AI video and digital marketing case studies"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(49,80,122,0.14),transparent_28%)]" />
 
@@ -89,7 +94,10 @@ export default function FeaturedWork() {
               mb-8
             "
           >
-            <Sparkles className="w-4 h-4 text-[#6288B9]" />
+            <Sparkles
+              className="w-4 h-4 text-[#6288B9]"
+              aria-hidden="true"
+            />
 
             <span
               className="
@@ -131,7 +139,7 @@ export default function FeaturedWork() {
                 to-[#A8BEDB]
               "
             >
-              Builds Presence
+              Builds Brand Presence
             </span>
           </h2>
 
@@ -145,10 +153,11 @@ export default function FeaturedWork() {
               max-w-[720px]
             "
           >
-            A curated look at brands, creators and
-            businesses we've helped grow across digital,
-            PR, web and experiential — where aesthetics,
-            systems and outcomes work together.
+            A curated look at brands, media platforms, event properties and
+            businesses we have helped grow across branding, PR, web development,
+            social media marketing, AI video production and experiential
+            campaigns — where aesthetics, systems and measurable outcomes work
+            together.
           </p>
 
           {/* MINI TEXT */}
@@ -161,14 +170,14 @@ export default function FeaturedWork() {
               text-slate-400
             "
           >
-            Select case studies • More coming soon
+            Select case studies • Branding • PR • Web • Events • AI Video
           </p>
         </motion.div>
 
         {/* WORK LIST */}
         <div className="mt-24 space-y-6">
           {works.map((work, index) => (
-            <motion.div
+            <motion.article
               key={work.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -192,6 +201,7 @@ export default function FeaturedWork() {
                 hover:-translate-y-1
                 hover:shadow-[0_20px_60px_rgba(15,23,42,0.06)]
               "
+              aria-label={`${work.title} case study by Double Trouble Studio`}
             >
               {/* TOP LINE */}
               <div
@@ -227,32 +237,31 @@ export default function FeaturedWork() {
               />
 
               <div className="relative z-10 grid lg:grid-cols-[120px_220px_1fr_80px] gap-10 items-start">
-                {/* NUMBER */}
                 {/* LOGO */}
-<div className="flex items-center">
-  <div
-    className="
-      w-[82px]
-      h-[82px]
-      rounded-[26px]
-      border
-      border-[#DCE5F0]
-      bg-white/80
-      backdrop-blur-xl
-      flex
-      items-center
-      justify-center
-      shadow-[0_10px_30px_rgba(15,23,42,0.05)]
-      overflow-hidden
-    "
-  >
-    <img
-      src={work.logo}
-      alt={work.title}
-      className="w-[48px] h-[48px] object-contain"
-    />
-  </div>
-</div>
+                <div className="flex items-center">
+                  <div
+                    className="
+                      w-[82px]
+                      h-[82px]
+                      rounded-[26px]
+                      border
+                      border-[#DCE5F0]
+                      bg-white/80
+                      backdrop-blur-xl
+                      flex
+                      items-center
+                      justify-center
+                      shadow-[0_10px_30px_rgba(15,23,42,0.05)]
+                      overflow-hidden
+                    "
+                  >
+                    <img
+                      src={work.logo}
+                      alt={`${work.title} logo - Double Trouble Studio featured work case study`}
+                      className="w-[48px] h-[48px] object-contain"
+                    />
+                  </div>
+                </div>
 
                 {/* CATEGORY */}
                 <div>
@@ -302,7 +311,9 @@ export default function FeaturedWork() {
 
                 {/* BUTTON */}
                 <div className="flex lg:justify-end">
-                  <div
+                  <button
+                    type="button"
+                    aria-label={`View ${work.title} featured work case study`}
                     className="
                       w-[56px]
                       h-[56px]
@@ -318,12 +329,43 @@ export default function FeaturedWork() {
                       group-hover:translate-x-1
                     "
                   >
-                    <ArrowUpRight className="w-5 h-5 text-white" />
-                  </div>
+                    <ArrowUpRight
+                      className="w-5 h-5 text-white"
+                      aria-hidden="true"
+                    />
+                  </button>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio featured work includes branding, PR campaigns,
+            digital marketing, web development, luxury event branding, guest
+            management, celebrity management, AI video production, VFX and
+            social media marketing case studies in India.
+          </h2>
+
+          <p>
+            Case studies include RNK Rentals for luxury car rental digital
+            transformation and SEO website development, House of Stars for
+            celebrity management platform branding and web development, Café
+            Holiday for restaurant and hospitality social media marketing, India
+            Today for AI-powered media campaign creative assets, All India Police
+            Golf Tournament for premium event branding and sponsor communication,
+            and Bhart Rehma for AI video production and VFX campaign assets.
+          </p>
+
+          <p>
+            Double Trouble Studio works with hospitality brands, luxury brands,
+            restaurants, cafés, fashion labels, lifestyle companies, media
+            companies, corporate brands, event properties, wedding brands and
+            founders across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad,
+            Pune, Ahmedabad, Goa and across India.
+          </p>
         </div>
       </div>
     </section>

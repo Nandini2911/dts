@@ -6,23 +6,19 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden  pt-[110px] pb-[160px]">
+    <section
+      className="relative overflow-hidden pt-[180px] pb-[160px]"
+      aria-label="About Double Trouble Studio creative agency, branding agency and digital marketing agency in Mumbai India"
+    >
       {/* BACKGROUND IMAGE */}
       <div
-        className="absolute inset-0  bg-center "
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage:
-            "url('/abouthero.jpg')", // CHANGE IMAGE PATH HERE
+          backgroundImage: "url('/abouthero.jpg')",
         }}
+        role="img"
+        aria-label="Double Trouble Studio creative agency background for branding, digital marketing, PR, web development and AI video production"
       />
-
-      {/* BACKGROUND COLOR */}
-   
-
-      {/* PREMIUM GRADIENT GLOWS */}
-
-
-      
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-7">
         {/* TOP LABEL */}
@@ -33,20 +29,20 @@ export default function AboutHero() {
           className="flex justify-center"
         >
           <div
-  className="
-    px-6
-    py-3
-    rounded-full
-    border
-    border-[#0D2444]/10
-    bg-gradient-to-r
-    from-[#0D2444]
-    via-[#16365F]
-    to-[#1F4B7A]
-    backdrop-blur-xl
-    shadow-[0_10px_40px_rgba(13,36,68,0.25)]
-  "
->
+            className="
+              px-6
+              py-3
+              rounded-full
+              border
+              border-[#0D2444]/10
+              bg-gradient-to-r
+              from-[#0D2444]
+              via-[#16365F]
+              to-[#1F4B7A]
+              backdrop-blur-xl
+              shadow-[0_10px_40px_rgba(13,36,68,0.25)]
+            "
+          >
             <span
               className="
                 text-[12px]
@@ -62,7 +58,7 @@ export default function AboutHero() {
         </motion.div>
 
         {/* HERO CONTENT */}
-        <div className="mt-2 text-center">
+        <div className="mt-6 text-center">
           {/* MAIN TITLE */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -84,9 +80,7 @@ export default function AboutHero() {
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
-            <span className="text-[#0F172A]">
-              We Build
-            </span>
+            <span className="text-[#0F172A]">We Build</span>
 
             <br />
 
@@ -105,9 +99,7 @@ export default function AboutHero() {
 
             <br />
 
-            <span className="text-[#0F172A]">
-              That Feel Alive
-            </span>
+            <span className="text-[#0F172A]">That Feel Alive</span>
           </motion.h1>
 
           {/* PARAGRAPH */}
@@ -129,10 +121,12 @@ export default function AboutHero() {
               font-medium
             "
           >
-            Double Trouble Studio is a Mumbai-based creative agency
-            building luxury digital experiences, modern storytelling
-            and high-performance brand systems for hospitality,
-            lifestyle, luxury and culture-driven brands.
+            Double Trouble Studio is a Mumbai-based creative agency, branding
+            agency and digital marketing agency building luxury digital
+            experiences, modern storytelling, PR campaigns, website development,
+            AI video production and high-performance brand systems for
+            hospitality, lifestyle, luxury, restaurant and culture-driven brands
+            across India.
           </motion.p>
 
           {/* BUTTONS */}
@@ -152,17 +146,21 @@ export default function AboutHero() {
               mt-12
             "
           >
-            <Link href="/contact">
+            <Link
+              href="/contact"
+              aria-label="Start a branding, website, PR or digital marketing project with Double Trouble Studio"
+            >
               <button className="primary-btn flex items-center gap-2">
                 Start Project
-                <ArrowRight size={18} />
+                <ArrowRight size={18} aria-hidden="true" />
               </button>
             </Link>
 
-            <Link href="/projects">
-              <button className="secondary-btn">
-                View Work
-              </button>
+            <Link
+              href="/projects"
+              aria-label="View Double Trouble Studio branding, web development, events, PR and AI video work"
+            >
+              <button className="secondary-btn">View Work</button>
             </Link>
           </motion.div>
         </div>
@@ -200,6 +198,7 @@ export default function AboutHero() {
               shadow-[0_20px_80px_rgba(15,23,42,0.08)]
               h-[420px]
             "
+            aria-label="Double Trouble Studio strategy, storytelling and brand architecture visual panel"
           >
             {/* INNER GLOW */}
             <div className="absolute top-[-100px] left-[10%] w-[220px] h-[120px] rounded-full bg-[#6288B9]/20 blur-3xl animate-pulse" />
@@ -241,9 +240,10 @@ export default function AboutHero() {
               </motion.h2>
 
               <p className="mt-8 max-w-[620px] text-black leading-9 text-[17px]">
-                Creating timeless digital experiences with premium
-                aesthetics, emotional storytelling and modern brand
-                systems designed for ambitious businesses.
+                Creating timeless digital experiences with premium aesthetics,
+                emotional storytelling, SEO-ready website systems, PR-led brand
+                communication and modern brand architecture designed for
+                ambitious businesses.
               </p>
             </div>
 
@@ -295,6 +295,40 @@ export default function AboutHero() {
             />
           </div>
         </motion.div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            About Double Trouble Studio, a Mumbai based creative agency,
+            branding agency, digital marketing agency, PR agency, website
+            development company, guest management agency, event marketing agency
+            and AI video production studio in India.
+          </h2>
+
+          <p>
+            Double Trouble Studio builds cultural brands through brand strategy,
+            visual identity, luxury brand positioning, website design, website
+            development, SEO, digital marketing, social media marketing, public
+            relations, media campaigns, event branding, guest management,
+            celebrity management, AI video production, VFX and creative
+            storytelling.
+          </p>
+
+          <p>
+            The agency works with hospitality brands, luxury brands, restaurants,
+            cafés, fashion labels, lifestyle companies, wedding planners, event
+            companies, creators, influencers, corporate brands, founders and
+            modern startups across Mumbai, Delhi, Chandigarh, Bangalore,
+            Hyderabad, Pune, Ahmedabad, Goa and across India.
+          </p>
+
+          <p>
+            Double Trouble Studio helps brands build premium positioning,
+            stronger online presence, cultural relevance, SEO visibility, PR
+            authority, digital growth and long-term brand architecture through
+            strategic creativity and premium execution.
+          </p>
+        </div>
       </div>
     </section>
   );

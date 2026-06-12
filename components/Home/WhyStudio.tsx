@@ -8,7 +8,10 @@ import {
 
 export default function AboutStudio() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F7FB] py-20">
+    <section
+      className="relative overflow-hidden bg-[#F6F7FB] py-20"
+      aria-label="About Double Trouble Studio creative branding and digital marketing agency in India"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(98,136,185,0.12),transparent_30%)]" />
 
@@ -51,7 +54,10 @@ export default function AboutStudio() {
                 mb-8
               "
             >
-              <Sparkles className="w-4 h-4 text-[#6288B9]" />
+              <Sparkles
+                className="w-4 h-4 text-[#6288B9]"
+                aria-hidden="true"
+              />
 
               <span
                 className="
@@ -114,7 +120,11 @@ export default function AboutStudio() {
                 max-w-[420px]
               "
             >
-              Double Trouble Studio is a Mumbai-based branding and digital marketing agency helping hospitality, luxury, lifestyle and event brands build stronger online presence through strategy, design and storytelling.
+              Double Trouble Studio is a Mumbai-based creative branding agency
+              and digital marketing agency in India, helping hospitality,
+              luxury, restaurant, lifestyle and event brands build stronger
+              online presence through brand strategy, visual identity, PR,
+              digital campaigns, website development and storytelling.
             </p>
           </motion.div>
         </div>
@@ -170,7 +180,7 @@ export default function AboutStudio() {
 
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">
-                 Strategic Creative Agency
+                  Strategic Creative Agency
                 </span>
 
                 <div
@@ -185,7 +195,10 @@ export default function AboutStudio() {
                     justify-center
                   "
                 >
-                  <ArrowUpRight className="w-5 h-5 text-white" />
+                  <ArrowUpRight
+                    className="w-5 h-5 text-white"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
             </div>
@@ -206,9 +219,9 @@ export default function AboutStudio() {
               </p>
 
               <p className="mt-4 text-[15px] leading-8 text-slate-500">
-                We believe growth-driven brands are built through
-                clarity, timeless aesthetics and emotional
-                storytelling.
+                We believe growth-driven brands are built through strategy,
+                clarity, luxury positioning, timeless aesthetics, cultural
+                relevance and emotional storytelling.
               </p>
             </div>
           </motion.div>
@@ -282,10 +295,10 @@ export default function AboutStudio() {
                   text-slate-600
                 "
               >
-                We create impactful visual systems,
-                elevated digital experiences and modern
-                storytelling designed for ambitious
-                lifestyle and luxury brands.
+                We create impactful brand identities, elevated digital
+                experiences, PR campaigns, social media content and modern
+                storytelling designed for ambitious luxury, lifestyle,
+                hospitality and restaurant brands.
               </p>
 
               <p
@@ -295,21 +308,31 @@ export default function AboutStudio() {
                   text-slate-500
                 "
               >
-                Every interaction is intentionally crafted
-                to feel timeless, refined and emotionally
-                connected across every brand touchpoint.
+                Every interaction is intentionally crafted to feel timeless,
+                refined and emotionally connected across websites, social media,
+                public relations, events, guest experiences and every brand
+                touchpoint.
               </p>
             </div>
 
             {/* SERVICES */}
             <div className="grid md:grid-cols-3 gap-5 mt-14">
               {[
-                "Luxury Websites",
-                "Brand Identity",
-                "Creative Campaigns",
+                {
+                  title: "Luxury Websites",
+                  text: "SEO-friendly, high-performance websites with premium UX, modern design and conversion-focused structure.",
+                },
+                {
+                  title: "Brand Identity",
+                  text: "Strategic visual identity, luxury brand positioning and brand systems built with clarity and consistency.",
+                },
+                {
+                  title: "Creative Campaigns",
+                  text: "PR, digital marketing, social media and creative campaigns designed for awareness, engagement and growth.",
+                },
               ].map((item) => (
                 <div
-                  key={item}
+                  key={item.title}
                   className="
                     rounded-[26px]
                     bg-[#F8FAFC]
@@ -333,21 +356,50 @@ export default function AboutStudio() {
                       shadow-[0_8px_20px_rgba(15,23,42,0.05)]
                     "
                   >
-                    <ArrowUpRight className="w-4 h-4 text-[#6288B9]" />
+                    <ArrowUpRight
+                      className="w-4 h-4 text-[#6288B9]"
+                      aria-hidden="true"
+                    />
                   </div>
 
                   <h4 className="mt-5 text-[17px] font-semibold text-[#10213D]">
-                    {item}
+                    {item.title}
                   </h4>
 
                   <p className="mt-2 text-[14px] leading-7 text-slate-500">
-                high-performance digital experiences with modern
-                    visual direction.
+                    {item.text}
                   </p>
                 </div>
               ))}
             </div>
           </motion.div>
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            About Double Trouble Studio, a Mumbai based creative branding
+            agency, digital marketing agency, PR agency, event management
+            company, guest management agency, website development company and AI
+            video production studio in India.
+          </h2>
+
+          <p>
+            Double Trouble Studio helps luxury brands, hospitality brands,
+            restaurants, cafes, fashion labels, lifestyle brands, corporate
+            companies, founders, event brands and wedding brands grow through
+            branding, digital marketing, social media marketing, SEO, public
+            relations, media campaigns, event management, guest management,
+            celebrity management, website development, AI video production and
+            VFX.
+          </p>
+
+          <p>
+            Services are available across Mumbai, Delhi, Chandigarh, Bangalore,
+            Hyderabad, Pune, Ahmedabad, Goa and across India for brands looking
+            for premium creative strategy, luxury brand positioning, modern web
+            design, digital campaigns and cultural storytelling.
+          </p>
         </div>
       </div>
     </section>

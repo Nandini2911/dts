@@ -10,7 +10,7 @@ const services = [
   {
     title: "Guest Management",
     tag: "Popular",
-    desc: "Guest entry, RSVP tracking and VIP coordination designed with premium execution.",
+    desc: "Premium guest management services for weddings, corporate events, luxury launches and celebrity events, including RSVP tracking, VIP handling, check-in flow and on-ground coordination.",
     features: [
       "RSVP System",
       "VIP Segmentation",
@@ -21,7 +21,7 @@ const services = [
   {
     title: "Celebrity Management",
     tag: "Popular",
-    desc: "Celebrity coordination handled with precision, discretion and luxury experience.",
+    desc: "Celebrity management and talent coordination for brand campaigns, events, weddings, launches and influencer collaborations handled with precision, discretion and premium hospitality.",
     features: [
       "Talent Sourcing",
       "Date Locking",
@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Events & Weddings",
-    desc: "Luxury experiences crafted with flawless execution, flow and elevated aesthetics.",
+    desc: "Luxury event management and wedding planning services crafted with flawless execution, premium production, guest experience design, show-flow planning and elevated aesthetics.",
     features: [
       "Concept & Theme",
       "Vendors & Production",
@@ -42,7 +42,7 @@ const services = [
   {
     title: "PR & Marketing",
     tag: "Popular",
-    desc: "PR campaigns, social media marketing, influencer collaborations and paid advertising strategies designed for modern brand growth.",
+    desc: "PR campaigns, media outreach, social media marketing, influencer collaborations and paid advertising strategies designed for brand visibility, reputation and digital growth.",
     features: [
       "Press & Features",
       "Brand Narrative",
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "Web Development",
-    desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase visibility, leads and conversions.",
+    desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase Google visibility, improve user experience, generate leads and drive conversions.",
     features: [
       "Next.js Websites",
       "UI/UX Design",
@@ -62,7 +62,7 @@ const services = [
   },
   {
     title: "AI Video & VFX",
-    desc: "AI-generated video ads, cinematic brand visuals and VFX content created for social media campaigns, launches and digital promotions.",
+    desc: "AI video production, cinematic brand films, AI-generated video ads and VFX content created for social media campaigns, product launches, brand storytelling and digital promotions.",
     features: [
       "AI Video Ads",
       "Product Films",
@@ -74,7 +74,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative overflow-hidden py-20 bg-[#EEF3F8]">
+    <section
+      className="relative overflow-hidden py-20 bg-[#EEF3F8]"
+      aria-label="Double Trouble Studio services including guest management, celebrity management, events, PR, web development and AI video production in India"
+    >
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(49,80,122,0.18),transparent_30%)]" />
 
@@ -117,7 +120,10 @@ export default function ServicesSection() {
                 mb-8
               "
             >
-              <Sparkles className="w-4 h-4 text-[#6288B9]" />
+              <Sparkles
+                className="w-4 h-4 text-[#6288B9]"
+                aria-hidden="true"
+              />
 
               <span
                 className="
@@ -128,7 +134,7 @@ export default function ServicesSection() {
                   text-[#31507A]
                 "
               >
-                Our Services
+                Our Creative Services
               </span>
             </div>
 
@@ -141,14 +147,14 @@ export default function ServicesSection() {
                 tracking-[-3px]
                 font-bold
                 text-[#10213D]
-                  max-w-[580px]
+                max-w-[580px]
               "
               style={{
                 fontFamily:
                   "New York, ui-serif, Georgia, serif",
               }}
             >
-             A premium stack for brands 
+              A Premium Stack for Brands
               <span
                 className="
                   block
@@ -160,7 +166,7 @@ export default function ServicesSection() {
                   to-[#A8BEDB]
                 "
               >
-              that want attention - and respect.
+                That Want Attention - and Respect.
               </span>
             </h2>
           </div>
@@ -174,16 +180,17 @@ export default function ServicesSection() {
               text-slate-500
             "
           >
-            Every service is designed to work together —
-            creating a scalable brand experience with
-            consistency, visibility and cultural relevance.
+            From guest management, celebrity management and luxury event
+            planning to PR, digital marketing, web development and AI video
+            production, every service is designed to create consistent
+            visibility, stronger positioning and cultural relevance.
           </p>
         </motion.div>
 
         {/* SERVICES */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-7 mt-24">
           {services.map((service, index) => (
-            <motion.div
+            <motion.article
               key={service.title}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -207,6 +214,7 @@ export default function ServicesSection() {
                 hover:-translate-y-2
                 hover:shadow-[0_25px_70px_rgba(15,23,42,0.08)]
               "
+              aria-label={`${service.title} service by Double Trouble Studio`}
             >
               {/* TOP GLOW */}
               <div
@@ -321,6 +329,8 @@ export default function ServicesSection() {
 
               {/* BUTTON */}
               <button
+                type="button"
+                aria-label={`Learn more about ${service.title}`}
                 className="
                   mt-8
                   flex
@@ -349,11 +359,47 @@ export default function ServicesSection() {
                     group-hover:translate-x-1
                   "
                 >
-                  <ArrowUpRight className="w-4 h-4 text-white" />
+                  <ArrowUpRight
+                    className="w-4 h-4 text-white"
+                    aria-hidden="true"
+                  />
                 </div>
               </button>
-            </motion.div>
+            </motion.article>
           ))}
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio services include guest management, celebrity
+            management, luxury event management, wedding planning, PR agency
+            services, digital marketing, web development, SEO, AI video
+            production and VFX in India.
+          </h2>
+
+          <p>
+            The agency provides premium guest management services for weddings,
+            corporate events, celebrity events, brand launches, investor events
+            and private gatherings with RSVP tracking, VIP segmentation,
+            check-in coordination, access control and on-ground event support.
+          </p>
+
+          <p>
+            Double Trouble Studio provides celebrity management, influencer
+            marketing, public relations, media outreach, social media marketing,
+            performance advertising, custom Next.js website development, landing
+            pages, SEO optimization, AI video ads, product films and VFX content
+            for luxury brands, hospitality brands, restaurants, fashion labels,
+            lifestyle companies and corporate brands.
+          </p>
+
+          <p>
+            Services are available across Mumbai, Delhi, Chandigarh, Bangalore,
+            Hyderabad, Pune, Ahmedabad, Goa and across India for brands looking
+            for premium creative strategy, event execution, digital growth and
+            cultural relevance.
+          </p>
         </div>
       </div>
     </section>

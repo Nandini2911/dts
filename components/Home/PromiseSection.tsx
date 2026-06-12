@@ -12,41 +12,33 @@ const features = [
   {
     icon: Layers3,
     title: "Structured Creativity",
-    desc: "Clean systems, premium visuals and intentional execution for modern brands.",
+    desc: "Clean brand systems, premium visuals, SEO-ready structure and intentional execution for modern digital brands.",
   },
   {
     icon: Globe,
     title: "Digital Presence",
-    desc: "Elegant experiences crafted to feel premium across every platform.",
+    desc: "Elegant website, social media and campaign experiences crafted to feel premium across every platform.",
   },
 ];
 
 export default function PremiumSection() {
   return (
-  <section className="relative overflow-hidden py-20">
-
-  {/* BG IMAGE */}
-  <div className="absolute inset-0">
-    <img
-      src="/promis.png"
-      alt=""
-      className="
-        w-full
-        h-full
-      
-     
-        scale-105
-      "
-    />
-  </div>
-
-
-  {/* YOUR CONTENT */}
-
-
-
-      
-     
+    <section
+      className="relative overflow-hidden py-20"
+      aria-label="Premium brand identity, digital presence and creative execution by Double Trouble Studio"
+    >
+      {/* BG IMAGE */}
+      <div className="absolute inset-0">
+        <img
+          src="/promis.png"
+          alt="Premium brand identity and digital design background for Double Trouble Studio"
+          className="
+            w-full
+            h-full
+            scale-105
+          "
+        />
+      </div>
 
       {/* FLOAT BLUR */}
       <motion.div
@@ -80,10 +72,13 @@ export default function PremiumSection() {
               mb-6
             "
           >
-            <Sparkles className="w-4 h-4 text-[#6288B9]" />
+            <Sparkles
+              className="w-4 h-4 text-[#6288B9]"
+              aria-hidden="true"
+            />
 
             <span className="text-[11px] tracking-[2px] uppercase text-[#0D2444] font-medium">
-              Premium Identity
+              Premium Brand Identity
             </span>
           </motion.div>
 
@@ -93,15 +88,14 @@ export default function PremiumSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="
-            text-[40px]
+              text-[40px]
               md:text-[58px]
               font-semibold
               tracking-[-3px]
               leading-[1]
               text-[#0D2444]
-            
             "
-              style={{
+            style={{
               fontFamily:
                 "New York, ui-serif, Georgia, serif",
             }}
@@ -125,9 +119,9 @@ export default function PremiumSection() {
               text-slate-500
             "
           >
-            Minimal aesthetics, refined interactions and
-            premium execution designed to elevate modern
-            digital brands.
+            Minimal aesthetics, refined interactions, SEO-friendly digital
+            structure and premium execution designed to elevate luxury,
+            hospitality, lifestyle and modern digital brands.
           </motion.p>
         </div>
 
@@ -156,7 +150,10 @@ export default function PremiumSection() {
             <div className="relative z-10">
               <div className="flex items-center justify-between">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0D2444] to-[#6288B9] flex items-center justify-center shadow-lg">
-                  <Sparkles className="w-5 h-5 text-white" />
+                  <Sparkles
+                    className="w-5 h-5 text-white"
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div className="px-3 py-1 rounded-full bg-[#EDF4FC] text-[#0D2444] text-[11px] font-medium tracking-wide">
@@ -173,12 +170,11 @@ export default function PremiumSection() {
                   tracking-[-2px]
                   text-[#0F172A]
                   font-semibold
-               
                 "
                 style={{
-                fontFamily:
-                  "New York, ui-serif, Georgia, serif",
-              }}
+                  fontFamily:
+                    "New York, ui-serif, Georgia, serif",
+                }}
               >
                 Elegant design
 
@@ -188,9 +184,10 @@ export default function PremiumSection() {
               </h3>
 
               <p className="mt-5 text-[14px] leading-7 text-slate-500 max-w-lg">
-                Every interaction is designed to feel
-                modern, premium and intentional — from
-                visuals to storytelling and execution.
+                Every interaction is designed to feel modern, premium and
+                intentional — from brand identity, website design and social
+                media visuals to storytelling, PR communication and campaign
+                execution.
               </p>
 
               {/* MINI FEATURES */}
@@ -199,8 +196,8 @@ export default function PremiumSection() {
                   const Icon = item.icon;
 
                   return (
-                    <motion.div
-                      key={index}
+                    <motion.article
+                      key={item.title}
                       whileHover={{ y: -4 }}
                       className="
                         rounded-2xl
@@ -210,9 +207,13 @@ export default function PremiumSection() {
                         p-5
                         backdrop-blur-xl
                       "
+                      aria-label={`${item.title} for premium brand identity and digital presence`}
                     >
                       <div className="w-10 h-10 rounded-xl bg-[#EDF4FC] flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-[#0D2444]" />
+                        <Icon
+                          className="w-4 h-4 text-[#0D2444]"
+                          aria-hidden="true"
+                        />
                       </div>
 
                       <h4 className="mt-4 text-[16px] font-semibold text-[#0F172A]">
@@ -222,7 +223,7 @@ export default function PremiumSection() {
                       <p className="mt-2 text-[13px] leading-6 text-slate-500">
                         {item.desc}
                       </p>
-                    </motion.div>
+                    </motion.article>
                   );
                 })}
               </div>
@@ -250,17 +251,21 @@ export default function PremiumSection() {
                 text-white
                 min-h-[220px]
               "
+              aria-label="Premium performance-focused creative execution by Double Trouble Studio"
             >
               <div className="absolute -top-10 -right-10 w-[180px] h-[180px] rounded-full bg-white/10 blur-3xl" />
 
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-xl">
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div>
                   <p className="text-[11px] uppercase tracking-[2px] text-white/60">
-                    Performance
+                    Performance Branding
                   </p>
 
                   <h3 className="mt-3 text-2xl font-semibold leading-tight font-[family:var(--font-sora)]">
@@ -287,11 +292,12 @@ export default function PremiumSection() {
                 backdrop-blur-xl
                 p-6
               "
+              aria-label="Clean visuals and smooth motion for premium digital brand experience"
             >
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[11px] uppercase tracking-[2px] text-slate-400">
-                    Experience
+                    Digital Experience
                   </p>
 
                   <h3 className="mt-2 text-2xl leading-tight font-semibold text-[#0F172A] font-[family:var(--font-sora)]">
@@ -326,6 +332,32 @@ export default function PremiumSection() {
               </div>
             </motion.div>
           </div>
+        </div>
+
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio creates premium brand identity, luxury brand
+            positioning, digital presence, website design, social media visuals,
+            PR communication, creative campaigns, AI video production and
+            performance-focused brand systems in India.
+          </h2>
+
+          <p>
+            The premium identity approach includes brand strategy, visual
+            identity, structured creativity, digital presence, website
+            development, SEO-friendly content structure, social media marketing,
+            public relations, event branding, campaign design, motion visuals,
+            AI video ads, VFX content and premium storytelling for luxury,
+            hospitality, restaurant, fashion, lifestyle and corporate brands.
+          </p>
+
+          <p>
+            Double Trouble Studio works with premium brands across Mumbai,
+            Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and
+            across India to build modern digital brands with clarity,
+            consistency, cultural relevance and long-term growth.
+          </p>
         </div>
       </div>
     </section>

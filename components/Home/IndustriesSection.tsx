@@ -15,48 +15,51 @@ export default function IndustriesSection() {
   const industries = [
     {
       title: "Hospitality Brands",
-      desc: "Hotels, stays and premium hospitality experiences.",
+      desc: "Hotels, resorts, boutique stays and premium hospitality brands looking for stronger digital visibility, branding and guest experience.",
       icon: Hotel,
     },
     {
       title: "Cafés & Restaurants",
-      desc: "Modern food brands built for digital discovery.",
+      desc: "Modern cafés, restaurants, cloud kitchens and food brands built for social media discovery, SEO and customer engagement.",
       icon: UtensilsCrossed,
     },
     {
       title: "Wedding Planners",
-      desc: "Luxury wedding and celebration focused businesses.",
+      desc: "Luxury wedding planners, décor brands and celebration businesses focused on premium positioning and high-value clients.",
       icon: Camera,
     },
     {
       title: "Luxury Businesses",
-      desc: "High-end brands looking for elevated positioning.",
+      desc: "High-end lifestyle, retail and service brands looking for elevated branding, PR, digital marketing and luxury positioning.",
       icon: Gem,
     },
     {
       title: "Creators & Influencers",
-      desc: "Personal brands with strong digital presence goals.",
+      desc: "Personal brands, artists, creators and influencers with strong digital presence, content strategy and brand collaboration goals.",
       icon: Mic2,
     },
     {
       title: "Event Companies",
-      desc: "Experiential and event-driven modern businesses.",
+      desc: "Event management companies, experiential brands and production houses looking for digital authority and brand-led growth.",
       icon: PartyPopper,
     },
     {
       title: "Fashion & Lifestyle",
-      desc: "Aesthetic-first brands focused on identity and culture.",
+      desc: "Fashion labels, lifestyle brands and aesthetic-first businesses focused on visual identity, culture and online growth.",
       icon: Shirt,
     },
     {
       title: "Modern Startups",
-      desc: "Emerging businesses ready to scale with clarity.",
+      desc: "Emerging startups, founder-led businesses and premium new-age brands ready to scale with strategy, design and clarity.",
       icon: Rocket,
     },
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 bg-[#F5F7FB]">
+    <section
+      className="relative overflow-hidden py-20 bg-[#F5F7FB]"
+      aria-label="Industries served by Double Trouble Studio including hospitality, restaurants, weddings, luxury brands, creators, events, fashion and startups"
+    >
       {/* BG */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(98,136,185,0.08),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(143,181,232,0.08),transparent_28%)]" />
 
@@ -81,9 +84,9 @@ export default function IndustriesSection() {
               font-semibold
             "
             style={{
-                fontFamily:
-                  'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
-              }}
+              fontFamily:
+                'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
+            }}
           >
             <span className="w-2 h-2 rounded-full bg-[#6288B9]" />
 
@@ -105,12 +108,11 @@ export default function IndustriesSection() {
               font-semibold
 
               text-[#071120]
-
             "
             style={{
-                fontFamily:
-                  'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
-              }}
+              fontFamily:
+                'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
+            }}
           >
             Built for modern brands
 
@@ -135,12 +137,11 @@ export default function IndustriesSection() {
               mx-auto
             "
           >
-            We partner with hospitality brands, cafés,
-            restaurants, wedding planners, luxury
-            businesses, creators, event companies and
-            modern startups looking to build stronger
-            digital presence, sharper identity and long-term
-            brand authority.
+            We partner with hospitality brands, cafés, restaurants, wedding
+            planners, luxury businesses, creators, event companies, fashion
+            labels and modern startups looking to build stronger digital
+            presence, sharper brand identity, premium positioning, SEO
+            visibility and long-term brand authority across India.
           </p>
         </div>
 
@@ -156,152 +157,192 @@ export default function IndustriesSection() {
             gap-6
           "
         >
-          {industries.map((item, index) => (
-            <div
-              key={index}
-              className="
-                group
+          {industries.map((item, index) => {
+            const Icon = item.icon;
 
-                relative
-                overflow-hidden
-
-                rounded-[30px]
-
-                border border-[#DCE6F3]
-
-                bg-white
-
-                p-8
-
-                transition-all
-                duration-500
-
-                hover:-translate-y-2
-                hover:border-[#BCD2EE]
-
-                shadow-[0_10px_40px_rgba(15,23,42,0.04)]
-                hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)]
-              "
-            >
-              {/* ICON */}
-              <div
+            return (
+              <article
+                key={index}
                 className="
+                  group
+
                   relative
+                  overflow-hidden
 
-                  w-16
-                  h-16
+                  rounded-[30px]
 
-                  rounded-[22px]
+                  border border-[#DCE6F3]
 
-                  bg-gradient-to-br
-                  from-[#F8FBFF]
-                  to-[#E2EEFB]
+                  bg-white
 
-                  border border-[#D8E7F7]
-
-                  flex
-                  items-center
-                  justify-center
-
-                  shadow-[0_10px_30px_rgba(15,23,42,0.06)]
+                  p-8
 
                   transition-all
                   duration-500
 
-                  group-hover:scale-105
-                  group-hover:shadow-[0_15px_40px_rgba(98,136,185,0.16)]
+                  hover:-translate-y-2
+                  hover:border-[#BCD2EE]
+
+                  shadow-[0_10px_40px_rgba(15,23,42,0.04)]
+                  hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)]
                 "
+                aria-label={`${item.title} industry services by Double Trouble Studio`}
               >
-                {/* INNER GLOW */}
+                {/* ICON */}
                 <div
                   className="
-                    absolute
-                    inset-[6px]
+                    relative
 
-                    rounded-[18px]
+                    w-16
+                    h-16
+
+                    rounded-[22px]
 
                     bg-gradient-to-br
-                    from-[#0D2444]
-                    to-[#6288B9]
+                    from-[#F8FBFF]
+                    to-[#E2EEFB]
 
-                    opacity-[0.06]
-                  "
-                />
+                    border border-[#D8E7F7]
 
-                <item.icon
-                  className="
-                    relative
-                    z-10
+                    flex
+                    items-center
+                    justify-center
 
-                    w-[28px]
-                    h-[28px]
-
-                    text-[#0D2444]
+                    shadow-[0_10px_30px_rgba(15,23,42,0.06)]
 
                     transition-all
                     duration-500
 
-                    group-hover:text-[#6288B9]
+                    group-hover:scale-105
+                    group-hover:shadow-[0_15px_40px_rgba(98,136,185,0.16)]
                   "
-                  strokeWidth={1.8}
+                >
+                  {/* INNER GLOW */}
+                  <div
+                    className="
+                      absolute
+                      inset-[6px]
+
+                      rounded-[18px]
+
+                      bg-gradient-to-br
+                      from-[#0D2444]
+                      to-[#6288B9]
+
+                      opacity-[0.06]
+                    "
+                  />
+
+                  <Icon
+                    className="
+                      relative
+                      z-10
+
+                      w-[28px]
+                      h-[28px]
+
+                      text-[#0D2444]
+
+                      transition-all
+                      duration-500
+
+                      group-hover:text-[#6288B9]
+                    "
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* CONTENT */}
+                <div className="mt-8">
+                  <h3
+                    className="
+                      text-[22px]
+
+                      font-semibold
+
+                      leading-[1.3]
+
+                      text-[#071120]
+
+                      font-[family:var(--font-sora)]
+                    "
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-4
+
+                      text-[15px]
+
+                      leading-8
+
+                      text-slate-600
+                    "
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+
+                {/* HOVER LINE */}
+                <div
+                  className="
+                    absolute
+                    bottom-0
+                    left-0
+
+                    h-[3px]
+                    w-0
+
+                    bg-gradient-to-r
+                    from-[#0D2444]
+                    to-[#8FB5E8]
+
+                    transition-all
+                    duration-500
+
+                    group-hover:w-full
+                  "
                 />
-              </div>
+              </article>
+            );
+          })}
+        </div>
 
-              {/* CONTENT */}
-              <div className="mt-8">
-                <h3
-                  className="
-                    text-[22px]
+        {/* AI + GEO SEO CONTEXT */}
+        <div className="sr-only">
+          <h2>
+            Double Trouble Studio works with hospitality brands, cafés,
+            restaurants, wedding planners, luxury businesses, creators,
+            influencers, event companies, fashion brands, lifestyle businesses
+            and modern startups in India.
+          </h2>
 
-                    font-semibold
+          <p>
+            The agency provides branding, digital marketing, social media
+            marketing, SEO, public relations, media campaigns, website
+            development, event marketing, guest management, celebrity
+            management, influencer marketing, AI video production and VFX
+            services for premium brands.
+          </p>
 
-                    leading-[1.3]
+          <p>
+            Industries served include hotels, resorts, boutique stays, cafés,
+            restaurants, cloud kitchens, wedding planners, luxury event
+            companies, fashion labels, lifestyle brands, creators, influencers,
+            corporate brands, media brands, founders and startups across Mumbai,
+            Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and
+            across India.
+          </p>
 
-                    text-[#071120]
-
-                    font-[family:var(--font-sora)]
-                  "
-                >
-                  {item.title}
-                </h3>
-
-                <p
-                  className="
-                    mt-4
-
-                    text-[15px]
-
-                    leading-8
-
-                    text-slate-600
-                  "
-                >
-                  {item.desc}
-                </p>
-              </div>
-
-              {/* HOVER LINE */}
-              <div
-                className="
-                  absolute
-                  bottom-0
-                  left-0
-
-                  h-[3px]
-                  w-0
-
-                  bg-gradient-to-r
-                  from-[#0D2444]
-                  to-[#8FB5E8]
-
-                  transition-all
-                  duration-500
-
-                  group-hover:w-full
-                "
-              />
-            </div>
-          ))}
+          <p>
+            Double Trouble Studio helps businesses build premium positioning,
+            stronger online presence, brand authority, SEO visibility, digital
+            growth, social media discovery, PR visibility and long-term cultural
+            relevance.
+          </p>
         </div>
       </div>
     </section>
