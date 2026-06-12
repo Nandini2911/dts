@@ -10,6 +10,11 @@ import CelebrityManagementProcess from "@/components/CelebrityManagement/Celebri
 
 import Navbar from "@/components/Navbar";
 import CelebrityTalentTypesSection from "@/components/CelebrityManagement/CelebrityTalentTypesSection";
+import CelebrityManagementIndiaCoverage from "@/components/CelebrityManagement/CelebrityManagementIndiaCoverage";
+import CelebrityUseCasesBookingInfo from "@/components/CelebrityManagement/CelebrityUseCasesBookingInfo";
+import CelebrityManagementFAQ from "@/components/CelebrityManagement/CelebrityManagementFAQ";
+import CelebrityManagementCTA from "@/components/CelebrityManagement/CelebrityManagementCTA";
+import WhyWorkWithDoubleTroubleStudio from "@/components/CelebrityManagement/WhyWorkWithDoubleTroubleStudio";
 
 
 
@@ -27,6 +32,11 @@ export default function CelebrityManagement() {
    <CelebrityManagementIndustries/>
    <CelebrityManagementProcess/>
    <CelebrityTalentTypesSection/>
+   <WhyWorkWithDoubleTroubleStudio/>
+   <CelebrityManagementIndiaCoverage/>
+   <CelebrityUseCasesBookingInfo/>
+   <CelebrityManagementFAQ/>
+   <CelebrityManagementCTA/>
       <Footer/>
     </main>
   );
