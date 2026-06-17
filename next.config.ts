@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  allowedDevOrigins: ["10.112.70.125"],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  allowedDevOrigins: [
+    "192.168.1.14",     // Aapka current IP
+    "localhost",
+    "0.0.0.0"
+  ],
+  
+  // Extra safe settings (content loading ke liye)
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
