@@ -24,7 +24,7 @@ export default function Hero() {
           bg-cover
           bg-no-repeat
           scale-[1.02]
-          brightness-[0.80]
+        
         "
         style={{
           backgroundImage: "url('/abouthero.jpg')",
@@ -39,9 +39,11 @@ export default function Hero() {
           absolute
           inset-0
           bg-gradient-to-r
-          from-black/75
-          via-black/45
-          to-black/20
+          from-black/5
+          via-black/25
+          to-black/45
+
+         
         "
       />
 
