@@ -9,6 +9,9 @@ import Navbar from "@/components/Navbar";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERY, POSTS_QUERY } from "@/sanity/lib/queries";
+import BlogShareButtons from "@/components/BlogShareButtons";
+
+
 
 export const revalidate = 60;
 
@@ -320,32 +323,37 @@ export default async function BlogPostPage({ params }: PageProps) {
     });
 
   const relatedPosts = allRelatedPosts.slice(0, 3);
+  const sidebarRelatedPosts = allRelatedPosts.slice(0, 5);
 
-const sidebarRelatedPosts = allRelatedPosts.slice(0, 5);
+  const relatedExploreHref = post.category
+    ? `/blog?category=${encodeURIComponent(post.category)}#blog-results`
+    : "/blog#blog-results";
 
-const relatedExploreHref = post.category
-  ? `/blog?category=${encodeURIComponent(post.category)}#blog-results`
-  : "/blog#blog-results";
-const categoryCounts = blogCategoryOrder.map((category) => {
-  const count =
-    category === "All"
-      ? allPosts.length
-      : allPosts.filter((item) => item.category === category).length;
+  const categoryCounts = blogCategoryOrder.map((category) => {
+    const count =
+      category === "All"
+        ? allPosts.length
+        : allPosts.filter((item) => item.category === category).length;
 
-  const href =
-    category === "All"
-      ? "/blog#blog-results"
-      : `/blog?category=${encodeURIComponent(category)}#blog-results`;
+    const href =
+      category === "All"
+        ? "/blog#blog-results"
+        : `/blog?category=${encodeURIComponent(category)}#blog-results`;
 
-  return {
-    category,
-    count,
-    href,
-  };
-});
+    return {
+      category,
+      count,
+      href,
+    };
+  });
 
   const tableOfContents = getTableOfContents(post.body);
   const readTime = getReadTime(post);
+
+  const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.doubletroublestudio.com";
+
+const shareUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.slug}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -460,275 +468,219 @@ const categoryCounts = blogCategoryOrder.map((category) => {
           </div>
         </div>
       </section>
+{/* Blog Content */}
+<section className="px-5 pb-20 pt-8 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-7xl">
+    <div className="grid items-start gap-10 lg:grid-cols-[340px_minmax(0,1fr)]">
+      
+      {/* Left Sticky Sidebar */}
+      <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
+        
 
-      {/* Content */}
-      <section className="px-5 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1.7fr]">
-          {/* Sidebar */}
-          <aside className="lg:sticky lg:top-24 lg:h-fit">
-            {/* Article Details */}
-            <div className="rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
+        {/* Table of Contents */}
+        {tableOfContents.length > 0 && (
+          <div className="rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
+              Table of Contents
+            </p>
+
+            <div className="mt-5 space-y-3">
+              {tableOfContents.map((item, index) => (
+                <a
+                  key={`${item.id}-${index}`}
+                  href={`#${item.id}`}
+                  className="grid grid-cols-[28px_1fr] gap-3 rounded-[18px] bg-[#F7FAFF] px-4 py-3 text-sm font-bold leading-6 text-[#38506D] transition hover:bg-[#EAF2FF] hover:text-[#0D2444]"
+                >
+                  <span className="text-xs font-black text-[#6288B9]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{item.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Share Blog */}
+<BlogShareButtons
+  title={post.title}
+  excerpt={post.excerpt}
+  url={shareUrl}
+/>
+
+        {/* Related Blogs */}
+        <div className="rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
+          <div className="flex items-center justify-between gap-4">
+            <div>
               <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
-                Article Details
-              </p>
-
-              <div className="mt-6 space-y-4">
-                <div className="rounded-[22px] bg-[#F7FAFF] p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#7B8EA5]">
-                    Author
-                  </p>
-
-                  <p className="mt-2 text-sm font-black text-[#0D2444]">
-                    {post.authorName || "Double Trouble Studio"}
-                  </p>
-                </div>
-
-                <div className="rounded-[22px] bg-[#F7FAFF] p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#7B8EA5]">
-                    Published
-                  </p>
-
-                  <p className="mt-2 text-sm font-black text-[#0D2444]">
-                    {formatDate(post.publishedAt)}
-                  </p>
-                </div>
-
-                <div className="rounded-[22px] bg-[#F7FAFF] p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#7B8EA5]">
-                    Read Time
-                  </p>
-
-                  <p className="mt-2 text-sm font-black text-[#0D2444]">
-                    {readTime}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Table of Contents */}
-            {tableOfContents.length > 0 && (
-              <div className="mt-6 rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
-                <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
-                  Table of Contents
-                </p>
-
-                <div className="mt-5 space-y-3">
-                  {tableOfContents.map((item, index) => (
-                    <a
-                      key={`${item.id}-${index}`}
-                      href={`#${item.id}`}
-                      className="block rounded-[18px] bg-[#F7FAFF] px-4 py-3 text-sm font-bold leading-6 text-[#38506D] transition hover:bg-[#EAF2FF] hover:text-[#0D2444]"
-                    >
-                      {String(index + 1).padStart(2, "0")}. {item.title}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-           {/* Related Blogs */}
-<div className="mt-6 rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
-  <div className="flex items-center justify-between gap-4">
-    <div>
-      <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
-        Related Blogs
-      </p>
-
-      <h3
-        className="mt-2 text-2xl font-black tracking-[-0.04em] text-[#0D2444]"
-        style={{
-          fontFamily: "New York, ui-serif, Georgia, serif",
-        }}
-      >
-        Similar Reads
-      </h3>
-    </div>
-
-    <span className="rounded-full bg-[#EAF2FF] px-3 py-2 text-xs font-black text-[#315E91]">
-      {allRelatedPosts.length}
-    </span>
-  </div>
-
-  <div className="mt-5 space-y-4">
-    {sidebarRelatedPosts.length === 0 ? (
-      <p className="rounded-[20px] bg-[#F7FAFF] p-4 text-sm font-semibold leading-6 text-[#53677F]">
-        No related blogs available in this category yet.
-      </p>
-    ) : (
-      sidebarRelatedPosts.map((item) => (
-        <Link
-          key={item._id}
-          href={`/blog/${item.slug}`}
-          className="group block rounded-[22px] border border-[#E5EEF9] bg-[#F7FAFF] p-4 transition hover:-translate-y-0.5 hover:border-[#C9DAF0] hover:bg-[#EAF2FF]"
-        >
-          <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#6288B9]">
-            {item.category || "DTS Insight"} • {getReadTime(item)}
-          </p>
-
-          <h4
-            className="line-clamp-2 text-sm font-black leading-5 tracking-[-0.03em] text-[#0D2444] transition group-hover:text-[#315E91]"
-            style={{
-              fontFamily: "New York, ui-serif, Georgia, serif",
-            }}
-          >
-            {item.title}
-          </h4>
-
-          <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#7B8EA5]">
-            {formatDate(item.publishedAt)}
-          </p>
-        </Link>
-      ))
-    )}
-  </div>
-
-  <Link
-    href={relatedExploreHref}
-    className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#0D2444] px-5 py-4 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#315E91]"
-  >
-    Explore More →
-  </Link>
-</div>
-
-            {/* All Categories */}
-            <div className="mt-6 rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
-                    All Categories
-                  </p>
-
-                  <h3
-                    className="mt-2 text-2xl font-black tracking-[-0.04em] text-[#0D2444]"
-                    style={{
-                      fontFamily: "New York, ui-serif, Georgia, serif",
-                    }}
-                  >
-                    Blog Topics
-                  </h3>
-                </div>
-
-                <span className="rounded-full bg-[#0D2444] px-3 py-2 text-xs font-black text-white">
-                  {allPosts.length}
-                </span>
-              </div>
-
-              <div className="mt-5 space-y-3">
-                {categoryCounts.map((item) => {
-                  const isActive = item.category === post.category;
-
-                  return (
-                    <Link
-                      key={item.category}
-                      href={item.href}
-                      className={`flex items-center justify-between gap-4 rounded-[20px] border px-4 py-3 transition hover:-translate-y-0.5 ${
-                        isActive
-                          ? "border-[#0D2444] bg-[#0D2444] text-white shadow-lg shadow-[#0D2444]/15"
-                          : "border-[#E5EEF9] bg-[#F7FAFF] text-[#0D2444] hover:bg-[#EAF2FF]"
-                      }`}
-                    >
-                      <span className="text-sm font-black leading-5">
-                        {item.category}
-                      </span>
-
-                      <span
-                        className={`flex h-8 min-w-8 items-center justify-center rounded-full px-2 text-xs font-black ${
-                          isActive
-                            ? "bg-white text-[#0D2444]"
-                            : "bg-white text-[#315E91]"
-                        }`}
-                      >
-                        {item.count}
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Related Blog Count */}
-            <div className="mt-6 rounded-[32px] border border-[#DCE7F5] bg-gradient-to-br from-[#0D2444] via-[#193B63] to-[#6288B9] p-6 text-white shadow-xl shadow-[#0D2444]/15">
-              <p className="text-xs font-black uppercase tracking-[0.24em] text-[#DDE8F7]">
                 Related Blogs
               </p>
 
               <h3
-                className="mt-2 text-3xl font-black tracking-[-0.05em]"
+                className="mt-2 text-2xl font-black tracking-[-0.04em] text-[#0D2444]"
                 style={{
                   fontFamily: "New York, ui-serif, Georgia, serif",
                 }}
               >
-                {allRelatedPosts.length}
+                Similar Reads
               </h3>
-
-              <p className="mt-2 text-sm leading-6 text-[#DDE8F7]">
-                Related blogs available in{" "}
-                <span className="font-black">
-                  {post.category || "this topic"}
-                </span>
-                .
-              </p>
-
-              <Link
-                href="/blog#blog-results"
-                className="mt-5 inline-flex rounded-full bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-[#0D2444] transition hover:bg-[#EAF2FF]"
-              >
-                Explore All →
-              </Link>
             </div>
-          </aside>
 
-          {/* Article */}
-          <article className="rounded-[38px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10 sm:p-9 lg:p-12">
-            {post.body ? (
-              <div className="prose prose-lg max-w-none space-y-7">
-                <PortableText
-                  value={post.body}
-                  components={portableTextComponents}
-                />
-              </div>
+            <span className="rounded-full bg-[#EAF2FF] px-3 py-2 text-xs font-black text-[#315E91]">
+              {allRelatedPosts.length}
+            </span>
+          </div>
+
+          <div className="mt-5 space-y-4">
+            {sidebarRelatedPosts.length === 0 ? (
+              <p className="rounded-[20px] bg-[#F7FAFF] p-4 text-sm font-semibold leading-6 text-[#53677F]">
+                No related blogs available in this category yet.
+              </p>
             ) : (
-              <div className="rounded-[28px] border border-dashed border-[#C9DAF0] bg-[#F7FAFF] p-8 text-center">
-                <h2 className="text-2xl font-black text-[#0D2444]">
-                  Blog content coming soon.
-                </h2>
+              sidebarRelatedPosts.map((item) => (
+                <Link
+                  key={item._id}
+                  href={`/blog/${item.slug}`}
+                  className="group block rounded-[22px] border border-[#E5EEF9] bg-[#F7FAFF] p-4 transition hover:-translate-y-0.5 hover:border-[#C9DAF0] hover:bg-[#EAF2FF]"
+                >
+                  <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#6288B9]">
+                    {item.category || "DTS Insight"} • {getReadTime(item)}
+                  </p>
 
-                <p className="mt-3 text-sm leading-7 text-[#53677F]">
-                  Add content in Sanity Studio and publish the blog.
-                </p>
-              </div>
+                  <h4
+                    className="line-clamp-2 text-sm font-black leading-5 tracking-[-0.03em] text-[#0D2444] transition group-hover:text-[#315E91]"
+                    style={{
+                      fontFamily: "New York, ui-serif, Georgia, serif",
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+
+                  <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#7B8EA5]">
+                    {formatDate(item.publishedAt)}
+                  </p>
+                </Link>
+              ))
             )}
+          </div>
 
-            <div className="mt-12 rounded-[30px] bg-gradient-to-br from-[#0D2444] via-[#193B63] to-[#6288B9] p-7 text-white sm:p-9">
-              <p className="text-xs font-black uppercase tracking-[0.24em] text-[#DDE8F7]">
-                Need this for your brand?
+          <Link
+            href={relatedExploreHref}
+            className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#0D2444] px-5 py-4 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#315E91]"
+          >
+            Explore More →
+          </Link>
+        </div>
+
+        {/* All Categories */}
+        <div className="rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6288B9]">
+                All Categories
               </p>
 
-              <h2
-                className="mt-3 text-3xl font-black tracking-[-0.05em] sm:text-4xl"
+              <h3
+                className="mt-2 text-2xl font-black tracking-[-0.04em] text-[#0D2444]"
                 style={{
                   fontFamily: "New York, ui-serif, Georgia, serif",
                 }}
               >
-                Let DTS build your next campaign.
-              </h2>
-
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-[#DDE8F7]">
-                From PR, celebrity management and events to websites, social
-                media, SEO and AI video production — Double Trouble Studio helps
-                brands grow with strategy and execution.
-              </p>
-
-              <Link
-                href="/contact"
-                className="mt-7 inline-flex rounded-full bg-white px-7 py-4 text-sm font-black text-[#0D2444] transition hover:bg-[#EAF2FF]"
-              >
-                Discuss Your Requirement →
-              </Link>
+                Blog Topics
+              </h3>
             </div>
-          </article>
+
+            <span className="rounded-full bg-[#0D2444] px-3 py-2 text-xs font-black text-white">
+              {allPosts.length}
+            </span>
+          </div>
+
+          <div className="mt-5 space-y-3">
+            {categoryCounts.map((item) => {
+              const isActive =
+                item.category !== "All" && item.category === post.category;
+
+              return (
+                <Link
+                  key={item.category}
+                  href={item.href}
+                  className={`flex items-center justify-between gap-4 rounded-[20px] border px-4 py-3 transition hover:-translate-y-0.5 ${
+                    isActive
+                      ? "border-[#0D2444] bg-[#0D2444] text-white shadow-lg shadow-[#0D2444]/15"
+                      : "border-[#E5EEF9] bg-[#F7FAFF] text-[#0D2444] hover:bg-[#EAF2FF]"
+                  }`}
+                >
+                  <span className="text-sm font-black leading-5">
+                    {item.category}
+                  </span>
+
+                  <span
+                    className={`flex h-8 min-w-8 items-center justify-center rounded-full px-2 text-xs font-black ${
+                      isActive
+                        ? "bg-white text-[#0D2444]"
+                        : "bg-white text-[#315E91]"
+                    }`}
+                  >
+                    {item.count}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
-      </section>
+      </aside>
+
+      {/* Scrollable Article Content */}
+<article className="rounded-[38px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10 sm:p-9 lg:h-[3000px] lg:overflow-y-auto lg:p-12 lg:[scrollbar-width:none] lg:[-ms-overflow-style:none] lg:[&::-webkit-scrollbar]:hidden">{post.body ? (
+          <div className="prose prose-lg max-w-none space-y-7">
+            <PortableText
+              value={post.body}
+              components={portableTextComponents}
+            />
+          </div>
+        ) : (
+          <div className="rounded-[28px] border border-dashed border-[#C9DAF0] bg-[#F7FAFF] p-8 text-center">
+            <h2 className="text-2xl font-black text-[#0D2444]">
+              Blog content coming soon.
+            </h2>
+
+            <p className="mt-3 text-sm leading-7 text-[#53677F]">
+              Add content in Sanity Studio and publish the blog.
+            </p>
+          </div>
+        )}
+
+        <div className="mt-12 rounded-[30px] bg-gradient-to-br from-[#0D2444] via-[#193B63] to-[#6288B9] p-7 text-white sm:p-9">
+          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#DDE8F7]">
+            Need this for your brand?
+          </p>
+
+          <h2
+            className="mt-3 text-3xl font-black tracking-[-0.05em] sm:text-4xl"
+            style={{
+              fontFamily: "New York, ui-serif, Georgia, serif",
+            }}
+          >
+            Let DTS build your next campaign.
+          </h2>
+
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#DDE8F7]">
+            From PR, celebrity management and events to websites, social media,
+            SEO and AI video production — Double Trouble Studio helps brands
+            grow with strategy and execution.
+          </p>
+
+          <Link
+            href="/contact"
+            className="mt-7 inline-flex rounded-full bg-white px-7 py-4 text-sm font-black text-[#0D2444] transition hover:bg-[#EAF2FF]"
+          >
+            Discuss Your Requirement →
+          </Link>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
@@ -751,10 +703,10 @@ const categoryCounts = blogCategoryOrder.map((category) => {
               </div>
 
               <Link
-                href="/blog#blog-results"
+                href={relatedExploreHref}
                 className="inline-flex w-fit rounded-full bg-[#0D2444] px-6 py-3 text-sm font-black text-white transition hover:bg-[#315E91]"
               >
-                View All Blogs →
+                Explore More →
               </Link>
             </div>
 
