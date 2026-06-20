@@ -1,14 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   allowedDevOrigins: [
-    "192.168.1.14",     // Aapka current IP
-    "localhost",
-    "0.0.0.0"
+    "192.168.1.3",
   ],
-  
-  // Extra safe settings (content loading ke liye)
+
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+    ],
   },
 };
 
