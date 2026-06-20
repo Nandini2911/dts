@@ -9,6 +9,9 @@ import Navbar from "@/components/Navbar";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERY, POSTS_QUERY } from "@/sanity/lib/queries";
+import BlogShareButtons from "@/components/BlogShareButtons";
+
+
 
 export const revalidate = 60;
 
@@ -347,6 +350,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   const tableOfContents = getTableOfContents(post.body);
   const readTime = getReadTime(post);
 
+  const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.doubletroublestudio.com";
+
+const shareUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.slug}`;
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -492,6 +500,13 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
           </div>
         )}
+
+        {/* Share Blog */}
+<BlogShareButtons
+  title={post.title}
+  excerpt={post.excerpt}
+  url={shareUrl}
+/>
 
         {/* Related Blogs */}
         <div className="rounded-[32px] border border-[#DCE7F5] bg-white p-6 shadow-xl shadow-[#0D2444]/10">
