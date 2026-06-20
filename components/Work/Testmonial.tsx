@@ -17,7 +17,7 @@ const testimonials = [
       "Double Trouble Studio completely transformed our digital presence with a premium website experience, strategic SEO and modern branding direction. The execution felt luxury, clean and highly professional.",
     impact:
       "Improved premium perception and stronger online visibility.",
-    image: "/clients/client1.jpg",
+    image: "/logos/26.webp",
   },
 
   {
@@ -27,7 +27,7 @@ const testimonials = [
       "The creative quality, editing precision and modern storytelling approach helped elevate our digital content experience. Every asset felt cinematic and professionally executed.",
     impact:
       "High-impact creative production designed for digital audiences.",
-    image: "/clients/client2.jpg",
+    image: "/india2.png",
   },
 
   {
@@ -37,7 +37,7 @@ const testimonials = [
       "From creative direction to social media visuals, the entire experience felt refined, modern and emotionally aligned with our luxury wedding positioning.",
     impact:
       "Built a stronger and more premium wedding brand identity.",
-    image: "/clients/client3.jpg",
+    image: "/vow.png",
   },
 ];
 
