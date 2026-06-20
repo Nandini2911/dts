@@ -5,42 +5,42 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 
 const works = [
   {
-    logo: "/logos/rnk.png",
+    logo: "/logos/26.webp",
     category: "Digital • Web • PR",
     title: "RNK Rentals",
     desc: "A complete digital transformation for India’s premier luxury car rental network through brand storytelling, PR communication, SEO-friendly website development, performance systems and premium web experience.",
   },
 
   {
-    logo: "/logos/hos.png",
+    logo: "/logos/13.webp",
     category: "Brand • Web • PR",
     title: "House of Stars",
     desc: "Brand positioning, website development and narrative system for a celebrity management and talent engagement platform connecting brands with India’s top celebrities, influencers and creators.",
   },
 
   {
-    logo: "/logos/cafe.png",
+    logo: "/cafeholiday.png",
     category: "Social • Events",
     title: "Café Holiday",
     desc: "A three-month hospitality brand revamp focused on social media marketing, café storytelling, event-led experiences, community engagement and modern digital growth.",
   },
 
   {
-    logo: "/logos/indiatoday.png",
+    logo: "/india.jpg",
     category: "Digital • Media • AI",
     title: "India Today",
     desc: "AI-powered visual campaigns, premium creative assets and digital media storytelling designed for one of India’s leading media platforms.",
   },
 
   {
-    logo: "/logos/golf.png",
+    logo: "/Golf Final Logo - 1.png",
     category: "Events • Branding • Production",
     title: "All India Police Golf Tournament",
     desc: "Creative support, event branding, sponsor communication and premium production identity for the prestigious All India Police Golf Tournament Chandigarh 2026.",
   },
 
   {
-    logo: "/logos/bhart.png",
+    logo: "/BRlogo.webp",
     category: "AI Video • VFX • Campaigns",
     title: "Bhart Rehma",
     desc: "AI-generated cinematic visuals, VFX-led storytelling and high-impact digital campaign assets designed for premium brand communication.",

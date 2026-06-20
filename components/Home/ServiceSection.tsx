@@ -1,14 +1,21 @@
 "use client";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
+
 import {
+
   ArrowUpRight,
+
   Sparkles,
+
 } from "lucide-react";
 
 const services = [
   {
     title: "Guest Management",
+    href: "/services/guest-management",
     tag: "Popular",
     desc: "Premium guest management services for weddings, corporate events, luxury launches and celebrity events, including RSVP tracking, VIP handling, check-in flow and on-ground coordination.",
     features: [
@@ -20,6 +27,7 @@ const services = [
   },
   {
     title: "Celebrity Management",
+    href: "/services/celebrity-management",
     tag: "Popular",
     desc: "Celebrity management and talent coordination for brand campaigns, events, weddings, launches and influencer collaborations handled with precision, discretion and premium hospitality.",
     features: [
@@ -31,6 +39,7 @@ const services = [
   },
   {
     title: "Events & Weddings",
+    href: "/services/events-weddings",
     desc: "Luxury event management and wedding planning services crafted with flawless execution, premium production, guest experience design, show-flow planning and elevated aesthetics.",
     features: [
       "Concept & Theme",
@@ -41,6 +50,7 @@ const services = [
   },
   {
     title: "PR & Marketing",
+    href: "/services/pr-media-marketing",
     tag: "Popular",
     desc: "PR campaigns, media outreach, social media marketing, influencer collaborations and paid advertising strategies designed for brand visibility, reputation and digital growth.",
     features: [
@@ -52,6 +62,7 @@ const services = [
   },
   {
     title: "Web Development",
+    href: "/services/web-development-marketing",
     desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase Google visibility, improve user experience, generate leads and drive conversions.",
     features: [
       "Next.js Websites",
@@ -62,6 +73,7 @@ const services = [
   },
   {
     title: "AI Video & VFX",
+    href: "/services/ai-video-vfx",
     desc: "AI video production, cinematic brand films, AI-generated video ads and VFX content created for social media campaigns, product launches, brand storytelling and digital promotions.",
     features: [
       "AI Video Ads",
@@ -327,44 +339,43 @@ export default function ServicesSection() {
                 ))}
               </div>
 
-              {/* BUTTON */}
-              <button
-                type="button"
-                aria-label={`Learn more about ${service.title}`}
-                className="
-                  mt-8
-                  flex
-                  items-center
-                  gap-3
-                  text-[14px]
-                  font-semibold
-                  text-[#10213D]
-                "
-              >
-                Learn More
+            <Link
+  href={service.href}
+  aria-label={`Learn more about ${service.title}`}
+  className="
+    mt-8
+    flex
+    items-center
+    gap-3
+    text-[14px]
+    font-semibold
+    text-[#10213D]
+  "
+>
+  Learn More
 
-                <div
-                  className="
-                    w-[44px]
-                    h-[44px]
-                    rounded-full
-                    bg-gradient-to-br
-                    from-[#10213D]
-                    to-[#31507A]
-                    flex
-                    items-center
-                    justify-center
-                    transition-all
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                >
-                  <ArrowUpRight
-                    className="w-4 h-4 text-white"
-                    aria-hidden="true"
-                  />
-                </div>
-              </button>
+  <div
+    className="
+      w-[44px]
+      h-[44px]
+      rounded-full
+      bg-gradient-to-br
+      from-[#10213D]
+      to-[#31507A]
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-300
+      group-hover:translate-x-1
+    "
+  >
+    <ArrowUpRight
+      className="w-4 h-4 text-white"
+      aria-hidden="true"
+    />
+  </div>
+</Link>
             </motion.article>
           ))}
         </div>

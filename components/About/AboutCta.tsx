@@ -159,7 +159,7 @@ export default function AboutCTA() {
           </Link>
 
           <Link
-            href="/projects"
+            href="/work"
             aria-label="View Double Trouble Studio branding, PR, website development, events and AI video portfolio"
           >
             <button className="secondary-btn">
