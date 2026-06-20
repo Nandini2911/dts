@@ -74,7 +74,7 @@ Professional Guest Management Services In Mumbai Including RSVP Management, Gues
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:mt-10"
             >
               <a
-                href="#contact"
+                href="/contact"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-[16px] bg-gradient-to-r from-[#0D2444] to-[#6288B9] px-6 py-4 text-[14px] font-bold text-white shadow-[0_18px_45px_rgba(13,36,68,0.25)] transition-all duration-300 hover:-translate-y-1 sm:w-auto sm:rounded-[18px] sm:px-7 sm:text-[15px]"
               >
                 Start A Project
@@ -84,7 +84,7 @@ Professional Guest Management Services In Mumbai Including RSVP Management, Gues
               </a>
 
               <a
-                href="#discussion"
+                href="/contact"
                 className="inline-flex w-full items-center justify-center rounded-[16px] border border-[#D5DFEC] bg-white px-6 py-4 text-[14px] font-bold text-[#0D2444] shadow-[0_14px_34px_rgba(13,36,68,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#6288B9] sm:w-auto sm:rounded-[18px] sm:px-7 sm:text-[15px]"
               >
                 Discuss Your Event
