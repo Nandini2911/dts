@@ -16,7 +16,6 @@ import FinalCTASection from "@/components/WebDevelopmentMarketting/FinalCTASecti
 import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 
-
 export const revalidate = 60;
 
 export const metadata = {
@@ -32,7 +31,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const searchQuery = params?.q?.trim() || "";
   const selectedCategory = params?.category?.trim() || "All";
 
-  const posts = await client.fetch<Post[]>(POSTS_QUERY);
+  const now = new Date().toISOString();
+
+  const posts = await client.fetch<Post[]>(POSTS_QUERY, {
+    now,
+  });
 
   const recentPost = posts[0];
 
@@ -86,10 +89,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   const featuredPostsPerPage = 9;
   const featuredCurrentPage = Math.max(1, Number(params?.fpage || "1") || 1);
+
   const featuredTotalPages = Math.max(
     1,
     Math.ceil(selectedFeaturedBlogs.length / featuredPostsPerPage)
   );
+
   const safeFeaturedPage = Math.min(featuredCurrentPage, featuredTotalPages);
 
   const paginatedFeaturedPosts = selectedFeaturedBlogs.slice(
@@ -113,10 +118,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   const mostReadPostsPerPage = 9;
   const mostReadCurrentPage = Math.max(1, Number(params?.mrpage || "1") || 1);
+
   const mostReadTotalPages = Math.max(
     1,
     Math.ceil(mostReadBlogs.length / mostReadPostsPerPage)
   );
+
   const safeMostReadPage = Math.min(mostReadCurrentPage, mostReadTotalPages);
 
   const paginatedMostReadBlogs = mostReadBlogs.slice(
@@ -154,9 +161,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
     if (selectedCategory !== "All") query.set("category", selectedCategory);
     if (params?.page && params.page !== "1") query.set("page", params.page);
+
     if (params?.mrpage && params.mrpage !== "1") {
       query.set("mrpage", params.mrpage);
     }
+
     if (page > 1) query.set("fpage", String(page));
 
     const queryString = query.toString();
@@ -184,6 +193,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <main className="overflow-hidden bg-[#F7FAFF] text-[#0D2444]">
       <Navbar />
+
       <BlogHero recentPost={recentPost} searchQuery={searchQuery} />
 
       <SearchResultsSection
@@ -233,7 +243,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <LeadMagnetSection />
       <BlogFAQSection />
       <FinalCTASection />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
