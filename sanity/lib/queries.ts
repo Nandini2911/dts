@@ -5,7 +5,7 @@ export const POSTS_QUERY = defineQuery(`
     _type == "post" &&
     defined(slug.current) &&
     defined(publishedAt) &&
-    dateTime(publishedAt) <= dateTime(now())
+    dateTime(publishedAt) <= dateTime($now)
   ] | order(publishedAt desc) {
     _id,
     title,
@@ -34,7 +34,7 @@ export const POST_QUERY = defineQuery(`
     _type == "post" &&
     slug.current == $slug &&
     defined(publishedAt) &&
-    dateTime(publishedAt) <= dateTime(now())
+    dateTime(publishedAt) <= dateTime($now)
   ][0] {
     _id,
     title,
