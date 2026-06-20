@@ -12,6 +12,7 @@ import MediaManagement from "@/components/PRMediaDigitalMarketing/MediaManagemen
 import PRDefinition from "@/components/PRMediaDigitalMarketing/PRDefinition";
 import PRHero from "@/components/PRMediaDigitalMarketing/PRHero";
 import PRIntro from "@/components/PRMediaDigitalMarketing/PRIntro";
+import PRMediaDigitalFeaturedWork from "@/components/PRMediaDigitalMarketing/PRMediaDigitalFeaturedWork";
 import Process from "@/components/PRMediaDigitalMarketing/Process";
 import PRServices from "@/components/PRMediaDigitalMarketing/PRServices";
 import SEOContentBlock from "@/components/PRMediaDigitalMarketing/SEOContentBlock";
@@ -605,6 +606,7 @@ export default function PRMediaDigitalMarketingPage() {
         <PRHero />
         <PRIntro />
         <PRDefinition />
+        <PRMediaDigitalFeaturedWork/>
         <PRServices />
         <MediaManagement />
         <DigitalMarketingServices />

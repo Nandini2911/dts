@@ -1,6 +1,7 @@
 import DestinationWeddingPlanningIndia from "@/components/EventsWeddings/DestinationWeddingPlanningIndia";
 import EndToEndEventWeddingServices from "@/components/EventsWeddings/EndToEndEventWeddingServices";
 import EventManagementServicesAcrossIndia from "@/components/EventsWeddings/EventManagementServicesAcrossIndia";
+import EventsWeddingFeaturedWork from "@/components/EventsWeddings/EventsWeddingFeaturedWork";
 import EventsWeddingsFQA from "@/components/EventsWeddings/EventsWeddingsFQA";
 import EventsWePlanManage from "@/components/EventsWeddings/EventsWePlanManage";
 import EventWeddingFinalCTA from "@/components/EventsWeddings/EventWeddingFinalCTA";
@@ -498,6 +499,7 @@ export default function EventsWeddings() {
         <EventWeddingHero />
         <EndToEndEventWeddingServices />
         <OurEventManagementServices />
+        <EventsWeddingFeaturedWork/>
         <OurWeddingPlanningServices />
         <EventsWePlanManage />
         <WhyProfessionalEventManagementMatters />

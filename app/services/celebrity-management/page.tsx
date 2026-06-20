@@ -15,6 +15,7 @@ import CelebrityUseCasesBookingInfo from "@/components/CelebrityManagement/Celeb
 import CelebrityManagementFAQ from "@/components/CelebrityManagement/CelebrityManagementFAQ";
 import CelebrityManagementCTA from "@/components/CelebrityManagement/CelebrityManagementCTA";
 import WhyWorkWithDoubleTroubleStudio from "@/components/CelebrityManagement/WhyWorkWithDoubleTroubleStudio";
+import CelebrityFeaturedWork from "@/components/CelebrityManagement/celebrityfeatured";
 
 const celebrityManagementSchema = {
   "@context": "https://schema.org",
@@ -531,6 +532,7 @@ export default function CelebrityManagement() {
         <CelebrityBookingIntro />
         <WhatIsCelebrityManagement />
         <CelebrityManagementServices />
+        <CelebrityFeaturedWork/>
         {/* <WhyBrandsInvestCelebrityManagement /> */}
         <CelebrityEventTypes />
         <CelebrityManagementIndustries />

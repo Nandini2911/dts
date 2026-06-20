@@ -170,9 +170,7 @@ export default function ContactMap() {
                   </h4>
 
                   <p className="mt-2 text-slate-600 leading-relaxed">
-                    Mumbai,
-                    Maharashtra,
-                    India
+                   Plot No.177, 1st floor, Aaram Nagar Part-2, seven bungalows, J P road, Versova, Andheri West, Mumbai- 400061
                   </p>
                 </div>
 
@@ -182,7 +180,7 @@ export default function ContactMap() {
                   </h4>
 
                   <p className="mt-2 text-slate-600">
-                    +91 98765 43210
+                    +918000006021
                   </p>
                 </div>
 
@@ -192,7 +190,7 @@ export default function ContactMap() {
                   </h4>
 
                   <p className="mt-2 text-slate-600">
-                    hello@yourbrand.com
+                    doubletrouble.studio01@gmail.com
                   </p>
                 </div>
 

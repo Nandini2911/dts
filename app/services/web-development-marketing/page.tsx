@@ -10,6 +10,7 @@ import IndustriesWeWorkWith from "@/components/WebDevelopmentMarketting/Industri
 import ProjectRequirementsSection from "@/components/WebDevelopmentMarketting/ProjectRequirementsSection";
 import SEOServicesSection from "@/components/WebDevelopmentMarketting/SEOServicesSection";
 import UseCasesSection from "@/components/WebDevelopmentMarketting/UseCasesSection";
+import WebDevelopmentMarketingFeaturedWork from "@/components/WebDevelopmentMarketting/WebDevelopmentMarketingFeaturedWork";
 import WebDevelopmentMarketingProcess from "@/components/WebDevelopmentMarketting/WebDevelopmentMarketingProcess";
 import WebsiteDevelopmentServices from "@/components/WebDevelopmentMarketting/WebsiteDevelopmentServices";
 import WebsiteDigitalHero from "@/components/WebDevelopmentMarketting/WebsiteDigitalHero";
@@ -745,6 +746,7 @@ export default function WebDevelopmentMarketing() {
         <WebsiteDigitalHero />
         <CompleteDigitalSolutions />
         <WhatIsWebSeoMarketing />
+        <WebDevelopmentMarketingFeaturedWork/>
         <WebsiteDevelopmentServices />
         <SEOServicesSection />
         <DigitalMarketingServicesSection />

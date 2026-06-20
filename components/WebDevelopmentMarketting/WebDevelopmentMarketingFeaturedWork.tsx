@@ -1,38 +1,46 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
-export default function CelebrityFeaturedWork() {
+export default function WebDevelopmentMarketingFeaturedWork() {
   const projects = [
     {
-      image: "/celebrity/cele1.jpg",
-      title: "Celebrity Brand Launch Appearance",
-      desc: "Managed celebrity coordination, arrival flow, media moments and on-stage presence for a premium brand launch event.",
+      image: "/shruti.png",
+      title: "Business Website Development",
+      desc: "Designed and developed a modern, responsive business website with strong brand presentation, fast loading pages and clear conversion flow.",
+      link: "https://www.shrutichadha.com/",
     },
     {
-      image: "/celebrity/cele3.jpg",
-      title: "Influencer & Creator Meet-Up",
-      desc: "Curated creator attendance, guest lists, content moments and smooth movement for a high-engagement influencer gathering.",
+      image: "/ap.png",
+      title: "E-Commerce Website Experience",
+      desc: "Built a product-focused online store with smooth navigation, mobile-first design, product discovery and conversion-ready user journeys.",
+      link: "https://apworld.in/",
     },
     {
-      image: "/celebrity/cele4.png",
-      title: "Red Carpet Celebrity Handling",
-      desc: "Handled celebrity arrivals, photo opportunities, media interactions and discreet backstage coordination for a luxury event.",
+      image: "/rnk.png",
+      title: "SEO Growth System",
+      desc: "Created an SEO strategy with keyword planning, technical optimization, on-page content structure and search-friendly website architecture.",
+      link: "https://www.rnk.com/",
     },
     {
-      image: "/celebrity/cele5.png",
-      title: "Celebrity Wedding Performance",
-      desc: "Planned artist movement, green room support, hospitality, security coordination and live performance flow for a destination celebration.",
+      image: "/xiimba.png",
+      title: "Performance Marketing Campaign",
+      desc: "Planned and executed digital ad campaigns with audience targeting, landing page direction, creative testing and lead generation strategy.",
+      link: "https://www.xiimba.com/",
     },
     {
-      image: "/celebrity/cele6.png",
-      title: "Film & Music Promotion Tour",
-      desc: "Coordinated celebrity appearances, press interactions, audience engagement and venue movement across multiple promotional touchpoints.",
+      image: "/poetry.png",
+      title: "Brand Website Revamp",
+      desc: "Transformed an outdated website into a premium digital experience with improved visuals, better content hierarchy and stronger brand trust.",
+      link: "https://www.poetrydubai.com/",
     },
     {
-      image: "/celebrity/celebrity.jpg",
-      title: "Luxury Event Celebrity Guest",
-      desc: "Managed invite coordination, arrival protocol, VIP routing and premium hospitality for celebrity guests at an exclusive event.",
+      image: "/afterr.png",
+      title: "Digital Launch Campaign",
+      desc: "Executed a complete online launch with website readiness, social media rollout, paid ads, SEO basics and digital communication planning.",
+      link: "https://www.afterrmatch.com/",
     },
   ];
 
@@ -56,24 +64,24 @@ export default function CelebrityFeaturedWork() {
           </span>
 
           <h2
-            className="mx-auto mt-6 max-w-[1000px] text-[38px] font-semibold leading-[1] tracking-[-0.055em] sm:text-[54px] md:text-[70px]"
+            className="mx-auto mt-6 max-w-[1050px] text-[38px] font-semibold leading-[1] tracking-[-0.055em] sm:text-[54px] md:text-[70px]"
             style={{
               fontFamily:
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
             <span className="bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#315E91] bg-clip-text text-transparent">
-              Celebrity Management
+              Web Development
             </span>{" "}
             <span className="bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
               In Action
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[18px]">
-            Real celebrity-led moments where talent coordination, artist
-            handling, VIP movement, media planning and brand presence come
-            together with precision.
+          <p className="mx-auto mt-6 max-w-[790px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[18px]">
+            Real digital growth scenarios where website development, SEO,
+            performance marketing, content strategy and user experience come
+            together to build stronger online presence and business results.
           </p>
         </motion.div>
 
@@ -103,7 +111,12 @@ export default function CelebrityFeaturedWork() {
               <div className="absolute left-0 top-0 h-[160px] w-[160px] rounded-full bg-white/70 blur-3xl transition-opacity duration-500 group-hover:opacity-0" />
 
               {/* Image */}
-              <div className="relative z-10 h-[300px] overflow-hidden rounded-[22px] bg-[#0D2444] shadow-[0_18px_45px_rgba(13,36,68,0.18)]">
+              <Link
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 block h-[300px] overflow-hidden rounded-[22px] bg-[#0D2444] shadow-[0_18px_45px_rgba(13,36,68,0.18)]"
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -111,21 +124,38 @@ export default function CelebrityFeaturedWork() {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D2444]/60 via-transparent to-transparent" />
-              </div>
+              </Link>
 
               {/* Text */}
               <div className="relative z-10 px-1 pb-3 pt-7">
                 <p className="text-[13px] font-bold uppercase tracking-[0.22em] text-[#315E91] transition-colors duration-500 group-hover:text-[#BFD7F2]">
-                  Celebrity Management
+                  Web Development & Digital Marketing
                 </p>
 
-                <h3 className="mt-5 text-[25px] font-bold leading-[1.15] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 group-hover:text-white md:text-[28px]">
-                  {project.title}
-                </h3>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <h3 className="mt-5 text-[25px] font-bold leading-[1.15] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 group-hover:text-white md:text-[28px]">
+                    {project.title}
+                  </h3>
+                </Link>
 
                 <p className="mt-5 text-[15px] font-medium leading-[1.65] text-[#203B5C]/75 transition-colors duration-500 group-hover:text-white/72 md:text-[16px]">
                   {project.desc}
                 </p>
+
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#0D2444]/15 bg-white/85 px-5 py-3 text-[12px] font-bold uppercase tracking-[0.16em] text-[#0D2444] shadow-sm transition-all duration-500 hover:bg-[#0D2444] hover:text-white group-hover:border-white/30 group-hover:bg-white/10 group-hover:text-white"
+                >
+                  Visit Website
+                  <ArrowUpRight size={16} />
+                </Link>
               </div>
 
               {/* Bottom shine */}

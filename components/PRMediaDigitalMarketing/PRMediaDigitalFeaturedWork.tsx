@@ -2,37 +2,37 @@
 
 import { motion } from "framer-motion";
 
-export default function CelebrityFeaturedWork() {
+export default function PRMediaDigitalFeaturedWork() {
   const projects = [
     {
+      image: "/celebrity/founder imh.jpg",
+      title: "Luxury Brand PR Campaign",
+      desc: "Built a premium PR communication plan with media outreach, brand storytelling, press visibility and reputation-led positioning.",
+    },
+    {
+      image: "/guest/brand.jpg",
+      title: "Press & Media Coverage",
+      desc: "Managed media coordination, press release distribution, journalist communication and brand coverage across relevant publications.",
+    },
+    {
       image: "/celebrity/cele1.jpg",
-      title: "Celebrity Brand Launch Appearance",
-      desc: "Managed celebrity coordination, arrival flow, media moments and on-stage presence for a premium brand launch event.",
+      title: "Performance Marketing Growth",
+      desc: "Created a conversion-focused digital marketing campaign with paid ads, audience targeting, landing page strategy and lead generation.",
     },
     {
-      image: "/celebrity/cele3.jpg",
-      title: "Influencer & Creator Meet-Up",
-      desc: "Curated creator attendance, guest lists, content moments and smooth movement for a high-engagement influencer gathering.",
-    },
-    {
-      image: "/celebrity/cele4.png",
-      title: "Red Carpet Celebrity Handling",
-      desc: "Handled celebrity arrivals, photo opportunities, media interactions and discreet backstage coordination for a luxury event.",
+      image: "/guest/brand2.jpg",
+      title: "Social Media Brand Building",
+      desc: "Developed a complete social media content system with campaign planning, creative direction, posting strategy and engagement growth.",
     },
     {
       image: "/celebrity/cele5.png",
-      title: "Celebrity Wedding Performance",
-      desc: "Planned artist movement, green room support, hospitality, security coordination and live performance flow for a destination celebration.",
+      title: "Influencer Marketing Campaign",
+      desc: "Planned influencer collaborations, creator shortlisting, content briefs, approvals and campaign amplification for brand awareness.",
     },
     {
-      image: "/celebrity/cele6.png",
-      title: "Film & Music Promotion Tour",
-      desc: "Coordinated celebrity appearances, press interactions, audience engagement and venue movement across multiple promotional touchpoints.",
-    },
-    {
-      image: "/celebrity/celebrity.jpg",
-      title: "Luxury Event Celebrity Guest",
-      desc: "Managed invite coordination, arrival protocol, VIP routing and premium hospitality for celebrity guests at an exclusive event.",
+      image: "/guest/celebrity.jpg",
+      title: "Brand Launch Communication",
+      desc: "Executed launch communication with PR buzz, social media rollout, digital ads, event visibility and strong brand positioning.",
     },
   ];
 
@@ -56,24 +56,24 @@ export default function CelebrityFeaturedWork() {
           </span>
 
           <h2
-            className="mx-auto mt-6 max-w-[1000px] text-[38px] font-semibold leading-[1] tracking-[-0.055em] sm:text-[54px] md:text-[70px]"
+            className="mx-auto mt-6 max-w-[1050px] text-[38px] font-semibold leading-[1] tracking-[-0.055em] sm:text-[54px] md:text-[70px]"
             style={{
               fontFamily:
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
             <span className="bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#315E91] bg-clip-text text-transparent">
-              Celebrity Management
+              PR, Media & Digital
             </span>{" "}
             <span className="bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
               In Action
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[18px]">
-            Real celebrity-led moments where talent coordination, artist
-            handling, VIP movement, media planning and brand presence come
-            together with precision.
+          <p className="mx-auto mt-6 max-w-[790px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[18px]">
+            Real brand growth scenarios where public relations, media coverage,
+            digital marketing, social media strategy and performance campaigns
+            work together to build visibility, trust and business growth.
           </p>
         </motion.div>
 
@@ -116,7 +116,7 @@ export default function CelebrityFeaturedWork() {
               {/* Text */}
               <div className="relative z-10 px-1 pb-3 pt-7">
                 <p className="text-[13px] font-bold uppercase tracking-[0.22em] text-[#315E91] transition-colors duration-500 group-hover:text-[#BFD7F2]">
-                  Celebrity Management
+                  PR, Media & Digital
                 </p>
 
                 <h3 className="mt-5 text-[25px] font-bold leading-[1.15] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 group-hover:text-white md:text-[28px]">

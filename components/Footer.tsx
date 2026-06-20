@@ -436,7 +436,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2">
-                    hello@dtsworld.in
+                    doubletrouble.studio01@gmail.com
                   </p>
                 </div>
               </a>
@@ -473,7 +473,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2">
-                    +91 80000 06021
+                    +91 8000006021
                   </p>
                 </div>
               </a>
@@ -500,7 +500,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2 leading-7">
-                    Mumbai, Maharashtra
+                   Plot No.177, 1st floor, Aaram Nagar Part-2, seven bungalows, J P road, Versova, Andheri West, Mumbai- 400061
                     <br />
                     India
                   </p>
