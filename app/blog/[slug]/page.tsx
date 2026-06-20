@@ -351,7 +351,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const readTime = getReadTime(post);
 
   const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.doubletroublestudio.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.dts-ruddy-seven.vercel.app.com";
 
 const shareUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.slug}`;
 
