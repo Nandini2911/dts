@@ -6,7 +6,7 @@ import AboutStory from "@/components/About/AboutStory";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import WhatWeBelieve from "@/components/About/WhatWeBelive";
-import LeadershipSection from "@/components/About/LeadershipSection";
+
 import OurTeamSection from "@/components/About/OurTeamSection";
 
 const aboutSchema = {
@@ -213,7 +213,6 @@ export default function About() {
         <AboutStory />
         <AboutExperience />
         <WhatWeBelieve />
-        <LeadershipSection />
         <OurTeamSection />
         <AboutFaq />
         <AboutCTA />

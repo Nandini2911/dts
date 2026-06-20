@@ -1,10 +1,69 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setStatus("");
+    setIsSuccess(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsSuccess(true);
+        setStatus("Mail successfully sent.");
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setIsSuccess(false);
+        setStatus(data.message || "Mail not sent. Please try again.");
+      }
+    } catch (error) {
+      setIsSuccess(false);
+      setStatus("Mail not sent. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section
       className="
@@ -24,7 +83,6 @@ export default function Hero() {
           bg-cover
           bg-no-repeat
           scale-[1.02]
-        
         "
         style={{
           backgroundImage: "url('/abouthero.jpg')",
@@ -42,8 +100,6 @@ export default function Hero() {
           from-black/5
           via-black/25
           to-black/45
-
-         
         "
       />
 
@@ -189,7 +245,6 @@ export default function Hero() {
               }}
             >
               Creative Agency
-
               <span
                 className="
                   block
@@ -203,7 +258,6 @@ export default function Hero() {
               >
                 For Brands, Events
               </span>
-
               & Digital Growth
             </h1>
 
@@ -287,7 +341,6 @@ export default function Hero() {
                   "
                 >
                   Start Project
-
                   <ArrowRight className="w-4 h-4 min-[1800px]:w-5 min-[1800px]:h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </Link>
@@ -502,6 +555,7 @@ export default function Hero() {
 
                 {/* FORM */}
                 <form
+                  onSubmit={handleSubmit}
                   className="
                     space-y-4
                     min-[1800px]:space-y-5
@@ -514,9 +568,12 @@ export default function Hero() {
                   <input
                     type="text"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Your Name"
                     autoComplete="name"
                     aria-label="Your Name"
+                    required
                     className="
                       w-full
                       h-[50px]
@@ -544,9 +601,12 @@ export default function Hero() {
                   <input
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email Address"
                     autoComplete="email"
                     aria-label="Email Address"
+                    required
                     className="
                       w-full
                       h-[50px]
@@ -574,8 +634,11 @@ export default function Hero() {
                   <textarea
                     rows={4}
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us about your project..."
                     aria-label="Tell us about your project"
+                    required
                     className="
                       w-full
                       min-h-[120px]
@@ -602,6 +665,7 @@ export default function Hero() {
 
                   <button
                     type="submit"
+                    disabled={loading}
                     aria-label="Send project inquiry"
                     className="
                       group
@@ -624,12 +688,30 @@ export default function Hero() {
                       transition-all
                       duration-300
                       hover:-translate-y-1
+                      disabled:opacity-60
+                      disabled:cursor-not-allowed
                     "
                   >
-                    Send Inquiry
+                    {loading ? "Sending..." : "Send Inquiry"}
 
-                    <ArrowRight className="w-4 h-4 min-[1800px]:w-5 min-[1800px]:h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    {!loading && (
+                      <ArrowRight className="w-4 h-4 min-[1800px]:w-5 min-[1800px]:h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    )}
                   </button>
+
+                  {status && (
+                    <p
+                      className={`
+                        text-center
+                        text-sm
+                        mt-3
+                        font-medium
+                        ${isSuccess ? "text-green-300" : "text-red-300"}
+                      `}
+                    >
+                      {status}
+                    </p>
+                  )}
                 </form>
               </div>
             </div>

@@ -1,8 +1,69 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ContactHero() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setStatus("");
+    setIsSuccess(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsSuccess(true);
+        setStatus("Mail successfully sent.");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setIsSuccess(false);
+        setStatus(data.message || "Mail not sent. Please try again.");
+      }
+    } catch (error) {
+      setIsSuccess(false);
+      setStatus("Mail not sent. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section
       className="
@@ -116,9 +177,7 @@ export default function ContactHero() {
                   'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
               }}
             >
-              <span className="text-[#0D2444]">
-                Let's Create
-              </span>
+              <span className="text-[#0D2444]">Let's Create</span>
 
               <span
                 className="
@@ -144,38 +203,26 @@ export default function ContactHero() {
                 leading-relaxed
               "
             >
-              Have a project in mind, looking for collaboration,
-              or simply want to connect? We'd love to hear from
-              you and help turn your ideas into reality.
+              Have a project in mind, looking for collaboration, or simply want
+              to connect? We'd love to hear from you and help turn your ideas
+              into reality.
             </p>
 
             {/* Premium Cards */}
             <div className="mt-10 grid sm:grid-cols-3 gap-4">
               <div className="glass rounded-2xl p-4">
-                <p className="text-[#6288B9] text-sm font-semibold">
-                  Fast
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Response Time
-                </p>
+                <p className="text-[#6288B9] text-sm font-semibold">Fast</p>
+                <p className="mt-1 text-sm text-slate-600">Response Time</p>
               </div>
 
               <div className="glass rounded-2xl p-4">
-                <p className="text-[#6288B9] text-sm font-semibold">
-                  Premium
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Support
-                </p>
+                <p className="text-[#6288B9] text-sm font-semibold">Premium</p>
+                <p className="mt-1 text-sm text-slate-600">Support</p>
               </div>
 
               <div className="glass rounded-2xl p-4">
-                <p className="text-[#6288B9] text-sm font-semibold">
-                  Custom
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Solutions
-                </p>
+                <p className="text-[#6288B9] text-sm font-semibold">Custom</p>
+                <p className="mt-1 text-sm text-slate-600">Solutions</p>
               </div>
             </div>
           </motion.div>
@@ -189,24 +236,24 @@ export default function ContactHero() {
             className="flex justify-center lg:justify-end"
           >
             <motion.div
-  className="
-  mt-15
-    relative
-    overflow-hidden
-    max-w-[500px]
-    w-full
-    rounded-[32px]
-    p-[1px]
-    bg-gradient-to-br
-    from-[#6288B9]
-    via-white
-    to-[#0D2444]
-    shadow-[0_20px_80px_rgba(13,36,68,0.15)]
-    transition-all
-    duration-500
-    hover:shadow-[0_25px_90px_rgba(13,36,68,0.22)]
-  "
->
+              className="
+                mt-15
+                relative
+                overflow-hidden
+                max-w-[500px]
+                w-full
+                rounded-[32px]
+                p-[1px]
+                bg-gradient-to-br
+                from-[#6288B9]
+                via-white
+                to-[#0D2444]
+                shadow-[0_20px_80px_rgba(13,36,68,0.15)]
+                transition-all
+                duration-500
+                hover:shadow-[0_25px_90px_rgba(13,36,68,0.22)]
+              "
+            >
               {/* Glow */}
               <div
                 className="
@@ -264,10 +311,14 @@ export default function ContactHero() {
                   We'd love to hear about your next project.
                 </p>
 
-                <form className="mt-6 space-y-4">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Your Name"
+                    required
                     className="
                       h-12
                       w-full
@@ -283,7 +334,11 @@ export default function ContactHero() {
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email Address"
+                    required
                     className="
                       h-12
                       w-full
@@ -299,7 +354,11 @@ export default function ContactHero() {
 
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Phone Number"
+                    required
                     className="
                       h-12
                       w-full
@@ -315,7 +374,11 @@ export default function ContactHero() {
 
                   <textarea
                     rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us about your project..."
+                    required
                     className="
                       w-full
                       rounded-xl
@@ -331,6 +394,7 @@ export default function ContactHero() {
 
                   <button
                     type="submit"
+                    disabled={loading}
                     className="
                       w-full
                       h-12
@@ -345,10 +409,25 @@ export default function ContactHero() {
                       transition-all
                       duration-500
                       hover:scale-[1.02]
+                      disabled:opacity-60
+                      disabled:cursor-not-allowed
                     "
                   >
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                   </button>
+
+                  {status && (
+                    <p
+                      className={`
+                        text-center
+                        text-sm
+                        font-medium
+                        ${isSuccess ? "text-green-600" : "text-red-600"}
+                      `}
+                    >
+                      {status}
+                    </p>
+                  )}
                 </form>
               </div>
             </motion.div>
