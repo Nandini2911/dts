@@ -134,7 +134,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   function getBlogUrl(category: string) {
     const query = new URLSearchParams();
 
-    if (category !== "All") query.set("category", category);
+    if (category !== "All") {
+      query.set("category", category);
+    }
 
     const queryString = query.toString();
 
@@ -146,8 +148,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   function getPaginationUrl(page: number) {
     const query = new URLSearchParams();
 
-    if (selectedCategory !== "All") query.set("category", selectedCategory);
-    if (page > 1) query.set("page", String(page));
+    if (selectedCategory !== "All") {
+      query.set("category", selectedCategory);
+    }
+
+    if (page > 1) {
+      query.set("page", String(page));
+    }
 
     const queryString = query.toString();
 
@@ -159,14 +166,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   function getFeaturedPaginationUrl(page: number) {
     const query = new URLSearchParams();
 
-    if (selectedCategory !== "All") query.set("category", selectedCategory);
-    if (params?.page && params.page !== "1") query.set("page", params.page);
+    if (selectedCategory !== "All") {
+      query.set("category", selectedCategory);
+    }
+
+    if (params?.page && params.page !== "1") {
+      query.set("page", params.page);
+    }
 
     if (params?.mrpage && params.mrpage !== "1") {
       query.set("mrpage", params.mrpage);
     }
 
-    if (page > 1) query.set("fpage", String(page));
+    if (page > 1) {
+      query.set("fpage", String(page));
+    }
 
     const queryString = query.toString();
 
@@ -178,10 +192,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   function getMostReadPaginationUrl(page: number) {
     const query = new URLSearchParams();
 
-    if (selectedCategory !== "All") query.set("category", selectedCategory);
-    if (params?.page && params.page !== "1") query.set("page", params.page);
-    if (params?.fpage && params.fpage !== "1") query.set("fpage", params.fpage);
-    if (page > 1) query.set("mrpage", String(page));
+    if (selectedCategory !== "All") {
+      query.set("category", selectedCategory);
+    }
+
+    if (params?.page && params.page !== "1") {
+      query.set("page", params.page);
+    }
+
+    if (params?.fpage && params.fpage !== "1") {
+      query.set("fpage", params.fpage);
+    }
+
+    if (page > 1) {
+      query.set("mrpage", String(page));
+    }
 
     const queryString = query.toString();
 
