@@ -157,7 +157,7 @@ export default function AboutHero() {
             </Link>
 
             <Link
-              href="work"
+              href="/work"
               aria-label="View Double Trouble Studio branding, web development, events, PR and AI video work"
             >
               <button className="secondary-btn">View Work</button>
