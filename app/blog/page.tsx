@@ -17,12 +17,77 @@ import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 
 export const revalidate = 60;
+import type { Metadata } from "next";
 
-export const metadata = {
-  title:
-    "Blog | PR, Events, Celebrity Management, Web & Digital Marketing Insights | Double Trouble Studio",
+export const metadata: Metadata = {
+  title: {
+    absolute: "Blog | Branding, PR, Digital Marketing & AI Insights",
+  },
+
   description:
-    "Explore expert insights from Double Trouble Studio on PR, celebrity management, events, guest handling, website development, digital marketing, social media, AI video and brand growth.",
+    "Explore expert insights, strategies, case studies and industry trends from Double Trouble Studio covering branding, PR, celebrity management, event marketing, website development, SEO, digital marketing, social media, AI video production and business growth.",
+
+  applicationName: "Double Trouble Studio",
+  creator: "Double Trouble Studio",
+  publisher: "Double Trouble Studio",
+
+  alternates: {
+    canonical: "https://www.dtsworld.in/blog",
+  },
+
+  keywords: [
+    "Digital Marketing Blog",
+    "Branding Blog",
+    "PR Blog",
+    "SEO Blog",
+    "Website Development Blog",
+    "Social Media Marketing Blog",
+    "AI Video Production Blog",
+    "Celebrity Management Blog",
+    "Guest Management Blog",
+    "Event Management Blog",
+    "Brand Strategy Insights",
+    "Marketing Case Studies",
+    "Double Trouble Studio Blog"
+  ],
+
+  openGraph: {
+    title: "Blog | Branding, PR, Digital Marketing & AI Insights",
+    description:
+      "Read practical insights, case studies and expert strategies on branding, PR, events, SEO, websites, digital marketing, social media and AI-powered content creation.",
+    url: "https://www.dtsworld.in/blog",
+    siteName: "Double Trouble Studio",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://www.dtsworld.in/og/blog-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Double Trouble Studio Blog",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Branding, PR, Digital Marketing & AI Insights",
+    description:
+      "Explore branding, PR, SEO, websites, social media, AI video production and digital marketing insights from Double Trouble Studio.",
+    images: ["https://www.dtsworld.in/twitter/blog-twitter.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
@@ -215,7 +280,28 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       : "/blog#most-read-blogs";
   }
 
+
+  const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://www.dtsworld.in/blog/#blog",
+  name: "Double Trouble Studio Blog",
+  description:
+    "Insights on branding, PR, digital marketing, SEO, websites, events, celebrity management, guest management and AI video production.",
+  url: "https://www.dtsworld.in/blog",
+  inLanguage: "en-IN",
+  publisher: {
+    "@id": "https://www.dtsworld.in/#organization",
+  },
+};
   return (
+  <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(blogSchema),
+      }}
+    />
     <main className="overflow-hidden bg-[#F7FAFF] text-[#0D2444]">
       <Navbar />
 
@@ -270,5 +356,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <FinalCTASection />
       <Footer />
     </main>
+    </>
   );
 }
