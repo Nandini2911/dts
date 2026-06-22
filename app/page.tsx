@@ -70,8 +70,6 @@ export const metadata: Metadata = {
 };
 
 
-
-
 const homeSchema = {
   "@context": "https://schema.org",
 
@@ -83,20 +81,6 @@ const homeSchema = {
       "contentUrl": "https://www.dtsworld.in/logo.png",
       "caption": "Double Trouble Studio Logo",
       "inLanguage": "en-IN"
-    },
-
-    {
-      "@type": "Brand",
-      "@id": "https://www.dtsworld.in/#brand",
-      "name": "Double Trouble Studio",
-      "alternateName": [
-        "DTS",
-        "DTS World"
-      ],
-      "url": "https://www.dtsworld.in/",
-      "logo": {
-        "@id": "https://www.dtsworld.in/#logo"
-      }
     },
 
     {
@@ -117,20 +101,12 @@ const homeSchema = {
 
       "url": "https://www.dtsworld.in/",
 
-      "mainEntityOfPage": {
-        "@id": "https://www.dtsworld.in/#webpage"
-      },
-
       "logo": {
         "@id": "https://www.dtsworld.in/#logo"
       },
 
       "image": {
         "@id": "https://www.dtsworld.in/#logo"
-      },
-
-      "brand": {
-        "@id": "https://www.dtsworld.in/#brand"
       },
 
       "description":
@@ -142,6 +118,8 @@ const homeSchema = {
       "telephone": "+918000006021",
 
       "email": "hellodoubletroublestudio@gmail.com",
+
+      "priceRange": "Custom project pricing",
 
       "address": {
         "@type": "PostalAddress",
@@ -171,7 +149,12 @@ const homeSchema = {
           "areaServed": {
             "@type": "Country",
             "name": "India"
-          }
+          },
+
+          "availableLanguage": [
+            "English",
+            "Hindi"
+          ]
         }
       ],
 
@@ -309,6 +292,10 @@ const homeSchema = {
         "@id": "https://www.dtsworld.in/#organization"
       },
 
+      "primaryImageOfPage": {
+        "@id": "https://www.dtsworld.in/#logo"
+      },
+
       "publisher": {
         "@id": "https://www.dtsworld.in/#organization"
       },
@@ -334,8 +321,6 @@ const homeSchema = {
         "https://www.dtsworld.in/services/web-development-marketing",
         "https://www.dtsworld.in/services/ai-video-vfx"
       ],
-
-      "isAccessibleForFree": true,
 
       "copyrightYear": 2026,
 
@@ -399,20 +384,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Wedding planners, corporate brands, luxury brands, event companies and private event hosts"
             }
           }
         },
@@ -454,20 +428,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Brands, event companies, wedding planners, agencies and corporate businesses"
             }
           }
         },
@@ -510,20 +473,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Wedding clients, corporate brands, luxury businesses and event organizers"
             }
           }
         },
@@ -566,20 +518,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Hospitality brands, luxury brands, restaurants, fashion labels, lifestyle brands, founders and startups"
             }
           }
         },
@@ -622,20 +563,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Modern businesses, startups, hospitality brands, luxury companies, restaurants and corporate brands"
             }
           }
         },
@@ -678,20 +608,9 @@ const homeSchema = {
               "@id": "https://www.dtsworld.in/#organization"
             },
 
-            "brand": {
-              "@id": "https://www.dtsworld.in/#brand"
-            },
-
             "areaServed": {
               "@type": "Country",
               "name": "India"
-            },
-
-            "audience": {
-              "@type": "Audience",
-
-              "audienceType":
-                "Brands, agencies, media companies, restaurants, hospitality businesses and product companies"
             }
           }
         }
@@ -728,22 +647,11 @@ const homeSchema = {
             "name": "RNK Rentals",
 
             "description":
-              "A digital transformation for a luxury car rental network through brand storytelling, PR communication, SEO-friendly website development, performance systems and premium web experience.",
+              "A digital transformation for a luxury car rental network through brand storytelling, PR communication, SEO-friendly website development and premium web experience.",
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": [
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/web-development-marketing#service"
-              },
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/pr-media-marketing#service"
-              }
-            ]
+            }
           }
         },
 
@@ -763,18 +671,7 @@ const homeSchema = {
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": [
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/celebrity-management#service"
-              },
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/web-development-marketing#service"
-              }
-            ]
+            }
           }
         },
 
@@ -790,15 +687,10 @@ const homeSchema = {
             "name": "Butterchicken Factory",
 
             "description":
-              "A hospitality brand revamp focused on social media marketing, restaurant storytelling, event-led experiences, community engagement and digital growth.",
+              "A hospitality brand revamp focused on social media marketing, restaurant storytelling, event-led experiences and digital growth.",
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": {
-              "@id":
-                "https://www.dtsworld.in/services/pr-media-marketing#service"
             }
           }
         },
@@ -819,18 +711,7 @@ const homeSchema = {
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": [
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/ai-video-vfx#service"
-              },
-              {
-                "@id":
-                  "https://www.dtsworld.in/services/pr-media-marketing#service"
-              }
-            ]
+            }
           }
         },
 
@@ -851,11 +732,6 @@ const homeSchema = {
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": {
-              "@id":
-                "https://www.dtsworld.in/services/events-weddings#service"
             }
           }
         },
@@ -876,11 +752,6 @@ const homeSchema = {
 
             "creator": {
               "@id": "https://www.dtsworld.in/#organization"
-            },
-
-            "about": {
-              "@id":
-                "https://www.dtsworld.in/services/ai-video-vfx#service"
             }
           }
         }
@@ -987,6 +858,8 @@ const homeSchema = {
     }
   ]
 };
+
+
 
 
 export default function Home() {
