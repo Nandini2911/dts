@@ -12,7 +12,7 @@ import PromiseSection from "@/components/Home/PromiseSection";
 import IndustriesSection from "@/components/Home/IndustriesSection";
 import FAQSection from "@/components/Home/HomeFaq";
 import Footer from "@/components/Footer";
-import Schema from "@/components/Schema";
+
 
 export const metadata: Metadata = {
   title: {
@@ -858,28 +858,28 @@ const homeSchema = {
     }
   ]
 };
-
-
-
-
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-    <Schema data={homeSchema} />
+      <script
+        id="home-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeSchema).replace(/</g, "\\u003c"),
+        }}
+      />
 
       <Navbar />
       <Hero />
-        <AboutStudio />
-        <WhyStudio />
-        <ServicesSection />
-        <StudioMethod />
-        <FeaturedWork />
-        <StudioDNA />
-        <PromiseSection />
-        <IndustriesSection />
-        <FAQSection />
-     
-
+      <AboutStudio />
+      <WhyStudio />
+      <ServicesSection />
+      <StudioMethod />
+      <FeaturedWork />
+      <StudioDNA />
+      <PromiseSection />
+      <IndustriesSection />
+      <FAQSection />
       <Footer />
     </>
   );
