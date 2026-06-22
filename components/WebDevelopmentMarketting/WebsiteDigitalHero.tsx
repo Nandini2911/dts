@@ -179,11 +179,11 @@ const WebsiteDigitalHero = () => {
 
           {/* CTA */}
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="#contact" className="primary-btn text-center">
+            <a href="/contact" className="primary-btn text-center">
               Build Your Website
             </a>
 
-            <a href="#services" className="secondary-btn text-center">
+            <a href="/services" className="secondary-btn text-center">
               Start Digital Growth
             </a>
           </div>

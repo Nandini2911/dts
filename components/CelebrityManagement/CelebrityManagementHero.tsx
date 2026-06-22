@@ -52,7 +52,7 @@ export default function CelebrityManagementHero() {
         {/* CTA */}
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
-            href="#contact"
+            href="/contact"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0D2444] shadow-[0_14px_35px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EAF6FF]"
           >
             Discuss Your Requirement
@@ -60,7 +60,7 @@ export default function CelebrityManagementHero() {
           </Link>
 
           <Link
-            href="#consultation"
+            href="/contact"
             className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/15 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_35px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/25"
           >
             <CalendarCheck className="h-3.5 w-3.5" />

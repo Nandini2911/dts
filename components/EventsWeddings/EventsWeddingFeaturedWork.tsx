@@ -2,37 +2,37 @@
 
 import { motion } from "framer-motion";
 
-export default function CelebrityFeaturedWork() {
+export default function EventsWeddingFeaturedWork() {
   const projects = [
     {
-      image: "/celebrity/cele1.jpg",
-      title: "Celebrity Brand Launch Appearance",
-      desc: "Managed celebrity coordination, arrival flow, media moments and on-stage presence for a premium brand launch event.",
-    },
-    {
-      image: "/celebrity/cele3.jpg",
-      title: "Influencer & Creator Meet-Up",
-      desc: "Curated creator attendance, guest lists, content moments and smooth movement for a high-engagement influencer gathering.",
-    },
-    {
-      image: "/celebrity/cele4.png",
-      title: "Red Carpet Celebrity Handling",
-      desc: "Handled celebrity arrivals, photo opportunities, media interactions and discreet backstage coordination for a luxury event.",
-    },
-    {
-      image: "/celebrity/cele5.png",
-      title: "Celebrity Wedding Performance",
-      desc: "Planned artist movement, green room support, hospitality, security coordination and live performance flow for a destination celebration.",
-    },
-    {
-      image: "/celebrity/cele6.png",
-      title: "Film & Music Promotion Tour",
-      desc: "Coordinated celebrity appearances, press interactions, audience engagement and venue movement across multiple promotional touchpoints.",
+      image: "/guest/wedding1.jpg",
+      title: "Luxury Wedding Celebration",
+      desc: "Designed and managed a premium wedding experience with detailed planning, décor coordination, guest flow and seamless event execution.",
     },
     {
       image: "/celebrity/celebrity.jpg",
-      title: "Luxury Event Celebrity Guest",
-      desc: "Managed invite coordination, arrival protocol, VIP routing and premium hospitality for celebrity guests at an exclusive event.",
+      title: "Corporate Event Experience",
+      desc: "Executed a high-impact corporate gathering with stage planning, guest management, branding, vendor coordination and on-ground control.",
+    },
+    {
+      image: "/guest/wedding2.jpg",
+      title: "Destination Wedding Management",
+      desc: "Coordinated hospitality, venue movement, vendor timelines, artist flow and guest experiences across multiple wedding functions.",
+    },
+    {
+      image: "/celebrity/cele4.png",
+      title: "Brand Launch Event",
+      desc: "Built a complete launch environment with audience flow, media moments, production planning, brand visibility and premium execution.",
+    },
+    {
+      image: "/guest/wedding3.jpg",
+      title: "Pre-Wedding Celebration",
+      desc: "Managed themed functions, entertainment, décor detailing, hospitality and smooth transitions between key celebration moments.",
+    },
+    {
+      image: "/celebrity/founder imh.jpg",
+      title: "Private Social Gathering",
+      desc: "Created an elegant private event experience with curated ambience, guest comfort, vendor handling and end-to-end event supervision.",
     },
   ];
 
@@ -63,7 +63,7 @@ export default function CelebrityFeaturedWork() {
             }}
           >
             <span className="bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#315E91] bg-clip-text text-transparent">
-              Celebrity Management
+              Events & Weddings
             </span>{" "}
             <span className="bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
               In Action
@@ -71,9 +71,9 @@ export default function CelebrityFeaturedWork() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[18px]">
-            Real celebrity-led moments where talent coordination, artist
-            handling, VIP movement, media planning and brand presence come
-            together with precision.
+            Real celebrations and brand experiences where planning, production,
+            décor, hospitality, vendor coordination and execution come together
+            with premium detail.
           </p>
         </motion.div>
 
@@ -116,7 +116,7 @@ export default function CelebrityFeaturedWork() {
               {/* Text */}
               <div className="relative z-10 px-1 pb-3 pt-7">
                 <p className="text-[13px] font-bold uppercase tracking-[0.22em] text-[#315E91] transition-colors duration-500 group-hover:text-[#BFD7F2]">
-                  Celebrity Management
+                  Events & Weddings
                 </p>
 
                 <h3 className="mt-5 text-[25px] font-bold leading-[1.15] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 group-hover:text-white md:text-[28px]">

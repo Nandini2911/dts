@@ -2,26 +2,30 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 const works = [
   {
     logo: "/logos/26.webp",
     category: "Digital • Web • PR",
     title: "RNK Rentals",
+    href: "https://www.rnk.com/",
     desc: "A complete digital transformation for India’s premier luxury car rental network through brand storytelling, PR communication, SEO-friendly website development, performance systems and premium web experience.",
   },
 
   {
-    logo: "/logos/13.webp",
+    logo: "/BRlogo.webp",
     category: "Brand • Web • PR",
-    title: "House of Stars",
+    title: "Bharat Reshma",
+    href: "https://www.instagram.com/bharat_reshma/?hl=en",
     desc: "Brand positioning, website development and narrative system for a celebrity management and talent engagement platform connecting brands with India’s top celebrities, influencers and creators.",
   },
 
   {
-    logo: "/cafeholiday.png",
+    logo: "/logos/36.webp",
     category: "Social • Events",
-    title: "Café Holiday",
+    title: "Butterchicken Factory",
+    href: "https://www.instagram.com/butterchickenfactory/?hl=en",
     desc: "A three-month hospitality brand revamp focused on social media marketing, café storytelling, event-led experiences, community engagement and modern digital growth.",
   },
 
@@ -29,6 +33,7 @@ const works = [
     logo: "/india.jpg",
     category: "Digital • Media • AI",
     title: "India Today",
+    href: "https://www.instagram.com/indiatoday/",
     desc: "AI-powered visual campaigns, premium creative assets and digital media storytelling designed for one of India’s leading media platforms.",
   },
 
@@ -36,13 +41,15 @@ const works = [
     logo: "/Golf Final Logo - 1.png",
     category: "Events • Branding • Production",
     title: "All India Police Golf Tournament",
+    href: "/work/all-india-police-golf-tournament",
     desc: "Creative support, event branding, sponsor communication and premium production identity for the prestigious All India Police Golf Tournament Chandigarh 2026.",
   },
 
   {
-    logo: "/BRlogo.webp",
+    logo: "/logos/38.webp",
     category: "AI Video • VFX • Campaigns",
-    title: "Bhart Rehma",
+    title: "Spice",
+    href: "https://www.instagram.com/indiatoday_spice/?hl=en",
     desc: "AI-generated cinematic visuals, VFX-led storytelling and high-impact digital campaign assets designed for premium brand communication.",
   },
 ];
@@ -123,8 +130,7 @@ export default function FeaturedWork() {
               text-[#10213D]
             "
             style={{
-              fontFamily:
-                "New York, ui-serif, Georgia, serif",
+              fontFamily: "New York, ui-serif, Georgia, serif",
             }}
           >
             Work That
@@ -289,8 +295,7 @@ export default function FeaturedWork() {
                       text-[#10213D]
                     "
                     style={{
-                      fontFamily:
-                        "New York, ui-serif, Georgia, serif",
+                      fontFamily: "New York, ui-serif, Georgia, serif",
                     }}
                   >
                     {work.title}
@@ -309,10 +314,10 @@ export default function FeaturedWork() {
                   </p>
                 </div>
 
-                {/* BUTTON */}
+                {/* LINK BUTTON */}
                 <div className="flex lg:justify-end">
-                  <button
-                    type="button"
+                  <Link
+                    href={work.href}
                     aria-label={`View ${work.title} featured work case study`}
                     className="
                       w-[56px]
@@ -333,7 +338,7 @@ export default function FeaturedWork() {
                       className="w-5 h-5 text-white"
                       aria-hidden="true"
                     />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.article>

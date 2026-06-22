@@ -75,27 +75,23 @@ const serviceLinks = [
 const socialLinks = [
   {
     icon: FaInstagram,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/p/DQ4RNa8jEDw/",
     label: "Instagram",
   },
   {
     icon: FaFacebookF,
-    link: "https://facebook.com",
+    link: "https://www.facebook.com/profile.php?id=61585435434487",
     label: "Facebook",
   },
-  {
-    icon: FaPinterestP,
-    link: "https://pinterest.com",
-    label: "Pinterest",
-  },
+  
   {
     icon: FaLinkedinIn,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/doubletrouble-studio/?originalSubdomain=in",
     label: "LinkedIn",
   },
   {
     icon: FaXTwitter,
-    link: "https://twitter.com",
+    link: "https://x.com/trouble90100",
     label: "X Twitter",
   },
 ];
@@ -436,7 +432,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2">
-                    hello@dtsworld.in
+                    doubletrouble.studio01@gmail.com
                   </p>
                 </div>
               </a>
@@ -473,7 +469,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2">
-                    +91 80000 06021
+                    +91 8000006021
                   </p>
                 </div>
               </a>
@@ -500,7 +496,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2 leading-7">
-                    Mumbai, Maharashtra
+                   Plot No.177, 1st floor, Aaram Nagar Part-2, seven bungalows, J P road, Versova, Andheri West, Mumbai- 400061
                     <br />
                     India
                   </p>

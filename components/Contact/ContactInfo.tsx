@@ -12,17 +12,17 @@ const contactData = [
     icon: FiMapPin,
     title: "Visit Us",
     description:
-      "Suite 19, Kaliandas Udyog Bhavan, Century Bazar, Prabhadevi, Mumbai 400025",
+      "Plot No.177, 1st floor, Aaram Nagar Part-2, seven bungalows, J P road, Versova, Andheri West, Mumbai- 400061",
   },
   {
     icon: FiPhone,
     title: "Call Us",
-    description: "+91 22 4322 7777",
+    description: "+918000006021",
   },
   {
     icon: FiMail,
     title: "Email Us",
-    description: "info@yourbrand.com",
+    description: "doubletrouble.studio01@gmail.com",
   },
 ];
 
