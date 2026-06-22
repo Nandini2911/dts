@@ -9,67 +9,67 @@ const fadeUp = {
 
 const services = [
   {
-    title: "AI Video Production",
-    text: "AI-assisted videos for brands, products, campaigns, events, music promotions and social media storytelling.",
-  },
-  {
-    title: "CGI Advertising Videos",
-    text: "CGI-style ads where products, brand elements or objects appear in visually striking digital environments.",
-  },
-  {
-    title: "VFX for Advertising",
-    text: "Visual effects for commercials, product videos, campaign films, reels, social ads and launch videos.",
+    title: "AI Commercial Video Production",
+    text: "AI-generated commercial videos for products, services, brand campaigns, advertisements and digital promotions.",
   },
   {
     title: "AI Product Videos",
-    text: "Product-focused videos using AI visuals, cinematic movement, transitions, animation and storytelling.",
+    text: "Product-focused AI videos with creative concepts, cinematic visuals, smooth movement and clear brand storytelling.",
   },
   {
-    title: "Brand Launch Films",
-    text: "Launch films for new brands, products, venues, restaurants, hotels, stores, events and campaigns.",
+    title: "AI Brand Films",
+    text: "Concept-driven AI brand films created for business introductions, launches, campaigns and premium brand communication.",
   },
   {
-    title: "Event Teaser Videos",
-    text: "High-energy teaser videos for launches, concerts, club nights, luxury experiences and corporate events.",
-  },
-  {
-    title: "Social Media Video Production",
-    text: "Reels, shorts, vertical videos, campaign edits and platform-ready content for Instagram and YouTube.",
-  },
-  {
-    title: "Motion Graphics",
-    text: "Animated text, logo reveals, kinetic typography, lower thirds, infographics and branded motion elements.",
-  },
-  {
-    title: "3D Animation & Visual Concepts",
-    text: "3D-style product animations, scene concepts, brand objects and digital environments for campaigns.",
+    title: "AI Social Media Videos",
+    text: "Scroll-stopping AI Reels, Shorts and vertical advertisements designed for Instagram, YouTube and paid social campaigns.",
   },
   {
     title: "AI Fashion Videos",
-    text: "Fashion-focused AI videos for clothing brands, designers, collection launches, lookbooks and luxury reels.",
+    text: "AI-generated fashion films for clothing brands, designers, collection launches, campaigns, lookbooks and luxury content.",
   },
   {
     title: "AI Hospitality Videos",
-    text: "Cinematic AI and VFX-led videos for hotels, restaurants, cafes, lounges, clubs, resorts and venues.",
+    text: "Cinematic AI videos for hotels, restaurants, cafes, lounges, resorts, clubs, venues and hospitality campaigns.",
   },
   {
-    title: "Music Video VFX",
-    text: "AI scenes, cinematic edits, surreal environments, motion design and stylized post-production for music videos.",
+    title: "Commercial Video Editing",
+    text: "Professional editing for advertisements, promotional videos, brand films and marketing campaigns with strong visual flow.",
   },
   {
-    title: "Video Editing & Post-Production",
-    text: "Editing, color correction, sound design, transitions, subtitles, clean-up, effects and final exports.",
+    title: "Reels & Shorts Editing",
+    text: "Fast-paced vertical video editing for Instagram Reels, YouTube Shorts, social media ads and creator content.",
+  },
+  {
+    title: "YouTube Video Editing",
+    text: "Long-form and short-form YouTube video editing with pacing, transitions, graphics, subtitles and sound enhancement.",
+  },
+  {
+    title: "Product & Brand Video Editing",
+    text: "Professional editing for product demonstrations, brand stories, launch films, promotional content and business videos.",
+  },
+  {
+    title: "Event Video Editing",
+    text: "Teasers, highlights, countdown videos and aftermovies for corporate events, weddings, launches, concerts and live experiences.",
+  },
+  {
+    title: "Motion Graphics & Text Animation",
+    text: "Animated titles, logo reveals, kinetic typography, lower thirds, infographics and branded motion elements for videos.",
+  },
+  {
+    title: "Video Post-Production",
+    text: "Complete post-production including footage selection, colour correction, sound design, subtitles, transitions and final exports.",
   },
 ];
 
 const orbitItems = [
-  "AI",
-  "CGI",
-  "VFX",
-  "3D",
-  "Reels",
-  "Films",
-  "Edit",
+  "AI Ads",
+  "AI Films",
+  "AI Reels",
+  "Products",
+  "Editing",
+  "YouTube",
+  "Events",
   "Motion",
 ];
 
@@ -132,7 +132,7 @@ export default function AIVideoVFXServices() {
             className="mx-auto mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              Our AI Video & VFX Services
+              Our AI Video & Video Editing Services
             </p>
           </motion.div>
 
@@ -141,9 +141,9 @@ export default function AIVideoVFXServices() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[36px] font-black leading-[1.02] tracking-[-0.045em] text-[#0D2444] sm:text-[48px] md:text-[64px]"
           >
-            Complete visual production
+            Complete AI video production
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              for modern campaigns.
+              and professional video editing.
             </span>
           </motion.h2>
 
@@ -152,9 +152,10 @@ export default function AIVideoVFXServices() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            We combine AI visuals, CGI advertising, VFX, motion graphics,
-            editing and post-production to create campaign-ready videos for
-            brands, launches, products, events and social media.
+            We combine AI-generated visuals, creative direction, professional
+            editing, motion graphics and post-production to create polished
+            videos for brands, products, advertising campaigns, events,
+            YouTube and social media.
           </motion.p>
         </motion.div>
 
@@ -203,19 +204,20 @@ export default function AIVideoVFXServices() {
           {/* center */}
           <div className="relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center rounded-full border border-white/80 bg-white/60 text-center shadow-2xl shadow-[#0D2444]/12 backdrop-blur-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#6288B9]">
-              DTS Visual Stack
+              DTS Video Stack
             </p>
 
             <h3 className="mt-4 text-[42px] font-black leading-none tracking-[-0.06em] text-[#0D2444]">
-              AI
+              AI Video
               <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                CGI
+                +
               </span>
-              VFX
+              Editing
             </h3>
 
             <p className="mt-5 max-w-[210px] text-sm leading-6 text-[#49617F]">
-              One workflow for videos, ads, reels, films and launch campaigns.
+              One workflow for commercials, reels, films, products and digital
+              campaigns.
             </p>
           </div>
 

@@ -9,49 +9,49 @@ const fadeUp = {
 
 const requirements = [
   {
-    title: "Brand Details",
+    title: "Brand Information",
     code: "BRAND",
-    text: "Brand name, industry, target audience, visual identity, logo, colors and any existing campaign material.",
+    text: "Share your brand name, industry, target audience, logo, brand colours, fonts, visual guidelines and any existing marketing or video assets.",
   },
   {
-    title: "Campaign Goal",
+    title: "Video Objective",
     code: "GOAL",
-    text: "The main purpose of the video: launch, awareness, sales, event promotion, storytelling, lead generation or brand positioning.",
+    text: "Tell us whether the video is for brand awareness, product promotion, lead generation, social media engagement, an event, a launch or business communication.",
   },
   {
-    title: "Product or Service Information",
-    code: "OFFER",
-    text: "Product photos, service details, key benefits, features, pricing details, offer information or product usage points.",
+    title: "Product, Service or Footage",
+    code: "ASSETS",
+    text: "Provide product images, service details, raw footage, interview clips, event recordings, screen recordings or other assets that need to appear in the final video.",
   },
   {
-    title: "Reference Style",
+    title: "Creative References",
     code: "STYLE",
-    text: "Any reference videos, moodboards, visual examples, CGI style, AI look, editing pace or creative direction you prefer.",
+    text: "Share reference videos, moodboards, editing styles, AI visual examples, pacing preferences, music direction or brand films that match the look you want.",
   },
   {
-    title: "Video Format",
+    title: "Video Format & Duration",
     code: "FORMAT",
-    text: "Required output sizes such as 9:16, 4:5, 1:1, 16:9, website hero video, event screen format or ad format.",
+    text: "Confirm the required duration and formats such as 9:16 for Reels, 16:9 for YouTube, 4:5 for social feeds, 1:1 for square posts or custom event-screen dimensions.",
   },
   {
-    title: "Script or Message",
+    title: "Script, Voiceover & CTA",
     code: "COPY",
-    text: "Final message, captions, voiceover lines, text overlays, CTA, offer line, launch date or campaign announcement copy.",
+    text: "Share the script, key message, voiceover copy, captions, on-screen text, offer details, call to action and any mandatory information that must appear.",
   },
   {
-    title: "Deadline & Usage",
+    title: "Deadline & Deliverables",
     code: "DELIVERY",
-    text: "Expected delivery timeline and where the video will be used: Instagram, YouTube, website, ads, event screen or presentation.",
+    text: "Confirm the deadline, number of videos, required cutdowns, language versions, revision expectations and where each final edit will be published or displayed.",
   },
 ];
 
 const quickList = [
-  "Logo",
-  "Brand Colors",
-  "Product Photos",
-  "Campaign Goal",
+  "Brand Assets",
+  "Video Objective",
+  "Raw Footage",
   "References",
-  "Video Size",
+  "Script or Brief",
+  "Video Format",
   "CTA",
   "Deadline",
 ];
@@ -95,9 +95,9 @@ export default function AIVideoVFXRequirements() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]"
           >
-            What we need to start
+            What we need to start your
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              your AI video project.
+              AI Video & Video Editing project.
             </span>
           </motion.h2>
 
@@ -106,8 +106,9 @@ export default function AIVideoVFXRequirements() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            Clear inputs help us plan the concept, AI visuals, VFX style,
-            script, edit direction and final platform-ready exports.
+            Clear project inputs help us plan the AI visuals, script, editing
+            style, pacing, motion graphics, sound design and final
+            platform-ready video deliverables.
           </motion.p>
         </motion.div>
 
@@ -134,10 +135,11 @@ export default function AIVideoVFXRequirements() {
                   <div className="flex items-center justify-between border-b border-[#6288B9]/18 pb-5">
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-                        Creative Brief
+                        AI Video & Editing Brief
                       </p>
+
                       <h3 className="mt-2 text-[34px] font-black leading-none tracking-[-0.055em] text-[#0D2444]">
-                        Input Sheet
+                        Input Checklist
                       </h3>
                     </div>
 
@@ -192,13 +194,14 @@ export default function AIVideoVFXRequirements() {
                       </p>
 
                       <p className="mt-3 text-[32px] font-black leading-tight tracking-[-0.05em] text-white">
-                        You do not need a perfect script to begin.
+                        You do not need a finished script or complete footage to
+                        begin.
                       </p>
 
                       <p className="mt-4 text-sm leading-7 text-white/62">
-                        Send your brand goal, product details, references and
-                        preferred output size. We can shape the creative
-                        direction from there.
+                        Send us your objective, brand assets, available footage
+                        and visual references. We can help develop the concept,
+                        script, AI visuals and professional editing direction.
                       </p>
                     </div>
                   </div>
@@ -257,7 +260,6 @@ export default function AIVideoVFXRequirements() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

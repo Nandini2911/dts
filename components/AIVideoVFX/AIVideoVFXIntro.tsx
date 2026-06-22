@@ -9,16 +9,16 @@ const fadeUp = {
 
 const introPoints = [
   {
-    title: "AI-Led Visual Direction",
-    text: "We use AI-assisted visuals with creative direction, scripting and brand storytelling to create campaign-ready video concepts.",
+    title: "AI Video Production",
+    text: "We create AI-generated commercials, product videos, brand films and campaign visuals using creative direction, scripting and AI-assisted production.",
   },
   {
-    title: "CGI & VFX Advertising",
-    text: "We create cinematic CGI-style ads, product visuals, compositing, motion graphics and visual effects for brand campaigns.",
+    title: "Professional Video Editing",
+    text: "We edit advertisements, reels, YouTube videos, event films and branded content with strong pacing, transitions, graphics and sound design.",
   },
   {
-    title: "Built For Digital Platforms",
-    text: "Every video is planned for Instagram, YouTube, websites, paid ads, launches, events and social media performance.",
+    title: "Content For Every Platform",
+    text: "Every video is adapted for Instagram, YouTube, websites, paid advertising, product launches, events and digital marketing campaigns.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function AIVideoVFXIntro() {
                 </div>
 
                 <p className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[9px] font-black uppercase tracking-[0.2em] text-white/70">
-                  Creative System
+                  Video Production System
                 </p>
               </div>
 
@@ -82,14 +82,16 @@ export default function AIVideoVFXIntro() {
                   className="rounded-[1.6rem] border border-white/15 bg-white/10 p-5 backdrop-blur-xl"
                 >
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#BFEAFF]">
-                    Concept
+                    Creative Concept
                   </p>
+
                   <h3 className="mt-2 text-2xl font-black tracking-[-0.04em] text-white">
-                    AI generated campaign film
+                    AI video creation and editing
                   </h3>
+
                   <p className="mt-3 text-sm leading-6 text-white/68">
-                    Visual ideas, story flow, motion and brand message planned
-                    together.
+                    Strategy, scripting, AI visuals, editing and brand
+                    storytelling developed as one complete production.
                   </p>
                 </motion.div>
 
@@ -106,7 +108,9 @@ export default function AIVideoVFXIntro() {
                     <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/50">
                       Output
                     </p>
+
                     <p className="mt-2 text-lg font-black text-white">9:16</p>
+
                     <p className="mt-1 text-xs text-white/55">
                       Reels & Shorts
                     </p>
@@ -122,11 +126,15 @@ export default function AIVideoVFXIntro() {
                     className="rounded-[1.4rem] border border-white/15 bg-white/10 p-4 backdrop-blur-xl"
                   >
                     <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/50">
-                      Style
+                      Service
                     </p>
-                    <p className="mt-2 text-lg font-black text-white">VFX</p>
+
+                    <p className="mt-2 text-lg font-black text-white">
+                      AI + Edit
+                    </p>
+
                     <p className="mt-1 text-xs text-white/55">
-                      CGI + Effects
+                      Complete Production
                     </p>
                   </motion.div>
                 </div>
@@ -134,8 +142,9 @@ export default function AIVideoVFXIntro() {
                 <div className="rounded-[1.4rem] border border-white/15 bg-white/10 p-4 backdrop-blur-xl">
                   <div className="mb-3 flex items-center justify-between">
                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/55">
-                      Production Flow
+                      Editing Workflow
                     </p>
+
                     <p className="text-xs font-black text-white">Live</p>
                   </div>
 
@@ -164,7 +173,7 @@ export default function AIVideoVFXIntro() {
           {/* Floating badge */}
           <div className="absolute -bottom-5 left-1/2 w-[84%] -translate-x-1/2 rounded-3xl border border-[#6288B9]/18 bg-white/85 px-5 py-4 text-center shadow-xl shadow-[#0D2444]/10 backdrop-blur-xl">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#315E91]">
-              AI + VFX + Editing + Storytelling
+              AI Video + Editing + Motion + Storytelling
             </p>
           </div>
         </motion.div>
@@ -183,7 +192,7 @@ export default function AIVideoVFXIntro() {
             className="mx-auto mb-5 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl lg:mx-0"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              Creative AI Video, CGI & VFX Production
+              AI Video Production & Video Editing Services
             </p>
           </motion.div>
 
@@ -192,9 +201,9 @@ export default function AIVideoVFXIntro() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="mx-auto max-w-4xl text-[34px] font-black leading-[1.02] tracking-[-0.045em] text-[#0D2444] sm:text-[46px] md:text-[58px] lg:mx-0"
           >
-            Premium visual content for
+            AI-powered video production with
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              modern brand storytelling.
+              professional video editing.
             </span>
           </motion.h2>
 
@@ -203,9 +212,10 @@ export default function AIVideoVFXIntro() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mt-6 text-base font-medium leading-8 text-[#304B6F] sm:text-lg"
           >
-            Video has become one of the strongest ways for brands to communicate
-            online. Audiences today respond to visuals that are cinematic, fast,
-            immersive and different from regular content.
+            Video is one of the most effective ways for brands to attract
+            attention, explain their value and build trust online. Today&apos;s
+            audiences respond to content that is visually strong, fast-paced,
+            platform-ready and supported by a clear story.
           </motion.p>
 
           <motion.p
@@ -213,11 +223,12 @@ export default function AIVideoVFXIntro() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mt-4 text-sm leading-7 text-[#49617F] sm:text-base"
           >
-            Double Trouble Studio helps businesses create high-impact videos
-            using AI video generation, VFX, CGI, editing, animation and brand
-            storytelling. Our approach combines creative ideas with technical
-            execution so the final video feels premium, intentional and
-            campaign-ready.
+            Double Trouble Studio provides AI video production and professional
+            video editing services for businesses, brands, creators and
+            agencies across India. We combine AI-generated visuals, creative
+            direction, scripting, motion graphics, colour correction, sound
+            design and precise editing to produce polished videos for marketing
+            and advertising.
           </motion.p>
 
           <motion.div
@@ -233,6 +244,7 @@ export default function AIVideoVFXIntro() {
                 <h3 className="text-base font-black tracking-[-0.02em] text-[#0D2444]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-sm leading-6 text-[#49617F]">
                   {item.text}
                 </p>
@@ -246,10 +258,11 @@ export default function AIVideoVFXIntro() {
             className="mt-8 rounded-[1.8rem] border border-[#6288B9]/18 bg-[#0D2444] p-6 shadow-xl shadow-[#0D2444]/10"
           >
             <p className="text-sm font-medium leading-7 text-white/78">
-              Whether you want a product launch video, luxury brand film,
-              AI-generated reel, CGI advertisement, event teaser, music promo,
-              hospitality campaign or futuristic visual concept, we help turn
-              ideas into strong visual content for digital platforms.
+              Whether you need an AI commercial, product launch video, brand
+              film, Instagram Reel, YouTube video, event teaser, hospitality
+              campaign, music promotion or professionally edited advertisement,
+              we turn your ideas and raw footage into high-quality video content
+              built for digital platforms.
             </p>
           </motion.div>
         </motion.div>

@@ -9,54 +9,54 @@ const fadeUp = {
 
 const useCases = [
   {
-    title: "Product Launch Campaigns",
-    label: "Launch",
-    text: "Create AI product videos, CGI ads, teaser edits and launch visuals that introduce products with stronger impact.",
+    title: "AI Commercial Videos",
+    label: "Advertising",
+    text: "Create concept-driven AI commercials for products, services, offers and digital advertising campaigns with branded visuals, clear messaging and platform-ready edits.",
   },
   {
-    title: "Restaurant & Hospitality Promotions",
-    label: "Hospitality",
-    text: "Create cinematic food videos, hotel visuals, cafe launch reels, ambience films and experience-led promotional content.",
+    title: "AI Product Videos",
+    label: "Product",
+    text: "Produce cinematic AI product videos for launches, demonstrations and promotions that highlight features, packaging, benefits, applications and design details.",
   },
   {
-    title: "Fashion Collection Videos",
-    label: "Fashion",
-    text: "Create AI fashion films, lookbook visuals, campaign reels, outfit videos and luxury clothing brand launch edits.",
+    title: "AI Brand Films",
+    label: "Brand",
+    text: "Develop AI-assisted brand films that communicate a company’s story, positioning, values and campaign message through consistent visuals and cinematic storytelling.",
   },
   {
-    title: "Jewellery & Luxury Brand Films",
-    label: "Luxury",
-    text: "Create premium jewellery videos, CGI product visuals, beauty close-ups, campaign edits and cinematic luxury storytelling.",
+    title: "Reels & Shorts Editing",
+    label: "Social Media",
+    text: "Professionally edit Instagram Reels, YouTube Shorts and vertical advertisements with strong hooks, fast pacing, subtitles, transitions, music and sound effects.",
   },
   {
-    title: "Event Teasers & Invite Films",
+    title: "Commercial Video Editing",
+    label: "Video Editing",
+    text: "Edit advertisements, promotional films and campaign videos with clean sequencing, colour correction, motion graphics, sound design and polished brand presentation.",
+  },
+  {
+    title: "YouTube Video Editing",
+    label: "YouTube",
+    text: "Edit long-form and short-form YouTube videos, interviews, podcasts and educational content with clean cuts, graphics, captions, audio enhancement and engaging pacing.",
+  },
+  {
+    title: "Event & Launch Video Editing",
     label: "Events",
-    text: "Create event launch videos, artist announcement edits, invite films, countdown reels, hype videos and aftermovie cuts.",
+    text: "Create event teasers, invitation films, countdown videos, artist announcements, launch highlights, recap Reels and professionally edited cinematic aftermovies.",
   },
   {
-    title: "Real Estate Project Videos",
-    label: "Real Estate",
-    text: "Create project launch films, location visuals, luxury property videos, CGI-style edits and website hero videos.",
-  },
-  {
-    title: "Music Video Visual Effects",
-    label: "Music",
-    text: "Create AI scenes, surreal edits, cinematic VFX, lyrical visuals and music promotion clips for artists and labels.",
-  },
-  {
-    title: "Corporate & Startup Explainers",
-    label: "Corporate",
-    text: "Create service explainers, founder videos, product demos, brand films and campaign videos for business communication.",
+    title: "Motion Graphics & Post-Production",
+    label: "Post-Production",
+    text: "Complete videos with animated typography, logo reveals, lower thirds, transitions, colour grading, subtitles, audio mixing and final platform-specific exports.",
   },
 ];
 
 const campaignWords = [
-  "Launch",
+  "Create",
+  "Edit",
   "Promote",
   "Explain",
-  "Sell",
-  "Position",
-  "Announce",
+  "Engage",
+  "Convert",
 ];
 
 export default function AIVideoVFXUseCases() {
@@ -118,7 +118,7 @@ export default function AIVideoVFXUseCases() {
             className="mx-auto mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              Use Cases
+              AI Video & Video Editing Services
             </p>
           </motion.div>
 
@@ -127,9 +127,9 @@ export default function AIVideoVFXUseCases() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]"
           >
-            Where AI Video & VFX
+            AI Video Production &
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              creates real impact.
+              Professional Video Editing
             </span>
           </motion.h2>
 
@@ -138,9 +138,9 @@ export default function AIVideoVFXUseCases() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            AI video production and VFX can be used across product launches,
-            hospitality promotions, luxury films, events, music videos, real
-            estate campaigns and business communication.
+            We create AI-generated commercials, product videos and brand films,
+            along with professional editing for Reels, YouTube videos, events,
+            advertisements, motion graphics and complete digital campaigns.
           </motion.p>
         </motion.div>
 
@@ -168,17 +168,20 @@ export default function AIVideoVFXUseCases() {
 
             <div className="relative z-10">
               <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                Campaign Purpose
+                Complete Video Solutions
               </p>
 
               <h3 className="mt-5 text-[44px] font-black leading-[0.92] tracking-[-0.065em] text-white sm:text-[64px]">
-                One visual.
-                <span className="block text-white/45">Many uses.</span>
+                Create with AI.
+                <span className="block text-white/45">
+                  Refine through editing.
+                </span>
               </h3>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-white/64 sm:text-base">
-                A strong AI video or VFX idea can be adapted for launches,
-                reels, ads, websites, event screens and premium brand films.
+                We combine AI-generated visuals with professional video editing
+                to create polished commercials, product videos, brand films,
+                Reels, YouTube content and campaign-ready deliverables.
               </p>
 
               {/* Center visual */}
@@ -221,12 +224,12 @@ export default function AIVideoVFXUseCases() {
                     AI Video
                   </p>
 
-                  <h4 className="mt-3 text-[54px] font-black leading-none tracking-[-0.075em] text-white">
-                    VFX
+                  <h4 className="mt-3 text-[42px] font-black leading-none tracking-[-0.075em] text-white">
+                    Editing
                   </h4>
 
                   <p className="mt-3 max-w-[150px] text-xs leading-5 text-white/55">
-                    Campaign-ready visual content system
+                    Production and post-production for modern campaigns
                   </p>
                 </div>
               </div>
@@ -237,8 +240,9 @@ export default function AIVideoVFXUseCases() {
                     <p className="text-[26px] font-black tracking-[-0.05em] text-white">
                       {item}
                     </p>
+
                     <p className="mt-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#BFEAFF]/70">
-                      Output
+                      Video Output
                     </p>
                   </div>
                 ))}

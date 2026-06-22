@@ -8,12 +8,12 @@ const fadeUp = {
 };
 
 const ctaPoints = [
-  "AI Video Production",
-  "CGI Advertising Videos",
-  "VFX & Motion Graphics",
-  "Product Launch Films",
-  "Reels & Social Ads",
-  "Website Hero Videos",
+  "AI Commercial Videos",
+  "AI Product Videos",
+  "Professional Video Editing",
+  "Reels & Shorts Editing",
+  "YouTube Video Editing",
+  "Motion Graphics & Post-Production",
 ];
 
 export default function AIVideoVFXCTA() {
@@ -91,7 +91,7 @@ export default function AIVideoVFXCTA() {
                 className="mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/80 px-4 py-2 shadow-sm backdrop-blur-xl"
               >
                 <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-                  Start Your Project
+                  Start Your Video Project
                 </p>
               </motion.div>
 
@@ -100,9 +100,9 @@ export default function AIVideoVFXCTA() {
                 transition={{ duration: 0.75, ease: "easeOut" }}
                 className="max-w-5xl text-[40px] font-black leading-[0.92] tracking-[-0.065em] text-[#0D2444] sm:text-[62px] md:text-[84px]"
               >
-                Ready to create an
+                Ready to create your
                 <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                  AI Video or VFX campaign?
+                  AI Video or professional edit?
                 </span>
               </motion.h2>
 
@@ -111,10 +111,11 @@ export default function AIVideoVFXCTA() {
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className="mt-7 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
               >
-                Whether you need a product launch video, CGI ad, luxury brand
-                film, event teaser, social media reel, website hero video or
-                VFX-led campaign visual, Double Trouble Studio can help plan and
-                create the complete video from concept to final export.
+                Whether you need an AI commercial, product video, brand film,
+                Instagram Reel, YouTube edit, event video or complete
+                post-production support, Double Trouble Studio can manage the
+                project from concept and scripting to editing, sound and final
+                platform-ready delivery.
               </motion.p>
 
               <motion.div
@@ -145,7 +146,7 @@ export default function AIVideoVFXCTA() {
               className="rounded-[2.3rem] border border-[#6288B9]/22 bg-white/78 p-6 shadow-xl shadow-[#0D2444]/8 backdrop-blur-xl"
             >
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-                We Can Create
+                Our Video Services
               </p>
 
               <div className="mt-5 grid gap-3">

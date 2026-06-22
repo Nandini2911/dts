@@ -11,42 +11,42 @@ const locations = [
   {
     city: "Mumbai",
     region: "West India",
-    text: "AI video production, CGI ads, VFX and premium brand films for fashion, hospitality, luxury, entertainment and startup campaigns.",
+    text: "AI video production and professional video editing for fashion, hospitality, luxury, entertainment, real estate, restaurant and startup brands in Mumbai.",
   },
   {
     city: "Delhi NCR",
     region: "North India",
-    text: "Campaign videos, event teasers, corporate films, product launch videos, reels and CGI-style digital ads for brands and businesses.",
+    text: "AI commercial videos, corporate films, product launch videos, event teasers, social media Reels and professional campaign editing for Delhi NCR brands.",
   },
   {
     city: "Chandigarh",
     region: "North India",
-    text: "AI videos, social media edits, launch films, event promos, hospitality videos and VFX-led campaign content for regional and national brands.",
+    text: "AI-generated videos, brand films, social media editing, hospitality videos, event promotions and launch campaigns for Chandigarh-based businesses.",
   },
   {
     city: "Punjab",
     region: "North India",
-    text: "Creative video production for events, music promotions, hospitality brands, real estate, lifestyle businesses and digital campaigns.",
+    text: "AI video production and professional editing for music promotions, events, hospitality brands, real estate, lifestyle businesses and digital campaigns across Punjab.",
   },
   {
     city: "Bengaluru",
     region: "South India",
-    text: "AI product videos, startup explainers, service videos, brand films, tech visuals and social media campaign edits.",
+    text: "AI product videos, startup explainers, technology brand films, service videos, YouTube editing and social media campaign content for Bengaluru businesses.",
   },
   {
     city: "Hyderabad",
     region: "South India",
-    text: "CGI ads, VFX videos, product visuals, corporate films, digital marketing videos and event campaign content.",
+    text: "AI advertising videos, product films, corporate video editing, promotional campaigns, event content and platform-ready social videos for Hyderabad brands.",
   },
   {
     city: "Pune",
     region: "West India",
-    text: "AI-assisted reels, brand launch videos, website hero visuals, product demos and platform-ready campaign exports.",
+    text: "AI-assisted Reels, product demonstrations, brand launch videos, website hero videos and professional video editing for businesses and creators in Pune.",
   },
   {
     city: "Pan India",
     region: "Remote Delivery",
-    text: "Remote AI video production and VFX services for brands, agencies, creators, events and businesses across India.",
+    text: "Remote AI video production and professional video editing services for brands, agencies, creators, events and businesses across India.",
   },
 ];
 
@@ -62,12 +62,12 @@ const markers = [
 
 const serviceMap = [
   "AI Video Production",
-  "CGI Advertising",
-  "VFX Editing",
+  "Commercial Video Editing",
   "Product Videos",
   "Brand Films",
-  "Event Teasers",
+  "Event Video Editing",
   "Reels & Shorts",
+  "YouTube Editing",
   "Website Videos",
 ];
 
@@ -106,7 +106,7 @@ export default function AIVideoVFXIndiaLocations() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]"
           >
-            AI Video & VFX services
+            AI Video & Video Editing Services
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
               across India.
             </span>
@@ -117,8 +117,9 @@ export default function AIVideoVFXIndiaLocations() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            Double Trouble Studio creates AI videos, CGI ads, VFX edits and
-            campaign-ready video content for brands across major Indian cities.
+            Double Trouble Studio provides AI video production and professional
+            video editing for commercials, products, brand films, Reels,
+            YouTube videos, events and digital campaigns across India.
           </motion.p>
         </motion.div>
 
@@ -138,12 +139,12 @@ export default function AIVideoVFXIndiaLocations() {
               <div className="relative z-10 flex h-full min-h-[560px] flex-col justify-between">
                 <div>
                   <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#6288B9]">
-                    Pan India Creative Delivery
+                    Pan India Video Delivery
                   </p>
 
                   <h3 className="mt-5 text-[44px] font-black leading-[0.94] tracking-[-0.06em] text-[#0D2444] sm:text-[62px]">
                     City-wise
-                    <span className="block text-[#315E91]">campaign</span>
+                    <span className="block text-[#315E91]">video</span>
                     <span className="block text-[#0D2444]/35">support.</span>
                   </h3>
                 </div>
@@ -184,7 +185,7 @@ export default function AIVideoVFXIndiaLocations() {
 
                 <div className="mt-8 border-t border-[#6288B9]/18 pt-6">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-                    Available For
+                    Available Services
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -246,7 +247,6 @@ export default function AIVideoVFXIndiaLocations() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

@@ -19,62 +19,63 @@ export default function AIVideoVFXFAQ() {
     {
       question: "What is AI video production?",
       answer:
-        "AI video production is the process of creating video content using artificial intelligence tools, creative direction, prompts, visual planning, editing and post-production. It can be used for brand films, product videos, CGI ads, reels, launch videos, event promos and digital campaigns.",
+        "AI video production is the process of creating video content using artificial intelligence, creative direction, scripting, visual prompts, scene planning and professional post-production. It can be used for commercials, product videos, brand films, social media campaigns, explainers, launch videos and website content.",
     },
     {
-      question: "What are VFX services?",
+      question: "What does professional video editing include?",
       answer:
-        "VFX services include visual effects, compositing, CGI-style elements, object removal, screen replacement, background enhancement, motion graphics, lighting effects, clean-up and cinematic post-production to make videos look more polished and campaign-ready.",
+        "Professional video editing includes selecting and arranging footage, removing unwanted sections, improving pacing, adding transitions, motion graphics, subtitles, music, sound effects, colour correction, audio enhancement and exporting the final video in the required format.",
     },
     {
-      question: "Does Double Trouble Studio provide AI video production services in India?",
+      question:
+        "Does Double Trouble Studio provide AI video and video editing services in India?",
       answer:
-        "Yes. Double Trouble Studio provides AI video production and VFX services in India for brands, startups, events, hospitality businesses, fashion labels, luxury brands, product launches, music videos, real estate campaigns and digital marketing projects.",
+        "Yes. Double Trouble Studio provides AI video production and professional video editing services for brands, startups, restaurants, hospitality businesses, fashion labels, luxury brands, real estate companies, events, creators and businesses across India.",
     },
     {
-      question: "Can AI videos be used for brand campaigns?",
+      question: "What types of AI videos can you create?",
       answer:
-        "Yes. AI videos can be used for brand awareness campaigns, product launches, Instagram Reels, YouTube Shorts, paid ads, website hero videos, event teasers, hospitality promotions, fashion campaigns, luxury brand films and social media marketing.",
+        "We can create AI commercial videos, product launch films, product demonstrations, brand films, fashion videos, hospitality promotions, real estate videos, event teasers, service explainers, website hero videos, Instagram Reels and YouTube Shorts.",
     },
     {
-      question: "Do you create CGI advertising videos?",
+      question: "What types of videos can you professionally edit?",
       answer:
-        "Yes. We create CGI-style advertising videos where products, brand elements or digital objects are placed in visually striking environments. CGI ads are useful for product launches, luxury campaigns, social media ads, brand announcements and scroll-stopping digital content.",
+        "We edit Instagram Reels, YouTube Shorts, advertisements, brand films, product videos, interviews, podcasts, corporate videos, event highlights, aftermovies, music videos, educational content, founder videos and long-form YouTube content.",
     },
     {
-      question: "What type of AI videos can you create?",
+      question: "Can you combine AI-generated visuals with my existing footage?",
       answer:
-        "We can create AI product videos, CGI ads, AI fashion videos, hospitality launch videos, event teasers, brand films, music video visuals, real estate project videos, website hero videos, explainer videos, motion graphic videos and social media reels.",
+        "Yes. We can combine AI-generated scenes with your product photographs, recorded footage, interviews, event clips, screen recordings, logos and other brand assets. The final edit can include transitions, motion graphics, text, music, colour correction and sound design.",
     },
     {
-      question: "Can you create videos for Instagram and YouTube?",
+      question: "Can you edit videos for Instagram, YouTube and websites?",
       answer:
-        "Yes. We create platform-ready videos for Instagram Reels, YouTube Shorts, feed posts, paid ads, website sections, landing pages, presentations and event screens. Videos can be adapted into different sizes and formats based on where they will be used.",
+        "Yes. We create and edit videos for Instagram Reels, YouTube Shorts, YouTube videos, social media advertisements, websites, landing pages, presentations and event screens. Each video can be adapted according to the platform, duration and audience.",
     },
     {
       question: "What video formats do you deliver?",
       answer:
-        "We can deliver videos in 9:16 for reels and shorts, 4:5 for social media feed, 1:1 for square posts and 16:9 for YouTube, websites, presentations, brand films and event screens. The final format depends on the campaign requirement.",
+        "We can deliver videos in 9:16 for Reels, Shorts and Stories, 4:5 for social media feeds, 1:1 for square posts and 16:9 for YouTube, websites, presentations, brand films and event screens. Custom dimensions can also be prepared when required.",
     },
     {
-      question: "Do I need a script before starting an AI video project?",
+      question: "Do I need to provide a script or raw footage?",
       answer:
-        "Not always. You can share your brand details, campaign goal, product or service information, reference style, required video format, CTA, deadline and usage platform. Based on this, we can help plan the script, visual direction, shot flow and final edit structure.",
+        "Not always. For an AI video, you can share your brand information, objective, product details, references and key message, and we can help develop the concept and script. For video editing, you can provide the available footage and brief, and we can organise it into a complete edit.",
     },
     {
-      question: "Can AI video and VFX be used for product launches?",
+      question: "Can one video be adapted into multiple shorter edits?",
       answer:
-        "Yes. AI video and VFX are very useful for product launches because they help create premium product visuals, teaser videos, reveal films, CGI-style ads, announcement reels and campaign content that can build curiosity before and after the launch.",
+        "Yes. A master video can be converted into shorter Reels, Shorts, advertisements, teasers, cutdowns and platform-specific versions. We can also adapt the same content into vertical, square, portrait and landscape formats for different campaign requirements.",
     },
     {
-      question: "How long does an AI video or VFX project take?",
+      question: "How long does an AI video or video editing project take?",
       answer:
-        "The timeline depends on the video length, number of scenes, creative complexity, AI visuals, CGI or VFX work, editing style, sound design, revisions and final output formats. Simple reels can be quicker, while detailed campaign films need more planning and production time.",
+        "The timeline depends on the video duration, number of scenes, amount of raw footage, AI visual requirements, editing complexity, motion graphics, sound design, revision rounds and final output formats. Short social videos may take less time, while detailed commercials and brand films require a longer production schedule.",
     },
     {
-      question: "How much does AI video production cost in India?",
+      question: "How much do AI video production and video editing cost?",
       answer:
-        "The cost depends on the concept, video duration, number of scenes, AI visual requirements, CGI or VFX complexity, editing work, motion graphics, voiceover, music, revisions and final delivery formats. We first understand the requirement and then share a customized quotation.",
+        "The cost depends on the video duration, creative concept, number of scenes, AI-generated visuals, amount of raw footage, editing requirements, motion graphics, subtitles, voiceover, sound design, revisions and final delivery formats. We review the complete brief before sharing a customised quotation.",
     },
   ];
 
@@ -122,14 +123,14 @@ export default function AIVideoVFXFAQ() {
           >
             AI Video Production{" "}
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              & VFX FAQs
+              & Video Editing FAQs
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-[720px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[17px]">
-            Everything you need to know about AI video production, CGI ads, VFX,
-            motion graphics, reels, launch videos, output formats and digital
-            campaign usage.
+            Everything you need to know about AI video production, professional
+            video editing, social media videos, commercials, brand films,
+            output formats, timelines and project requirements.
           </p>
         </div>
 

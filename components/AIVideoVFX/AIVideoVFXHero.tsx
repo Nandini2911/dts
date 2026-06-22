@@ -10,8 +10,8 @@ const fadeUp = {
 
 const heroTags = [
   "AI Video Production",
-  "CGI Ads",
-  "VFX Services",
+  "Commercial Video Editing",
+  "Social Media Reels",
   "Brand Launch Films",
 ];
 
@@ -22,13 +22,13 @@ const visualCards = [
     position: "left-0 top-[18%]",
   },
   {
-    title: "CGI Ads",
-    text: "Premium campaign renders",
+    title: "Video Editing",
+    text: "Premium campaign edits",
     position: "right-0 top-[30%]",
   },
   {
-    title: "VFX Editing",
-    text: "Cinematic post-production",
+    title: "Reels Editing",
+    text: "Engaging social media videos",
     position: "left-8 bottom-[18%]",
   },
 ];
@@ -85,8 +85,6 @@ export default function AIVideoVFXHero() {
         />
       </div>
 
-      
-
       {/* Decorative animated blue blur */}
       <motion.div
         animate={{
@@ -121,31 +119,31 @@ export default function AIVideoVFXHero() {
             </span>
 
             <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/85 sm:text-xs">
-              AI Video • CGI Ads • VFX Production
+              AI Video • Reels • Video Editing
             </p>
           </motion.div>
 
-       <motion.h1
-  variants={fadeUp}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="mx-auto max-w-5xl text-[34px] font-black leading-[0.96] tracking-[-0.045em] text-white sm:text-[46px] md:text-[60px] lg:mx-0 xl:text-[74px]"
->
-  AI Video Production
-  <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
-    & VFX Services
-  </span>
-  <span className="block text-white">in India</span>
-</motion.h1>
+          <motion.h1
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mx-auto max-w-5xl text-[34px] font-black leading-[0.96] tracking-[-0.045em] text-white sm:text-[46px] md:text-[60px] lg:mx-0 xl:text-[74px]"
+          >
+            AI Video Production
+            <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
+              & Video Editing
+            </span>
+            <span className="block text-white">in India</span>
+          </motion.h1>
 
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-base font-semibold leading-8 text-white/82 sm:text-lg lg:mx-0"
           >
-            Double Trouble Studio creates AI videos, CGI ads, VFX-led brand
+            Double Trouble Studio creates AI videos, professionally edited brand
             films, product launch videos, event teasers, Instagram reels,
-            YouTube videos and cinematic visual campaigns for brands across
-            India.
+            YouTube videos, commercial ads and engaging visual campaigns for
+            brands across India.
           </motion.p>
 
           <motion.p
@@ -153,9 +151,9 @@ export default function AIVideoVFXHero() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/68 sm:text-base lg:mx-0"
           >
-            From AI-generated commercial videos to CGI product ads and visual
-            effects for advertising, we help brands create premium, modern and
-            scroll-stopping video content.
+            From AI-generated commercial videos to social media reels, YouTube
+            edits and branded promotional films, we help businesses create
+            premium, modern and scroll-stopping video content.
           </motion.p>
 
           <motion.div
@@ -167,7 +165,7 @@ export default function AIVideoVFXHero() {
               href="/contact"
               className="group inline-flex w-full items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-bold text-[#0D2444] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#BFEAFF] sm:w-auto"
             >
-              Create Your AI Video
+              Create Your Video
               <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
@@ -177,7 +175,7 @@ export default function AIVideoVFXHero() {
               href="/contact"
               className="inline-flex w-full items-center justify-center rounded-full border border-white/25 bg-white/10 px-7 py-4 text-sm font-bold text-white shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/18 sm:w-auto"
             >
-              Start A Visual Campaign
+              Start A Video Campaign
             </Link>
           </motion.div>
 
@@ -255,7 +253,7 @@ export default function AIVideoVFXHero() {
                 </div>
 
                 <p className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[9px] font-black uppercase tracking-[0.2em] text-white/75">
-                  Render Preview
+                  Edit Preview
                 </p>
               </div>
 
@@ -281,7 +279,7 @@ export default function AIVideoVFXHero() {
               <div className="absolute bottom-5 left-5 right-5 z-10 rounded-[1.5rem] border border-white/15 bg-white/10 p-4 backdrop-blur-xl">
                 <div className="mb-4 flex items-center justify-between">
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
-                    AI Campaign Render
+                    Video Editing Preview
                   </p>
                   <p className="text-xs font-black text-white">9:16</p>
                 </div>
@@ -304,7 +302,7 @@ export default function AIVideoVFXHero() {
                 </div>
 
                 <div className="mt-4 grid grid-cols-3 gap-2">
-                  {["AI", "CGI", "VFX"].map((item) => (
+                  {["AI", "REELS", "EDIT"].map((item) => (
                     <div
                       key={item}
                       className="rounded-xl border border-white/15 bg-white/10 py-2 text-center"
@@ -322,7 +320,7 @@ export default function AIVideoVFXHero() {
           {/* Bottom badge */}
           <div className="absolute bottom-1 left-1/2 z-20 w-[86%] -translate-x-1/2 rounded-3xl border border-white/20 bg-white/12 px-5 py-4 shadow-xl shadow-black/15 backdrop-blur-xl">
             <p className="text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#BFEAFF]">
-              Built for Reels, Ads, Launches & Websites
+              Edited for Reels, Ads, Launches & Websites
             </p>
           </div>
         </motion.div>

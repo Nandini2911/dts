@@ -10,39 +10,39 @@ const fadeUp = {
 const benefits = [
   {
     title: "Premium Visual Appeal",
-    text: "AI video production and VFX help brands create cinematic visuals that look polished, modern and campaign-ready.",
+    text: "AI video production and professional video editing help brands create cinematic content that looks polished, modern and campaign-ready.",
   },
   {
     title: "Faster Content Creation",
-    text: "AI-assisted workflows speed up concept development, visual creation, editing and format adaptation for campaigns.",
+    text: "AI-assisted workflows speed up concept development and visual creation, while professional editing turns ideas and footage into finished videos faster.",
   },
   {
     title: "Better Campaign Recall",
-    text: "CGI, motion graphics and VFX create visual moments that audiences notice, remember and associate with the brand.",
+    text: "Creative AI visuals, motion graphics, strong pacing and professional editing create memorable moments that audiences associate with the brand.",
   },
   {
     title: "Platform-Ready Outputs",
-    text: "Videos can be adapted for Instagram Reels, YouTube Shorts, ads, websites, landing pages, event screens and presentations.",
+    text: "Videos can be professionally edited and adapted for Instagram Reels, YouTube Shorts, ads, websites, landing pages, event screens and presentations.",
   },
   {
     title: "Stronger Product Storytelling",
-    text: "AI visuals and VFX allow products, services and brand ideas to be shown with more mood, drama, clarity and visual depth.",
+    text: "AI-generated visuals and structured video editing help present products, services and brand ideas with more clarity, emotion and visual depth.",
   },
   {
     title: "Luxury Brand Positioning",
-    text: "Premium pacing, cinematic effects, refined edits and clean post-production help brands look more elevated online.",
+    text: "Premium pacing, cinematic visuals, refined edits, colour correction and clean post-production help brands look more elevated online.",
   },
   {
     title: "More Creative Freedom",
-    text: "AI and CGI make it possible to create scenes, worlds, product moments and campaign visuals that are difficult to shoot traditionally.",
+    text: "AI video production makes it possible to create original scenes, environments and campaign concepts, while professional editing brings every visual into one cohesive story.",
   },
   {
     title: "Reusable Campaign Assets",
-    text: "One visual concept can be converted into multiple edits, cutdowns, sizes, teasers, ads and social media formats.",
+    text: "One AI video or professionally edited master film can be converted into multiple cutdowns, sizes, teasers, advertisements and social media formats.",
   },
 ];
 
-const keywords = ["Impact", "Speed", "Recall", "Scale"];
+const keywords = ["Quality", "Speed", "Engagement", "Scale"];
 
 export default function AIVideoVFXBenefits() {
   return (
@@ -122,7 +122,7 @@ export default function AIVideoVFXBenefits() {
             <h2 className="max-w-5xl text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-white sm:text-[56px] md:text-[78px]">
               Why brands invest in
               <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
-                AI Video & VFX.
+                AI Video & Video Editing.
               </span>
             </h2>
           </motion.div>
@@ -132,8 +132,9 @@ export default function AIVideoVFXBenefits() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-sm font-medium leading-7 text-white/64 sm:text-base lg:text-right"
           >
-            AI video and VFX help brands create content that feels premium,
-            flexible, fast, memorable and ready for digital campaigns.
+            AI video production and professional video editing help brands
+            create content that feels premium, flexible, fast, memorable and
+            ready for digital campaigns.
           </motion.p>
         </motion.div>
 
@@ -149,20 +150,21 @@ export default function AIVideoVFXBenefits() {
           >
             <div className="border-y border-white/15 py-10">
               <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                Visual Advantage
+                Video Advantage
               </p>
 
               <h3 className="mt-5 text-[42px] font-black leading-[0.94] tracking-[-0.06em] text-white sm:text-[60px]">
-                Better visuals.
+                Better videos.
                 <span className="block text-white/45">
                   Stronger campaigns.
                 </span>
               </h3>
 
               <p className="mt-6 text-sm leading-7 text-white/62 sm:text-base">
-                In digital marketing, the first impression is visual. AI, CGI
-                and VFX help brands create videos that look premium, communicate
-                quickly and give campaigns a stronger creative edge.
+                In digital marketing, the first impression is often created
+                through video. AI-generated visuals and professional editing
+                help brands communicate quickly, look premium and give every
+                campaign a stronger creative edge.
               </p>
             </div>
 
@@ -236,7 +238,6 @@ export default function AIVideoVFXBenefits() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

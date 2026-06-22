@@ -9,39 +9,39 @@ const fadeUp = {
 
 const processSteps = [
   {
-    title: "Requirement Understanding",
+    title: "Project Brief & Requirements",
     tag: "Discovery",
-    text: "We understand the brand, campaign goal, target audience, product, service, platform requirement and final video purpose.",
+    text: "We understand your brand, product or service, target audience, campaign objective, preferred video style, required duration, platform and final deliverables.",
   },
   {
-    title: "Creative Concept Planning",
-    tag: "Concept",
-    text: "We define the video idea, mood, visual direction, reference style, storytelling angle and campaign message.",
+    title: "Concept, Script & Direction",
+    tag: "Pre-Production",
+    text: "We develop the core concept, campaign message, script, voiceover, visual treatment, references and creative direction for the AI video or editing project.",
   },
   {
-    title: "Script & Shot Breakdown",
-    tag: "Structure",
-    text: "We prepare the video flow, scene structure, text direction, visual prompts, shot ideas and edit sequence.",
+    title: "Storyboard & Scene Planning",
+    tag: "Planning",
+    text: "We divide the script into scenes and plan the shot flow, visual prompts, camera angles, transitions, on-screen text, product placement and editing sequence.",
   },
   {
-    title: "AI Visual Creation",
-    tag: "AI Build",
-    text: "We generate or design AI visuals, CGI-style scenes, character looks, product environments and visual assets.",
+    title: "AI Visual & Video Creation",
+    tag: "AI Production",
+    text: "We create AI-generated characters, environments, product scenes, brand visuals and video shots while maintaining consistency across every frame and scene.",
   },
   {
-    title: "VFX & Motion Design",
-    tag: "VFX Polish",
-    text: "We add compositing, motion graphics, transitions, effects, clean-up, animated text and visual enhancements.",
+    title: "Professional Video Editing",
+    tag: "Editing",
+    text: "We arrange AI-generated clips, recorded footage, product shots and brand assets into a complete video with clean cuts, strong pacing and smooth visual continuity.",
   },
   {
-    title: "Editing & Sound Design",
-    tag: "Post",
-    text: "We edit the video with pacing, music, sound effects, color tone, subtitles and platform-specific energy.",
+    title: "Motion Graphics, Colour & Sound",
+    tag: "Post-Production",
+    text: "We add animated text, logo reveals, motion graphics, transitions, colour correction, music, voiceover, sound effects, subtitles and final audio balancing.",
   },
   {
-    title: "Final Export & Adaptation",
+    title: "Review, Export & Adaptation",
     tag: "Delivery",
-    text: "We export videos in formats such as 9:16, 4:5, 1:1 and 16:9 for reels, ads, websites and campaigns.",
+    text: "After feedback and final approval, we export the video in 9:16, 4:5, 1:1 and 16:9 formats for Reels, Shorts, advertisements, YouTube, websites and campaigns.",
   },
 ];
 
@@ -103,14 +103,14 @@ export default function AIVideoVFXProcess() {
           <motion.div variants={fadeUp}>
             <div className="mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl">
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-                Our Process
+                Our Creative Process
               </p>
             </div>
 
             <h2 className="max-w-5xl text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]">
-              How we create AI Video
+              How we produce AI Videos
               <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                & VFX campaigns.
+                & professionally edit content.
               </span>
             </h2>
           </motion.div>
@@ -120,8 +120,9 @@ export default function AIVideoVFXProcess() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-sm font-medium leading-7 text-[#49617F] sm:text-base lg:text-right"
           >
-            A clean workflow keeps every AI video, CGI ad and VFX campaign
-            purposeful, premium and ready for final platform use.
+            Our complete workflow covers planning, AI video generation,
+            professional editing, motion graphics, sound design and final
+            platform-ready delivery.
           </motion.p>
         </motion.div>
 
@@ -150,11 +151,12 @@ export default function AIVideoVFXProcess() {
             <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_0.55fr] lg:items-center">
               <div>
                 <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                  Production Journey
+                  AI Video & Editing Workflow
                 </p>
 
                 <h3 className="mt-4 text-[34px] font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-[50px]">
-                  From brief to final export, every step has a purpose.
+                  From creative planning to final delivery, every stage builds a
+                  stronger video.
                 </h3>
               </div>
 
@@ -175,8 +177,9 @@ export default function AIVideoVFXProcess() {
                     <p className="text-[24px] font-black tracking-[-0.05em] text-white">
                       {item}
                     </p>
+
                     <p className="mt-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#BFEAFF]/70">
-                      Export
+                      Format
                     </p>
                   </motion.div>
                 ))}

@@ -10,39 +10,39 @@ const fadeUp = {
 const formats = [
   {
     size: "9:16",
-    title: "Vertical Reels",
-    use: "Instagram Reels, YouTube Shorts, Stories, social ads",
-    text: "Best for mobile-first campaigns where the video needs to capture attention quickly and hold viewers in a vertical feed.",
+    title: "Vertical Video Editing",
+    use: "Instagram Reels, YouTube Shorts, Stories, vertical ads",
+    text: "Ideal for AI-generated videos and professionally edited mobile-first content designed to capture attention quickly in vertical social media feeds.",
   },
   {
     size: "4:5",
-    title: "Premium Feed Videos",
+    title: "Social Feed Videos",
     use: "Instagram feed, Facebook feed, paid ads, campaign posts",
-    text: "A strong format for social media posts because it gives more screen space while still feeling clean and premium.",
+    text: "A high-visibility social format for AI product videos, brand campaigns, promotional edits and advertisements that need more space within the feed.",
   },
   {
     size: "1:1",
-    title: "Square Campaign Edits",
-    use: "Feed posts, thumbnails, social media previews, paid creatives",
-    text: "Useful for compact campaign edits, product videos, announcement creatives and platform-neutral video assets.",
+    title: "Square Video Edits",
+    use: "Feed posts, paid creatives, previews, product campaigns",
+    text: "A versatile format for AI video campaigns, product demonstrations, service explainers, announcements and professionally edited social media content.",
   },
   {
     size: "16:9",
-    title: "Wide Brand Films",
+    title: "Wide-Screen Video Editing",
     use: "YouTube, websites, presentations, event screens, brand films",
-    text: "Ideal for cinematic brand films, website hero sections, launch videos, event screens and long-form campaign storytelling.",
+    text: "Best suited for AI brand films, YouTube videos, commercial edits, website videos, event presentations and long-form visual storytelling.",
   },
 ];
 
 const outputs = [
-  "Reels",
-  "Ads",
-  "Websites",
-  "Launches",
-  "Events",
-  "YouTube",
-  "Landing Pages",
-  "Presentations",
+  "Instagram Reels",
+  "YouTube Shorts",
+  "Social Ads",
+  "Brand Films",
+  "Product Videos",
+  "YouTube Videos",
+  "Website Videos",
+  "Event Screens",
 ];
 
 export default function AIVideoVFXFormats() {
@@ -68,12 +68,12 @@ export default function AIVideoVFXFormats() {
           <motion.div variants={fadeUp}>
             <div className="mb-6 inline-flex rounded-full border border-[#6288B9]/20 bg-[#F7FAFF] px-4 py-2 shadow-sm">
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-                Video Formats
+                AI Video & Editing Formats
               </p>
             </div>
 
             <h2 className="max-w-5xl text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]">
-              Output formats for
+              Video formats created for
               <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
                 every digital platform.
               </span>
@@ -85,8 +85,9 @@ export default function AIVideoVFXFormats() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-sm font-medium leading-7 text-[#49617F] sm:text-base lg:text-right"
           >
-            Every AI video, CGI ad and VFX campaign can be adapted into multiple
-            platform-ready sizes for social media, websites, ads and events.
+            Every AI-generated video and professionally edited project can be
+            adapted into platform-ready formats for social media, YouTube,
+            websites, advertisements, presentations and event screens.
           </motion.p>
         </motion.div>
 
@@ -160,13 +161,13 @@ export default function AIVideoVFXFormats() {
                     </div>
 
                     <p className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[8px] font-black uppercase tracking-[0.18em] text-[#BFEAFF]">
-                      Preview
+                      Video Preview
                     </p>
                   </div>
 
                   <div>
                     <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                      Primary Mobile Format
+                      Primary Vertical Format
                     </p>
 
                     <h3 className="mt-4 text-[72px] font-black leading-none tracking-[-0.075em] text-white">
@@ -174,14 +175,15 @@ export default function AIVideoVFXFormats() {
                     </h3>
 
                     <p className="mt-4 text-sm leading-6 text-white/62">
-                      Built for reels, shorts, stories, vertical ads and
-                      mobile-first campaigns.
+                      Created for AI Reels, professionally edited Shorts,
+                      Stories, vertical advertisements and mobile-first
+                      campaigns.
                     </p>
                   </div>
 
                   <div className="border-t border-white/15 pt-5">
                     <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#BFEAFF]">
-                      Platform Ready
+                      Edited & Platform Ready
                     </p>
                   </div>
                 </div>
@@ -249,17 +251,18 @@ export default function AIVideoVFXFormats() {
           <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-                Delivered For
+                Video Deliverables
               </p>
 
               <h3 className="mt-2 text-[30px] font-black tracking-[-0.045em] text-[#0D2444] sm:text-[42px]">
-                One concept. Multiple campaign outputs.
+                One master video. Multiple platform-ready edits.
               </h3>
             </div>
 
             <p className="max-w-md text-sm leading-7 text-[#49617F] sm:text-right">
-              Videos can be exported as cutdowns, teasers, reels, ads, website
-              visuals and event screen edits.
+              AI videos and professionally edited content can be delivered as
+              full-length films, cutdowns, Reels, Shorts, advertisements,
+              website videos and event-screen versions.
             </p>
           </div>
 
