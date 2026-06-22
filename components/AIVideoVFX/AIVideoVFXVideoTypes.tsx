@@ -9,49 +9,49 @@ const fadeUp = {
 
 const videoTypes = [
   {
+    title: "AI Commercial Videos",
+    label: "AI Ads",
+    text: "AI-generated commercial videos for products, services, offers and digital advertising campaigns with creative concepts and branded storytelling.",
+  },
+  {
+    title: "AI Product Videos",
+    label: "AI Product",
+    text: "Cinematic AI product videos for launches, promotions and demonstrations using creative scenes, product movement and premium visual presentation.",
+  },
+  {
     title: "AI Brand Films",
-    label: "Brand",
-    text: "Cinematic AI-assisted films for brand launches, storytelling, digital campaigns and premium identity building.",
+    label: "AI Brand",
+    text: "Concept-driven AI brand films for business introductions, brand storytelling, campaign launches and premium digital communication.",
   },
   {
-    title: "CGI Product Ads",
-    label: "Product",
-    text: "High-impact CGI videos where products appear in stylized, surreal or campaign-focused digital environments.",
+    title: "Reels & Shorts Editing",
+    label: "Social Edit",
+    text: "Fast-paced vertical video editing for Instagram Reels, YouTube Shorts, paid social advertisements and creator-led brand campaigns.",
   },
   {
-    title: "Instagram Reels & Shorts",
-    label: "Social",
-    text: "Short-form vertical videos for Instagram, YouTube Shorts, paid ads, influencer campaigns and launches.",
+    title: "Commercial Video Editing",
+    label: "Ad Editing",
+    text: "Professional editing for advertisements, promotional videos and brand films with strong pacing, clean sequencing, graphics, colour and sound.",
   },
   {
-    title: "Event Launch Videos",
+    title: "YouTube Video Editing",
+    label: "YouTube",
+    text: "Long-form and short-form YouTube editing with clean cuts, subtitles, transitions, motion graphics, audio enhancement and engaging visual flow.",
+  },
+  {
+    title: "Event & Launch Video Editing",
     label: "Events",
-    text: "Teasers, invite videos, countdown edits, hype reels and launch announcements for events and experiences.",
+    text: "Professional editing for event teasers, invitations, countdown videos, artist announcements, launch highlights and cinematic aftermovies.",
   },
   {
-    title: "Luxury Commercial Videos",
-    label: "Luxury",
-    text: "Premium commercials for fashion, hospitality, lifestyle, real estate, jewellery, automotive and luxury brands.",
+    title: "Product & Service Explainer Videos",
+    label: "Explainer",
+    text: "Clear explainer videos created with AI visuals, recorded footage, text animation and structured editing to communicate products and services.",
   },
   {
-    title: "Music Video Visuals",
-    label: "Music",
-    text: "AI scenes, VFX overlays, surreal edits, lyric visuals and promotional video cuts for music releases.",
-  },
-  {
-    title: "Website Hero Videos",
-    label: "Website",
-    text: "Looping hero videos, landing page visuals and website background videos for modern digital campaigns.",
-  },
-  {
-    title: "Explainer & Service Videos",
-    label: "Explain",
-    text: "Clear videos that explain a service, product, offer, process or business model using animation and visuals.",
-  },
-  {
-    title: "Motion Graphic Videos",
-    label: "Motion",
-    text: "Animated typography, logo reveals, brand graphics, transitions, icons and visual storytelling assets.",
+    title: "Motion Graphics & Post-Production",
+    label: "Post",
+    text: "Complete video post-production with animated titles, logo reveals, colour correction, sound design, subtitles, transitions and final exports.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function AIVideoVFXVideoTypes() {
             className="mx-auto mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              Video Types
+              AI Video Production & Video Editing
             </p>
           </motion.div>
 
@@ -130,9 +130,9 @@ export default function AIVideoVFXVideoTypes() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[34px] font-black leading-[1.02] tracking-[-0.045em] text-[#0D2444] sm:text-[46px] md:text-[60px]"
           >
-            Types of AI, CGI
+            Types of AI Videos
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              & VFX Videos We Create
+              & Professional Video Edits We Create
             </span>
           </motion.h2>
 
@@ -141,9 +141,9 @@ export default function AIVideoVFXVideoTypes() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            We create AI-assisted videos, CGI ads, reels, commercials, website
-            visuals, music video effects and event films designed for different
-            platforms, audiences and campaign goals.
+            We create AI-generated videos and provide professional video editing
+            for commercials, product campaigns, brand films, Instagram Reels,
+            YouTube videos, events, explainers and digital marketing content.
           </motion.p>
         </motion.div>
 
@@ -171,12 +171,12 @@ export default function AIVideoVFXVideoTypes() {
 
             <div className="relative z-10">
               <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                Production Board
+                Complete Video Production
               </p>
 
               <h3 className="mt-5 text-[40px] font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-[56px]">
                 One
-                <span className="block text-white/50">visual system.</span>
+                <span className="block text-white/50">creative system.</span>
               </h3>
 
               {/* Lens */}
@@ -206,7 +206,7 @@ export default function AIVideoVFXVideoTypes() {
 
                 <div className="relative flex h-[190px] w-[190px] flex-col items-center justify-center rounded-full border border-white/20 bg-white/10 text-center backdrop-blur-xl sm:h-[230px] sm:w-[230px]">
                   <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#BFEAFF]">
-                    AI / CGI / VFX
+                    AI Video + Editing
                   </p>
 
                   <p className="mt-3 text-[42px] font-black leading-none tracking-[-0.06em] text-white">
@@ -214,7 +214,8 @@ export default function AIVideoVFXVideoTypes() {
                   </p>
 
                   <p className="mt-3 max-w-[150px] text-xs leading-5 text-white/60">
-                    Video formats for launch, ads, reels and brand films.
+                    Complete videos for ads, Reels, products, brand films and
+                    digital campaigns.
                   </p>
                 </div>
               </div>
@@ -236,6 +237,7 @@ export default function AIVideoVFXVideoTypes() {
                     <p className="text-[28px] font-black tracking-[-0.05em] text-white">
                       {item.value}
                     </p>
+
                     <p className="mt-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#BFEAFF]/75">
                       {item.label}
                     </p>
@@ -245,63 +247,195 @@ export default function AIVideoVFXVideoTypes() {
             </div>
           </motion.div>
 
-          {/* Right production blocks */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ staggerChildren: 0.07 }}
-            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+         {/* Right production blocks */}
+<motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, margin: "-80px" }}
+  transition={{ staggerChildren: 0.07 }}
+  className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+>
+  {videoTypes.map((item, index) => (
+    <motion.div
+      key={item.title}
+      variants={fadeUp}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="
+        group
+        relative
+        h-full
+        overflow-hidden
+        rounded-[2.1rem]
+        border
+        border-[#6288B9]/20
+        bg-white/70
+        p-[1px]
+        shadow-sm
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        hover:-translate-y-2
+        hover:border-[#6288B9]/40
+        hover:shadow-2xl
+        hover:shadow-[#0D2444]/14
+      "
+    >
+      {/* Same gradient hover background for every card */}
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D2444]/45 via-[#6288B9]/25 to-white/35" />
+      </div>
+
+      <div
+        className="
+          relative
+          flex
+          h-full
+          min-h-[300px]
+          flex-col
+          justify-between
+          overflow-hidden
+          rounded-[2rem]
+          bg-white/82
+          p-5
+          transition-all
+          duration-500
+          group-hover:bg-[#0D2444]
+        "
+      >
+        {/* Same hover glow for every card */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -right-20
+            -top-20
+            h-44
+            w-44
+            rounded-full
+            bg-[#6288B9]/10
+            blur-2xl
+            transition-all
+            duration-500
+            group-hover:bg-[#6288B9]/25
+          "
+        />
+
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <p
+              className="
+                text-[10px]
+                font-black
+                uppercase
+                tracking-[0.22em]
+                text-[#6288B9]
+                transition-colors
+                duration-500
+                group-hover:text-[#BFEAFF]
+              "
+            >
+              {item.label}
+            </p>
+
+            <span
+              className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#6288B9]/25
+                bg-[#F7FAFF]
+                text-xs
+                font-black
+                text-[#315E91]
+                transition-all
+                duration-500
+                group-hover:rotate-6
+                group-hover:border-white/20
+                group-hover:bg-white/10
+                group-hover:text-white
+              "
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
+          </div>
+
+          <h3
+            className="
+              mt-9
+              text-[25px]
+              font-black
+              leading-tight
+              tracking-[-0.045em]
+              text-[#0D2444]
+              transition-colors
+              duration-500
+              group-hover:text-white
+            "
           >
-            {videoTypes.map((item, index) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className={`group relative overflow-hidden rounded-[2.1rem] border border-[#6288B9]/20 bg-white/70 p-[1px] shadow-sm backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D2444]/14 ${
-                  index === 0 || index === 4 || index === 8
-                    ? "sm:col-span-2 lg:col-span-1"
-                    : ""
-                }`}
-              >
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#0D2444]/45 via-[#6288B9]/25 to-white/35" />
-                </div>
-
-                <div className="relative flex min-h-[260px] flex-col justify-between rounded-[2rem] bg-white/82 p-5 transition-all duration-500 group-hover:bg-[#0D2444]">
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#6288B9] transition-colors duration-500 group-hover:text-[#BFEAFF]">
-                        {item.label}
-                      </p>
-
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#6288B9]/25 bg-[#F7FAFF] text-xs font-black text-[#315E91] transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/10 group-hover:text-white">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-9 text-[25px] font-black leading-tight tracking-[-0.045em] text-[#0D2444] transition-colors duration-500 group-hover:text-white">
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  <div className="mt-8">
-                    <div className="mb-5 h-px w-12 bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] transition-all duration-500 group-hover:w-24 group-hover:from-white group-hover:via-[#BFEAFF] group-hover:to-[#67B7E8]" />
-
-                    <p className="text-sm leading-7 text-[#49617F] transition-colors duration-500 group-hover:text-white/70">
-                      {item.text}
-                    </p>
-                  </div>
-
-                  <span className="pointer-events-none absolute bottom-[-24px] right-[-4px] text-[105px] font-black leading-none tracking-[-0.08em] text-[#0D2444]/5 transition-colors duration-500 group-hover:text-white/8">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+            {item.title}
+          </h3>
         </div>
 
+        <div className="relative z-10 mt-8">
+          <div
+            className="
+              mb-5
+              h-px
+              w-12
+              bg-gradient-to-r
+              from-[#0D2444]
+              via-[#315E91]
+              to-[#6288B9]
+              transition-all
+              duration-500
+              group-hover:w-24
+              group-hover:from-white
+              group-hover:via-[#BFEAFF]
+              group-hover:to-[#67B7E8]
+            "
+          />
+
+          <p
+            className="
+              text-sm
+              leading-7
+              text-[#49617F]
+              transition-colors
+              duration-500
+              group-hover:text-white/70
+            "
+          >
+            {item.text}
+          </p>
+        </div>
+
+        <span
+          className="
+            pointer-events-none
+            absolute
+            bottom-[-24px]
+            right-[-4px]
+            text-[105px]
+            font-black
+            leading-none
+            tracking-[-0.08em]
+            text-[#0D2444]/5
+            transition-colors
+            duration-500
+            group-hover:text-white/8
+          "
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+    </motion.div>
+  ))}
+</motion.div>
+        </div>
       </div>
     </section>
   );

@@ -9,32 +9,39 @@ const fadeUp = {
 
 const reasons = [
   {
-    title: "Creative Direction First",
-    text: "Every video starts with the campaign idea, brand mood, audience, message and visual direction before AI or VFX work begins.",
+    title: "Strategy-Led Creative Direction",
+    text: "Every project begins with your brand, audience, objective, platform and message so the final video supports a clear marketing or communication goal.",
   },
   {
-    title: "Premium Visual Quality",
-    text: "We focus on refined styling, clean motion, cinematic pacing, polished edits and brand-aligned visual treatment.",
+    title: "AI Video Production Expertise",
+    text: "We create AI-generated commercials, product videos, brand films, characters, environments and campaign visuals with consistent styling and storytelling.",
   },
   {
-    title: "AI + CGI + VFX Workflow",
-    text: "Our production approach combines AI visuals, CGI-style concepts, VFX polish, motion graphics and professional post-production.",
+    title: "Professional Video Editing",
+    text: "We transform AI clips, raw footage and brand assets into polished videos using structured sequencing, strong pacing, clean cuts and visual continuity.",
   },
   {
-    title: "Campaign-Ready Outputs",
-    text: "Videos are adapted for reels, ads, websites, YouTube, launch campaigns, event screens and social media formats.",
+    title: "Complete Post-Production",
+    text: "Every edit can include motion graphics, animated typography, colour correction, subtitles, voiceovers, music, sound effects and final audio balancing.",
   },
   {
-    title: "Fast Execution",
-    text: "AI-assisted workflows help brands create high-quality visual campaigns faster without depending on heavy traditional production every time.",
+    title: "Platform-Ready Deliverables",
+    text: "We adapt videos for Instagram Reels, YouTube Shorts, social ads, websites, presentations, event screens and long-form YouTube content.",
   },
   {
-    title: "End-to-End Support",
-    text: "From concept, script and prompts to editing, sound, VFX, subtitles and final exports, the full production flow is managed.",
+    title: "End-to-End Project Support",
+    text: "From concept development and scripting to AI visual creation, editing, revisions and final exports, the complete production workflow is managed by our team.",
   },
 ];
 
-const pillars = ["Strategy", "AI Visuals", "CGI", "VFX", "Editing", "Delivery"];
+const pillars = [
+  "Strategy",
+  "AI Production",
+  "Video Editing",
+  "Post-Production",
+  "Sound Design",
+  "Delivery",
+];
 
 export default function WhyChooseAIVideoVFX() {
   return (
@@ -95,7 +102,7 @@ export default function WhyChooseAIVideoVFX() {
             className="mx-auto mb-6 inline-flex rounded-full border border-[#6288B9]/22 bg-white/80 px-4 py-2 shadow-sm backdrop-blur-xl"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              Why Choose DTS
+              Why Choose Double Trouble Studio
             </p>
           </motion.div>
 
@@ -104,9 +111,9 @@ export default function WhyChooseAIVideoVFX() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-[#0D2444] sm:text-[56px] md:text-[78px]"
           >
-            Why choose Double Trouble Studio
+            Why choose us for
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              for AI Video & VFX.
+              AI Video & Video Editing.
             </span>
           </motion.h2>
 
@@ -115,9 +122,10 @@ export default function WhyChooseAIVideoVFX() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            We create AI videos, CGI ads and VFX-led campaign visuals with a
-            balance of creative strategy, premium styling and platform-ready
-            execution.
+            We combine AI video production, professional video editing and
+            complete post-production to create polished, brand-aligned content
+            for advertisements, products, social media, YouTube, events and
+            digital campaigns.
           </motion.p>
         </motion.div>
 
@@ -147,21 +155,21 @@ export default function WhyChooseAIVideoVFX() {
               <div className="relative z-10 flex min-h-[650px] flex-col justify-between">
                 <div>
                   <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                    DTS Creative System
+                    DTS Video Production System
                   </p>
 
                   <h3 className="mt-5 text-[48px] font-black leading-[0.9] tracking-[-0.07em] text-white sm:text-[70px]">
-                    Idea.
-                    <span className="block text-white/45">Image.</span>
+                    Create.
+                    <span className="block text-white/45">Edit.</span>
                     <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
-                      Impact.
+                      Deliver.
                     </span>
                   </h3>
 
                   <p className="mt-6 max-w-md text-sm leading-7 text-white/62 sm:text-base">
-                    We do not create AI videos only for effects. We create them
-                    as campaign assets that help brands look sharper, launch
-                    faster and communicate better.
+                    We use AI to expand creative possibilities and professional
+                    editing to turn every visual, clip and idea into a cohesive,
+                    polished and campaign-ready video.
                   </p>
                 </div>
 
@@ -184,7 +192,7 @@ export default function WhyChooseAIVideoVFX() {
                         </p>
 
                         <p className="mt-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#BFEAFF]/70">
-                          Layer
+                          Production Layer
                         </p>
                       </motion.div>
                     ))}
@@ -196,8 +204,8 @@ export default function WhyChooseAIVideoVFX() {
                     </p>
 
                     <p className="mt-3 text-2xl font-black leading-tight tracking-[-0.04em] text-white">
-                      Brands that need premium, modern and scroll-stopping video
-                      content.
+                      Brands that need original AI visuals and professionally
+                      edited video content for modern digital platforms.
                     </p>
                   </div>
                 </div>
@@ -231,7 +239,7 @@ export default function WhyChooseAIVideoVFX() {
 
                       <div>
                         <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#6288B9] transition-colors duration-500 group-hover:text-[#BFEAFF]">
-                          Advantage
+                          Our Advantage
                         </p>
 
                         <h3 className="mt-3 text-[28px] font-black leading-[1] tracking-[-0.055em] text-[#0D2444] transition-colors duration-500 group-hover:text-white sm:text-[34px]">
@@ -257,8 +265,6 @@ export default function WhyChooseAIVideoVFX() {
             </motion.div>
           </div>
         </div>
-
-    
       </div>
     </section>
   );

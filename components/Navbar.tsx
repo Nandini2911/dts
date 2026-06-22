@@ -23,11 +23,11 @@ const services = [
     href: "/services/pr-media-marketing",
   },
   {
-    name: "Web Development & Marketing",
+    name: "Web Development & SEO",
     href: "/services/web-development-marketing",
   },
   {
-    name: "AI Video & VFX",
+    name: "AI Video & Video Editing",
     href: "/services/ai-video-vfx",
   },
 ];

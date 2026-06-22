@@ -72,7 +72,7 @@ const services = [
     ],
   },
   {
-    title: "AI Video & VFX",
+    title: "AI Video & Video Editing",
     href: "/services/ai-video-vfx",
     desc: "AI video production, cinematic brand films, AI-generated video ads and VFX content created for social media campaigns, product launches, brand storytelling and digital promotions.",
     features: [

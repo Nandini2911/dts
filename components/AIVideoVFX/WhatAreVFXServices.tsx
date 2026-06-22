@@ -7,35 +7,35 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-const vfxElements = [
-  "CGI Objects",
-  "Background Extensions",
-  "Object Removal",
-  "Clean-Up",
-  "Compositing",
-  "Screen Replacement",
-  "Lighting Effects",
+const videoElements = [
+  "AI Visual Creation",
+  "Script Development",
+  "Creative Direction",
+  "Video Editing",
+  "Colour Correction",
+  "Sound Design",
   "Motion Graphics",
-  "3D Elements",
-  "Cinematic Enhancements",
+  "Text Animation",
+  "Transitions",
+  "Platform Optimisation",
 ];
 
-const vfxUses = [
+const videoUses = [
   {
     title: "Product Launches",
-    text: "Make product videos look more premium, dramatic and campaign-ready.",
+    text: "Create AI-powered product videos and professionally edited launch films that present products with clarity, creativity and premium visual appeal.",
   },
   {
-    title: "CGI Ads",
-    text: "Add digital objects, surreal visual scenes and branded motion effects.",
+    title: "Advertising Campaigns",
+    text: "Produce AI commercials, promotional videos and edited digital advertisements designed to capture attention and communicate your brand message.",
   },
   {
-    title: "Event Films",
-    text: "Enhance teasers, launch videos, countdowns and aftermovies with cinematic effects.",
+    title: "Brand & Event Films",
+    text: "Transform AI visuals and recorded footage into brand films, event teasers, highlights, countdown videos and cinematic aftermovies.",
   },
   {
     title: "Social Media Content",
-    text: "Create scroll-stopping reels, shorts and paid ad visuals with stronger impact.",
+    text: "Create engaging Instagram Reels, YouTube Shorts, vertical ads and platform-ready videos with strong pacing, graphics and sound.",
   },
 ];
 
@@ -93,14 +93,14 @@ export default function WhatAreVFXServices() {
           <motion.div variants={fadeUp}>
             <div className="mb-6 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl">
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-                VFX Services Explained
+                AI Video & Video Editing Explained
               </p>
             </div>
 
             <h2 className="max-w-4xl text-[36px] font-black leading-[1.02] tracking-[-0.045em] text-[#0D2444] sm:text-[48px] md:text-[64px]">
-              What Are
+              What Are AI Video
               <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                VFX Services?
+                & Video Editing Services?
               </span>
             </h2>
           </motion.div>
@@ -111,10 +111,11 @@ export default function WhatAreVFXServices() {
             className="flex items-end"
           >
             <p className="max-w-3xl text-lg font-medium leading-9 text-[#304B6F] sm:text-xl">
-              VFX, or visual effects, is the process of adding, enhancing or
-              manipulating visual elements in a video during post-production.
-              It helps brands create visuals that may be difficult, expensive
-              or impossible to shoot in real life.
+              AI video production uses artificial intelligence and creative
+              direction to generate original visual content, while professional
+              video editing transforms AI visuals or recorded footage into a
+              polished story through sequencing, graphics, colour, sound and
+              platform-specific formatting.
             </p>
           </motion.div>
         </motion.div>
@@ -140,7 +141,7 @@ export default function WhatAreVFXServices() {
                 }}
                 className="text-[92px] font-black leading-none tracking-[-0.09em] text-[#0D2444]/10 sm:text-[130px] md:text-[170px]"
               >
-                VFX
+                AI+EDIT
               </motion.p>
             </div>
 
@@ -150,21 +151,22 @@ export default function WhatAreVFXServices() {
               </p>
 
               <h3 className="mt-4 max-w-4xl text-[30px] font-black leading-tight tracking-[-0.045em] text-[#0D2444] sm:text-[44px] md:text-[54px]">
-                VFX makes the impossible look believable, cinematic and useful
-                for advertising.
+                AI creates new visual possibilities, and professional editing
+                turns them into clear, engaging and campaign-ready videos.
               </h3>
 
               <p className="mt-6 max-w-3xl text-sm leading-8 text-[#49617F] sm:text-base">
-                It can include CGI objects, background extensions, object
-                removal, clean-up, compositing, screen replacement, lighting
-                effects, motion graphics, transitions, 3D elements and
-                cinematic enhancements.
+                The process can include concept development, scriptwriting,
+                AI-generated visuals, footage selection, scene sequencing,
+                colour correction, sound design, motion graphics, text
+                animation, transitions and final optimisation for different
+                digital platforms.
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* VFX elements line grid */}
+        {/* Video elements line grid */}
         <div className="mt-16">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -175,21 +177,23 @@ export default function WhatAreVFXServices() {
           >
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-                What VFX Can Include
+                What Our Video Services Include
               </p>
+
               <h3 className="mt-3 text-[30px] font-black leading-tight tracking-[-0.04em] text-[#0D2444] sm:text-[42px]">
-                Visual effects used in brand videos.
+                AI production and editing for complete brand videos.
               </h3>
             </div>
 
             <p className="max-w-xl text-sm leading-7 text-[#49617F] sm:text-base">
-              These elements help make videos cleaner, more premium, more
-              cinematic and more suitable for marketing use.
+              These services work together to create videos that are visually
+              original, professionally edited, easy to understand and ready for
+              marketing across multiple digital platforms.
             </p>
           </motion.div>
 
           <div className="grid border-t border-[#6288B9]/25 sm:grid-cols-2 lg:grid-cols-5">
-            {vfxElements.map((item, index) => (
+            {videoElements.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: 18 }}
@@ -226,18 +230,19 @@ export default function WhatAreVFXServices() {
             className="pt-4"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#6288B9]">
-              VFX for Advertising
+              AI Video & Editing for Marketing
             </p>
 
             <h3 className="mt-4 text-[30px] font-black leading-tight tracking-[-0.04em] text-[#0D2444] sm:text-[42px]">
-              Used when regular footage needs more impact.
+              Used when brands need original visuals and professional execution.
             </h3>
 
             <p className="mt-5 text-sm leading-7 text-[#49617F] sm:text-base">
-              For marketing and advertising, VFX is commonly used in product
-              launches, CGI ads, luxury films, music videos, real estate
-              visuals, automotive campaigns, fashion reels, event teasers and
-              social media content.
+              AI video production and video editing services are commonly used
+              for product launches, digital advertisements, luxury brand films,
+              hospitality campaigns, real estate videos, fashion content, music
+              promotions, event teasers, YouTube videos and social media
+              campaigns.
             </p>
           </motion.div>
 
@@ -245,7 +250,7 @@ export default function WhatAreVFXServices() {
             <div className="absolute left-[13px] top-0 h-full w-px bg-gradient-to-b from-[#6288B9]/0 via-[#315E91]/45 to-[#6288B9]/0" />
 
             <div className="space-y-10">
-              {vfxUses.map((item, index) => (
+              {videoUses.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, x: 28 }}

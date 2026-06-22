@@ -10,35 +10,35 @@ const fadeUp = {
 const industries = [
   {
     title: "Fashion & Apparel",
-    text: "AI fashion films, collection launch videos, lookbook reels and premium campaign visuals for clothing brands and designers.",
+    text: "AI fashion videos, collection launch films, lookbook Reels and professionally edited campaign content for clothing brands, designers and fashion labels.",
   },
   {
     title: "Jewellery & Luxury",
-    text: "High-end CGI, AI and VFX-led videos for jewellery, watches, luxury accessories, gifting and lifestyle campaigns.",
+    text: "Premium AI product videos, cinematic brand films and refined video editing for jewellery, watches, luxury accessories and lifestyle campaigns.",
   },
   {
     title: "Hospitality & Restaurants",
-    text: "Cinematic reels, launch films, ambience videos, food visuals and hotel promos for cafes, lounges, hotels and restaurants.",
+    text: "AI-assisted promotional videos, food Reels, ambience films and professionally edited content for hotels, restaurants, cafes, lounges and resorts.",
   },
   {
     title: "Events & Entertainment",
-    text: "Event teasers, artist announcements, invite films, countdown edits, aftermovies and stage screen visuals.",
+    text: "Event teaser videos, invitation films, artist announcements, countdown edits, highlight videos and cinematic aftermovies for live experiences.",
   },
   {
     title: "Real Estate & Architecture",
-    text: "Luxury property videos, CGI-style concepts, project launch films, location visuals and premium real estate campaign edits.",
+    text: "AI property videos, project launch films, location showcases, walkthrough edits and premium promotional content for real estate and architecture brands.",
   },
   {
     title: "Automotive & Mobility",
-    text: "Car reveal videos, CGI motion visuals, launch films, lifestyle edits and performance-led commercial videos.",
+    text: "AI car commercials, vehicle reveal videos, launch films, lifestyle edits and professionally produced promotional videos for mobility brands.",
   },
   {
     title: "Beauty & Wellness",
-    text: "Product videos, treatment explainers, clinic reels, launch campaigns, transformation films and wellness storytelling.",
+    text: "AI product films, treatment explainers, clinic Reels, transformation videos and edited campaigns for beauty, skincare, wellness and healthcare brands.",
   },
   {
     title: "Corporate & Startups",
-    text: "Brand films, service explainers, founder videos, product demos, pitch visuals and digital campaign videos.",
+    text: "AI brand films, founder videos, service explainers, product demonstrations, recruitment videos and professional editing for corporate communication.",
   },
 ];
 
@@ -48,7 +48,7 @@ const orbitLabels = [
   "Events",
   "Hotels",
   "Real Estate",
-  "Music",
+  "Automotive",
   "Beauty",
   "Corporate",
 ];
@@ -100,7 +100,7 @@ export default function AIVideoVFXIndustries() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute right-[-220px] bottom-[-220px] h-[640px] w-[640px] rounded-full bg-[#87B9D8]/18 blur-3xl"
+          className="absolute bottom-[-220px] right-[-220px] h-[640px] w-[640px] rounded-full bg-[#87B9D8]/18 blur-3xl"
         />
 
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#164B73]/30 to-transparent" />
@@ -119,14 +119,14 @@ export default function AIVideoVFXIndustries() {
           <motion.div variants={fadeUp}>
             <div className="mb-6 inline-flex rounded-full border border-[#164B73]/18 bg-white/65 px-4 py-2 shadow-sm backdrop-blur-xl">
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#164B73] sm:text-xs">
-                Industries We Work With
+                Industries We Create Videos For
               </p>
             </div>
 
             <h2 className="max-w-5xl text-[36px] font-black leading-[1] tracking-[-0.055em] text-[#06213D] sm:text-[52px] md:text-[72px]">
-              AI Video & VFX for
+              AI Video & Video Editing for
               <span className="block bg-gradient-to-r from-[#06213D] via-[#164B73] to-[#6FA6C9] bg-clip-text text-transparent">
-                industry-specific visual language.
+                industry-specific brand content.
               </span>
             </h2>
           </motion.div>
@@ -137,15 +137,17 @@ export default function AIVideoVFXIndustries() {
             className="lg:text-right"
           >
             <p className="text-sm font-medium leading-7 text-[#395B74] sm:text-base">
-              Every industry needs a different visual rhythm. Fashion needs
-              mood, hospitality needs ambience, events need energy and luxury
-              brands need refined cinematic storytelling.
+              Every industry requires a different video style. Fashion needs
+              visual mood, hospitality needs ambience, events need energy,
+              products need clarity and luxury brands need refined cinematic
+              storytelling.
             </p>
 
             <div className="mt-6 flex items-center gap-3 lg:justify-end">
               <span className="h-px w-16 bg-[#164B73]/35" />
+
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#164B73]">
-                08 Visual Categories
+                08 Industry Categories
               </p>
             </div>
           </motion.div>
@@ -190,19 +192,20 @@ export default function AIVideoVFXIndustries() {
             {/* Center */}
             <div className="relative z-10 flex h-[280px] w-[280px] flex-col items-center justify-center rounded-full border border-white/85 bg-white/68 text-center shadow-2xl shadow-[#06213D]/14 backdrop-blur-2xl">
               <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#164B73]">
-                DTS Visual Engine
+                DTS Video Engine
               </p>
 
-              <h3 className="mt-4 text-[44px] font-black leading-none tracking-[-0.06em] text-[#06213D]">
-                AI
+              <h3 className="mt-4 text-[40px] font-black leading-none tracking-[-0.06em] text-[#06213D]">
+                AI Video
                 <span className="block bg-gradient-to-r from-[#06213D] via-[#164B73] to-[#6FA6C9] bg-clip-text text-transparent">
-                  CGI
+                  +
                 </span>
-                VFX
+                Editing
               </h3>
 
               <p className="mt-5 max-w-[190px] text-sm leading-6 text-[#395B74]">
-                Adapted for each industry, platform and campaign goal.
+                Video production adapted for every industry, platform and
+                campaign objective.
               </p>
             </div>
 

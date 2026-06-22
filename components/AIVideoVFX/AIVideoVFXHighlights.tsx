@@ -4,28 +4,34 @@ import { motion } from "framer-motion";
 
 const highlights = [
   {
-    title: "AI Video Production",
-    description: "AI-assisted visuals for campaigns, launches and brand films.",
+    title: "AI Commercial Videos",
+    description:
+      "AI-generated advertising videos created for brand campaigns, services, products and digital promotions.",
   },
   {
-    title: "CGI Ads",
-    description: "Premium CGI-style videos for products, events and promotions.",
+    title: "AI Product Videos",
+    description:
+      "Creative AI-powered product visuals, launch videos and promotional films designed to attract attention.",
   },
   {
-    title: "VFX for Advertising",
-    description: "Visual effects, compositing and cinematic post-production.",
+    title: "AI Brand Films",
+    description:
+      "Concept-driven AI videos for brand storytelling, business presentations, launches and marketing campaigns.",
   },
   {
-    title: "Social Media Videos",
-    description: "Reels, shorts, vertical ads and digital-first video content.",
+    title: "Commercial Video Editing",
+    description:
+      "Professional editing for advertisements, promotional videos, brand films and high-impact marketing campaigns.",
   },
   {
-    title: "Brand Launch Films",
-    description: "Launch videos for products, venues, events and luxury brands.",
+    title: "Reels & Social Video Editing",
+    description:
+      "Fast-paced reels, shorts and vertical video edits created for Instagram, YouTube and digital advertising.",
   },
   {
-    title: "3D Animation",
-    description: "Animated concepts, digital objects and visual storytelling.",
+    title: "YouTube & Long-Form Editing",
+    description:
+      "Polished YouTube videos, interviews, podcasts and long-form content with graphics, sound design and pacing.",
   },
 ];
 
@@ -46,47 +52,46 @@ const fadeUp = {
 export default function AIVideoVFXHighlights() {
   return (
     <section
-  className="relative overflow-hidden bg-gradient-to-br from-[#F7FAFF] via-[#EAF3FF] to-[#DDEBFA] px-4 py-20 text-[#0D2444] sm:px-6 lg:px-8"
-  style={{
-    fontFamily: "New York, ui-serif, Georgia, serif",
-  }}
->
-    
-    {/* Gradient shade background */}
-<div className="pointer-events-none absolute inset-0 -z-10">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(98,136,185,0.28),transparent_30%),radial-gradient(circle_at_82%_20%,rgba(49,94,145,0.18),transparent_32%),radial-gradient(circle_at_50%_100%,rgba(13,36,68,0.14),transparent_38%)]" />
+      className="relative overflow-hidden bg-gradient-to-br from-[#F7FAFF] via-[#EAF3FF] to-[#DDEBFA] px-4 py-20 text-[#0D2444] sm:px-6 lg:px-8"
+      style={{
+        fontFamily: "New York, ui-serif, Georgia, serif",
+      }}
+    >
+      {/* Gradient shade background */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(98,136,185,0.28),transparent_30%),radial-gradient(circle_at_82%_20%,rgba(49,94,145,0.18),transparent_32%),radial-gradient(circle_at_50%_100%,rgba(13,36,68,0.14),transparent_38%)]" />
 
-  <motion.div
-    animate={{
-      x: [0, 35, -20, 0],
-      y: [0, -24, 18, 0],
-      scale: [1, 1.08, 0.98, 1],
-    }}
-    transition={{
-      duration: 15,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-    className="absolute -left-40 top-[-140px] h-[460px] w-[460px] rounded-full bg-[#6288B9]/25 blur-3xl"
-  />
+        <motion.div
+          animate={{
+            x: [0, 35, -20, 0],
+            y: [0, -24, 18, 0],
+            scale: [1, 1.08, 0.98, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute -left-40 top-[-140px] h-[460px] w-[460px] rounded-full bg-[#6288B9]/25 blur-3xl"
+        />
 
-  <motion.div
-    animate={{
-      x: [0, -30, 25, 0],
-      y: [0, 20, -18, 0],
-      scale: [1, 0.96, 1.08, 1],
-    }}
-    transition={{
-      duration: 17,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-    className="absolute right-[-160px] bottom-[-150px] h-[500px] w-[500px] rounded-full bg-[#315E91]/18 blur-3xl"
-  />
+        <motion.div
+          animate={{
+            x: [0, -30, 25, 0],
+            y: [0, 20, -18, 0],
+            scale: [1, 0.96, 1.08, 1],
+          }}
+          transition={{
+            duration: 17,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute bottom-[-150px] right-[-160px] h-[500px] w-[500px] rounded-full bg-[#315E91]/18 blur-3xl"
+        />
 
-  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#6288B9]/35 to-transparent" />
-  <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
-</div>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#6288B9]/35 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+      </div>
 
       <div className="mx-auto max-w-7xl">
         {/* Top Heading */}
@@ -103,7 +108,7 @@ export default function AIVideoVFXHighlights() {
             className="mx-auto mb-4 inline-flex rounded-full border border-[#6288B9]/25 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl"
           >
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#315E91] sm:text-xs">
-              What We Create
+              AI Video & Video Editing
             </p>
           </motion.div>
 
@@ -112,9 +117,9 @@ export default function AIVideoVFXHighlights() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-[34px] font-black leading-[1.02] tracking-[-0.045em] text-[#0D2444] sm:text-[46px] md:text-[58px]"
           >
-            AI, CGI & VFX content built for
+            AI-powered video creation combined with
             <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-              modern brand campaigns.
+              professional video editing.
             </span>
           </motion.h2>
 
@@ -123,9 +128,9 @@ export default function AIVideoVFXHighlights() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-7 text-[#49617F] sm:text-base"
           >
-            From launch films to CGI product ads and social media videos, this
-            page covers the core visual production services brands need for
-            digital-first campaigns.
+            We combine AI video production with professional editing to create
+            commercials, product videos, brand films, social media reels and
+            YouTube content that looks modern, polished and campaign-ready.
           </motion.p>
         </motion.div>
 
@@ -217,7 +222,7 @@ export default function AIVideoVFXHighlights() {
                 Best For
               </p>
               <p className="mt-1 text-sm font-bold text-white">
-                Launches • Brands • Events • Products
+                Brands • Products • Campaigns • Creators
               </p>
             </div>
           </div>

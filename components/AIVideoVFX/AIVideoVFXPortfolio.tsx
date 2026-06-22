@@ -9,44 +9,44 @@ const fadeUp = {
 
 const portfolioItems = [
   {
+    title: "AI Commercial Video",
+    category: "AI Advertising",
+    text: "A concept-driven AI commercial created for product, service and brand campaigns with original visuals, cinematic storytelling and platform-ready editing.",
+  },
+  {
     title: "AI Product Launch Film",
-    category: "Product Campaign",
-    text: "A premium product-focused video concept using AI visuals, cinematic movement, CGI-style scenes and platform-ready edits.",
+    category: "Product Video",
+    text: "A premium product-focused video using AI-generated environments, detailed product visuals, feature-led storytelling and professional post-production.",
   },
   {
-    title: "CGI Social Media Ad",
-    category: "Digital Ad",
-    text: "A scroll-stopping CGI-style visual campaign designed for reels, paid ads, launch announcements and brand awareness.",
+    title: "Brand Film & Campaign Edit",
+    category: "Brand Storytelling",
+    text: "A professionally structured brand film combining AI visuals, recorded footage, motion graphics, music and refined editing to communicate the brand story.",
   },
   {
-    title: "Luxury Brand Visual",
-    category: "Luxury Film",
-    text: "A refined AI and VFX-led visual direction for jewellery, fashion, beauty, lifestyle and premium brand campaigns.",
+    title: "Reels & Shorts Editing",
+    category: "Social Media Editing",
+    text: "Fast-paced vertical video editing for Instagram Reels, YouTube Shorts and social advertisements with hooks, subtitles, transitions and sound design.",
   },
   {
-    title: "Hospitality Launch Video",
-    category: "Hotel / Restaurant",
-    text: "A cinematic launch video for cafes, hotels, lounges, restaurants and hospitality experiences with ambience-led storytelling.",
+    title: "Event Highlight & Aftermovie",
+    category: "Event Editing",
+    text: "Professional editing for event teasers, artist announcements, launches, highlight films and aftermovies with energetic pacing, colour correction and music.",
   },
   {
-    title: "Event Teaser Film",
-    category: "Events",
-    text: "A high-energy teaser video for launches, artist announcements, luxury events, club nights, concerts and invite campaigns.",
-  },
-  {
-    title: "Website Hero Video",
-    category: "Web Visual",
-    text: "A looping visual asset for websites, landing pages and digital campaigns with strong brand mood and clean motion.",
+    title: "YouTube & Website Video",
+    category: "Digital Content",
+    text: "Long-form and short-form video editing for YouTube, websites and landing pages with clean cuts, branded graphics, audio enhancement and platform-specific exports.",
   },
 ];
 
 const showcaseTags = [
-  "AI Visuals",
-  "CGI Ads",
-  "VFX Polish",
+  "AI Videos",
+  "Product Films",
+  "Video Editing",
   "Brand Films",
-  "Reels",
-  "Launches",
+  "Reels & Shorts",
+  "Post-Production",
 ];
 
 export default function AIVideoVFXPortfolio() {
@@ -120,14 +120,14 @@ export default function AIVideoVFXPortfolio() {
           <motion.div variants={fadeUp}>
             <div className="mb-6 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-xl">
               <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#BFEAFF] sm:text-xs">
-                Portfolio Style
+                Video Portfolio
               </p>
             </div>
 
             <h2 className="max-w-5xl text-[38px] font-black leading-[0.98] tracking-[-0.06em] text-white sm:text-[56px] md:text-[78px]">
-              AI Video & VFX work
+              AI Video Production &
               <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
-                built for campaigns.
+                Professional Video Editing.
               </span>
             </h2>
           </motion.div>
@@ -137,8 +137,9 @@ export default function AIVideoVFXPortfolio() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="text-sm font-medium leading-7 text-white/64 sm:text-base lg:text-right"
           >
-            Our portfolio direction includes product launches, CGI ads, luxury
-            videos, hospitality films, event teasers and website visuals.
+            Our portfolio includes AI commercials, product films, brand videos,
+            social media edits, event aftermovies, YouTube content and
+            platform-ready digital campaign videos.
           </motion.p>
         </motion.div>
 
@@ -157,20 +158,21 @@ export default function AIVideoVFXPortfolio() {
 
               <div className="relative z-10">
                 <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#BFEAFF]">
-                  Visual Showcase
+                  Creative Video Showcase
                 </p>
 
                 <h3 className="mt-5 text-[46px] font-black leading-[0.9] tracking-[-0.07em] text-white sm:text-[68px]">
-                  Made
-                  <span className="block text-white/45">to look</span>
+                  Created
+                  <span className="block text-white/45">with AI.</span>
                   <span className="block bg-gradient-to-r from-white via-[#BFEAFF] to-[#67B7E8] bg-clip-text text-transparent">
-                    premium.
+                    Finished with precision.
                   </span>
                 </h3>
 
                 <p className="mt-6 text-sm leading-7 text-white/62 sm:text-base">
-                  Every project direction is planned to feel campaign-ready,
-                  visually modern and suitable for digital platforms.
+                  We combine AI-generated visuals with professional editing,
+                  motion graphics, colour correction and sound design to produce
+                  polished videos for modern brands.
                 </p>
 
                 {/* Reel mockup stack */}
@@ -216,14 +218,15 @@ export default function AIVideoVFXPortfolio() {
                       <div className="relative z-10 flex h-full flex-col justify-between p-5">
                         <div className="flex items-center justify-between">
                           <span className="h-2 w-2 rounded-full bg-[#BFEAFF]" />
+
                           <p className="text-[8px] font-black uppercase tracking-[0.18em] text-[#BFEAFF]">
-                            Preview
+                            Video Preview
                           </p>
                         </div>
 
                         <div>
                           <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#BFEAFF]">
-                            AI + VFX
+                            AI Video + Editing
                           </p>
 
                           <h4 className="mt-3 text-[46px] font-black leading-none tracking-[-0.07em] text-white">
@@ -299,7 +302,6 @@ export default function AIVideoVFXPortfolio() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

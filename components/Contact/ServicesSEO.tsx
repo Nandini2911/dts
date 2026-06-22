@@ -33,7 +33,7 @@ const services = [
   },
   {
     icon: FiFilm,
-    title: "AI Video & VFX",
+    title: "AI Video & Video Editing",
   },
 ];
 

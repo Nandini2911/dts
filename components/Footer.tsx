@@ -67,7 +67,7 @@ const serviceLinks = [
     href: "/services/web-development-marketing",
   },
   {
-    label: "AI Video & VFX",
+    label: "AI Video & Video Editing",
     href: "/services/ai-video-vfx",
   },
 ];
