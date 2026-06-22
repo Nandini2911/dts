@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutStudio() {
   return (
@@ -183,23 +184,29 @@ export default function AboutStudio() {
                   Strategic Creative Agency
                 </span>
 
-                <div
-                  className="
-                    w-[56px]
-                    h-[56px]
-                    rounded-full
-                    bg-white/10
-                    backdrop-blur-xl
-                    flex
-                    items-center
-                    justify-center
-                  "
-                >
-                  <ArrowUpRight
-                    className="w-5 h-5 text-white"
-                    aria-hidden="true"
-                  />
-                </div>
+               <Link
+  href="/about"
+  aria-label="Go to About page"
+  className="
+    w-[56px]
+    h-[56px]
+    rounded-full
+    bg-white/10
+    backdrop-blur-xl
+    flex
+    items-center
+    justify-center
+    transition-all
+    duration-300
+    hover:bg-white/20
+    hover:-translate-y-1
+  "
+>
+  <ArrowUpRight
+    className="w-5 h-5 text-white"
+    aria-hidden="true"
+  />
+</Link>
               </div>
             </div>
 
