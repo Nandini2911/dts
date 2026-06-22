@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.dtsworld.in/home-og.jpg",
+        url: "https://www.dtsworld.in/og/home-og.jpg",
         width: 1200,
         height: 630,
         alt: "Double Trouble Studio creative digital agency in Mumbai",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Creative Digital Agency in Mumbai | Double Trouble Studio",
     description:
       "Branding, PR, digital marketing, websites, SEO, events, guest management, AI video production and VFX for modern brands.",
-    images: ["https://www.dtsworld.in/home-twitter.jpg"],
+    images: ["https://www.dtsworld.in/twitter/home-twitter.jpg"],
   },
 
   robots: {
@@ -185,8 +185,8 @@ export default function Home() {
               {
                 "@type": "ImageObject",
                 "@id": "https://www.dtsworld.in/#primary-image",
-                url: "https://www.dtsworld.in/home-og.jpg",
-                contentUrl: "https://www.dtsworld.in/home-og.jpg",
+                url: "https://www.dtsworld.in/og/home-og.jpg",
+                contentUrl: "https://www.dtsworld.in/og/home-og.jpg",
                 width: 1200,
                 height: 630,
                 caption:
