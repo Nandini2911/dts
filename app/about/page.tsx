@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "About Double Trouble Studio | Creative Agency in Mumbai",
     description:
       "Meet the team behind Double Trouble Studio and discover our approach to branding, digital marketing, PR, website development, AI video production and cultural brand building.",
-    images: ["https://www.dtsworld.in/twitter/about-twitter-image.jpg"],
+    images: ["https://www.dtsworld.in/twitter/about-twitter-image.png"],
   },
 
   robots: {
