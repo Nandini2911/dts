@@ -35,7 +35,7 @@ export default function FaqSection() {
   ];
 
   return (
-    <section
+    <section id="faq"
       className="relative overflow-hidden py-20 bg-[#F5F7FB]"
       aria-label="Frequently asked questions about Double Trouble Studio branding, digital marketing, PR, website development and creative services"
     >

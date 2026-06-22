@@ -104,7 +104,7 @@ export default function Home() {
             "Creative Agency for Brands, Events and Digital Growth",
 
           telephone: "+918000006021",
-          email: "hellodoubletroublestudio@gmail.com",
+          email: "info@dtsworld.in",
 
           address: {
             "@type": "PostalAddress",
@@ -120,7 +120,7 @@ export default function Home() {
             "@type": "ContactPoint",
             contactType: "customer service",
             telephone: "+918000006021",
-            email: "hellodoubletroublestudio@gmail.com",
+            email: "info@dtsworld.in",
             url: "https://www.dtsworld.in/contact",
 
             areaServed: {
