@@ -432,7 +432,7 @@ export default function Footer() {
                   </p>
 
                   <p className="text-white text-[16px] mt-2">
-                    doubletrouble.studio01@gmail.com
+                    hellodoubletroublestudio@gmail.com
                   </p>
                 </div>
               </a>
