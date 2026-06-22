@@ -20,6 +20,146 @@ import WhyChooseAIVideoVFX from "@/components/AIVideoVFX/WhyChooseAIVideoVFX";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "AI Video Production, CGI Ads & VFX Services India | DTS",
+
+  description:
+    "AI video production, CGI ads, VFX, motion graphics and cinematic brand films for product launches, reels, events and digital campaigns across India.",
+
+  applicationName: "Double Trouble Studio",
+
+  authors: [
+    {
+      name: "Double Trouble Studio",
+      url: "https://www.dtsworld.in/",
+    },
+  ],
+
+  creator: "Double Trouble Studio",
+
+  publisher: "Double Trouble Studio",
+
+  category:
+    "AI Video Production, CGI Advertising and VFX Services",
+
+  keywords: [
+    "AI video production company India",
+    "AI video production services",
+    "AI video agency India",
+    "AI video production Mumbai",
+    "AI generated video production",
+    "AI commercial video production",
+    "AI advertising video agency",
+    "CGI advertising agency India",
+    "CGI ads production",
+    "CGI product advertising",
+    "CGI product video",
+    "CGI commercial production",
+    "VFX company in India",
+    "VFX services India",
+    "VFX for advertising",
+    "visual effects production",
+    "motion graphics services",
+    "3D animation services",
+    "AI product video production",
+    "product launch video production",
+    "brand launch film production",
+    "cinematic brand film",
+    "luxury brand video production",
+    "social media video production",
+    "Instagram Reels production",
+    "YouTube video production",
+    "vertical video ads",
+    "event teaser video production",
+    "event launch video",
+    "website hero video production",
+    "AI fashion video production",
+    "AI hospitality video production",
+    "music video VFX",
+    "video editing and post production",
+    "AI video production Delhi",
+    "AI video production Chandigarh",
+    "AI video production Bangalore",
+    "AI video production across India",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dtsworld.in/services/ai-video-vfx",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "en_IN",
+
+    url:
+      "https://www.dtsworld.in/services/ai-video-vfx",
+
+    siteName: "Double Trouble Studio",
+
+    title:
+      "AI Video Production, CGI Ads & VFX Services in India",
+
+    description:
+      "Create premium AI videos, CGI product ads, cinematic VFX, motion graphics, brand films, event teasers and social media campaigns with Double Trouble Studio.",
+
+    images: [
+      {
+        url:
+          "https://www.dtsworld.in/ai-video-vfx-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "AI Video Production, CGI Advertising and VFX Services by Double Trouble Studio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "AI Video Production, CGI Ads & VFX Services India",
+
+    description:
+      "AI videos, CGI ads, VFX, motion graphics, product launch films, reels and cinematic digital campaigns for modern brands across India.",
+
+    images: [
+      "https://www.dtsworld.in/ai-video-vfx-og.jpg",
+    ],
+  },
+
+  robots: {
+    index: true,
+
+    follow: true,
+
+    nocache: false,
+
+    googleBot: {
+      index: true,
+
+      follow: true,
+
+      noimageindex: false,
+
+      "max-image-preview": "large",
+
+      "max-snippet": -1,
+
+      "max-video-preview": -1,
+    },
+  },
+};
+
 const aiVideoVFXSchema = {
   "@context": "https://schema.org",
   "@graph": [

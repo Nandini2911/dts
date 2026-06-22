@@ -13,8 +13,8 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Premium Agency",
-  description: "Luxury Digital Agency",
+  title: "Double Trouble Studio | Branding, PR & Digital Marketing Agency",
+  description: "Double Trouble Studio is a Mumbai-based branding, PR and digital marketing agency offering social media, websites, SEO, events, celebrity management and AI video production."
 };
 
 export default function RootLayout({

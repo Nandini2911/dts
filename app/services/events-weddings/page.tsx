@@ -17,6 +17,146 @@ import WhyProfessionalEventManagementMatters from "@/components/EventsWeddings/W
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Event Management & Wedding Planning Company India | DTS",
+
+  description:
+    "End-to-end event management and wedding planning for corporate events, brand launches, destination weddings and luxury celebrations across India.",
+
+  applicationName: "Double Trouble Studio",
+
+  authors: [
+    {
+      name: "Double Trouble Studio",
+      url: "https://www.dtsworld.in/",
+    },
+  ],
+
+  creator: "Double Trouble Studio",
+
+  publisher: "Double Trouble Studio",
+
+  category: "Event Management and Wedding Planning",
+
+  keywords: [
+    "event management company in India",
+    "event management services India",
+    "wedding planning company in India",
+    "wedding planner India",
+    "luxury wedding planner India",
+    "destination wedding planner India",
+    "event planning company India",
+    "corporate event management",
+    "corporate event planners India",
+    "brand launch event management",
+    "product launch event planning",
+    "luxury event management",
+    "hospitality event management",
+    "fashion show event management",
+    "award ceremony management",
+    "conference event management",
+    "exhibition management company",
+    "private event planning",
+    "social event management",
+    "wedding management services",
+    "complete wedding planning",
+    "destination wedding management",
+    "wedding decor planning",
+    "wedding vendor coordination",
+    "wedding guest management",
+    "wedding hospitality management",
+    "wedding logistics management",
+    "artist management for weddings",
+    "celebrity booking for events",
+    "event production company India",
+    "event vendor management",
+    "event logistics management",
+    "event management Mumbai",
+    "event management Delhi NCR",
+    "event management Chandigarh",
+    "event management Bangalore",
+    "destination wedding Jaipur",
+    "destination wedding Udaipur",
+    "destination wedding Goa",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dtsworld.in/services/events-weddings",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "en_IN",
+
+    url:
+      "https://www.dtsworld.in/services/events-weddings",
+
+    siteName: "Double Trouble Studio",
+
+    title:
+      "Event Management & Wedding Planning Company in India",
+
+    description:
+      "End-to-end planning, production, décor, hospitality, logistics and on-ground execution for corporate events, luxury weddings and destination celebrations.",
+
+    images: [
+      {
+        url:
+          "https://www.dtsworld.in/events-weddings-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "Event Management and Wedding Planning Services by Double Trouble Studio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Event Management & Wedding Planning Company in India",
+
+    description:
+      "Corporate events, brand launches, destination weddings, luxury celebrations, production, hospitality and complete on-ground execution across India.",
+
+    images: [
+      "https://www.dtsworld.in/events-weddings-og.jpg",
+    ],
+  },
+
+  robots: {
+    index: true,
+
+    follow: true,
+
+    nocache: false,
+
+    googleBot: {
+      index: true,
+
+      follow: true,
+
+      noimageindex: false,
+
+      "max-image-preview": "large",
+
+      "max-snippet": -1,
+
+      "max-video-preview": -1,
+    },
+  },
+};
+
+
 const eventsWeddingsSchema = {
   "@context": "https://schema.org",
   "@graph": [

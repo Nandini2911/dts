@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Home/Hero";
 import AboutStudio from "@/components/Home/AboutSection";
@@ -7,453 +9,878 @@ import StudioMethod from "@/components/Home/StudioMethode";
 import FeaturedWork from "@/components/Home/FeaturedWork";
 import StudioDNA from "@/components/Home/StudiaDna";
 import PromiseSection from "@/components/Home/PromiseSection";
+import IndustriesSection from "@/components/Home/IndustriesSection";
 import FAQSection from "@/components/Home/HomeFaq";
 import Footer from "@/components/Footer";
-import IndustriesSection from "@/components/Home/IndustriesSection";
 
-const schema = {
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Creative Digital Agency in Mumbai | Double Trouble Studio",
+  },
+
+  description:
+    "Double Trouble Studio is a Mumbai creative agency for branding, PR, digital marketing, websites, SEO, events, guest management, AI video and VFX.",
+
+  applicationName: "Double Trouble Studio",
+  creator: "Double Trouble Studio",
+  publisher: "Double Trouble Studio",
+
+  alternates: {
+    canonical: "https://www.dtsworld.in/",
+  },
+
+  openGraph: {
+    title: "Creative Digital Agency in Mumbai | Double Trouble Studio",
+    description:
+      "Build a premium brand presence with branding, PR, digital marketing, websites, SEO, events, guest management, AI video production and VFX.",
+    url: "https://www.dtsworld.in/",
+    siteName: "Double Trouble Studio",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://www.dtsworld.in/og/home-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Double Trouble Studio creative digital agency in Mumbai",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Creative Digital Agency in Mumbai | Double Trouble Studio",
+    description:
+      "Branding, PR, digital marketing, websites, SEO, events, guest management, AI video production and VFX for modern brands.",
+    images: ["https://www.dtsworld.in/twitter/home-twitter.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+
+const homeSchema = {
   "@context": "https://schema.org",
+
   "@graph": [
     {
-      "@type": "ProfessionalService",
-      "@id": "https://www.dtsworld.in/#organization",
-      name: "Double Trouble Studio",
-      alternateName: "DTS World",
-      url: "https://www.dtsworld.in/",
-      logo: {
-        "@type": "ImageObject",
-        "@id": "https://www.dtsworld.in/#logo",
-        url: "https://www.dtsworld.in/logo.png",
-        contentUrl: "https://www.dtsworld.in/logo.png",
-        caption: "Double Trouble Studio Logo",
-      },
-      image: {
-        "@type": "ImageObject",
-        url: "https://www.dtsworld.in/og-image.jpg",
-      },
-      description:
-        "Double Trouble Studio is a creative digital agency in India offering branding, PR, event management, guest management, digital marketing, website development, SEO, AI video production and VFX services for hospitality, luxury, restaurant, fashion, lifestyle, corporate and premium event brands.",
-      slogan: "Creative Agency For Brands, Events & Digital Growth",
-      email: "hello@dtsworld.in",
-      telephone: "+918000006021",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Mumbai",
-        addressRegion: "Maharashtra",
-        addressCountry: "IN",
-      },
-      areaServed: [
-        {
-          "@type": "Country",
-          name: "India",
-        },
-        {
-          "@type": "City",
-          name: "Mumbai",
-        },
-        {
-          "@type": "City",
-          name: "Delhi",
-        },
-        {
-          "@type": "City",
-          name: "Chandigarh",
-        },
-        {
-          "@type": "City",
-          name: "Bangalore",
-        },
-        {
-          "@type": "City",
-          name: "Hyderabad",
-        },
-        {
-          "@type": "City",
-          name: "Pune",
-        },
-        {
-          "@type": "City",
-          name: "Ahmedabad",
-        },
-        {
-          "@type": "City",
-          name: "Goa",
-        },
+      "@type": "ImageObject",
+      "@id": "https://www.dtsworld.in/#logo",
+      "url": "https://www.dtsworld.in/logo.png",
+      "contentUrl": "https://www.dtsworld.in/logo.png",
+      "caption": "Double Trouble Studio Logo",
+      "inLanguage": "en-IN"
+    },
+
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness"
       ],
-      contactPoint: [
+      "@id": "https://www.dtsworld.in/#organization",
+
+      "name": "Double Trouble Studio",
+
+      "legalName": "Double Trouble Studio Pvt. Ltd.",
+
+      "alternateName": [
+        "DTS",
+        "DTS World"
+      ],
+
+      "url": "https://www.dtsworld.in/",
+
+      "logo": {
+        "@id": "https://www.dtsworld.in/#logo"
+      },
+
+      "image": {
+        "@id": "https://www.dtsworld.in/#logo"
+      },
+
+      "description":
+        "Double Trouble Studio is a Mumbai-based creative digital agency offering branding, public relations, digital marketing, social media marketing, event and wedding management, guest management, celebrity management, website development, SEO, AI video production and VFX services across India.",
+
+      "slogan":
+        "Creative Agency for Brands, Events and Digital Growth",
+
+      "telephone": "+918000006021",
+
+      "email": "hellodoubletroublestudio@gmail.com",
+
+      "priceRange": "Custom project pricing",
+
+      "address": {
+        "@type": "PostalAddress",
+
+        "streetAddress":
+          "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
+
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400061",
+        "addressCountry": "IN"
+      },
+
+      "contactPoint": [
         {
           "@type": "ContactPoint",
-          telephone: "+918000006021",
-          email: "hello@dtsworld.in",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English", "Hindi"],
-        },
+          "@id": "https://www.dtsworld.in/#contact-point",
+
+          "contactType": "customer service",
+
+          "telephone": "+918000006021",
+
+          "email": "hellodoubletroublestudio@gmail.com",
+
+          "url": "https://www.dtsworld.in/contact",
+
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+
+          "availableLanguage": [
+            "English",
+            "Hindi"
+          ]
+        }
       ],
-      knowsAbout: [
-        "Creative Digital Agency",
+
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Chandigarh"
+        },
+        {
+          "@type": "City",
+          "name": "Bengaluru",
+          "alternateName": "Bangalore"
+        },
+        {
+          "@type": "City",
+          "name": "Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Pune"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Goa"
+        }
+      ],
+
+      "audience": {
+        "@type": "Audience",
+
+        "audienceType":
+          "Hospitality brands, luxury brands, restaurants, cafes, fashion labels, lifestyle businesses, corporate brands, founders, creators, event companies, wedding planners and modern startups"
+      },
+
+      "knowsAbout": [
         "Brand Strategy",
-        "Branding",
+        "Brand Identity",
         "Logo Design",
         "Visual Identity",
         "Luxury Brand Positioning",
+        "Creative Direction",
         "Digital Marketing",
         "Social Media Marketing",
-        "Search Engine Optimization",
-        "SEO",
+        "Performance Advertising",
         "Public Relations",
-        "PR Campaigns",
-        "Media Campaigns",
+        "Media Outreach",
         "Influencer Marketing",
-        "Performance Marketing",
-        "Website Design",
-        "Website Development",
-        "Next.js Website Development",
+        "Content Strategy",
         "Event Management",
         "Wedding Management",
         "Guest Management",
         "Celebrity Management",
+        "Website Design",
+        "Website Development",
+        "Next.js Website Development",
+        "User Interface Design",
+        "User Experience Design",
+        "Search Engine Optimization",
+        "Technical SEO",
         "AI Video Production",
-        "VFX",
-        "Creative Direction",
-        "Hospitality Marketing",
-        "Restaurant Marketing",
-        "Luxury Brand Marketing",
+        "AI Video Advertising",
+        "Product Films",
+        "Visual Effects",
+        "Brand Storytelling"
       ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        "@id": "https://www.dtsworld.in/#services",
-        name: "Double Trouble Studio Creative Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/guest-management/#service",
-              name: "Guest Management Services",
-              serviceType: "Guest Management",
-              url: "https://www.dtsworld.in/services/guest-management",
-              description:
-                "Premium guest management services for weddings, corporate events, luxury launches and celebrity events, including RSVP tracking, VIP handling, check-in flow and on-ground coordination.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/celebrity-management/#service",
-              name: "Celebrity Management Services",
-              serviceType: "Celebrity Management",
-              url: "https://www.dtsworld.in/services/celebrity-management",
-              description:
-                "Celebrity management and talent coordination for brand campaigns, events, weddings, launches and influencer collaborations.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/events-weddings/#service",
-              name: "Events and Wedding Management Services",
-              serviceType: "Event Management and Wedding Planning",
-              url: "https://www.dtsworld.in/services/events-weddings",
-              description:
-                "Luxury event management and wedding planning services with production, guest experience design, show-flow planning and premium aesthetics.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/pr-media-digital-marketing/#service",
-              name: "PR and Digital Marketing Services",
-              serviceType: "Public Relations, Media Campaigns and Digital Marketing",
-              url: "https://www.dtsworld.in/services/pr-media-digital-marketing",
-              description:
-                "PR campaigns, media outreach, social media marketing, influencer collaborations and paid advertising strategies for brand visibility, reputation and digital growth.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/web-development-marketing/#service",
-              name: "Website Development and SEO Services",
-              serviceType: "Website Development, SEO and UI/UX Design",
-              url: "https://www.dtsworld.in/services/web-development-marketing",
-              description:
-                "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase Google visibility, improve user experience, generate leads and drive conversions.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              "@id": "https://www.dtsworld.in/services/ai-video-vfx/#service",
-              name: "AI Video Production and VFX Services",
-              serviceType: "AI Video Production and VFX",
-              url: "https://www.dtsworld.in/services/ai-video-vfx",
-              description:
-                "AI video production, cinematic brand films, AI-generated video ads and VFX content for social media campaigns, product launches, brand storytelling and digital promotions.",
-              provider: {
-                "@id": "https://www.dtsworld.in/#organization",
-              },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-            },
-          },
-        ],
-      },
+
+      "hasOfferCatalog": {
+        "@id": "https://www.dtsworld.in/#services"
+      }
     },
+
     {
       "@type": "WebSite",
       "@id": "https://www.dtsworld.in/#website",
-      url: "https://www.dtsworld.in/",
-      name: "Double Trouble Studio",
-      alternateName: "DTS World",
-      description:
-        "India-based branding, website design, PR, event management, guest management, digital marketing and AI video production agency helping modern businesses grow through strategy, storytelling and performance-driven experiences.",
-      publisher: {
-        "@id": "https://www.dtsworld.in/#organization",
+
+      "url": "https://www.dtsworld.in/",
+
+      "name": "Double Trouble Studio",
+
+      "alternateName": [
+        "DTS",
+        "DTS World"
+      ],
+
+      "description":
+        "Double Trouble Studio is a creative digital agency in Mumbai providing branding, PR, digital marketing, event management, guest management, website development, SEO, AI video production and VFX services.",
+
+      "publisher": {
+        "@id": "https://www.dtsworld.in/#organization"
       },
-      inLanguage: "en-IN",
+
+      "inLanguage": "en-IN"
     },
+
     {
       "@type": "WebPage",
       "@id": "https://www.dtsworld.in/#webpage",
-      url: "https://www.dtsworld.in/",
-      name: "Creative Digital Agency in India | Double Trouble Studio",
-      headline: "Creative Agency For Brands, Events & Digital Growth",
-      description:
-        "Double Trouble Studio is a creative digital agency in India offering branding, PR, event management, guest management, digital marketing, website development, SEO, AI video production and VFX services.",
-      isPartOf: {
-        "@id": "https://www.dtsworld.in/#website",
+
+      "url": "https://www.dtsworld.in/",
+
+      "name":
+        "Creative Digital Agency in Mumbai | Double Trouble Studio",
+
+      "headline":
+        "Creative Agency For Brands, Events & Digital Growth",
+
+      "description":
+        "Double Trouble Studio is a Mumbai creative agency offering branding, PR, digital marketing, website development, SEO, events, guest management, AI video production and VFX.",
+
+      "isPartOf": {
+        "@id": "https://www.dtsworld.in/#website"
       },
-      about: {
-        "@id": "https://www.dtsworld.in/#organization",
+
+      "about": {
+        "@id": "https://www.dtsworld.in/#organization"
       },
-      mainEntity: {
-        "@id": "https://www.dtsworld.in/#organization",
+
+      "mainEntity": {
+        "@id": "https://www.dtsworld.in/#organization"
       },
-      primaryImageOfPage: {
-        "@type": "ImageObject",
-        url: "https://www.dtsworld.in/og-image.jpg",
+
+      "primaryImageOfPage": {
+        "@id": "https://www.dtsworld.in/#logo"
       },
-      breadcrumb: {
-        "@id": "https://www.dtsworld.in/#breadcrumb",
+
+      "publisher": {
+        "@id": "https://www.dtsworld.in/#organization"
       },
-      inLanguage: "en-IN",
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.dtsworld.in/#breadcrumb",
-      itemListElement: [
+
+      "hasPart": {
+        "@id": "https://www.dtsworld.in/#faq"
+      },
+
+      "mentions": [
         {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.dtsworld.in/",
+          "@id": "https://www.dtsworld.in/#services"
         },
+        {
+          "@id": "https://www.dtsworld.in/#featured-work"
+        }
       ],
+
+      "significantLink": [
+        "https://www.dtsworld.in/services/guest-management",
+        "https://www.dtsworld.in/services/celebrity-management",
+        "https://www.dtsworld.in/services/events-weddings",
+        "https://www.dtsworld.in/services/pr-media-marketing",
+        "https://www.dtsworld.in/services/web-development-marketing",
+        "https://www.dtsworld.in/services/ai-video-vfx"
+      ],
+
+      "copyrightYear": 2026,
+
+      "copyrightHolder": {
+        "@id": "https://www.dtsworld.in/#organization"
+      },
+
+      "inLanguage": "en-IN"
     },
+
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.dtsworld.in/#services",
+
+      "name": "Double Trouble Studio Creative Services",
+
+      "url": "https://www.dtsworld.in/#services",
+
+      "description":
+        "Guest management, celebrity management, event and wedding planning, PR, digital marketing, website development, SEO, AI video production and VFX services across India.",
+
+      "itemListOrder":
+        "https://schema.org/ItemListUnordered",
+
+      "numberOfItems": 6,
+
+      "itemListElement": [
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/guest-management#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/guest-management",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/guest-management#service",
+
+            "name": "Guest Management Services",
+
+            "url":
+              "https://www.dtsworld.in/services/guest-management",
+
+            "serviceType": "Guest Management",
+
+            "category":
+              "Event Guest Management Services",
+
+            "description":
+              "Premium guest management services for weddings, corporate events, luxury launches and celebrity events, including RSVP tracking, VIP segmentation, check-in coordination, entry flow and on-ground event support.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/celebrity-management#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/celebrity-management",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/celebrity-management#service",
+
+            "name": "Celebrity Management Services",
+
+            "url":
+              "https://www.dtsworld.in/services/celebrity-management",
+
+            "serviceType":
+              "Celebrity Management and Talent Coordination",
+
+            "category":
+              "Celebrity Booking and Talent Management",
+
+            "description":
+              "Celebrity management and talent coordination for brand campaigns, corporate events, weddings, launches, public appearances and influencer collaborations.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/events-weddings#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/events-weddings",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/events-weddings#service",
+
+            "name":
+              "Event Management and Wedding Planning",
+
+            "url":
+              "https://www.dtsworld.in/services/events-weddings",
+
+            "serviceType":
+              "Event Management and Wedding Planning",
+
+            "category":
+              "Luxury Events and Wedding Services",
+
+            "description":
+              "Luxury event management and wedding planning services covering concepts, themes, vendors, production, guest journeys, hospitality and show-flow execution.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/pr-media-marketing#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/pr-media-marketing",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/pr-media-marketing#service",
+
+            "name":
+              "PR, Media and Digital Marketing",
+
+            "url":
+              "https://www.dtsworld.in/services/pr-media-marketing",
+
+            "serviceType":
+              "Public Relations, Media and Digital Marketing",
+
+            "category":
+              "PR and Digital Marketing Services",
+
+            "description":
+              "PR campaigns, media outreach, social media marketing, influencer collaborations, content strategy and paid advertising services for brand visibility, reputation and digital growth.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/web-development-marketing#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/web-development-marketing",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/web-development-marketing#service",
+
+            "name":
+              "Website Development and SEO",
+
+            "url":
+              "https://www.dtsworld.in/services/web-development-marketing",
+
+            "serviceType":
+              "Website Design, Website Development and SEO",
+
+            "category":
+              "Web Development and Search Engine Optimization",
+
+            "description":
+              "Custom Next.js websites, landing pages, UI and UX design, technical SEO, analytics, conversion funnels and performance-focused digital platforms.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "@id":
+            "https://www.dtsworld.in/services/ai-video-vfx#offer",
+
+          "url":
+            "https://www.dtsworld.in/services/ai-video-vfx",
+
+          "seller": {
+            "@id": "https://www.dtsworld.in/#organization"
+          },
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "@id":
+              "https://www.dtsworld.in/services/ai-video-vfx#service",
+
+            "name":
+              "AI Video Production and VFX",
+
+            "url":
+              "https://www.dtsworld.in/services/ai-video-vfx",
+
+            "serviceType":
+              "AI Video Production and Visual Effects",
+
+            "category":
+              "AI Advertising, Video Production and VFX",
+
+            "description":
+              "AI-generated advertisements, cinematic brand films, product videos, campaign visuals, visual effects and social media video content.",
+
+            "provider": {
+              "@id": "https://www.dtsworld.in/#organization"
+            },
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            }
+          }
+        }
+      ]
+    },
+
     {
       "@type": "ItemList",
       "@id": "https://www.dtsworld.in/#featured-work",
-      name: "Featured Work by Double Trouble Studio",
-      description:
-        "Featured work across branding, PR, web development, social media marketing, AI video production and experiential campaigns.",
-      itemListElement: [
+
+      "name":
+        "Double Trouble Studio Featured Work",
+
+      "url": "https://www.dtsworld.in/work",
+
+      "description":
+        "Selected branding, PR, website development, social media marketing, event branding, AI video production and VFX work by Double Trouble Studio.",
+
+      "itemListOrder":
+        "https://schema.org/ItemListUnordered",
+
+      "numberOfItems": 6,
+
+      "itemListElement": [
         {
           "@type": "ListItem",
-          position: 1,
-          item: {
+          "position": 1,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "RNK Rentals",
-            description:
-              "A complete digital transformation for India’s luxury car rental network through brand storytelling, PR communication, SEO-friendly website development and premium web experience.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
+            "@id":
+              "https://www.dtsworld.in/#work-rnk-rentals",
+
+            "name": "RNK Rentals",
+
+            "description":
+              "A digital transformation for a luxury car rental network through brand storytelling, PR communication, SEO-friendly website development and premium web experience.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
         },
+
         {
           "@type": "ListItem",
-          position: 2,
-          item: {
+          "position": 2,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "House of Stars",
-            description:
-              "Brand positioning, website development and narrative system for a celebrity management and talent engagement platform.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
+            "@id":
+              "https://www.dtsworld.in/#work-bharat-reshma",
+
+            "name": "Bharat Reshma",
+
+            "description":
+              "Brand positioning, website development and narrative systems for a celebrity management and talent engagement platform.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
         },
+
         {
           "@type": "ListItem",
-          position: 3,
-          item: {
+          "position": 3,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "Café Holiday",
-            description:
-              "Hospitality brand revamp focused on social media marketing, café storytelling, event-led experiences and community engagement.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
+            "@id":
+              "https://www.dtsworld.in/#work-butterchicken-factory",
+
+            "name": "Butterchicken Factory",
+
+            "description":
+              "A hospitality brand revamp focused on social media marketing, restaurant storytelling, event-led experiences and digital growth.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
         },
+
         {
           "@type": "ListItem",
-          position: 4,
-          item: {
+          "position": 4,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "India Today",
-            description:
-              "AI-powered visual campaigns, premium creative assets and digital media storytelling for a leading media platform.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
+            "@id":
+              "https://www.dtsworld.in/#work-india-today",
+
+            "name": "India Today",
+
+            "description":
+              "AI-powered visual campaigns, premium creative assets and digital media storytelling.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
         },
+
         {
           "@type": "ListItem",
-          position: 5,
-          item: {
+          "position": 5,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "All India Police Golf Tournament",
-            description:
-              "Creative support, event branding, sponsor communication and premium production identity for All India Police Golf Tournament Chandigarh 2026.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
+            "@id":
+              "https://www.dtsworld.in/#work-all-india-police-golf-tournament",
+
+            "name":
+              "All India Police Golf Tournament",
+
+            "description":
+              "Creative support, event branding, sponsor communication and premium production identity for the All India Police Golf Tournament Chandigarh 2026.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
         },
+
         {
           "@type": "ListItem",
-          position: 6,
-          item: {
+          "position": 6,
+
+          "item": {
             "@type": "CreativeWork",
-            name: "Bhart Rehma",
-            description:
-              "AI-generated cinematic visuals, VFX-led storytelling and high-impact digital campaign assets for premium brand communication.",
-            creator: {
-              "@id": "https://www.dtsworld.in/#organization",
-            },
-          },
-        },
-      ],
+            "@id":
+              "https://www.dtsworld.in/#work-spice",
+
+            "name": "Spice",
+
+            "description":
+              "AI-generated cinematic visuals, VFX-led storytelling and digital campaign assets designed for premium brand communication.",
+
+            "creator": {
+              "@id": "https://www.dtsworld.in/#organization"
+            }
+          }
+        }
+      ]
     },
+
     {
       "@type": "FAQPage",
       "@id": "https://www.dtsworld.in/#faq",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What services does Double Trouble Studio offer?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Double Trouble Studio offers branding, website design, website development, SEO, social media management, PR, digital marketing campaigns, creative direction, event marketing, guest management, celebrity management, AI video production, VFX and premium visual identity systems tailored for modern brands.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you work with startups and small businesses?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Double Trouble Studio works with startups, founder-led businesses, hospitality brands, restaurants, cafés, fashion labels, lifestyle companies, creators, influencers, event companies, wedding brands and corporate brands across India.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long does a branding or website project take?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "The timeline for a branding or website project depends on the project scope, number of pages, content requirements, design complexity, approvals and development requirements. Double Trouble Studio plans each project with a clear process from discovery and design to development and deployment.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you provide social media content creation?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Double Trouble Studio provides social media content creation, content strategy, campaign planning, creative direction, brand storytelling, reels, static posts, performance-led communication and digital marketing support for modern brands.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can we work together remotely?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Double Trouble Studio works with brands remotely across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and across India through structured communication, digital planning, project coordination and online reviews.",
-          },
-        },
-      ],
-    },
-  ],
-};
 
-export default function Home() {
+      "url": "https://www.dtsworld.in/#faq",
+
+      "name":
+        "Frequently Asked Questions About Double Trouble Studio",
+
+      "description":
+        "Answers to common questions about Double Trouble Studio services, project timelines, startups, social media content creation and remote collaboration.",
+
+      "isPartOf": {
+        "@id": "https://www.dtsworld.in/#webpage"
+      },
+
+      "about": {
+        "@id": "https://www.dtsworld.in/#organization"
+      },
+
+      "publisher": {
+        "@id": "https://www.dtsworld.in/#organization"
+      },
+
+      "inLanguage": "en-IN",
+
+      "mainEntity": [
+        {
+          "@type": "Question",
+
+          "name":
+            "What services does Double Trouble Studio offer?",
+
+          "acceptedAnswer": {
+            "@type": "Answer",
+
+            "text":
+              "Double Trouble Studio offers branding, website design, website development, SEO, social media management, PR, digital marketing campaigns, creative direction, event marketing, guest management, celebrity management, AI video production, VFX and premium visual identity systems tailored for modern brands."
+          }
+        },
+
+        {
+          "@type": "Question",
+
+          "name":
+            "Do you work with startups and small businesses?",
+
+          "acceptedAnswer": {
+            "@type": "Answer",
+
+            "text":
+              "Yes. We work with modern startups, founder-led businesses, small businesses, growing companies and established brands that want stronger digital presence, premium positioning, better brand identity, SEO visibility and long-term growth."
+          }
+        },
+
+        {
+          "@type": "Question",
+
+          "name":
+            "How long does a branding or website project take?",
+
+          "acceptedAnswer": {
+            "@type": "Answer",
+
+            "text":
+              "Project timelines depend on the scope, but most branding, website design and website development projects typically take between 2–6 weeks with strategy, UI/UX direction, content structure, SEO foundations, design revisions and launch support included."
+          }
+        },
+
+        {
+          "@type": "Question",
+
+          "name":
+            "Do you provide social media content creation?",
+
+          "acceptedAnswer": {
+            "@type": "Answer",
+
+            "text":
+              "Yes. We create premium social media strategies, visual content systems, reels direction, campaign ideas, content calendars, digital assets, influencer campaign support and high-performing content for hospitality, luxury, restaurant, fashion, lifestyle and event brands."
+          }
+        },
+
+        {
+          "@type": "Question",
+
+          "name":
+            "Can we work together remotely?",
+
+          "acceptedAnswer": {
+            "@type": "Answer",
+
+            "text":
+              "Yes. We work with clients across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa, India and internationally through smooth remote collaboration, structured communication, organized workflows and clear project timelines."
+          }
+        }
+      ]
+    }
+  ]
+};
+export default function HomePage() {
   return (
     <>
       <script
+        id="home-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema),
+          __html: JSON.stringify(homeSchema).replace(/</g, "\\u003c"),
         }}
       />
 
-      <main>
-        <Navbar />
-        <Hero />
-        <AboutStudio />
-        <WhyStudio />
-        <ServicesSection />
-        <StudioMethod />
-        <FeaturedWork />
-        <StudioDNA />
-        <PromiseSection />
-        <IndustriesSection />
-        <FAQSection />
-        <Footer />
-      </main>
+      <Navbar />
+      <Hero />
+      <AboutStudio />
+      <WhyStudio />
+      <ServicesSection />
+      <StudioMethod />
+      <FeaturedWork />
+      <StudioDNA />
+      <PromiseSection />
+      <IndustriesSection />
+      <FAQSection />
+      <Footer />
     </>
   );
 }
