@@ -21,6 +21,147 @@ import UseCases from "@/components/PRMediaDigitalMarketing/UseCases";
 import WhyChooseDTS from "@/components/PRMediaDigitalMarketing/WhyChooseDTS";
 import WhyPRDigitalMatters from "@/components/PRMediaDigitalMarketing/WhyPRDigitalMatters";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "PR & Digital Marketing Agency in India | Double Trouble Studio",
+
+  description:
+    "Integrated PR, media relations, social media, SEO, influencer marketing and paid campaigns for brands, events and public personalities across India.",
+
+  applicationName: "Double Trouble Studio",
+
+  authors: [
+    {
+      name: "Double Trouble Studio",
+      url: "https://www.dtsworld.in/",
+    },
+  ],
+
+  creator: "Double Trouble Studio",
+
+  publisher: "Double Trouble Studio",
+
+  category:
+    "PR, Media and Digital Marketing Services",
+
+  keywords: [
+    "PR agency in India",
+    "public relations agency India",
+    "digital marketing agency India",
+    "PR and digital marketing agency",
+    "media relations agency",
+    "media management agency",
+    "media coverage services",
+    "press release writing services",
+    "press release distribution India",
+    "corporate PR agency",
+    "startup PR agency",
+    "celebrity PR agency",
+    "event PR agency",
+    "hospitality PR agency",
+    "luxury brand PR agency",
+    "brand communication agency",
+    "social media marketing agency",
+    "social media management India",
+    "influencer marketing agency",
+    "influencer campaign management",
+    "SEO agency India",
+    "search engine optimization services",
+    "performance marketing agency",
+    "paid advertising agency",
+    "Meta ads management",
+    "Google ads management",
+    "content marketing services",
+    "online reputation management",
+    "brand reputation management",
+    "brand launch PR campaign",
+    "product launch marketing",
+    "event promotion agency",
+    "lead generation agency India",
+    "local SEO services",
+    "personal branding PR",
+    "founder PR services",
+    "digital marketing agency Mumbai",
+    "PR agency Mumbai",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dtsworld.in/services/pr-media-digital-marketing",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "en_IN",
+
+    url:
+      "https://www.dtsworld.in/services/pr-media-digital-marketing",
+
+    siteName: "Double Trouble Studio",
+
+    title:
+      "PR, Media & Digital Marketing Agency in India",
+
+    description:
+      "Build visibility, credibility and growth through PR, media coverage, social media, influencer marketing, SEO, paid ads and reputation management.",
+
+    images: [
+      {
+        url:
+          "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "PR, Media and Digital Marketing Services by Double Trouble Studio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "PR & Digital Marketing Agency in India | DTS",
+
+    description:
+      "Integrated PR, media coverage, social media, influencer campaigns, SEO, paid ads and brand communication services across India.",
+
+    images: [
+      "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+    ],
+  },
+
+  robots: {
+    index: true,
+
+    follow: true,
+
+    nocache: false,
+
+    googleBot: {
+      index: true,
+
+      follow: true,
+
+      noimageindex: false,
+
+      "max-image-preview": "large",
+
+      "max-snippet": -1,
+
+      "max-video-preview": -1,
+    },
+  },
+};
+
+
 const prMediaDigitalMarketingSchema = {
   "@context": "https://schema.org",
   "@graph": [

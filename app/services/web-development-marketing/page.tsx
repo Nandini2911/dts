@@ -20,6 +20,146 @@ import WhyChooseDTSSection from "@/components/WebDevelopmentMarketting/WhyChoose
 import WhySEOStartsDuringDevelopment from "@/components/WebDevelopmentMarketting/WhySEOStartsDuringDevelopment";
 import WhyWebsiteSEOMarketingTogether from "@/components/WebDevelopmentMarketting/WhyWebsiteSEOMarketingTogether";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Website Development, SEO & Digital Marketing India | DTS",
+
+  description:
+    "Website development, SEO, ecommerce, social media, paid ads and lead-generation services for businesses and growing brands across India.",
+
+  applicationName: "Double Trouble Studio",
+
+  authors: [
+    {
+      name: "Double Trouble Studio",
+      url: "https://www.dtsworld.in/",
+    },
+  ],
+
+  creator: "Double Trouble Studio",
+
+  publisher: "Double Trouble Studio",
+
+  category:
+    "Website Development, SEO and Digital Marketing",
+
+  keywords: [
+    "website development company in India",
+    "website development services India",
+    "website design company India",
+    "custom website development",
+    "business website development",
+    "corporate website development",
+    "ecommerce website development",
+    "Shopify website development",
+    "WordPress website development",
+    "landing page design",
+    "website redesign services",
+    "website maintenance services",
+    "UI UX website design",
+    "SEO friendly website development",
+    "SEO company in India",
+    "SEO services India",
+    "technical SEO services",
+    "on page SEO",
+    "local SEO services",
+    "ecommerce SEO services",
+    "SEO content writing",
+    "website SEO audit",
+    "AI Overview optimization",
+    "GEO optimization services",
+    "digital marketing agency India",
+    "social media marketing services",
+    "performance marketing agency",
+    "Google Ads management",
+    "Meta Ads management",
+    "lead generation services",
+    "content marketing services",
+    "email marketing services",
+    "WhatsApp marketing services",
+    "online reputation management",
+    "influencer marketing agency",
+    "website development Mumbai",
+    "SEO agency Mumbai",
+    "digital marketing company Mumbai",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dtsworld.in/services/web-development-marketing",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "en_IN",
+
+    url:
+      "https://www.dtsworld.in/services/web-development-marketing",
+
+    siteName: "Double Trouble Studio",
+
+    title:
+      "Website Development, SEO & Digital Marketing Services in India",
+
+    description:
+      "Build a stronger digital presence with custom websites, SEO, ecommerce development, social media marketing, paid advertising and lead-generation campaigns.",
+
+    images: [
+      {
+        url:
+          "https://www.dtsworld.in/web-development-marketing-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "Website Development, SEO and Digital Marketing Services by Double Trouble Studio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Website Development, SEO & Digital Marketing India",
+
+    description:
+      "Custom websites, SEO, ecommerce, social media, paid ads and lead-generation solutions for businesses across India.",
+
+    images: [
+      "https://www.dtsworld.in/web-development-marketing-og.jpg",
+    ],
+  },
+
+  robots: {
+    index: true,
+
+    follow: true,
+
+    nocache: false,
+
+    googleBot: {
+      index: true,
+
+      follow: true,
+
+      noimageindex: false,
+
+      "max-image-preview": "large",
+
+      "max-snippet": -1,
+
+      "max-video-preview": -1,
+    },
+  },
+};
+
 const webDevelopmentMarketingSchema = {
   "@context": "https://schema.org",
   "@graph": [
