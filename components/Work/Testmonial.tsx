@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
       setActive((prev) =>
         prev === testimonials.length - 1 ? 0 : prev + 1
       );
-    }, 100);
+    }, 2000);
 
     return () => clearInterval(autoSlide);
   }, []);
