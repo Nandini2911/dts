@@ -61,7 +61,7 @@ const services = [
     ],
   },
   {
-    title: "Web Development",
+    title: "Web Development & SEO",
     href: "/services/web-development-marketing",
     desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase Google visibility, improve user experience, generate leads and drive conversions.",
     features: [

@@ -190,7 +190,7 @@ export default function ContactMap() {
                   </h4>
 
                   <p className="mt-2 text-slate-600">
-                    doubletrouble.studio01@gmail.com
+                    info@dtsworld.in
                   </p>
                 </div>
 

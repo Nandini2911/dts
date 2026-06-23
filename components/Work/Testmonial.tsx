@@ -7,7 +7,7 @@ import {
   ArrowRight,
   Star,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -19,7 +19,6 @@ const testimonials = [
       "Improved premium perception and stronger online visibility.",
     image: "/logos/26.webp",
   },
-
   {
     name: "India Today",
     role: "Media & Broadcasting",
@@ -29,7 +28,6 @@ const testimonials = [
       "High-impact creative production designed for digital audiences.",
     image: "/india2.png",
   },
-
   {
     name: "Vow Story",
     role: "Luxury Wedding Brand",
@@ -44,6 +42,17 @@ const testimonials = [
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
 
+  // Automatically change testimonial every 5 seconds
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      setActive((prev) =>
+        prev === testimonials.length - 1 ? 0 : prev + 1
+      );
+    }, 100);
+
+    return () => clearInterval(autoSlide);
+  }, []);
+
   const nextSlide = () => {
     setActive((prev) =>
       prev === testimonials.length - 1 ? 0 : prev + 1
@@ -57,16 +66,16 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="relative overflow-hidden py-[120px] bg-[#f7fafc]">
+    <section className="relative overflow-hidden bg-[#f7fafc] py-[120px]">
       {/* BACKGROUND */}
       <div className="absolute inset-0">
         {/* Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f7fafc] to-[#eef3f9]" />
 
         {/* Glow */}
-        <div className="absolute top-[5%] left-[5%] w-[320px] h-[320px] rounded-full bg-[#6288B9]/10 blur-3xl" />
+        <div className="absolute left-[5%] top-[5%] h-[320px] w-[320px] rounded-full bg-[#6288B9]/10 blur-3xl" />
 
-        <div className="absolute bottom-[0%] right-[0%] w-[280px] h-[280px] rounded-full bg-[#0D2444]/5 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[280px] w-[280px] rounded-full bg-[#0D2444]/5 blur-3xl" />
 
         {/* Grid */}
         <div
@@ -80,7 +89,7 @@ export default function TestimonialsSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1380px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-[1380px] px-5 sm:px-6 md:px-8 lg:px-10">
         {/* TOP */}
         <div className="max-w-[850px]">
           {/* BADGE */}
@@ -97,22 +106,22 @@ export default function TestimonialsSection() {
               border
               border-[#6288B9]/20
               bg-white/70
-              backdrop-blur-xl
               px-5
               py-2.5
               shadow-[0_8px_30px_rgba(15,23,42,0.05)]
+              backdrop-blur-xl
             "
           >
-            <Quote className="w-4 h-4 text-[#456A9E]" />
+            <Quote className="h-4 w-4 text-[#456A9E]" />
 
             <span
               className="
                 text-[11px]
-                sm:text-[12px]
                 font-semibold
-                tracking-[2px]
                 uppercase
+                tracking-[2px]
                 text-[#456A9E]
+                sm:text-[12px]
               "
             >
               Client Testimonials
@@ -128,12 +137,12 @@ export default function TestimonialsSection() {
             className="
               mt-7
               text-[38px]
-              leading-[1.05]
-              sm:text-[52px]
-              md:text-[66px]
               font-bold
+              leading-[1.05]
               tracking-[-2px]
               text-[#0D2444]
+              sm:text-[52px]
+              md:text-[66px]
             "
             style={{
               fontFamily:
@@ -167,14 +176,13 @@ export default function TestimonialsSection() {
               max-w-[760px]
               text-[16px]
               leading-[1.9]
-              sm:text-[18px]
               text-[#5B6472]
+              sm:text-[18px]
             "
           >
-            Premium creative experiences crafted for
-            hospitality, luxury, media and modern brands
-            looking to build stronger digital presence and
-            refined brand perception.
+            Premium creative experiences crafted for hospitality, luxury,
+            media and modern brands looking to build stronger digital presence
+            and refined brand perception.
           </motion.p>
         </div>
 
@@ -182,8 +190,9 @@ export default function TestimonialsSection() {
         <div className="mt-20">
           <motion.div
             key={active}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.7 }}
             className="
               relative
@@ -192,8 +201,8 @@ export default function TestimonialsSection() {
               border
               border-white/20
               bg-white/70
-              backdrop-blur-2xl
               shadow-[0_20px_70px_rgba(15,23,42,0.08)]
+              backdrop-blur-2xl
             "
           >
             {/* BG */}
@@ -209,26 +218,22 @@ export default function TestimonialsSection() {
             />
 
             {/* INNER GLOW */}
-            <div className="absolute top-[-40px] right-[-20px] w-[220px] h-[220px] rounded-full bg-[#6288B9]/10 blur-3xl" />
+            <div className="absolute right-[-20px] top-[-40px] h-[220px] w-[220px] rounded-full bg-[#6288B9]/10 blur-3xl" />
 
-            <div className="relative z-10 grid gap-10 lg:grid-cols-[320px_1fr] p-7 md:p-10 lg:p-14">
+            <div className="relative z-10 grid gap-10 p-7 md:p-10 lg:grid-cols-[320px_1fr] lg:p-14">
               {/* LEFT */}
               <div
                 className="
                   relative
+                  h-[340px]
                   overflow-hidden
                   rounded-[30px]
-                  h-[340px]
                 "
               >
                 <img
                   src={testimonials[active].image}
                   alt={testimonials[active].name}
-                  className="
-                    w-full
-                    h-full
-                    object-cover
-                  "
+                  className="h-full w-full object-cover"
                 />
 
                 {/* Overlay */}
@@ -244,7 +249,7 @@ export default function TestimonialsSection() {
                 />
 
                 {/* Stars */}
-                <div className="absolute top-5 left-5 flex items-center gap-1">
+                <div className="absolute left-5 top-5 flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((item) => (
                     <Star
                       key={item}
@@ -259,8 +264,8 @@ export default function TestimonialsSection() {
                   <h3
                     className="
                       text-[30px]
-                      leading-none
                       font-bold
+                      leading-none
                       text-white
                     "
                     style={{
@@ -271,7 +276,7 @@ export default function TestimonialsSection() {
                     {testimonials[active].name}
                   </h3>
 
-                  <p className="mt-2 text-white/70 text-[14px]">
+                  <p className="mt-2 text-[14px] text-white/70">
                     {testimonials[active].role}
                   </p>
                 </div>
@@ -284,10 +289,10 @@ export default function TestimonialsSection() {
                   <div
                     className="
                       flex
+                      h-16
+                      w-16
                       items-center
                       justify-center
-                      w-16
-                      h-16
                       rounded-full
                       bg-gradient-to-r
                       from-[#0D2444]
@@ -303,10 +308,10 @@ export default function TestimonialsSection() {
                     className="
                       mt-8
                       text-[22px]
-                      leading-[1.8]
-                      md:text-[28px]
-                      text-[#0D2444]
                       font-medium
+                      leading-[1.8]
+                      text-[#0D2444]
+                      md:text-[28px]
                     "
                     style={{
                       fontFamily:
@@ -329,7 +334,7 @@ export default function TestimonialsSection() {
                       p-6
                     "
                   >
-                    <p className="text-[11px] tracking-[2px] uppercase text-white/50 font-semibold">
+                    <p className="text-[11px] font-semibold uppercase tracking-[2px] text-white/50">
                       Impact
                     </p>
 
@@ -343,18 +348,20 @@ export default function TestimonialsSection() {
                 <div className="mt-10 flex items-center justify-between">
                   {/* DOTS */}
                   <div className="flex items-center gap-3">
-                    {testimonials.map((_, index) => (
+                    {testimonials.map((testimonial, index) => (
                       <button
-                        key={index}
+                        key={testimonial.name}
+                        type="button"
                         onClick={() => setActive(index)}
+                        aria-label={`Show testimonial ${index + 1}`}
                         className={`
+                          rounded-full
                           transition-all
                           duration-300
-                          rounded-full
                           ${
                             active === index
-                              ? "w-10 h-3 bg-[#0D2444]"
-                              : "w-3 h-3 bg-[#0D2444]/20"
+                              ? "h-3 w-10 bg-[#0D2444]"
+                              : "h-3 w-3 bg-[#0D2444]/20"
                           }
                         `}
                       />
@@ -364,13 +371,15 @@ export default function TestimonialsSection() {
                   {/* BUTTONS */}
                   <div className="flex items-center gap-3">
                     <button
+                      type="button"
                       onClick={prevSlide}
+                      aria-label="Previous testimonial"
                       className="
                         flex
+                        h-12
+                        w-12
                         items-center
                         justify-center
-                        w-12
-                        h-12
                         rounded-full
                         border
                         border-[#0D2444]/10
@@ -386,13 +395,15 @@ export default function TestimonialsSection() {
                     </button>
 
                     <button
+                      type="button"
                       onClick={nextSlide}
+                      aria-label="Next testimonial"
                       className="
                         flex
+                        h-12
+                        w-12
                         items-center
                         justify-center
-                        w-12
-                        h-12
                         rounded-full
                         bg-gradient-to-r
                         from-[#0D2444]
