@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       "A Mumbai-based creative agency specializing in brand strategy, digital marketing, PR, celebrity management, events, website development, SEO, AI video production and VFX.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "og/home-og.jpg",
         width: 1200,
         height: 630,
         alt: "Double Trouble Studio – Creative and Digital Marketing Agency",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
       "Double Trouble Studio | Creative, Digital Marketing & PR Agency",
     description:
       "Creative strategy, digital marketing, PR, celebrity management, events, websites, SEO, AI video production and VFX.",
-    images: ["/og-image.jpg"],
+    images: ["/twitter/home-twitter.jpg"],
   },
 
   icons: {
