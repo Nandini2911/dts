@@ -19,6 +19,7 @@ import CelebrityFeaturedWork from "@/components/CelebrityManagement/celebrityfea
 
 
 import type { Metadata } from "next";
+import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 
 export const metadata: Metadata = {
   title:
@@ -674,6 +675,7 @@ export default function CelebrityManagement() {
         <CelebrityManagementFAQ />
         <CelebrityManagementCTA />
         <Footer />
+        <ServiceCityLinks serviceSlug="celebrity-management" />
       </main>
     </>
   );

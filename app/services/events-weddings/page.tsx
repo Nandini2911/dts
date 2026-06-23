@@ -16,6 +16,7 @@ import WhyChooseDoubleTroubleStudioEvents from "@/components/EventsWeddings/WhyC
 import WhyProfessionalEventManagementMatters from "@/components/EventsWeddings/WhyProfessionalEventManagementMatters";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 
 import type { Metadata } from "next";
 
@@ -653,6 +654,7 @@ export default function EventsWeddings() {
         <EventsWeddingsFQA />
         <EventWeddingFinalCTA />
         <Footer />
+     <ServiceCityLinks serviceSlug="events-weddings" />
       </main>
     </>
   );
