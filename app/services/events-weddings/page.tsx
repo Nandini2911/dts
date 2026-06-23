@@ -654,7 +654,7 @@ export default function EventsWeddings() {
         <EventsWeddingsFQA />
         <EventWeddingFinalCTA />
         <Footer />
-        <ServiceCityLinks serviceSlug="event-management" />
+     <ServiceCityLinks serviceSlug="events-weddings" />
       </main>
     </>
   );
