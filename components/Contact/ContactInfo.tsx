@@ -22,7 +22,7 @@ const contactData = [
   {
     icon: FiMail,
     title: "Email Us",
-    description: "doubletrouble.studio01@gmail.com",
+    description: "info@dtsworld.in",
   },
 ];
 
