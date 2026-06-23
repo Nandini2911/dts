@@ -15,6 +15,7 @@ import { ResultsOutcomes } from "@/components/GuestManagement/ResultOutcomes";
 import { WhyDoubleTroubleStudio } from "@/components/GuestManagement/WhyDoubleTrouble";
 import WhyGuestManagementMatters from "@/components/GuestManagement/WhyGuestManagementMatters";
 import Navbar from "@/components/Navbar";
+import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 
 import type { Metadata } from "next";
 
@@ -1811,6 +1812,8 @@ export default function GuestManagement() {
         <GuestManagementFaq />
         <LocalSeoSection />
         <Footer />
+              <ServiceCityLinks serviceSlug="guest-management" />
+
       </main>
     </>
   );
