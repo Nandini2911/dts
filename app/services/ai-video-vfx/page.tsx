@@ -19,6 +19,7 @@ import WhatIsAIVideoProduction from "@/components/AIVideoVFX/WhatIsAIVideoProduc
 import WhyChooseAIVideoVFX from "@/components/AIVideoVFX/WhyChooseAIVideoVFX";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 
 
 import type { Metadata } from "next";
@@ -595,6 +596,7 @@ export default function AIVideoProductionVFXPage() {
         <AIVideoVFXFAQ />
         <AIVideoVFXCTA />
         <Footer />
+        <ServiceCityLinks serviceSlug="ai-video-vfx" />
       </main>
     </>
   );

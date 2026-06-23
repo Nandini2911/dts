@@ -20,6 +20,7 @@ import StartRequirements from "@/components/PRMediaDigitalMarketing/StartRequire
 import UseCases from "@/components/PRMediaDigitalMarketing/UseCases";
 import WhyChooseDTS from "@/components/PRMediaDigitalMarketing/WhyChooseDTS";
 import WhyPRDigitalMatters from "@/components/PRMediaDigitalMarketing/WhyPRDigitalMatters";
+import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 
 
 import type { Metadata } from "next";
@@ -764,6 +765,7 @@ export default function PRMediaDigitalMarketingPage() {
         <FinalCTA />
         <SEOContentBlock />
         <Footer />
+        <ServiceCityLinks serviceSlug="pr-media-digital-marketing" />
       </main>
     </>
   );
