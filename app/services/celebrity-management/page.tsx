@@ -17,6 +17,136 @@ import CelebrityManagementCTA from "@/components/CelebrityManagement/CelebrityMa
 import WhyWorkWithDoubleTroubleStudio from "@/components/CelebrityManagement/WhyWorkWithDoubleTroubleStudio";
 import CelebrityFeaturedWork from "@/components/CelebrityManagement/celebrityfeatured";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Celebrity Management Company in India | Double Trouble Studio",
+
+  description:
+    "Book celebrities, influencers, hosts, speakers and performers for brand campaigns, corporate events, luxury experiences and private celebrations across India.",
+
+  applicationName: "Double Trouble Studio",
+
+  authors: [
+    {
+      name: "Double Trouble Studio",
+      url: "https://www.dtsworld.in/",
+    },
+  ],
+
+  creator: "Double Trouble Studio",
+
+  publisher: "Double Trouble Studio",
+
+  category: "Celebrity Management Services",
+
+  keywords: [
+    "celebrity management company in India",
+    "celebrity management services",
+    "celebrity booking agency India",
+    "celebrity booking services",
+    "Bollywood celebrity booking",
+    "celebrity endorsement agency",
+    "celebrity appearance management",
+    "celebrity booking for corporate events",
+    "celebrity booking for weddings",
+    "celebrity booking for brand launches",
+    "celebrity host booking",
+    "celebrity anchor booking",
+    "singer booking agency India",
+    "performer booking agency",
+    "sports personality booking",
+    "public figure management",
+    "motivational speaker booking",
+    "influencer collaboration agency",
+    "creator collaboration agency",
+    "brand ambassador management",
+    "corporate event talent management",
+    "luxury event celebrity booking",
+    "hospitality celebrity activation",
+    "celebrity management Mumbai",
+    "celebrity booking Mumbai",
+    "celebrity management Delhi",
+    "celebrity management Bangalore",
+    "celebrity management across India",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dtsworld.in/services/celebrity-management",
+  },
+
+  openGraph: {
+    type: "website",
+
+    locale: "en_IN",
+
+    url:
+      "https://www.dtsworld.in/services/celebrity-management",
+
+    siteName: "Double Trouble Studio",
+
+    title:
+      "Celebrity Management Company in India | Double Trouble Studio",
+
+    description:
+      "End-to-end celebrity booking, talent sourcing, negotiations, contracts, logistics and event-day coordination for brands and premium events across India.",
+
+    images: [
+      {
+        url:
+          "https://www.dtsworld.in/celebrity-management-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "Celebrity Management and Celebrity Booking Services by Double Trouble Studio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Celebrity Management Company in India | Double Trouble Studio",
+
+    description:
+      "Celebrity booking, endorsements, influencer collaborations, hosts, speakers and performers for campaigns and premium events across India.",
+
+    images: [
+      "https://www.dtsworld.in/celebrity-management-og.jpg",
+    ],
+  },
+
+  robots: {
+    index: true,
+
+    follow: true,
+
+    nocache: false,
+
+    googleBot: {
+      index: true,
+
+      follow: true,
+
+      noimageindex: false,
+
+      "max-image-preview": "large",
+
+      "max-snippet": -1,
+
+      "max-video-preview": -1,
+    },
+  },
+};
+
+
 const celebrityManagementSchema = {
   "@context": "https://schema.org",
   "@graph": [
