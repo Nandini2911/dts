@@ -1,6 +1,8 @@
+
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -78,7 +80,7 @@ export const metadata: Metadata = {
       "A Mumbai-based creative agency specializing in brand strategy, digital marketing, PR, celebrity management, events, website development, SEO, AI video production and VFX.",
     images: [
       {
-        url: "og/home-og.jpg",
+        url: "/og/home-og.jpg",
         width: 1200,
         height: 630,
         alt: "Double Trouble Studio – Creative and Digital Marketing Agency",
@@ -130,7 +132,6 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // Add your Google Search Console verification code here:
     // google: "YOUR_GOOGLE_VERIFICATION_CODE",
   },
 
@@ -156,7 +157,56 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${sora.variable}`}>
-      
+        {/* Meta Pixel */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {
+              if(f.fbq)return;
+
+              n=f.fbq=function(){
+                n.callMethod
+                  ? n.callMethod.apply(n,arguments)
+                  : n.queue.push(arguments);
+              };
+
+              if(!f._fbq)f._fbq=n;
+
+              n.push=n;
+              n.loaded=!0;
+              n.version='2.0';
+              n.queue=[];
+
+              t=b.createElement(e);
+              t.async=!0;
+              t.src=v;
+
+              s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s);
+            }
+            (
+              window,
+              document,
+              'script',
+              'https://connect.facebook.net/en_US/fbevents.js'
+            );
+
+            fbq('init', '1620417945831859');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+
+        {/* Meta Pixel fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1620417945831859&ev=PageView&noscript=1"
+            alt=""
+            aria-hidden="true"
+          />
+        </noscript>
 
         {children}
 
@@ -165,3 +215,4 @@ export default function RootLayout({
     </html>
   );
 }
+
