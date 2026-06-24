@@ -4,16 +4,26 @@ export const POSTS_QUERY = defineQuery(`
   *[
     _type == "post" &&
     defined(slug.current) &&
-    defined(publishedAt) &&
-    dateTime(publishedAt) <= dateTime($now)
-  ] | order(publishedAt desc) {
+    dateTime(
+      coalesce(publishedAt, _createdAt)
+    ) <= dateTime($now)
+  ]
+  | order(
+      coalesce(publishedAt, _createdAt) desc
+    )
+  {
     _id,
     title,
     "slug": slug.current,
     category,
     authorName,
     mainImage,
-    publishedAt,
+
+    "publishedAt": coalesce(
+      publishedAt,
+      _createdAt
+    ),
+
     seoKeywords,
 
     isFeatured,
@@ -25,7 +35,11 @@ export const POSTS_QUERY = defineQuery(`
     viewCount,
 
     "bodyText": pt::text(body),
-    "excerpt": coalesce(excerpt, pt::text(body)[0...170])
+
+    "excerpt": coalesce(
+      excerpt,
+      pt::text(body)[0...170]
+    )
   }
 `);
 
@@ -33,8 +47,9 @@ export const POST_QUERY = defineQuery(`
   *[
     _type == "post" &&
     slug.current == $slug &&
-    defined(publishedAt) &&
-    dateTime(publishedAt) <= dateTime($now)
+    dateTime(
+      coalesce(publishedAt, _createdAt)
+    ) <= dateTime($now)
   ][0] {
     _id,
     title,
@@ -42,7 +57,12 @@ export const POST_QUERY = defineQuery(`
     category,
     authorName,
     mainImage,
-    publishedAt,
+
+    "publishedAt": coalesce(
+      publishedAt,
+      _createdAt
+    ),
+
     seoTitle,
     seoDescription,
     focusKeyword,
@@ -51,7 +71,34 @@ export const POST_QUERY = defineQuery(`
     viewCount,
 
     "bodyText": pt::text(body),
-    "excerpt": coalesce(excerpt, pt::text(body)[0...170]),
+
+    "excerpt": coalesce(
+      excerpt,
+      pt::text(body)[0...170]
+    ),
+
     body
+  }
+`);
+
+export const BLOG_SITEMAP_QUERY = defineQuery(`
+  *[
+    _type == "post" &&
+    defined(slug.current) &&
+    dateTime(
+      coalesce(publishedAt, _createdAt)
+    ) <= dateTime($now)
+  ]
+  | order(
+      coalesce(publishedAt, _createdAt) desc
+    )
+  {
+    "slug": slug.current,
+
+    "lastModified": coalesce(
+      _updatedAt,
+      publishedAt,
+      _createdAt
+    )
   }
 `);

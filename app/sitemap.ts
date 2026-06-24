@@ -9,7 +9,12 @@ import {
 } from "@/lib/service-city";
 
 import { SITE } from "@/lib/site";
+
 import { client } from "@/sanity/lib/client";
+
+import {
+  BLOG_SITEMAP_QUERY,
+} from "@/sanity/lib/queries";
 
 export const revalidate = 60;
 
@@ -17,26 +22,6 @@ type SitemapBlogPost = {
   slug: string;
   lastModified?: string;
 };
-
-const BLOG_SITEMAP_QUERY = `
-  *[
-    _type == "post" &&
-    defined(slug.current) &&
-    (
-      !defined(publishedAt) ||
-      publishedAt <= $now
-    )
-  ]
-  | order(coalesce(publishedAt, _createdAt) desc)
-  {
-    "slug": slug.current,
-    "lastModified": coalesce(
-      _updatedAt,
-      publishedAt,
-      _createdAt
-    )
-  }
-`;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
