@@ -9,8 +9,46 @@ import {
 } from "@/lib/service-city";
 
 import { SITE } from "@/lib/site";
+import { client } from "@/sanity/lib/client";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const revalidate = 60;
+
+type SitemapBlogPost = {
+  slug: string;
+  lastModified?: string;
+};
+
+const BLOG_SITEMAP_QUERY = `
+  *[
+    _type == "post" &&
+    defined(slug.current) &&
+    (
+      !defined(publishedAt) ||
+      publishedAt <= $now
+    )
+  ]
+  | order(coalesce(publishedAt, _createdAt) desc)
+  {
+    "slug": slug.current,
+    "lastModified": coalesce(
+      _updatedAt,
+      publishedAt,
+      _createdAt
+    )
+  }
+`;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date().toISOString();
+
+  const blogPosts =
+    await client.fetch<SitemapBlogPost[]>(
+      BLOG_SITEMAP_QUERY,
+      {
+        now,
+      },
+    );
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE.url,
@@ -38,8 +76,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     {
       url: `${SITE.url}/blog`,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "daily",
+      priority: 0.9,
     },
 
     {
@@ -52,8 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages: MetadataRoute.Sitemap =
     ALL_SEO_SERVICE_SLUGS.map(
       (serviceSlug) => ({
-        url:
-          `${SITE.url}/services/${serviceSlug}`,
+        url: `${SITE.url}/services/${serviceSlug}`,
         changeFrequency: "monthly",
         priority: 0.8,
       }),
@@ -72,9 +109,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }),
     );
 
+  const blogPostPages: MetadataRoute.Sitemap =
+    blogPosts
+      .filter((post) => Boolean(post.slug))
+      .map((post) => ({
+        url: `${SITE.url}/blog/${post.slug}`,
+
+        lastModified:
+          post.lastModified ?? undefined,
+
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+
   return [
     ...staticPages,
     ...servicePages,
     ...serviceCityPages,
+    ...blogPostPages,
   ];
 }
