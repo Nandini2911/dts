@@ -109,7 +109,9 @@ export const metadata: Metadata = {
         sizes: "512x512",
       },
     ],
+
     shortcut: "/favicon.ico",
+
     apple: [
       {
         url: "/apple-icon.png",
@@ -122,6 +124,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -132,7 +135,13 @@ export const metadata: Metadata = {
   },
 
   verification: {
+    // Add Google Search Console verification later if required:
     // google: "YOUR_GOOGLE_VERIFICATION_CODE",
+
+    other: {
+      "facebook-domain-verification":
+        "fckd8j06ue7776jrx86hmtj0cdg4rs",
+    },
   },
 
   other: {
@@ -210,9 +219,9 @@ export default function RootLayout({
 
         {children}
 
+        {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-5J6M99HD" />
       </body>
     </html>
   );
 }
-
