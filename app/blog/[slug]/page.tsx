@@ -14,6 +14,7 @@ import BlogShareButtons from "@/components/BlogShareButtons";
 
 
 export const revalidate = 60;
+export const dynamicParams = true;
 
 type PageProps = {
   params: Promise<{
