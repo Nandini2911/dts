@@ -12,6 +12,7 @@ import PromiseSection from "@/components/Home/PromiseSection";
 import IndustriesSection from "@/components/Home/IndustriesSection";
 import FAQSection from "@/components/Home/HomeFaq";
 import Footer from "@/components/Footer";
+import PopularServiceLocations from "@/components/Home/PopularServiceLocations";
 
 
 export const metadata: Metadata = {
@@ -874,6 +875,7 @@ export default function HomePage() {
       <AboutStudio />
       <WhyStudio />
       <ServicesSection />
+      <PopularServiceLocations/>
       <StudioMethod />
       <FeaturedWork />
       <StudioDNA />
