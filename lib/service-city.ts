@@ -71,7 +71,7 @@ export function getServiceCityData(
     city,
     canonicalUrl,
 
-    indexable: customContent?.indexable === true,
+   indexable: customContent?.indexable ?? true,
 
     title:
       `${service.seoName} in ${city.name} | ${SITE.shortName}`,

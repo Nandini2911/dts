@@ -1,47 +1,62 @@
 import type { MetadataRoute } from "next";
 
-import {
-  ALL_SEO_SERVICE_SLUGS,
-} from "@/data/seo-services";
-
-import {
-  getPublishedServiceCityPages,
-} from "@/lib/service-city";
-
+import { ALL_SEO_SERVICE_SLUGS } from "@/data/seo-services";
+import { getPublishedServiceCityPages } from "@/lib/service-city";
 import { SITE } from "@/lib/site";
+import { client } from "@/sanity/lib/client";
+import { BLOG_SITEMAP_QUERY } from "@/sanity/lib/queries";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+type SitemapBlogPost = {
+  slug: string;
+  lastModified?: string;
+};
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date().toISOString();
+
+  const blogPosts = await client.fetch<SitemapBlogPost[]>(
+    BLOG_SITEMAP_QUERY,
+    { now },
+    {
+      cache: "no-store",
+    }
+  );
+
+  console.log("SITEMAP BLOG COUNT:", blogPosts.length);
+  console.log(
+    "SITEMAP BLOG SLUGS:",
+    blogPosts.map((post) => post.slug)
+  );
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE.url,
       changeFrequency: "weekly",
       priority: 1,
     },
-
     {
       url: `${SITE.url}/about`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
     {
       url: `${SITE.url}/contact`,
       changeFrequency: "yearly",
       priority: 0.7,
     },
-
     {
       url: `${SITE.url}/work`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
     {
       url: `${SITE.url}/blog`,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "daily",
+      priority: 0.9,
     },
-
     {
       url: `${SITE.url}/locations`,
       changeFrequency: "monthly",
@@ -50,31 +65,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const servicePages: MetadataRoute.Sitemap =
-    ALL_SEO_SERVICE_SLUGS.map(
-      (serviceSlug) => ({
-        url:
-          `${SITE.url}/services/${serviceSlug}`,
-        changeFrequency: "monthly",
-        priority: 0.8,
-      }),
-    );
+    ALL_SEO_SERVICE_SLUGS.map((serviceSlug) => ({
+      url: `${SITE.url}/services/${serviceSlug}`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }));
 
   const serviceCityPages: MetadataRoute.Sitemap =
-    getPublishedServiceCityPages().map(
-      (page) => ({
-        url: page.canonicalUrl,
+    getPublishedServiceCityPages().map((page) => ({
+      url: page.canonicalUrl,
+      lastModified: page.lastModified ?? undefined,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
 
-        lastModified:
-          page.lastModified ?? undefined,
-
+  const blogPostPages: MetadataRoute.Sitemap =
+    blogPosts
+      .filter((post) => post.slug && post.slug.trim() !== "")
+      .map((post) => ({
+        url: `${SITE.url}/blog/${post.slug}`,
+        lastModified: post.lastModified ?? now,
         changeFrequency: "monthly",
         priority: 0.7,
-      }),
-    );
+      }));
 
   return [
     ...staticPages,
     ...servicePages,
     ...serviceCityPages,
+    ...blogPostPages,
   ];
 }

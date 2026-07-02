@@ -102,6 +102,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     now,
   });
 
+  console.log(
+  "SANITY BLOG COUNT:",
+  posts.length,
+);
   const recentPost = posts[0];
 
   const searchFilteredPosts = searchQuery

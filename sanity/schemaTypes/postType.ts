@@ -73,13 +73,16 @@ export const postType = defineType({
       ],
     }),
 
-    defineField({
-      name: 'publishedAt',
-      title: 'Published Date',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString(),
-    }),
+defineField({
+  name: "publishedAt",
+  title: "Published Date",
+  type: "datetime",
+  initialValue: () =>
+    new Date().toISOString(),
 
+  validation: (Rule) =>
+    Rule.required(),
+}),
     defineField({
       name: 'seoTitle',
       title: 'SEO Title',

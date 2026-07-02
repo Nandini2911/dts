@@ -287,11 +287,42 @@ export default function Hero() {
                 min-[1800px]:max-w-[780px]
               "
             >
-              Double Trouble Studio is a creative digital agency in India
-              offering branding, PR, event management, guest management, digital
-              marketing, website development, AI video production and VFX
-              services for hospitality, luxury, restaurant, fashion and
-              lifestyle brands.
+             Double Trouble Studio is a creative digital agency in India offering{" "}
+<Link
+  href="/services/pr-media-digital-marketing"
+  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+>
+  PR and digital marketing services
+</Link>
+,{" "}
+<Link
+  href="/services/pr-media-digital-marketing"
+  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+>
+   event management and wedding planning
+</Link>
+,{" "}
+<Link
+  href="/services/pr-media-digital-marketing"
+  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+>
+  premium guest management
+</Link>
+,{" "}
+<Link
+  href="/services/pr-media-digital-marketing"
+  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+>
+ website development and SEO services
+</Link>
+, and{" "}
+<Link
+  href="/services/pr-media-digital-marketing"
+  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+>
+ AI video production and video editing
+</Link>{" "}
+for hospitality, luxury, restaurant, fashion and lifestyle brands.
             </p>
 
             {/* BUTTONS */}

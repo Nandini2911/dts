@@ -1,6 +1,9 @@
+
+
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -78,7 +81,7 @@ export const metadata: Metadata = {
       "A Mumbai-based creative agency specializing in brand strategy, digital marketing, PR, celebrity management, events, website development, SEO, AI video production and VFX.",
     images: [
       {
-        url: "og/home-og.jpg",
+        url: "/og/home-og.jpg",
         width: 1200,
         height: 630,
         alt: "Double Trouble Studio – Creative and Digital Marketing Agency",
@@ -107,7 +110,9 @@ export const metadata: Metadata = {
         sizes: "512x512",
       },
     ],
+
     shortcut: "/favicon.ico",
+
     apple: [
       {
         url: "/apple-icon.png",
@@ -120,6 +125,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -130,8 +136,13 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // Add your Google Search Console verification code here:
+    // Add Google Search Console verification later if required:
     // google: "YOUR_GOOGLE_VERIFICATION_CODE",
+
+    other: {
+      "facebook-domain-verification":
+        "fckd8j06ue7776jrx86hmtj0cdg4rs",
+    },
   },
 
   other: {
@@ -148,174 +159,6 @@ export const viewport: Viewport = {
   themeColor: "#0D2444",
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["Organization", "ProfessionalService"],
-      "@id": `${siteUrl}/#organization`,
-      name: "Double Trouble Studio",
-      alternateName: "DTS",
-      url: siteUrl,
-      logo: {
-        "@type": "ImageObject",
-        "@id": `${siteUrl}/#logo`,
-        url: `${siteUrl}/logo.png`,
-        contentUrl: `${siteUrl}/logo.png`,
-        caption: "Double Trouble Studio",
-      },
-      image: `${siteUrl}/og-image.jpg`,
-      description:
-        "Double Trouble Studio is a Mumbai-based creative, branding, digital marketing, public relations, celebrity management, event management and web development agency helping brands build visibility, authority and measurable business growth.",
-      email: "mailto:info@dtsworld.in",
-      telephone: "+91-80000-06021",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Mumbai",
-        addressRegion: "Maharashtra",
-        addressCountry: "IN",
-      },
-      areaServed: {
-        "@type": "Country",
-        name: "India",
-      },
-      knowsAbout: [
-        "Brand Strategy",
-        "Digital Marketing",
-        "Public Relations",
-        "Celebrity Management",
-        "Guest Management",
-        "Event Management",
-        "Wedding Management",
-        "Search Engine Optimization",
-        "Social Media Marketing",
-        "Website Design",
-        "Website Development",
-        "AI Video Production",
-        "VFX",
-        "Creative Content Production",
-      ],
-      audience: [
-        {
-          "@type": "Audience",
-          audienceType: "Business Owners",
-        },
-        {
-          "@type": "Audience",
-          audienceType: "Founders",
-        },
-        {
-          "@type": "Audience",
-          audienceType: "Marketing Managers",
-        },
-        {
-          "@type": "Audience",
-          audienceType: "Brand Teams",
-        },
-        {
-          "@type": "Audience",
-          audienceType: "Event Organizers",
-        },
-        {
-          "@type": "Audience",
-          audienceType: "Luxury and Lifestyle Brands",
-        },
-      ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Double Trouble Studio Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Brand Strategy",
-              url: `${siteUrl}/services`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Digital Marketing",
-              url: `${siteUrl}/services/pr-media-marketing`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Public Relations",
-              url: `${siteUrl}/services/pr-media-marketing`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Celebrity Management",
-              url: `${siteUrl}/services/celebrity-management`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Guest Management",
-              url: `${siteUrl}/services/guest-management`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Event and Wedding Management",
-              url: `${siteUrl}/services/events-weddings`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Website Design and Development",
-              url: `${siteUrl}/services/web-development-marketing`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Search Engine Optimization",
-              url: `${siteUrl}/services/web-development-marketing`,
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "AI Video Production and VFX",
-              url: `${siteUrl}/services/ai-video-vfx`,
-            },
-          },
-        ],
-      },
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "Double Trouble Studio",
-      alternateName: "DTS",
-      description:
-        "Official website of Double Trouble Studio, a creative, branding, PR, digital marketing, celebrity management, events and web development agency in Mumbai.",
-      publisher: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      inLanguage: "en-IN",
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -324,15 +167,60 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${sora.variable}`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
-          }}
-        />
+        {/* Meta Pixel */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {
+              if(f.fbq)return;
+
+              n=f.fbq=function(){
+                n.callMethod
+                  ? n.callMethod.apply(n,arguments)
+                  : n.queue.push(arguments);
+              };
+
+              if(!f._fbq)f._fbq=n;
+
+              n.push=n;
+              n.loaded=!0;
+              n.version='2.0';
+              n.queue=[];
+
+              t=b.createElement(e);
+              t.async=!0;
+              t.src=v;
+
+              s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s);
+            }
+            (
+              window,
+              document,
+              'script',
+              'https://connect.facebook.net/en_US/fbevents.js'
+            );
+
+            fbq('init', '1620417945831859');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+
+        {/* Meta Pixel fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1620417945831859&ev=PageView&noscript=1"
+            alt=""
+            aria-hidden="true"
+          />
+        </noscript>
 
         {children}
 
+        {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-5J6M99HD" />
       </body>
     </html>
