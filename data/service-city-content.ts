@@ -120,7 +120,7 @@ export const SERVICE_CITY_CONTENT: Partial<
     lastModified: "2026-06-23",
   },
 
-  "pr-media-digital-marketing:mumbai": {
+  "pr-media-marketing:mumbai": {
     indexable: true,
 
     introduction:
