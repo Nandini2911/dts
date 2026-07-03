@@ -7,7 +7,7 @@ import { buildServiceCityMetadata } from "@/lib/service-city";
 
 
 const SERVICE_SLUG =
-  "pr-media-digital-marketing" as const;
+  "pr-media-marketing" as const;
 
 type PageProps = {
   params: Promise<{
