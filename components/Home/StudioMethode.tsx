@@ -1,34 +1,72 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
-
 const steps = [
   {
     number: "01",
     title: "Discover",
-    desc: "Brand truth, audience behaviour, market research and category positioning for stronger brand strategy.",
+    desc: (
+      <>
+        Brand truth, audience behaviour, market research and{" "}
+        <Link
+          href="/blog/luxury-brand-strategy-roadmap-india"
+          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
+        >
+          category positioning
+        </Link>{" "}
+        for stronger brand strategy.
+      </>
+    ),
   },
   {
     number: "02",
     title: "Design",
-    desc: "Brand narrative, visual systems, content direction and strategic digital experience planning.",
+    desc: (
+      <>
+        Brand narrative, visual systems, content direction and strategic
+        digital experience planning.
+      </>
+    ),
   },
   {
     number: "03",
     title: "Develop",
-    desc: "SEO-friendly websites, digital campaigns, PR assets and elevated brand experiences built for growth.",
+    desc: (
+      <>
+        SEO-friendly websites, digital campaigns, PR assets and elevated
+        brand experiences built with{" "}
+        <Link
+          href="/blog/on-page-seo-checklist-for-higher-rankings"
+          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
+        >
+          SEO planning
+        </Link>
+        .
+      </>
+    ),
   },
   {
     number: "04",
     title: "Deploy",
-    desc: "Campaign launch, amplification, performance optimisation and long-term digital growth across India.",
+    desc: (
+      <>
+        Campaign launch, amplification,{" "}
+        <Link
+          href="/blog/conversion-optimization-luxury-brands-high-ticket-funnel"
+          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
+        >
+          performance optimisation
+        </Link>{" "}
+        and long-term digital growth across India.
+      </>
+    ),
   },
 ];
-
 export default function StudioMethod() {
   return (
     <section
@@ -280,18 +318,18 @@ export default function StudioMethod() {
                     {step.title}
                   </h3>
 
-                  <p
-                    className="
-                      mt-5
-                      text-[14px]
-                      leading-[28px]
-                      text-white/70
-                      max-w-[260px]
-                      [text-shadow:0_2px_18px_rgba(0,0,0,0.35)]
-                    "
-                  >
-                    {step.desc}
-                  </p>
+                 <p
+  className="
+    mt-5
+    text-[14px]
+    leading-[28px]
+    text-white/70
+    max-w-[260px]
+    [text-shadow:0_2px_18px_rgba(0,0,0,0.35)]
+  "
+>
+  {step.desc}
+</p>
                 </div>
 
                 {/* GLOW */}

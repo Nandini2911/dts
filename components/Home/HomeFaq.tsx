@@ -1,41 +1,222 @@
-
 // components/FaqSection.tsx
 
 "use client";
 
+import type { ReactNode } from "react";
+import Link from "next/link";
 import { Plus } from "lucide-react";
 
+const inlineLinkClass =
+  "font-semibold text-[#0D2444] underline underline-offset-4 decoration-[#6288B9]/40 hover:decoration-[#0D2444] transition-colors";
+
+type FAQItem = {
+  question: ReactNode;
+  answer: ReactNode;
+};
+
 export default function FaqSection() {
-  const faqs = [
+  const faqs: FAQItem[] = [
     {
       question: "What services does Double Trouble Studio offer?",
-      answer:
-        "Double Trouble Studio offers branding, website design, website development, SEO, social media management, PR, digital marketing campaigns, creative direction, event marketing, guest management, celebrity management, AI video production, VFX and premium visual identity systems tailored for modern brands.",
+      answer: (
+        <>
+          Double Trouble Studio offers branding,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={inlineLinkClass}
+          >
+            website design
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={inlineLinkClass}
+          >
+            website development
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/what-is-seo-beginners-guide-search-engine-optimization"
+            className={inlineLinkClass}
+          >
+            SEO
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={inlineLinkClass}
+          >
+            social media management
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={inlineLinkClass}
+          >
+            PR
+          </Link>
+          , digital marketing campaigns, creative direction,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={inlineLinkClass}
+          >
+            event marketing
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={inlineLinkClass}
+          >
+            guest management
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={inlineLinkClass}
+          >
+            celebrity management
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/ai-video-vfx"
+            className={inlineLinkClass}
+          >
+            AI video production
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/ai-video-vfx"
+            className={inlineLinkClass}
+          >
+            VFX
+          </Link>{" "}
+          and premium visual identity systems tailored for modern brands.
+        </>
+      ),
     },
     {
-      question: "Do you work with startups and small businesses?",
-      answer:
-        "Yes. We work with modern startups, founder-led businesses, small businesses, growing companies and established brands that want stronger digital presence, premium positioning, better brand identity, SEO visibility and long-term growth.",
+      question: (
+        <>
+          Do you work with{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels"
+            className="transition-colors hover:text-[#0D2444]"
+          >
+            startups
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/ai-automation-for-small-medium-businesses"
+            className="transition-colors hover:text-[#0D2444]"
+          >
+            small businesses
+          </Link>
+          ?
+        </>
+      ),
+      answer: (
+        <>
+          Yes. We work with modern{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels"
+            className={inlineLinkClass}
+          >
+            startups
+          </Link>
+          , founder-led businesses,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/ai-automation-for-small-medium-businesses"
+            className={inlineLinkClass}
+          >
+            small businesses
+          </Link>
+          , growing companies and established brands that want stronger digital
+          presence, premium positioning, better brand identity,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/on-page-seo-checklist-for-higher-rankings"
+            className={inlineLinkClass}
+          >
+            SEO visibility
+          </Link>{" "}
+          and long-term growth.
+        </>
+      ),
     },
     {
       question: "How long does a branding or website project take?",
-      answer:
-        "Project timelines depend on the scope, but most branding, website design and website development projects typically take between 2–6 weeks with strategy, UI/UX direction, content structure, SEO foundations, design revisions and launch support included.",
+      answer: (
+        <>
+          Project timelines depend on the scope, but most branding,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={inlineLinkClass}
+          >
+            website design
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={inlineLinkClass}
+          >
+            website development
+          </Link>{" "}
+          projects typically take between 2–6 weeks with strategy,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/ui-ux-design-principles-for-high-end-brand-websites"
+            className={inlineLinkClass}
+          >
+            UI/UX direction
+          </Link>
+          , content structure,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/technical-seo-foundations-speed-mobile-core-web-vitals"
+            className={inlineLinkClass}
+          >
+            SEO foundations
+          </Link>
+          , design revisions and launch support included.
+        </>
+      ),
     },
     {
       question: "Do you provide social media content creation?",
-      answer:
-        "Yes. We create premium social media strategies, visual content systems, reels direction, campaign ideas, content calendars, digital assets, influencer campaign support and high-performing content for hospitality, luxury, restaurant, fashion, lifestyle and event brands.",
+      answer: (
+        <>
+          Yes. We create premium social media strategies, visual content
+          systems, reels direction, campaign ideas,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/content-strategy-brand-websites-blogs-galleries-lead-magnets"
+            className={inlineLinkClass}
+          >
+            content calendars
+          </Link>
+          , digital assets, influencer campaign support and high-performing
+          content for hospitality, luxury, restaurant, fashion, lifestyle and
+          event brands.
+        </>
+      ),
     },
     {
       question: "Can we work together remotely?",
-      answer:
-        "Yes. We work with clients across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa, India and internationally through smooth remote collaboration, structured communication, organized workflows and clear project timelines.",
+      answer: (
+        <>
+          Yes. We work with clients across{" "}
+          <Link
+            href="https://www.dtsworld.in/locations"
+            className={inlineLinkClass}
+          >
+            Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad,
+            Goa, India
+          </Link>{" "}
+          and internationally through smooth remote collaboration, structured
+          communication, organized workflows and clear project timelines.
+        </>
+      ),
     },
   ];
 
   return (
-    <section 
+    <section
       className="relative overflow-hidden py-20 bg-[#F5F7FB]"
       aria-label="Frequently asked questions about Double Trouble Studio branding, digital marketing, PR, website development and creative services"
     >
@@ -95,9 +276,35 @@ export default function FaqSection() {
             "
           >
             Everything you need to know about working with Double Trouble
-            Studio, our branding process, website development, PR, digital
-            marketing, guest management, AI video production and creative
-            services.
+            Studio, our branding process,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/web-development-marketing"
+              className={inlineLinkClass}
+            >
+              website development
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className={inlineLinkClass}
+            >
+              PR
+            </Link>
+            , digital marketing,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/guest-management"
+              className={inlineLinkClass}
+            >
+              guest management
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/ai-video-vfx"
+              className={inlineLinkClass}
+            >
+              AI video production
+            </Link>{" "}
+            and creative services.
           </p>
         </div>
 
@@ -116,7 +323,11 @@ export default function FaqSection() {
                 transition-all
                 duration-300
               "
-              aria-label={item.question}
+              aria-label={
+                typeof item.question === "string"
+                  ? item.question
+                  : `FAQ item ${index + 1}`
+              }
             >
               {/* QUESTION */}
               <div
@@ -208,4 +419,3 @@ export default function FaqSection() {
     </section>
   );
 }
-
