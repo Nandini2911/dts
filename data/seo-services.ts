@@ -164,7 +164,7 @@ export const SEO_SERVICES = {
     ],
   },
 
-  "pr-media-digital-marketing": {
+  "pr-media-marketing": {
     name: "PR, Media & Digital Marketing",
     shortName: "PR & Digital Marketing",
     seoName: "PR & Digital Marketing Agency",

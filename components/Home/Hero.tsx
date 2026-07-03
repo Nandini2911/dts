@@ -287,7 +287,18 @@ export default function Hero() {
                 min-[1800px]:max-w-[780px]
               "
             >
-             Double Trouble Studio is a creative digital agency in India offering{" "}
+             Double Trouble Studio is a{" "}
+             <Link
+                href="/about"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
+
+                >
+
+             creative digital agency in India
+
+             </Link>,
+             
+              offering{" "}
 <Link
   href="/services/pr-media-digital-marketing"
   className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"

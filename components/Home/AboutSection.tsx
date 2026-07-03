@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import {
@@ -6,6 +7,7 @@ import {
   Sparkles,
   Globe,
   Layers3,
+ 
 } from "lucide-react";
 
 export default function AboutStudio() {
@@ -113,20 +115,33 @@ export default function AboutStudio() {
 
             {/* TEXT */}
             <div className="mt-8 max-w-[560px] space-y-5">
-              <p
-                className="
-                  text-[16px]
-                  leading-[32px]
-                  text-slate-600
-                "
-              >
-                Double Trouble Studio is a Mumbai-based creative branding
-                agency and digital marketing agency in India, helping
-                hospitality, luxury, restaurant, lifestyle and event brands
-                build stronger online presence through brand strategy, visual
-                identity, PR campaigns, social media marketing, website
-                development and performance-led storytelling.
-              </p>
+              <p className="text-[16px] leading-[32px] text-slate-600">
+  Double Trouble Studio is a{" "}
+  <Link
+    href="/about"
+    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+  >
+    Mumbai-based creative branding agency
+  </Link>{" "}
+  and{" "}
+  <Link
+    href="/services/pr-media-marketing"
+    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+  >
+    digital marketing agency in India, 
+  </Link>{" "}
+   helping hospitality, luxury,
+  restaurant, lifestyle and event brands build stronger online presence
+  through{" "}
+  <Link
+    href="/blog/luxury-brand-strategy-roadmap-india"
+    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+  >
+    brand strategy, 
+  </Link>{" "}
+  visual identity, PR campaigns, social media
+  marketing, website development and performance-led storytelling.
+</p>
 
               <p
                 className="
@@ -200,7 +215,15 @@ export default function AboutStudio() {
                   </h3>
 
                   <p className="mt-5 text-[15px] leading-8 text-slate-500">
-                    We merge brand strategy, digital design, storytelling,
+                    We merge{" "}
+                    <Link
+                      href="/blog/luxury-brand-strategy-roadmap-india"
+                      className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                    >
+                    brand strategy,{" "}
+                    </Link>
+                    
+                    digital design, storytelling,
                     culture and marketing intelligence into premium experiences
                     that feel elevated, memorable and built for growth.
                   </p>
@@ -237,7 +260,14 @@ export default function AboutStudio() {
                     </div>
 
                     <h4 className="mt-5 text-[16px] font-semibold text-[#10213D]">
-                      India-Wide Presence
+
+                      <Link
+                        href="/locations"
+                        className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                      >
+                        India-Wide Presence
+                      </Link>{" "}
+                      
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-slate-500">

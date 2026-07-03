@@ -1,85 +1,345 @@
 "use client";
 
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import { motion } from "framer-motion";
 
 import {
-
   ArrowUpRight,
-
   Sparkles,
-
 } from "lucide-react";
 
-const services = [
+const inlineLinkClass =
+      "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
+
+type ServiceFeature = {
+  label: string;
+  href?: string;
+};
+
+type Service = {
+  title: string;
+  href: string;
+  tag?: string;
+  desc: ReactNode;
+  features: ServiceFeature[];
+};
+
+const services: Service[] = [
   {
     title: "Guest Management",
-    href: "/services/guest-management",
+    href: "https://www.dtsworld.in/services/guest-management",
     tag: "Popular",
-    desc: "Premium guest management services for weddings, corporate events, luxury launches and celebrity events, including RSVP tracking, VIP handling, check-in flow and on-ground coordination.",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/guest-management"
+          className={inlineLinkClass}
+        >
+          Premium guest management services
+        </Link>{" "}
+        for weddings, corporate events, luxury launches and celebrity events,
+        including{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/event-rsvp-management"
+          className={inlineLinkClass}
+        >
+          RSVP tracking
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/guest-management"
+          className={inlineLinkClass}
+        >
+          VIP handling
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+          className={inlineLinkClass}
+        >
+          check-in flow
+        </Link>{" "}
+        and on-ground coordination.
+      </>
+    ),
     features: [
-      "RSVP System",
-      "VIP Segmentation",
-      "Entry Coordination",
-      "On-Ground Team",
+      {
+        label: "RSVP tracking",
+        href: "https://www.dtsworld.in/blog/event-rsvp-management",
+      },
+      {
+        label: "VIP Segmentation",
+        href: "https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list",
+      },
+      {
+        label: "Entry Coordination",
+        href: "https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping",
+      },
+      {
+        label: "On-Ground Team",
+        href: "https://www.dtsworld.in/services/guest-management",
+      },
     ],
   },
   {
     title: "Celebrity Management",
-    href: "/services/celebrity-management",
+    href: "https://www.dtsworld.in/services/celebrity-management",
     tag: "Popular",
-    desc: "Celebrity management and talent coordination for brand campaigns, events, weddings, launches and influencer collaborations handled with precision, discretion and premium hospitality.",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/celebrity-management"
+          className={inlineLinkClass}
+        >
+          Celebrity management and talent coordination
+        </Link>{" "}
+        for brand campaigns, events, weddings, launches and{" "}
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          influencer collaborations
+        </Link>{" "}
+        handled with precision, discretion and premium hospitality.
+      </>
+    ),
     features: [
-      "Talent Sourcing",
-      "Date Locking",
-      "Briefing & Logistics",
-      "Contracts Support",
+      {
+        label: "Talent Sourcing",
+        href: "https://www.dtsworld.in/services/celebrity-management",
+      },
+      {
+        label: "Date Locking",
+        href: "https://www.dtsworld.in/services/celebrity-management",
+      },
+      {
+        label: "Briefing & Logistics",
+        href: "https://www.dtsworld.in/services/celebrity-management",
+      },
+      {
+        label: "Contracts Support",
+        href: "https://www.dtsworld.in/services/celebrity-management",
+      },
     ],
   },
   {
     title: "Events & Weddings",
-    href: "/services/events-weddings",
-    desc: "Luxury event management and wedding planning services crafted with flawless execution, premium production, guest experience design, show-flow planning and elevated aesthetics.",
+    href: "https://www.dtsworld.in/services/events-weddings",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={inlineLinkClass}
+        >
+          Luxury event management and wedding planning services
+        </Link>{" "}
+        crafted with flawless execution, premium production,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/guest-management"
+          className={inlineLinkClass}
+        >
+          guest experience design
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={inlineLinkClass}
+        >
+          show-flow planning
+        </Link>{" "}
+        and elevated aesthetics.
+      </>
+    ),
     features: [
-      "Concept & Theme",
-      "Vendors & Production",
-      "Guest Journey",
-      "Show-Flow Execution",
+      {
+        label: "Concept & Theme",
+        href: "https://www.dtsworld.in/services/events-weddings",
+      },
+      {
+        label: "Vendors & Production",
+        href: "https://www.dtsworld.in/services/events-weddings",
+      },
+      {
+        label: "Guest Journey",
+        href: "https://www.dtsworld.in/services/guest-management",
+      },
+      {
+        label: "Show-Flow Execution",
+        href: "https://www.dtsworld.in/services/events-weddings",
+      },
     ],
   },
   {
     title: "PR & Marketing",
-    href: "/services/pr-media-marketing",
+    href: "https://www.dtsworld.in/services/pr-media-marketing",
     tag: "Popular",
-    desc: "PR campaigns, media outreach, social media marketing, influencer collaborations and paid advertising strategies designed for brand visibility, reputation and digital growth.",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          PR campaigns
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          media outreach
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          social media marketing
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          influencer collaborations
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={inlineLinkClass}
+        >
+          paid advertising strategies
+        </Link>{" "}
+        designed for brand visibility, reputation and digital growth.
+      </>
+    ),
     features: [
-      "Press & Features",
-      "Brand Narrative",
-      "Content Strategy",
-      "Performance Ads",
+      {
+        label: "Press & Features",
+        href: "https://www.dtsworld.in/services/pr-media-marketing",
+      },
+      {
+        label: "Brand Narrative",
+        href: "https://www.dtsworld.in/services/pr-media-marketing",
+      },
+      {
+        label: "Content Strategy",
+        href: "https://www.dtsworld.in/blog/content-strategy-brand-websites-blogs-galleries-lead-magnets",
+      },
+      {
+        label: "Performance Ads",
+        href: "https://www.dtsworld.in/services/pr-media-marketing",
+      },
     ],
   },
   {
     title: "Web Development & SEO",
-    href: "/services/web-development-marketing",
-    desc: "Custom Next.js websites, landing pages and SEO-optimized digital platforms designed to increase Google visibility, improve user experience, generate leads and drive conversions.",
+    href: "https://www.dtsworld.in/services/web-development-marketing",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/web-development-marketing"
+          className={inlineLinkClass}
+        >
+          Custom Next.js websites
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels"
+          className={inlineLinkClass}
+        >
+          landing pages
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://www.dtsworld.in/services/web-development-marketing"
+          className={inlineLinkClass}
+        >
+          SEO-optimized digital platforms
+        </Link>{" "}
+        designed to increase{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/what-is-seo-beginners-guide-search-engine-optimization"
+          className={inlineLinkClass}
+        >
+          Google visibility
+        </Link>
+        , improve user experience, generate leads and drive conversions.
+      </>
+    ),
     features: [
-      "Next.js Websites",
-      "UI/UX Design",
-      "SEO Foundations",
-      "Funnels & Tracking",
+      {
+        label: "Next.js Websites",
+        href: "https://www.dtsworld.in/services/web-development-marketing",
+      },
+      {
+        label: "UI/UX Design",
+        href: "https://www.dtsworld.in/blog/ui-ux-design-principles-for-high-end-brand-websites",
+      },
+      {
+        label: "SEO Foundations",
+        href: "https://www.dtsworld.in/blog/technical-seo-foundations-speed-mobile-core-web-vitals",
+      },
+      {
+        label: "Funnels & Tracking",
+        href: "https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels",
+      },
     ],
   },
   {
     title: "AI Video & Video Editing",
-    href: "/services/ai-video-vfx",
-    desc: "AI video production, cinematic brand films, AI-generated video ads and VFX content created for social media campaigns, product launches, brand storytelling and digital promotions.",
+    href: "https://www.dtsworld.in/services/ai-video-vfx",
+    desc: (
+      <>
+        <Link
+          href="https://www.dtsworld.in/services/ai-video-vfx"
+          className={inlineLinkClass}
+        >
+          AI video production
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/services/ai-video-vfx"
+          className={inlineLinkClass}
+        >
+          cinematic brand films
+        </Link>
+        ,{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/ai-video-ads-benefits-cost-use-cases"
+          className={inlineLinkClass}
+        >
+          AI-generated video ads
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://www.dtsworld.in/services/ai-video-vfx"
+          className={inlineLinkClass}
+        >
+          VFX content
+        </Link>{" "}
+        created for social media campaigns, product launches, brand storytelling
+        and digital promotions.
+      </>
+    ),
     features: [
-      "AI Video Ads",
-      "Product Films",
-      "VFX Enhancements",
-      "Fast Turnarounds",
+      {
+        label: "AI Video Ads",
+        href: "https://www.dtsworld.in/blog/ai-video-ads-benefits-cost-use-cases",
+      },
+      {
+        label: "Product Films",
+        href: "https://www.dtsworld.in/services/ai-video-vfx",
+      },
+      {
+        label: "VFX Enhancements",
+        href: "https://www.dtsworld.in/services/ai-video-vfx",
+      },
+      {
+        label: "Fast Turnarounds",
+        href: "https://www.dtsworld.in/services/ai-video-vfx",
+      },
     ],
   },
 ];
@@ -162,8 +422,7 @@ export default function ServicesSection() {
                 max-w-[580px]
               "
               style={{
-                fontFamily:
-                  "New York, ui-serif, Georgia, serif",
+                fontFamily: "New York, ui-serif, Georgia, serif",
               }}
             >
               A Premium Stack for Brands
@@ -293,11 +552,16 @@ export default function ServicesSection() {
                   text-[#10213D]
                 "
                 style={{
-                  fontFamily:
-                    "New York, ui-serif, Georgia, serif",
+                  fontFamily: "New York, ui-serif, Georgia, serif",
                 }}
               >
-                {service.title}
+                <Link
+                  href={service.href}
+                  aria-label={`${service.title} service`}
+                  className="transition-colors hover:text-[#31507A]"
+                >
+                  {service.title}
+                </Link>
               </h3>
 
               {/* DESC */}
@@ -316,7 +580,7 @@ export default function ServicesSection() {
               <div className="space-y-3 mt-8">
                 {service.features.map((feature) => (
                   <div
-                    key={feature}
+                    key={feature.label}
                     className="
                       flex
                       items-center
@@ -330,52 +594,61 @@ export default function ServicesSection() {
                       backdrop-blur-xl
                     "
                   >
-                    <span className="text-[14px] text-slate-700 font-medium">
-                      {feature}
-                    </span>
+                    {feature.href ? (
+                      <Link
+                        href={feature.href}
+                        className="text-[14px] text-slate-700 font-medium transition-colors hover:text-[#10213D]"
+                      >
+                        {feature.label}
+                      </Link>
+                    ) : (
+                      <span className="text-[14px] text-slate-700 font-medium">
+                        {feature.label}
+                      </span>
+                    )}
 
                     <div className="w-2 h-2 rounded-full bg-[#6288B9]" />
                   </div>
                 ))}
               </div>
 
-            <Link
-  href={service.href}
-  aria-label={`Learn more about ${service.title}`}
-  className="
-    mt-8
-    flex
-    items-center
-    gap-3
-    text-[14px]
-    font-semibold
-    text-[#10213D]
-  "
->
-  Learn More
+              <Link
+                href={service.href}
+                aria-label={`${service.title} service by Double Trouble Studio`}
+                className="
+                  mt-8
+                  flex
+                  items-center
+                  gap-3
+                  text-[14px]
+                  font-semibold
+                  text-[#10213D]
+                "
+              >
+                {service.title}
 
-  <div
-    className="
-      w-[44px]
-      h-[44px]
-      rounded-full
-      bg-gradient-to-br
-      from-[#10213D]
-      to-[#31507A]
-      flex
-      items-center
-      justify-center
-      transition-all
-      duration-300
-      group-hover:translate-x-1
-    "
-  >
-    <ArrowUpRight
-      className="w-4 h-4 text-white"
-      aria-hidden="true"
-    />
-  </div>
-</Link>
+                <div
+                  className="
+                    w-[44px]
+                    h-[44px]
+                    rounded-full
+                    bg-gradient-to-br
+                    from-[#10213D]
+                    to-[#31507A]
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  <ArrowUpRight
+                    className="w-4 h-4 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
+              </Link>
             </motion.article>
           ))}
         </div>
