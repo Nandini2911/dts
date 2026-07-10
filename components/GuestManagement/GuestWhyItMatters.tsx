@@ -1,15 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-semibold text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
+
+const cardLinkClass =
+  "text-[15px] font-bold text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91] md:text-[16px]";
 
 export default function WhyItMatters() {
   const points = [
-    "Faster Entry",
-    "Better Guest Experience",
-    "Controlled Access",
-    "VIP Coordination",
-    "Real-Time Visibility",
-    "Stress-Free Execution",
+    {
+      title: "Faster Entry",
+      href: "https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping",
+    },
+    {
+      title: "Better Guest Experience",
+      href: "https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events",
+    },
+    {
+      title: "Controlled Access",
+      href: "https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events",
+    },
+    {
+      title: "VIP Coordination",
+      href: "https://www.dtsworld.in/services/celebrity-management",
+    },
+    {
+      title: "Real-Time Visibility",
+      href: "https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction",
+    },
+    {
+      title: "Stress-Free Execution",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
   ];
 
   return (
@@ -22,8 +47,6 @@ export default function WhyItMatters() {
         backgroundRepeat: "no-repeat",
       }}
     >
-     
-
       {/* Soft premium glows */}
       <div className="absolute left-[-160px] top-[-120px] h-[420px] w-[420px] rounded-full bg-[#6288B9]/25 blur-3xl" />
       <div className="absolute right-[-180px] bottom-[-170px] h-[460px] w-[460px] rounded-full bg-[#0D2444]/10 blur-3xl" />
@@ -52,9 +75,16 @@ export default function WhyItMatters() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-[850px] text-[15px] font-semibold leading-[1.85] text-[#203B5C] md:text-[18px]">
-            A guest&apos;s experience begins long before they enter the venue.
-            Poor coordination, delayed entry or unclear communication can affect
-            the perception of the entire event.
+            A{" "}
+            <Link
+              href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+              className={linkClass}
+            >
+              guest experience
+            </Link>{" "}
+            begins long before they enter the venue. Poor coordination, delayed
+            entry or unclear communication can affect the perception of the
+            entire event.
           </p>
         </motion.div>
 
@@ -66,13 +96,19 @@ export default function WhyItMatters() {
           className="mx-auto mt-12 max-w-[1000px]"
         >
           <p className="text-center text-[12px] font-bold uppercase tracking-[0.24em] text-[#0D2444]/70">
-            Professional Guest Management Ensures
+            <Link
+              href="https://www.dtsworld.in/services/guest-management"
+              className={linkClass}
+            >
+              Professional Guest Management
+            </Link>{" "}
+            Ensures
           </p>
 
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {points.map((point, index) => (
               <motion.div
-                key={point}
+                key={point.title}
                 initial={{ opacity: 0, y: 20, scale: 0.96 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
@@ -89,8 +125,10 @@ export default function WhyItMatters() {
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h3 className="text-[15px] font-bold text-[#0D2444] md:text-[16px]">
-                  {point}
+                <h3>
+                  <Link href={point.href} className={cardLinkClass}>
+                    {point.title}
+                  </Link>
                 </h3>
 
                 <div className="mx-auto mt-4 h-px w-12 bg-[#0D2444]/20 transition-all duration-300 group-hover:w-20 group-hover:bg-[#0D2444]/50" />

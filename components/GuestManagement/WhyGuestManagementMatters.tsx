@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const serifFont = {
   fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -9,15 +10,42 @@ const serifFont = {
 const badgeClass =
   "inline-flex rounded-full border border-white/20 bg-gradient-to-r from-[#0D2444] via-[#16365F] to-[#1F4B7A] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_40px_rgba(13,36,68,0.25)] backdrop-blur-xl sm:px-5 sm:py-3 sm:text-[11px] sm:tracking-[0.24em]";
 
+const textLinkClass =
+  "font-medium text-[#315E91] underline underline-offset-4 hover:text-[#315E91]";
+
+const chipLinkClass =
+  "rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[12px] font-semibold leading-[1.4] text-white/90 underline underline-offset-4 backdrop-blur-xl transition-colors duration-300 hover:text-white";
+
 export default function WhyGuestManagementMatters() {
   const points = [
-    "Guest Management For Weddings",
-    "Guest Management For Corporate Events",
-    "VIP Guest Coordination",
-    "RSVP Management",
-    "Event Registration Systems",
-    "Access Control & Security",
-    "Guest Experience Optimization",
+    {
+      title: "Guest Management For Weddings",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Guest Management For Corporate Events",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "VIP Guest Coordination",
+      href: "https://www.dtsworld.in/services/celebrity-management",
+    },
+    {
+      title: "RSVP Management",
+      href: "https://www.dtsworld.in/blog/event-rsvp-management",
+    },
+    {
+      title: "Event Registration Systems",
+      href: "https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events",
+    },
+    {
+      title: "Access Control & Security",
+      href: "https://www.dtsworld.in/blog/guest-data-privacy-luxury-events",
+    },
+    {
+      title: "Guest Experience Optimization",
+      href: "https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events",
+    },
   ];
 
   return (
@@ -43,9 +71,12 @@ export default function WhyGuestManagementMatters() {
             className="mx-auto mt-6 max-w-[900px] text-[34px] font-semibold leading-[0.98] tracking-[-0.055em] text-[#0D2444] sm:text-[42px] md:text-[52px] lg:text-[60px]"
             style={serifFont}
           >
-            Why Professional Guest Management{" "}
+            Why{" "}
+            
+              Professional Guest Management Services
+            {" "}
             <span className="bg-gradient-to-r from-[#6288B9] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
-              Services Matter
+              Matter
             </span>
           </h2>
 
@@ -76,12 +107,13 @@ export default function WhyGuestManagementMatters() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 {points.map((point) => (
-                  <span
-                    key={point}
-                    className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[12px] font-semibold leading-[1.4] text-white/90 backdrop-blur-xl"
+                  <Link
+                    key={point.title}
+                    href={point.href}
+                    className={chipLinkClass}
                   >
-                    {point}
-                  </span>
+                    {point.title}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -91,54 +123,168 @@ export default function WhyGuestManagementMatters() {
               <p className="text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
                 Professional guest management services are essential for events
                 where timing, hospitality, security and first impressions matter.
-                Whether it is a luxury wedding, a corporate conference, a
-                celebrity event, a brand launch or a private VIP experience, the
-                way guests are managed directly affects the overall event
+                Whether it is a{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+                  className={textLinkClass}
+                >
+                  luxury wedding
+                </Link>
+                , a{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  corporate conference
+                </Link>
+                , a{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/celebrity-management"
+                  className={textLinkClass}
+                >
+                  celebrity event
+                </Link>
+                , a{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={textLinkClass}
+                >
+                  brand launch
+                </Link>{" "}
+                or a{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/guest-management"
+                  className={textLinkClass}
+                >
+                  private VIP experience
+                </Link>
+                , the way guests are managed directly affects the overall event
                 experience. A strong guest management system ensures that every
                 attendee is tracked, verified, guided and assisted from the first
                 invitation to the final event-day interaction.
               </p>
 
               <p className="text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
-                Guest management for weddings is especially important because
-                weddings often involve multiple guest categories, family groups,
-                VIP guests, hospitality teams, rooming lists, entry desks and
-                event-day coordination. With proper RSVP management, guest list
-                management and check-in management, hosts can understand who is
-                attending, who needs follow-up, who requires special assistance
-                and how each guest should be welcomed. This creates a smoother
-                arrival experience and reduces confusion at the venue.
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  Guest management for weddings
+                </Link>{" "}
+                is especially important because weddings, including{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+                  className={textLinkClass}
+                >
+                  destination weddings
+                </Link>
+                , often involve multiple guest categories, family groups, VIP
+                guests, hospitality teams, rooming lists, entry desks and
+                event-day coordination. With proper{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/event-rsvp-management"
+                  className={textLinkClass}
+                >
+                  RSVP management
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+                  className={textLinkClass}
+                >
+                  guest list management
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+                  className={textLinkClass}
+                >
+                  check-in management
+                </Link>
+                , hosts can understand who is attending, who needs follow-up,
+                who requires special assistance and how each guest should be
+                welcomed. This creates a smoother arrival experience and reduces
+                confusion at the venue.
               </p>
 
               <p className="text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
-                For corporate events, professional guest management helps
-                maintain structure and brand reputation. Event registration
-                systems, attendee verification, badge coordination, access
-                control and real-time guest tracking make conferences, investor
-                meetings, product launches and networking events more efficient.
-                When guests enter quickly and receive the right information at
-                the right time, the event feels more premium, organized and
-                professionally executed.
+                For{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  corporate events
+                </Link>
+                , professional guest management helps maintain structure and
+                brand reputation.{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                  className={textLinkClass}
+                >
+                  Event registration systems
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                  className={textLinkClass}
+                >
+                  attendee verification
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                  className={textLinkClass}
+                >
+                  badge coordination
+                </Link>
+                , access control and{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+                  className={textLinkClass}
+                >
+                  real-time guest tracking
+                </Link>{" "}
+                make conferences, investor meetings, product launches and
+                networking events more efficient. When guests enter quickly and
+                receive the right information at the right time, the event feels
+                more premium, organized and professionally executed.
               </p>
 
               <p className="text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
-                VIP guest coordination is another major part of effective event
-                management. Celebrities, founders, dignitaries, speakers,
-                investors and high-value guests often require dedicated handling,
-                separate entry flow, privacy, security support and personalized
+                <Link
+                  href="https://www.dtsworld.in/services/celebrity-management"
+                  className={textLinkClass}
+                >
+                  VIP guest coordination
+                </Link>{" "}
+                is another major part of effective event management.
+                Celebrities, founders, dignitaries, speakers, investors and
+                high-value guests often require dedicated handling, separate
+                entry flow, privacy, security support and personalized
                 hospitality. A trained guest management team ensures VIP movement
                 is controlled without disturbing the main guest experience.
               </p>
 
               <p className="text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
-                Access control and security are equally important. A clear guest
-                list, event registration process and entry verification system
-                help prevent unauthorized access, reduce gate pressure and allow
-                teams to manage guest movement with confidence. In premium
-                events, guest experience optimization is not optional. It is the
-                difference between a crowded entry point and a seamless welcome.
-                With the right systems, every guest feels expected, assisted and
-                valued.
+                <Link
+                  href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+                  className={textLinkClass}
+                >
+                  Access control and security
+                </Link>{" "}
+                are equally important. A clear guest list, event registration
+                process and entry verification system help prevent unauthorized
+                access, reduce gate pressure and allow teams to manage guest
+                movement with confidence. In premium events,{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+                  className={textLinkClass}
+                >
+                  guest experience optimization
+                </Link>{" "}
+                is not optional. It is the difference between a crowded entry
+                point and a seamless welcome. With the right systems, every
+                guest feels expected, assisted and valued.
               </p>
             </div>
           </div>

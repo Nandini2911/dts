@@ -85,24 +85,28 @@ export default function AboutCTA() {
               'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
           }}
         >
-          <span className="text-[#0F172A]">
-            Create A Brand
-          </span>
-
-          <br />
-
-          <span
-            className="
-              text-transparent
-              bg-clip-text
-              bg-gradient-to-r
-              from-[#0D2444]
-              via-[#6288B9]
-              to-[#A4B8D2]
-            "
+          <Link
+            href="https://www.dtsworld.in/contact"
+            aria-label="Create a brand people trust with Double Trouble Studio"
+            className="inline-block no-underline"
           >
-            People Remember
-          </span>
+            <span className="text-[#0F172A]">Create a brand</span>
+
+            <br />
+
+            <span
+              className="
+                text-transparent
+                bg-clip-text
+                bg-gradient-to-r
+                from-[#0D2444]
+                via-[#6288B9]
+                to-[#A4B8D2]
+              "
+            >
+              people trust.
+            </span>
+          </Link>
         </motion.h2>
 
         {/* TEXT */}
@@ -149,22 +153,20 @@ export default function AboutCTA() {
           "
         >
           <Link
-            href="/contact"
+            href="https://www.dtsworld.in/contact"
             aria-label="Start a branding, digital marketing, PR, website development or AI video project with Double Trouble Studio"
+            className="primary-btn flex items-center gap-2"
           >
-            <button className="primary-btn flex items-center gap-2">
-              Start Project
-              <ArrowRight size={18} aria-hidden="true" />
-            </button>
+            Start Project
+            <ArrowRight size={18} aria-hidden="true" />
           </Link>
 
           <Link
-            href="/work"
+            href="https://www.dtsworld.in/work"
             aria-label="View Double Trouble Studio branding, PR, website development, events and AI video portfolio"
+            className="secondary-btn"
           >
-            <button className="secondary-btn">
-              View Work
-            </button>
+            View Work
           </Link>
         </motion.div>
 

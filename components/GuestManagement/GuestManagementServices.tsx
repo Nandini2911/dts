@@ -1,58 +1,386 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const titleLinkClass =
+  "underline underline-offset-4 transition-colors duration-300 group-hover:text-white";
+
+const descLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91] group-hover:text-white";
 
 export default function GuestManagementServices() {
   const services = [
     {
       number: "01",
-      title: "RSVP Management",
-      desc: "Track confirmations, reminders and attendance for every invited guest.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/event-rsvp-management"
+          className={titleLinkClass}
+        >
+          RSVP Management
+        </Link>
+      ),
+      titleText: "RSVP Management",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/event-rsvp-management"
+            className={descLinkClass}
+          >
+            Track confirmations
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/post-event-guest-follow-up"
+            className={descLinkClass}
+          >
+            reminders
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+            className={descLinkClass}
+          >
+            attendance
+          </Link>{" "}
+          for every invited guest.
+        </>
+      ),
     },
     {
       number: "02",
-      title: "Guest List Management",
-      desc: "Organized guest segmentation, database management and event guest planning.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+          className={titleLinkClass}
+        >
+          Guest List Management
+        </Link>
+      ),
+      titleText: "Guest List Management",
+      desc: (
+        <>
+          Organized{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+            className={descLinkClass}
+          >
+            guest segmentation
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+            className={descLinkClass}
+          >
+            database management
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-complex-guest-lists-luxury-events"
+            className={descLinkClass}
+          >
+            event guest planning
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "03",
-      title: "VIP Guest Management",
-      desc: "Special handling for celebrities, founders, dignitaries and premium guests.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/celebrity-management"
+          className={titleLinkClass}
+        >
+          VIP Guest Management
+        </Link>
+      ),
+      titleText: "VIP Guest Management",
+      desc: (
+        <>
+          Special handling for{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={descLinkClass}
+          >
+            celebrities
+          </Link>
+          ,{" "}
+          <Link href="https://www.dtsworld.in/about" className={descLinkClass}>
+            founders
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={descLinkClass}
+          >
+            dignitaries
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/guest-personalization-strategies-luxury-events"
+            className={descLinkClass}
+          >
+            premium guests
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "04",
-      title: "Event Registration",
-      desc: "Pre-event attendee registration, verification and guest data collection.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+          className={titleLinkClass}
+        >
+          Event Registration
+        </Link>
+      ),
+      titleText: "Event Registration",
+      desc: (
+        <>
+          Pre-event{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+            className={descLinkClass}
+          >
+            attendee registration
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+            className={descLinkClass}
+          >
+            verification
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+            className={descLinkClass}
+          >
+            guest data collection
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "05",
-      title: "Check-In Management",
-      desc: "Fast entry flow, guest verification and smooth on-ground check-in experience.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+          className={titleLinkClass}
+        >
+          Check-In Management
+        </Link>
+      ),
+      titleText: "Check-In Management",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+            className={descLinkClass}
+          >
+            Fast entry flow
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+            className={descLinkClass}
+          >
+            guest verification
+          </Link>{" "}
+          and smooth on-ground{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+            className={descLinkClass}
+          >
+            check-in experience
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "06",
-      title: "Access Control",
-      desc: "Secure guest access, zone control and movement management across the event.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+          className={titleLinkClass}
+        >
+          Access Control
+        </Link>
+      ),
+      titleText: "Access Control",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+            className={descLinkClass}
+          >
+            Secure guest access
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+            className={descLinkClass}
+          >
+            zone control
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={descLinkClass}
+          >
+            movement management
+          </Link>{" "}
+          across the event.
+        </>
+      ),
     },
     {
       number: "07",
-      title: "Attendee Tracking",
-      desc: "Real-time attendee tracking, entry monitoring and attendance reporting.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+          className={titleLinkClass}
+        >
+          Attendee Tracking
+        </Link>
+      ),
+      titleText: "Attendee Tracking",
+      desc: (
+        <>
+          Monitor{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+            className={descLinkClass}
+          >
+            real-time attendee tracking
+          </Link>
+          , entry monitoring and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+            className={descLinkClass}
+          >
+            attendance reporting
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "08",
-      title: "Invitation Management",
-      desc: "Digital invitation planning, invite dispatch, guest confirmations and follow-ups.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/event-rsvp-management"
+          className={titleLinkClass}
+        >
+          Invitation Management
+        </Link>
+      ),
+      titleText: "Invitation Management",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/event-rsvp-management"
+            className={descLinkClass}
+          >
+            Digital invitation planning
+          </Link>
+          , invite dispatch,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/event-rsvp-management"
+            className={descLinkClass}
+          >
+            guest confirmations
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/post-event-guest-follow-up"
+            className={descLinkClass}
+          >
+            follow-ups
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "09",
-      title: "Hospitality Coordination",
-      desc: "Welcome desk support, seating assistance and premium hospitality coordination.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Hospitality Coordination
+        </Link>
+      ),
+      titleText: "Hospitality Coordination",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={descLinkClass}
+          >
+            Welcome desk support
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+            className={descLinkClass}
+          >
+            seating assistance
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={descLinkClass}
+          >
+            premium hospitality coordination
+          </Link>
+          .
+        </>
+      ),
     },
     {
       number: "10",
-      title: "Guest Communication Management",
-      desc: "WhatsApp, email and call coordination for updates, reminders and event directions.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/event-rsvp-management"
+          className={titleLinkClass}
+        >
+          Guest Communication Management
+        </Link>
+      ),
+      titleText: "Guest Communication Management",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/post-event-guest-follow-up"
+            className={descLinkClass}
+          >
+            WhatsApp, email and call coordination
+          </Link>{" "}
+          for updates,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/post-event-guest-follow-up"
+            className={descLinkClass}
+          >
+            reminders
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+            className={descLinkClass}
+          >
+            event directions
+          </Link>
+          .
+        </>
+      ),
     },
   ];
 
@@ -102,7 +430,7 @@ export default function GuestManagementServices() {
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.titleText}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}

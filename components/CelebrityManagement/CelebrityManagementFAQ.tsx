@@ -1,6 +1,7 @@
-
 "use client";
 
+import type { ReactNode } from "react";
+import Link from "next/link";
 import { Plus } from "lucide-react";
 
 const serifFont = {
@@ -8,80 +9,273 @@ const serifFont = {
     'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
 };
 
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
+
 type FaqItem = {
-  question: string;
-  answer: string;
+  question: ReactNode;
+  questionText: string;
+  answer: ReactNode;
+  schemaAnswer: string;
 };
 
 export default function CelebrityManagementFaq() {
   const faqs: FaqItem[] = [
     {
       question: "What is celebrity management?",
-      answer:
+      questionText: "What is celebrity management?",
+      schemaAnswer:
         "Celebrity management involves sourcing, booking, coordinating and managing public personalities for events, campaigns, endorsements, promotions and brand collaborations.",
+      answer: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/celebrity-management-in-india-guide"
+            className={linkClass}
+          >
+            Celebrity management
+          </Link>{" "}
+          involves sourcing, booking, coordinating and managing public
+          personalities for events, campaigns, endorsements, promotions and brand
+          collaborations.
+        </>
+      ),
     },
     {
       question: "How does celebrity booking work?",
-      answer:
+      questionText: "How does celebrity booking work?",
+      schemaAnswer:
         "Celebrity booking usually includes requirement discovery, talent shortlisting, availability checks, fee negotiation, contract coordination, logistics planning and event-day management.",
+      answer: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact"
+            className={linkClass}
+          >
+            Celebrity booking
+          </Link>{" "}
+          usually includes requirement discovery, talent shortlisting,
+          availability checks,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+            className={linkClass}
+          >
+            fee negotiation
+          </Link>
+          , contract coordination, logistics planning and event-day management.
+        </>
+      ),
     },
     {
-      question: "Can you arrange celebrities for brand endorsements?",
-      answer:
+      question: (
+        <>
+          Can you arrange celebrities for{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+            className={linkClass}
+          >
+            brand endorsements
+          </Link>
+          ?
+        </>
+      ),
+      questionText: "Can you arrange celebrities for brand endorsements?",
+      schemaAnswer:
         "Yes. We help businesses secure suitable celebrities, influencers and public personalities for advertising campaigns, brand promotions, ambassador programs and digital collaborations.",
+      answer: (
+        <>
+          Yes. We help businesses secure suitable celebrities, influencers and
+          public personalities for advertising campaigns,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            brand promotions
+          </Link>
+          , ambassador programs and digital collaborations.
+        </>
+      ),
     },
     {
       question: "How much does it cost to hire a celebrity in India?",
-      answer:
+      questionText: "How much does it cost to hire a celebrity in India?",
+      schemaAnswer:
         "Celebrity booking costs depend on the celebrity’s profile, event type, city, appearance duration, campaign deliverables, usage rights, exclusivity, travel requirements and availability.",
+      answer: (
+        <>
+          Celebrity booking costs depend on the celebrity’s profile, event type,
+          city, appearance duration, campaign deliverables,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+            className={linkClass}
+          >
+            usage rights
+          </Link>
+          , exclusivity, travel requirements and availability.
+        </>
+      ),
     },
     {
-      question: "Can celebrities be booked for social media promotions?",
+      question: (
+        <>
+          Can celebrities be booked for{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            social media promotions
+          </Link>
+          ?
+        </>
+      ),
+      questionText: "Can celebrities be booked for social media promotions?",
+      schemaAnswer:
+        "Yes. Celebrities, influencers and creators can be coordinated for reels, branded content, shoutouts, campaign videos, product promotions and digital collaborations depending on the campaign scope.",
       answer:
         "Yes. Celebrities, influencers and creators can be coordinated for reels, branded content, shoutouts, campaign videos, product promotions and digital collaborations depending on the campaign scope.",
     },
     {
       question: "Can you arrange Bollywood celebrities for private events?",
-      answer:
+      questionText: "Can you arrange Bollywood celebrities for private events?",
+      schemaAnswer:
         "Yes. Bollywood celebrities can be coordinated for private events, weddings, corporate events, hospitality experiences and luxury celebrations, subject to availability, budget and appearance requirements.",
+      answer: (
+        <>
+          Yes. Bollywood celebrities can be coordinated for{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={linkClass}
+          >
+            private events
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+            className={linkClass}
+          >
+            weddings
+          </Link>
+          , corporate events, hospitality experiences and luxury celebrations,
+          subject to availability, budget and appearance requirements.
+        </>
+      ),
     },
     {
       question: "Do celebrity endorsement fees include usage rights?",
-      answer:
+      questionText: "Do celebrity endorsement fees include usage rights?",
+      schemaAnswer:
         "Not always. Usage rights for digital ads, print, outdoor, television, social media, brand campaigns and long-term promotions are usually discussed separately.",
+      answer: (
+        <>
+          Not always.{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+            className={linkClass}
+          >
+            Usage rights
+          </Link>{" "}
+          for digital ads, print, outdoor, television, social media, brand
+          campaigns and long-term promotions are usually discussed separately.
+        </>
+      ),
     },
     {
       question: "What types of events can include celebrity appearances?",
-      answer:
+      questionText: "What types of events can include celebrity appearances?",
+      schemaAnswer:
         "Corporate events, hospitality launches, weddings, product launches, brand activations, award ceremonies, fashion shows, conferences, private gatherings and promotional events can include celebrity appearances.",
+      answer: (
+        <>
+          Corporate events, hospitality launches, weddings, product launches,
+          brand activations, award ceremonies, fashion shows, conferences,
+          private gatherings and promotional events can include{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={linkClass}
+          >
+            celebrity appearances
+          </Link>
+          .
+        </>
+      ),
     },
     {
-      question: "Do you manage influencer collaborations?",
+      question: (
+        <>
+          Do you manage{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            influencer collaborations
+          </Link>
+          ?
+        </>
+      ),
+      questionText: "Do you manage influencer collaborations?",
+      schemaAnswer:
+        "Yes. We coordinate influencer and creator partnerships for brand campaigns, product promotions, hospitality activations, lifestyle content, digital campaigns and social media engagement.",
       answer:
         "Yes. We coordinate influencer and creator partnerships for brand campaigns, product promotions, hospitality activations, lifestyle content, digital campaigns and social media engagement.",
     },
     {
       question: "How early should celebrity booking be planned?",
+      questionText: "How early should celebrity booking be planned?",
+      schemaAnswer:
+        "Advance planning is recommended because celebrity availability, travel schedules, campaign approvals and contract timelines can vary depending on the personality and event date.",
       answer:
         "Advance planning is recommended because celebrity availability, travel schedules, campaign approvals and contract timelines can vary depending on the personality and event date.",
     },
     {
-      question: "Do you manage celebrity logistics?",
+      question: (
+        <>
+          Do you manage{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={linkClass}
+          >
+            celebrity logistics
+          </Link>
+          ?
+        </>
+      ),
+      questionText: "Do you manage celebrity logistics?",
+      schemaAnswer:
+        "Yes. We coordinate travel, accommodation, scheduling, hospitality, green room requirements, backstage movement and event-day operations.",
       answer:
         "Yes. We coordinate travel, accommodation, scheduling, hospitality, green room requirements, backstage movement and event-day operations.",
     },
     {
       question: "Can you arrange celebrity hosts and speakers?",
+      questionText: "Can you arrange celebrity hosts and speakers?",
+      schemaAnswer:
+        "Yes. We manage celebrity hosts, anchors, moderators, keynote speakers, motivational speakers, business leaders, performers and entertainment talent.",
       answer:
         "Yes. We manage celebrity hosts, anchors, moderators, keynote speakers, motivational speakers, business leaders, performers and entertainment talent.",
     },
     {
-      question: "Do you provide event-day coordination?",
+      question: (
+        <>
+          Do you provide{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={linkClass}
+          >
+            event-day coordination
+          </Link>
+          ?
+        </>
+      ),
+      questionText: "Do you provide event-day coordination?",
+      schemaAnswer:
+        "Yes. Our team oversees on-site coordination, arrivals, backstage communication, media interactions, stage entries, guest engagement and stakeholder communication.",
       answer:
         "Yes. Our team oversees on-site coordination, arrivals, backstage communication, media interactions, stage entries, guest engagement and stakeholder communication.",
     },
     {
       question: "What information is required to book a celebrity?",
+      questionText: "What information is required to book a celebrity?",
+      schemaAnswer:
+        "We usually require the event date, city, venue, event type, preferred talent category, budget range, audience profile, appearance duration and expected deliverables.",
       answer:
         "We usually require the event date, city, venue, event type, preferred talent category, budget range, audience profile, appearance duration and expected deliverables.",
     },
@@ -93,10 +287,10 @@ export default function CelebrityManagementFaq() {
     "@id": "https://www.dtsworld.in/services/celebrity-management#faq",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.question,
+      name: faq.questionText,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: faq.schemaAnswer,
       },
     })),
   };
@@ -149,7 +343,7 @@ export default function CelebrityManagementFaq() {
         <div className="mt-12 space-y-5 md:mt-16">
           {faqs.map((item) => (
             <article
-              key={item.question}
+              key={item.questionText}
               className="rounded-[28px] border border-[#DCE6F3] bg-white p-7 shadow-[0_12px_38px_rgba(13,36,68,0.04)] transition-all duration-300 hover:border-[#BCD2EE] hover:shadow-[0_18px_55px_rgba(13,36,68,0.08)]"
             >
               <div className="flex items-center justify-between gap-5">

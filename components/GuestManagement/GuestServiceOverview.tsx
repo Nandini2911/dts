@@ -1,19 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
+
+const serviceLinkClass =
+  "relative z-10 text-[13px] font-bold leading-[1.4] text-[#0D2444] underline underline-offset-4 transition-colors duration-300 group-hover:text-white sm:text-[14px]";
 
 export default function ServiceOverview() {
   const services = [
-    "RSVP Management",
-    "Guest List Management",
-    "Event Registration",
-    "VIP Guest Coordination",
-    "Check-In Management",
-    "Access Control",
-    "Hospitality Support",
-    "On-Ground Guest Assistance",
-
-    
+    {
+      title: "RSVP Management",
+      href: "https://www.dtsworld.in/blog/event-rsvp-management",
+    },
+    {
+      title: "Guest List Management",
+      href: "https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list",
+    },
+    {
+      title: "Event Registration",
+      href: "https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events",
+    },
+    {
+      title: "VIP Guest Coordination",
+      href: "https://www.dtsworld.in/services/celebrity-management",
+    },
+    {
+      title: "Check-In Management",
+      href: "https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping",
+    },
+    {
+      title: "Access Control",
+      href: "https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events",
+    },
+    {
+      title: "Hospitality Support",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "On-Ground Guest Assistance",
+      href: "https://www.dtsworld.in/services/guest-management",
+    },
   ];
 
   return (
@@ -52,8 +81,14 @@ export default function ServiceOverview() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-[850px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[17px]">
-            Guest management is the process of planning, organizing and
-            coordinating attendees before, during and after an event.
+            <Link
+              href="https://www.dtsworld.in/services/guest-management"
+              className={linkClass}
+            >
+              Guest management
+            </Link>{" "}
+            is the process of planning, organizing and coordinating attendees
+            before, during and after an event.
           </p>
 
           <p className="mx-auto mt-5 max-w-[850px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[17px]">
@@ -71,7 +106,7 @@ export default function ServiceOverview() {
         >
           {services.map((service, index) => (
             <motion.div
-              key={service}
+              key={service.title}
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: [0.85, 1.05, 1] }}
               viewport={{ once: true }}
@@ -82,9 +117,9 @@ export default function ServiceOverview() {
               }}
               className="group relative overflow-hidden rounded-[20px] border border-[#DCE6F2] bg-white px-5 py-5 shadow-[0_14px_40px_rgba(13,36,68,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#6288B9]"
             >
-              <span className="relative z-10 text-[13px] font-bold leading-[1.4] text-[#0D2444] transition-colors duration-300 group-hover:text-white sm:text-[14px]">
-                {service}
-              </span>
+              <Link href={service.href} className={serviceLinkClass}>
+                {service.title}
+              </Link>
 
               <div className="absolute inset-0 translate-y-full bg-gradient-to-r from-[#0D2444] to-[#315E91] transition-transform duration-300 group-hover:translate-y-0" />
             </motion.div>
@@ -99,9 +134,43 @@ export default function ServiceOverview() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mx-auto mt-9 max-w-[900px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[17px]"
         >
-          Whether it's a luxury wedding, corporate conference, celebrity event
-          or brand launch, effective guest management ensures smooth operations
-          and an exceptional guest experience.
+          Whether it's a{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+            className={linkClass}
+          >
+            luxury wedding
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={linkClass}
+          >
+            corporate conference
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={linkClass}
+          >
+            celebrity event
+          </Link>{" "}
+          or{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            brand launch
+          </Link>
+          , effective guest management ensures smooth operations and an
+          exceptional{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+            className={linkClass}
+          >
+            guest experience
+          </Link>
+          .
         </motion.p>
 
         {/* SMALL BOTTOM LINE */}

@@ -1,18 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
 
 const principles = [
   {
-    title: "Strategic Thinking",
-    desc: "Every creative decision is backed by brand positioning, audience research, category understanding, SEO intent and long-term digital growth direction.",
+    key: "strategic-thinking",
+    title:"strategic thinking", 
+    titleText: "Strategic Thinking",
+    desc: (
+      <>
+        Every creative decision is backed by brand positioning,{" "}
+        <Link href="https://www.dtsworld.in/about" className={linkClass}>
+          audience research
+        </Link>
+        , category understanding,{" "}
+        <Link
+          href="https://www.dtsworld.in/blog/on-page-seo-checklist-for-higher-rankings"
+          className={linkClass}
+        >
+          SEO intent
+        </Link>{" "}
+        and long-term digital growth direction.
+      </>
+    ),
   },
+{
+  key: "premium-execution",
+  title: "Premium Execution",
+  titleText: "Premium Execution",
+  desc: (
+    <>
+      From brand visuals to{" "}
+      <Link
+        href="https://www.dtsworld.in/services/web-development-marketing"
+        className={linkClass}
+      >
+        websites
+      </Link>
+      ,{" "}
+      <Link
+        href="https://www.dtsworld.in/services/pr-media-marketing"
+        className={linkClass}
+      >
+        PR communication
+      </Link>
+      ,{" "}
+      <Link
+        href="https://www.dtsworld.in/services/pr-media-marketing"
+        className={linkClass}
+      >
+        social media content
+      </Link>{" "}
+      and{" "}
+      <Link
+        href="https://www.dtsworld.in/services/pr-media-marketing"
+        className={linkClass}
+      >
+        digital campaigns
+      </Link>
+      , every detail is refined to feel elevated, modern and intentional.
+    </>
+  ),
+},
   {
-    title: "Premium Execution",
-    desc: "From brand visuals to websites, PR communication, social media content and digital campaigns, every detail is refined to feel elevated, modern and intentional.",
-  },
-  {
+    key: "cultural-relevance",
     title: "Cultural Relevance",
+    titleText: "Cultural Relevance",
     desc: "We build brands that connect emotionally with modern audiences across websites, social media, PR, events, digital platforms and premium brand touchpoints.",
   },
 ];
@@ -101,9 +158,7 @@ export default function AboutStory() {
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
-            <span className="text-[#0F172A]">
-              Clarity
-            </span>
+            <span className="text-[#0F172A]">Clarity</span>
 
             <span
               className="
@@ -136,9 +191,32 @@ export default function AboutStory() {
             "
           >
             We believe modern brands are built through intentional design,
-            strategic clarity, premium brand positioning, digital marketing
-            intelligence, SEO-ready structure and emotional storytelling — not
-            noise, trends or temporary attention.
+            strategic clarity,{" "}
+            <Link
+              href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+              className={linkClass}
+            >
+              premium brand positioning
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className={linkClass}
+            >
+              digital marketing intelligence
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/web-development-marketing"
+              className={linkClass}
+            >
+              SEO-ready structure
+            </Link>{" "}
+            and{" "}
+            <Link href="https://www.dtsworld.in/about" className={linkClass}>
+              emotional storytelling
+            </Link>{" "}
+            — not noise, trends or temporary attention.
           </motion.p>
         </div>
 
@@ -146,7 +224,7 @@ export default function AboutStory() {
         <div className="grid sm:grid-cols-3 gap-7 mt-15">
           {principles.map((item, index) => (
             <motion.article
-              key={item.title}
+              key={item.key}
               initial={{
                 opacity: 0,
                 y: 50,
@@ -164,7 +242,7 @@ export default function AboutStory() {
                 y: -10,
               }}
               className="group relative"
-              aria-label={`${item.title} principle by Double Trouble Studio`}
+              aria-label={`${item.titleText} principle by Double Trouble Studio`}
             >
               {/* OUTER GLOW */}
               <div

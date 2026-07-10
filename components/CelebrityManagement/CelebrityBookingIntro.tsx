@@ -1,24 +1,101 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
+
 export default function CelebrityBookingIntro() {
-  const sections = [
+  const sections: {
+    number: string;
+    title: string;
+    text: ReactNode;
+  }[] = [
     {
       number: "01",
       title: "Visibility, Trust & Recall",
-      text: "Celebrity appearances can help brands increase visibility, strengthen audience trust and create memorable experiences. Whether you are planning a product launch, corporate conference, hospitality activation, luxury event, wedding celebration, award ceremony or marketing campaign, the right personality can help amplify your message and create stronger audience recall.",
+      text: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={textLinkClass}
+          >
+            Celebrity appearances
+          </Link>{" "}
+          can help brands increase visibility, strengthen audience trust and
+          create memorable experiences. Whether you are planning a{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={textLinkClass}
+          >
+            product launch
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={textLinkClass}
+          >
+            corporate conference
+          </Link>
+          , hospitality activation,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={textLinkClass}
+          >
+            luxury event
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={textLinkClass}
+          >
+            wedding celebration
+          </Link>
+          , award ceremony or marketing campaign, the right personality can help
+          amplify your message and create stronger audience recall.
+        </>
+      ),
     },
     {
       number: "02",
       title: "Talent Matched With Brand Fit",
-      text: "Double Trouble Studio works across celebrity management, brand campaigns, influencer collaborations, event coordination, PR-led experiences and luxury activations. This allows us to recommend talent not only by popularity, but also by brand fit, audience relevance, media value, event objective and campaign positioning.",
+      text: (
+        <>
+          Double Trouble Studio works across celebrity management, brand
+          campaigns,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={textLinkClass}
+          >
+            influencer collaborations
+          </Link>
+          , event coordination, PR-led experiences and luxury activations. This
+          allows us to recommend talent not only by popularity, but also by brand
+          fit, audience relevance, media value, event objective and campaign
+          positioning.
+        </>
+      ),
     },
     {
       number: "03",
       title: "Planning To Execution",
-      text: "Our team manages celebrity booking, endorsement partnerships, influencer collaborations, public figure appearances, talent logistics, stakeholder communication and event-day coordination to ensure every engagement runs smoothly from planning to execution.",
+      text: (
+        <>
+          Our team manages celebrity booking, endorsement partnerships,
+          influencer collaborations, public figure appearances, talent logistics,
+          stakeholder communication and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={textLinkClass}
+          >
+            event-day coordination
+          </Link>{" "}
+          to ensure every engagement runs smoothly from planning to execution.
+        </>
+      ),
     },
   ];
 
@@ -53,9 +130,12 @@ export default function CelebrityBookingIntro() {
             }}
           >
             End-to-End Celebrity Management &{" "}
-            <span className="bg-gradient-to-r from-[#6288B9] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
+            <Link
+              href=""
+              className="bg-gradient-to-r from-[#6288B9] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent  decoration-[#315E91] underline-offset-8 hover:decoration-[#0D2444]"
+            >
               Celebrity Booking Services
-            </span>
+            </Link>
           </h2>
 
           <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[17px]">

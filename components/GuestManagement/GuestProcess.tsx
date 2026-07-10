@@ -1,36 +1,103 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+
 const serifFont = {
   fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
 };
 
 export function OurProcess() {
+  const linkClass =
+    "underline underline-offset-4 decoration-[#6288B9]/35 transition-colors duration-300 hover:text-[#315E91] hover:decoration-[#315E91]";
+
+  const titleLinkClass =
+    "transition-colors duration-300 hover:text-[#315E91] hover:underline hover:underline-offset-4";
+
   const steps = [
     {
       no: "01",
       title: "Discovery & Planning",
-      desc: "Understanding audience types, VIP priorities and event objectives.",
+      titleLink: "https://www.dtsworld.in/contact",
+      desc: (
+        <>
+          Understanding{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+            className={linkClass}
+          >
+            audience types
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={linkClass}
+          >
+            VIP priorities
+          </Link>{" "}
+          and event objectives.
+        </>
+      ),
     },
     {
       no: "02",
       title: "Guest System Setup",
-      desc: "Creating guest categories, access tiers and RSVP workflows.",
+      titleLink: "https://www.dtsworld.in/blog/event-rsvp-management",
+      desc: (
+        <>
+          Creating{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+            className={linkClass}
+          >
+            guest categories
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+            className={linkClass}
+          >
+            access tiers
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/event-rsvp-management"
+            className={linkClass}
+          >
+            RSVP workflows
+          </Link>
+          .
+        </>
+      ),
     },
     {
       no: "03",
       title: "Coordination & Communication",
+      titleLink: "https://www.dtsworld.in/blog/post-event-guest-follow-up",
       desc: "Invitations, reminders and confirmations.",
     },
     {
       no: "04",
       title: "On-Ground Execution",
+      titleLink: "https://www.dtsworld.in/services/guest-management",
       desc: "Check-ins, access control and real-time coordination.",
     },
     {
       no: "05",
       title: "Reporting & Wrap-Up",
-      desc: "Attendance insights and post-event review.",
+      titleLink:
+        "https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction"
+            className={linkClass}
+          >
+            Attendance insights
+          </Link>{" "}
+          and post-event review.
+        </>
+      ),
     },
   ];
 
@@ -53,12 +120,11 @@ export function OurProcess() {
 
             <h2
               className="mt-7 text-[42px] font-semibold leading-[0.95] tracking-[-0.06em] text-[#0D2444] sm:text-[34px] md:text-[54px]"
-                 style={serifFont}
-             
+              style={serifFont}
             >
               Our Guest Management{" "}
               <span className="bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-               Process
+                Process
               </span>
             </h2>
 
@@ -90,11 +156,10 @@ export function OurProcess() {
                       Step {step.no}
                     </p>
 
-                    <h3
-                      className="text-[25px] font-semibold tracking-[-0.04em] text-[#0D2444]"
-                      
-                    >
-                      {step.title}
+                    <h3 className="text-[25px] font-semibold tracking-[-0.04em] text-[#0D2444]">
+                      <Link href={step.titleLink} className={titleLinkClass}>
+                        {step.title}
+                      </Link>
                     </h3>
 
                     <p className="mt-2 text-[14px] font-medium leading-[1.65] text-[#203B5C]/72 md:text-[15px]">

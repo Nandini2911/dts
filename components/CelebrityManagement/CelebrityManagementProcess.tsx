@@ -1,6 +1,8 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   ArrowRight,
   CalendarCheck,
@@ -13,47 +15,111 @@ import {
   UsersRound,
 } from "lucide-react";
 
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+type ProcessStep = {
+  step: string;
+  title: ReactNode;
+  titleText: string;
+  desc: string;
+  icon: typeof UsersRound;
+};
+
 export default function CelebrityManagementProcess() {
-  const steps = [
+  const steps: ProcessStep[] = [
     {
       step: "01",
-      title: "Requirement Discovery",
+      title: (
+        <Link href="https://www.dtsworld.in/contact" className={titleLinkClass}>
+          Requirement Discovery
+        </Link>
+      ),
+      titleText: "Requirement Discovery",
       desc: "We understand your event goals, campaign objective, audience profile, preferred talent category, city, date, budget range and expected deliverables.",
       icon: UsersRound,
     },
     {
       step: "02",
-      title: "Talent Research & Shortlisting",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact"
+          className={titleLinkClass}
+        >
+          Talent Research & Shortlisting
+        </Link>
+      ),
+      titleText: "Talent Research & Shortlisting",
       desc: "We identify suitable celebrities, influencers, speakers or performers based on relevance, availability, popularity, audience fit and brand positioning.",
       icon: Search,
     },
     {
       step: "03",
-      title: "Outreach & Negotiation",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+          className={titleLinkClass}
+        >
+          Outreach & Negotiation
+        </Link>
+      ),
+      titleText: "Outreach & Negotiation",
       desc: "We manage talent outreach, availability checks, commercial discussions, appearance terms, deliverables and negotiation.",
       icon: Handshake,
     },
     {
       step: "04",
-      title: "Contract & Compliance",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+          className={titleLinkClass}
+        >
+          Contract & Compliance
+        </Link>
+      ),
+      titleText: "Contract & Compliance",
       desc: "We coordinate agreements, usage rights, appearance clauses, deliverables, brand category terms, payment schedules and documentation.",
       icon: FileText,
     },
     {
       step: "05",
-      title: "Logistics Planning",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+          className={titleLinkClass}
+        >
+          Logistics Planning
+        </Link>
+      ),
+      titleText: "Logistics Planning",
       desc: "We manage travel, accommodation, hospitality, security, green room requirements, schedules, technical needs and event-day movement planning.",
       icon: Plane,
     },
     {
       step: "06",
-      title: "Event-Day Coordination",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+          className={titleLinkClass}
+        >
+          Event-Day Coordination
+        </Link>
+      ),
+      titleText: "Event-Day Coordination",
       desc: "Our team oversees arrival coordination, backstage communication, media moments, stage flow, guest interaction, stakeholder alignment and departure planning.",
       icon: CalendarCheck,
     },
     {
       step: "07",
-      title: "Post-Event Support",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Post-Event Support
+        </Link>
+      ),
+      titleText: "Post-Event Support",
       desc: "We assist with campaign deliverables, content coordination, reporting, usage confirmations and post-event closure.",
       icon: CheckCircle2,
     },
@@ -128,7 +194,7 @@ export default function CelebrityManagementProcess() {
 
                   return (
                     <motion.div
-                      key={item.step}
+                      key={item.titleText}
                       initial={{ opacity: 0, y: 28 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.2 }}
@@ -152,7 +218,7 @@ export default function CelebrityManagementProcess() {
                           isLeft ? "text-right" : "col-start-2 text-left"
                         }`}
                       >
-                        <div className="relative overflow-hidden rounded-[30px] border border-white/12 bg-white/[0.07] p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.11]">
+                        <div className="relative overflow-hidden rounded-[30px] border border-white/12 bg-white/[0.07] p-7 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white/[0.11]">
                           <div className="absolute right-[-80px] top-[-80px] h-[170px] w-[170px] rounded-full bg-[#8ABDF0]/15 blur-2xl" />
 
                           <div className="relative z-10">
@@ -202,7 +268,7 @@ export default function CelebrityManagementProcess() {
 
                 return (
                   <motion.div
-                    key={item.step}
+                    key={item.titleText}
                     initial={{ opacity: 0, x: 24 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.2 }}

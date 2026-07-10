@@ -1,58 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
 
 export default function CelebrityEventTypes() {
   const eventTypes = [
     {
       category: "Business",
       title: "Corporate Events",
+      href: "https://www.dtsworld.in/services/events-weddings",
       desc: "We manage celebrities, speakers, hosts and performers for conferences, annual days, leadership summits, employee events and business gatherings.",
     },
     {
       category: "Launches",
       title: "Product Launches",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
       desc: "We help brands identify celebrities, influencers or hosts who can create launch visibility, media interest and audience engagement for new products.",
     },
     {
       category: "Campaigns",
       title: "Brand Activations",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
       desc: "We coordinate talent for mall activations, retail launches, experiential campaigns, pop-ups, consumer engagement campaigns and promotional events.",
     },
     {
       category: "Hospitality",
       title: "Hotel Launches",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
       desc: "We manage celebrity appearances for luxury hotel openings, hospitality previews, guest experiences, media interactions and premium brand moments.",
     },
     {
       category: "F&B",
       title: "Restaurant Openings",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
       desc: "We help restaurants, cafes, lounges and nightlife brands collaborate with celebrities, influencers and creators for launch visibility and social media reach.",
     },
     {
       category: "Premium",
       title: "Luxury Experiences",
+      href: "https://www.dtsworld.in/services/events-weddings",
       desc: "We coordinate public personalities for curated experiences, private previews, fashion showcases, lifestyle events and premium audience engagements.",
     },
     {
       category: "Fashion",
       title: "Fashion Shows",
+      href: "https://www.dtsworld.in/services/events-weddings",
       desc: "We manage showstoppers, celebrity guests, hosts, influencers, models and media-facing appearances for fashion events and designer showcases.",
     },
     {
       category: "Recognition",
       title: "Award Ceremonies",
+      href: "https://www.dtsworld.in/services/events-weddings",
       desc: "We coordinate celebrity presenters, hosts, performers, chief guests and public personalities for award nights and recognition events.",
     },
     {
       category: "Private",
       title: "Weddings & Private Celebrations",
+      href: "https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026",
       desc: "We help clients book celebrities, singers, performers, hosts and entertainers for weddings, sangeet nights, receptions and private celebrations.",
     },
     {
       category: "Knowledge",
       title: "Conferences & Summits",
+      href: "https://www.dtsworld.in/services/events-weddings",
       desc: "We arrange keynote speakers, moderators, celebrity hosts, industry leaders and thought leaders for business conferences and summits.",
     },
     {
@@ -122,33 +136,39 @@ export default function CelebrityEventTypes() {
                 delay: index * 0.035,
                 ease: "easeOut",
               }}
-              className="group grid grid-cols-1 border-b border-[#DCE6F2] px-5 py-6 transition-all duration-300 last:border-b-0 hover:bg-[#0D2444] sm:px-7 md:grid-cols-[180px_0.8fr_1.2fr_44px] md:items-center md:gap-7 lg:px-9"
+              className="group grid grid-cols-1 border-b border-[#DCE6F2] px-5 py-6 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] last:border-b-0 hover:bg-[#0D2444] sm:px-7 md:grid-cols-[180px_0.8fr_1.2fr_44px] md:items-center md:gap-7 lg:px-9"
             >
               {/* CATEGORY */}
               <div>
-                <span className="inline-flex rounded-full border border-[#8ABDF0]/45 bg-[#F0F8FF] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#315E91] transition-all duration-300 group-hover:border-white/25 group-hover:bg-white/12 group-hover:text-white">
+                <span className="inline-flex rounded-full border border-[#8ABDF0]/45 bg-[#F0F8FF] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#315E91] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-white/25 group-hover:bg-white/12 group-hover:text-white">
                   {item.category}
                 </span>
               </div>
 
               {/* TITLE */}
               <h3
-                className="mt-5 text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#0D2444] transition-colors duration-300 group-hover:text-white md:mt-0 md:text-[28px]"
+                className="mt-5 text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white md:mt-0 md:text-[28px]"
                 style={{
                   fontFamily:
                     'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
                 }}
               >
-                {item.title}
+                {item.href ? (
+                  <Link href={item.href} className={titleLinkClass}>
+                    {item.title}
+                  </Link>
+                ) : (
+                  item.title
+                )}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-4 max-w-[650px] text-[14px] font-medium leading-[1.8] text-slate-600 transition-colors duration-300 group-hover:text-white/78 md:mt-0 md:text-[15px]">
+              <p className="mt-4 max-w-[650px] text-[14px] font-medium leading-[1.8] text-slate-600 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white/78 md:mt-0 md:text-[15px]">
                 {item.desc}
               </p>
 
               {/* ARROW */}
-              <div className="mt-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#0D2444] text-white transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:bg-white group-hover:text-[#0D2444] md:mt-0">
+              <div className="mt-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#0D2444] text-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:bg-white group-hover:text-[#0D2444] md:mt-0">
                 <ArrowUpRight className="h-4 w-4" />
               </div>
             </motion.div>

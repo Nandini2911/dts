@@ -1,15 +1,51 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
+
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
+
+const whiteTextLinkClass =
+  "font-medium text-white underline underline-offset-4 transition-colors duration-300 hover:text-[#8ABDF0]";
+
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+type ReasonItem = {
+  title: string;
+  href?: string;
+  desc: string;
+};
+
+function LinkedTitle({
+  title,
+  href,
+  className = "",
+}: {
+  title: string;
+  href?: string;
+  className?: string;
+}) {
+  if (!href) return <>{title}</>;
+
+  return (
+    <Link href={href} className={`${titleLinkClass} ${className}`}>
+      {title}
+    </Link>
+  );
+}
 
 export default function WhyWorkWithDoubleTroubleStudio() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const reasons = [
+  const reasons: ReasonItem[] = [
     {
       title: "Strategic Talent Recommendations",
+      href: "https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact",
       desc: "We recommend talent based on brand fit, audience profile, campaign objective, event format and desired impact, not only popularity.",
     },
     {
@@ -22,6 +58,7 @@ export default function WhyWorkWithDoubleTroubleStudio() {
     },
     {
       title: "End-to-End Project Management",
+      href: "https://www.dtsworld.in/about",
       desc: "From celebrity sourcing and negotiations to contracts, logistics, hospitality and event-day handling, we manage the complete process.",
     },
     {
@@ -30,6 +67,7 @@ export default function WhyWorkWithDoubleTroubleStudio() {
     },
     {
       title: "Nationwide Execution Capability",
+      href: "https://www.dtsworld.in/locations",
       desc: "We support celebrity management and talent coordination across major cities and event destinations in India.",
     },
     {
@@ -38,6 +76,7 @@ export default function WhyWorkWithDoubleTroubleStudio() {
     },
     {
       title: "On-Ground Coordination Team",
+      href: "https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination",
       desc: "We manage arrivals, backstage movement, media moments, stage entries, guest interactions and departure planning during the event.",
     },
   ];
@@ -77,9 +116,36 @@ export default function WhyWorkWithDoubleTroubleStudio() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[17px]">
-            We combine strategy, PR thinking, talent coordination, event
-            execution and luxury hospitality sensibility to deliver celebrity
-            engagements that feel smooth, professional and brand-aligned.
+            We combine strategy,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className={textLinkClass}
+            >
+              PR thinking
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/blog/celebrity-management-in-india-guide"
+              className={textLinkClass}
+            >
+              talent coordination
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/events-weddings"
+              className={textLinkClass}
+            >
+              event execution
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://www.dtsworld.in/services/events-weddings"
+              className={textLinkClass}
+            >
+              luxury hospitality sensibility
+            </Link>{" "}
+            to deliver celebrity engagements that feel smooth, professional and
+            brand-aligned.
           </p>
         </motion.div>
 
@@ -98,12 +164,18 @@ export default function WhyWorkWithDoubleTroubleStudio() {
                 const isActive = activeIndex === index;
 
                 return (
-                  <button
+                  <div
                     key={item.title}
-                    type="button"
+                    role="button"
+                    tabIndex={0}
                     onMouseEnter={() => setActiveIndex(index)}
                     onClick={() => setActiveIndex(index)}
-                    className={`group flex w-full items-center justify-between gap-4 rounded-[26px] px-5 py-5 text-left transition-all duration-300 ${
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        setActiveIndex(index);
+                      }
+                    }}
+                    className={`group flex w-full cursor-pointer items-center justify-between gap-4 rounded-[26px] px-5 py-5 text-left transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       isActive
                         ? "bg-[#0D2444] text-white shadow-[0_20px_60px_rgba(13,36,68,0.20)]"
                         : "bg-white/70 text-[#0D2444] hover:bg-white"
@@ -111,7 +183,7 @@ export default function WhyWorkWithDoubleTroubleStudio() {
                   >
                     <div className="flex items-start gap-4">
                       <span
-                        className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                        className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                           isActive
                             ? "bg-[#8ABDF0] text-[#0D2444]"
                             : "bg-[#F0F8FF] text-[#315E91]"
@@ -121,18 +193,18 @@ export default function WhyWorkWithDoubleTroubleStudio() {
                       </span>
 
                       <span className="text-[15px] font-black uppercase leading-[1.45] tracking-[0.11em]">
-                        {item.title}
+                        <LinkedTitle title={item.title} href={item.href} />
                       </span>
                     </div>
 
                     <ArrowUpRight
-                      className={`h-4 w-4 shrink-0 transition-all duration-300 ${
+                      className={`h-4 w-4 shrink-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                         isActive
                           ? "translate-x-1 -translate-y-1 text-[#8ABDF0]"
                           : "text-[#6288B9] group-hover:translate-x-1 group-hover:-translate-y-1"
                       }`}
                     />
-                  </button>
+                  </div>
                 );
               })}
             </div>
@@ -181,7 +253,11 @@ export default function WhyWorkWithDoubleTroubleStudio() {
                           'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
                       }}
                     >
-                      {reasons[activeIndex].title}
+                      <LinkedTitle
+                        title={reasons[activeIndex].title}
+                        href={reasons[activeIndex].href}
+                        className="hover:text-[#8ABDF0]"
+                      />
                     </h3>
 
                     <p className="mt-7 max-w-[680px] text-[16px] font-medium leading-[1.9] text-white/74 md:text-[18px]">

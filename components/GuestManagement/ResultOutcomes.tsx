@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const badgeClass =
@@ -10,30 +11,62 @@ const serifFont = {
 };
 
 export function ResultsOutcomes() {
+  const linkClass =
+    "underline underline-offset-4 decoration-[#6288B9]/35 transition-colors duration-300 hover:text-[#315E91] hover:decoration-[#315E91] group-hover:hover:text-white group-hover:hover:decoration-white";
+
+  const titleLinkClass =
+    "transition-colors duration-300 hover:text-[#315E91] hover:underline hover:underline-offset-4 group-hover:hover:text-white";
+
   const results = [
     {
       stat: "95%",
       title: "Faster Verification",
-      desc: "Guests are verified quickly through organized lists, registrations and check-in systems.",
+      titleLink:
+        "https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events",
+      desc: (
+        <>
+          Guests are verified quickly through organized lists,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+            className={linkClass}
+          >
+            registrations
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+            className={linkClass}
+          >
+            check-in systems
+          </Link>
+          .
+        </>
+      ),
     },
     {
       stat: "70%",
       title: "Reduction In Entry Delays",
+      titleLink:
+        "https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping",
       desc: "Structured entry flow helps reduce crowding, confusion and long waiting time at gates.",
     },
     {
       stat: "100%",
       title: "RSVP Visibility",
+      titleLink: "https://www.dtsworld.in/blog/event-rsvp-management",
       desc: "Track confirmations, pending responses and expected attendance before event day.",
     },
     {
       stat: "VIP",
       title: "Dedicated VIP Handling",
+      titleLink: "https://www.dtsworld.in/services/celebrity-management",
       desc: "Special coordination for celebrities, founders, dignitaries and premium guests.",
     },
     {
       stat: "LIVE",
       title: "Real-Time Guest Tracking",
+      titleLink:
+        "https://www.dtsworld.in/blog/event-guest-analytics-behavior-engagement-satisfaction",
       desc: "On-ground teams monitor guest movement, arrivals and access throughout the event.",
     },
   ];
@@ -110,7 +143,9 @@ export function ResultsOutcomes() {
                   className="mt-10 text-[22px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 group-hover:text-white lg:text-[21px]"
                   style={serifFont}
                 >
-                  {item.title}
+                  <Link href={item.titleLink} className={titleLinkClass}>
+                    {item.title}
+                  </Link>
                 </h3>
 
                 <p className="mt-4 text-[14px] font-medium leading-[1.65] text-[#203B5C]/72 transition-colors duration-500 group-hover:text-white/75">

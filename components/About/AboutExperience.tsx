@@ -1,14 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
 
 const values = [
-  "Timeless Brand Aesthetics",
-  "Luxury Brand Positioning",
-  "Modern Storytelling",
-  "Digital Brand Experiences",
-  "Creative Direction",
-  "Strategic Branding",
+  {
+    title: "Timeless Brand Aesthetics",
+    href: "",
+  },
+  {
+    title: "Luxury Brand Positioning",
+  },
+  {
+    title: "Modern Storytelling",
+    href: "",
+  },
+  {
+    title: "Digital Brand Experiences",
+  },
+  {
+    title: "Creative Direction",
+  },
+  {
+    title: "Strategic Branding",
+  },
 ];
 
 export default function AboutExperience() {
@@ -97,9 +115,7 @@ export default function AboutExperience() {
                   'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
               }}
             >
-              <span className="text-[#0F172A]">
-                Beyond
-              </span>
+              <span className="text-[#0F172A]">Beyond</span>
 
               <br />
 
@@ -132,9 +148,42 @@ export default function AboutExperience() {
             "
           >
             <p className="text-slate-500 leading-[2] text-[15px]">
-              We create premium digital perception systems designed for luxury
-              brands, hospitality brands, lifestyle businesses, restaurants,
-              event companies and culturally-led modern brands.
+              We create premium digital perception systems designed for{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/seo-for-luxury-brands-positioning-keywords-authority"
+                className={linkClass}
+              >
+                luxury brands
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/pr-media-marketing"
+                className={linkClass}
+              >
+                hospitality brands
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/pr-media-marketing"
+                className={linkClass}
+              >
+                lifestyle businesses
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/pr-media-marketing"
+                className={linkClass}
+              >
+                restaurants
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/events-weddings"
+                className={linkClass}
+              >
+                event companies
+              </Link>{" "}
+              and culturally-led modern brands.
             </p>
           </motion.div>
         </div>
@@ -298,10 +347,42 @@ export default function AboutExperience() {
                   "
                 >
                   Every interaction is intentionally crafted to feel elevated,
-                  emotional and culturally relevant — from brand strategy,
-                  digital experiences, website development and storytelling to
-                  PR communication, SEO structure, strategic positioning and
-                  premium brand systems.
+                  emotional and culturally relevant — from{" "}
+                  <Link
+                    href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+                    className={linkClass}
+                  >
+                    brand strategy
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="https://www.dtsworld.in/services/web-development-marketing"
+                    className={linkClass}
+                  >
+                    digital experiences
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="https://www.dtsworld.in/services/web-development-marketing"
+                    className={linkClass}
+                  >
+                    website development
+                  </Link>{" "}
+                  and storytelling to{" "}
+                  <Link
+                    href="https://www.dtsworld.in/services/pr-media-marketing"
+                    className={linkClass}
+                  >
+                    PR communication
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="https://www.dtsworld.in/blog/technical-seo-complete-website-optimization-guide"
+                    className={linkClass}
+                  >
+                    SEO structure
+                  </Link>
+                  , strategic positioning and premium brand systems.
                 </p>
 
                 {/* LINE */}
@@ -324,7 +405,7 @@ export default function AboutExperience() {
           <div className="grid grid-cols-2 gap-5">
             {values.map((item, index) => (
               <motion.article
-                key={item}
+                key={item.title}
                 initial={{
                   opacity: 0,
                   scale: 0.92,
@@ -342,7 +423,7 @@ export default function AboutExperience() {
                   y: -8,
                 }}
                 className="group relative"
-                aria-label={`${item} by Double Trouble Studio`}
+                aria-label={`${item.title} by Double Trouble Studio`}
               >
                 {/* GLOW */}
                 <div
@@ -428,7 +509,13 @@ export default function AboutExperience() {
                           'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
                       }}
                     >
-                      {item}
+                      {item.href ? (
+                        <Link href={item.href} className={linkClass}>
+                          {item.title}
+                        </Link>
+                      ) : (
+                        item.title
+                      )}
                     </h4>
 
                     {/* LINE */}

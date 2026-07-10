@@ -1,31 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const serifFont = {
   fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
 };
 
+const titleLinkClass =
+  "underline underline-offset-4 transition-colors duration-300 hover:text-[#D9E8F7]";
+
+const descLinkClass =
+  "font-medium text-white underline underline-offset-4 transition-colors duration-300 hover:text-[#D9E8F7]";
+
 export function WhyDoubleTroubleStudio() {
   const reasons = [
     {
-      title: "Premium Event Experience",
-      desc: "Built for luxury and high-visibility environments.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Premium Event Experience
+        </Link>
+      ),
+      titleText: "Premium Event Experience",
+      desc: (
+        <>
+          Built for{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={descLinkClass}
+          >
+            luxury and high-visibility environments
+          </Link>
+          .
+        </>
+      ),
     },
     {
-      title: "Strategy + Execution",
-      desc: "Planning and on-ground management under one roof.",
+      title: (
+        <Link href="https://www.dtsworld.in/about" className={titleLinkClass}>
+          Strategy + Execution
+        </Link>
+      ),
+      titleText: "Strategy + Execution",
+      desc: (
+        <>
+          Planning and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={descLinkClass}
+          >
+            on-ground management
+          </Link>{" "}
+          under one roof.
+        </>
+      ),
     },
     {
       title: "Calm Under Pressure",
-      desc: "Experienced in handling VIPs, celebrities and large audiences.",
+      titleText: "Calm Under Pressure",
+      desc: (
+        <>
+          Experienced in handling{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={descLinkClass}
+          >
+            VIPs
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={descLinkClass}
+          >
+            celebrities
+          </Link>{" "}
+          and large audiences.
+        </>
+      ),
     },
     {
-      title: "Structured Systems",
-      desc: "Documented workflows, escalation protocols and access controls.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/event-rsvp-management"
+          className={titleLinkClass}
+        >
+          Structured Systems
+        </Link>
+      ),
+      titleText: "Structured Systems",
+      desc: (
+        <>
+          Documented workflows, escalation protocols and{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+            className={descLinkClass}
+          >
+            access controls
+          </Link>
+          .
+        </>
+      ),
     },
     {
-      title: "Complete Confidentiality",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+          className={titleLinkClass}
+        >
+          Complete Confidentiality
+        </Link>
+      ),
+      titleText: "Complete Confidentiality",
       desc: "Professional handling of guest information and event operations.",
     },
   ];
@@ -39,7 +127,7 @@ export function WhyDoubleTroubleStudio() {
       }}
     >
       {/* Soft light wash */}
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255, 255, 255, 0.61),transparent_35%,rgba(191, 215, 242, 0.31)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.61),transparent_35%,rgba(191,215,242,0.31)_100%)]" />
 
       {/* Premium glow elements */}
       <div className="absolute left-[-180px] top-[-160px] h-[460px] w-[460px] rounded-full bg-[#BFD7F2]/20 blur-3xl" />
@@ -80,7 +168,7 @@ export function WhyDoubleTroubleStudio() {
           <div className="grid gap-4">
             {reasons.map((item, index) => (
               <motion.div
-                key={item.title}
+                key={item.titleText}
                 initial={{ opacity: 0, x: 34 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.07 }}

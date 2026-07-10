@@ -674,8 +674,9 @@ export default function CelebrityManagement() {
         <CelebrityUseCasesBookingInfo />
         <CelebrityManagementFAQ />
         <CelebrityManagementCTA />
+         <ServiceCityLinks serviceSlug="celebrity-management" />
         <Footer />
-        <ServiceCityLinks serviceSlug="celebrity-management" />
+       
       </main>
     </>
   );

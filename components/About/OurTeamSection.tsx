@@ -69,7 +69,12 @@ export default function OurTeamSection() {
             Our Team
           </span>
 
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-[#0D2444] md:text-6xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-[#0D2444] md:text-6xl"
+            style={{
+              fontFamily:
+                'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
+            }}
+          >
             The People Behind The Experience
           </h2>
 
@@ -113,9 +118,7 @@ export default function OurTeamSection() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D2444]/55 via-transparent to-transparent" />
 
-                <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/15 text-sm font-semibold text-white backdrop-blur-md">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+              
               </div>
 
               <div className="relative p-7">

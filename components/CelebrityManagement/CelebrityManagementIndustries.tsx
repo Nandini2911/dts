@@ -1,29 +1,102 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+const descLinkClass =
+  "relative z-20 font-medium text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+type IndustryItem = {
+  tag: string;
+  title: ReactNode;
+  titleText: string;
+  desc: ReactNode;
+};
+
 export default function CelebrityManagementIndustries() {
-  const industries = [
+  const industries: IndustryItem[] = [
     {
       tag: "Luxury",
-      title: "Luxury & Lifestyle Brands",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/seo-for-luxury-brands-positioning-keywords-authority"
+          className={titleLinkClass}
+        >
+          Luxury & Lifestyle Brands
+        </Link>
+      ),
+      titleText: "Luxury & Lifestyle Brands",
       desc: "We work with luxury brands, fashion labels, beauty companies, wellness brands, premium retail businesses and lifestyle companies looking to create aspiration, visibility and audience engagement.",
     },
     {
       tag: "Hospitality",
-      title: "Hospitality & Experiences",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Hospitality & Experiences
+        </Link>
+      ),
+      titleText: "Hospitality & Experiences",
       desc: "We support hotels, restaurants, lounges, nightlife venues, destination events, luxury experiences and private celebrations with celebrity and influencer coordination.",
     },
     {
       tag: "Corporate",
-      title: "Corporate & Consumer Brands",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Corporate & Consumer Brands
+        </Link>
+      ),
+      titleText: "Corporate & Consumer Brands",
       desc: "We help corporate organizations, FMCG brands, automotive companies, real estate developers, technology companies, e-commerce businesses and retail brands use celebrity partnerships for campaigns and events.",
     },
     {
       tag: "Events",
-      title: "Events & Entertainment Businesses",
-      desc: "We support event management agencies, wedding planners, entertainment companies, production teams and experiential agencies with talent sourcing and celebrity coordination.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Events & Entertainment Businesses
+        </Link>
+      ),
+      titleText: "Events & Entertainment Businesses",
+      desc: (
+        <>
+          We support{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={descLinkClass}
+          >
+            event management agencies
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+            className={descLinkClass}
+          >
+            wedding planners
+          </Link>
+          , entertainment companies, production teams and experiential agencies
+          with{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact"
+            className={descLinkClass}
+          >
+            talent sourcing
+          </Link>{" "}
+          and celebrity coordination.
+        </>
+      ),
     },
   ];
 
@@ -32,7 +105,7 @@ export default function CelebrityManagementIndustries() {
     index,
     direction,
   }: {
-    item: (typeof industries)[number];
+    item: IndustryItem;
     index: number;
     direction: "left" | "right";
   }) => (
@@ -45,23 +118,23 @@ export default function CelebrityManagementIndustries() {
         delay: index * 0.12,
         ease: "easeOut",
       }}
-      className="group relative overflow-hidden rounded-[34px] border border-white/70 bg-white/60 p-7 shadow-[0_22px_70px_rgba(13,36,68,0.09)] backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-[#0D2444] hover:shadow-[0_34px_95px_rgba(13,36,68,0.18)]"
+      className="group relative overflow-hidden rounded-[34px] border border-white/70 bg-white/60 p-7 shadow-[0_22px_70px_rgba(13,36,68,0.09)] backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:bg-[#0D2444] hover:shadow-[0_34px_95px_rgba(13,36,68,0.18)]"
     >
-      <div className="absolute right-[-80px] top-[-80px] h-[180px] w-[180px] rounded-full bg-[#8ABDF0]/25 blur-2xl transition-all duration-300 group-hover:bg-white/15" />
+      <div className="absolute right-[-80px] top-[-80px] h-[180px] w-[180px] rounded-full bg-[#8ABDF0]/25 blur-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-white/15" />
 
       <div className="relative z-10">
         <div className="flex items-center justify-between gap-5">
-          <span className="rounded-full border border-[#8ABDF0]/40 bg-[#F0F8FF] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#315E91] transition-all duration-300 group-hover:border-white/25 group-hover:bg-white/12 group-hover:text-white">
+          <span className="rounded-full border border-[#8ABDF0]/40 bg-[#F0F8FF] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#315E91] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-white/25 group-hover:bg-white/12 group-hover:text-white">
             {item.tag}
           </span>
 
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0D2444] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#0D2444]">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0D2444] text-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-white group-hover:text-[#0D2444]">
             <ArrowUpRight className="h-4 w-4" />
           </span>
         </div>
 
         <h3
-          className="mt-7 text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#0D2444] transition-colors duration-300 group-hover:text-white md:text-[30px]"
+          className="mt-7 text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#0D2444] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white md:text-[30px]"
           style={{
             fontFamily:
               'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -70,7 +143,7 @@ export default function CelebrityManagementIndustries() {
           {item.title}
         </h3>
 
-        <p className="mt-5 text-[14px] font-medium leading-[1.85] text-slate-600 transition-colors duration-300 group-hover:text-white/80">
+        <p className="mt-5 text-[14px] font-medium leading-[1.85] text-slate-600 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white/80">
           {item.desc}
         </p>
       </div>
@@ -124,7 +197,7 @@ export default function CelebrityManagementIndustries() {
           <div className="flex flex-col gap-8">
             {industries.slice(0, 2).map((item, index) => (
               <IndustryCard
-                key={item.title}
+                key={item.titleText}
                 item={item}
                 index={index}
                 direction="left"
@@ -167,7 +240,7 @@ export default function CelebrityManagementIndustries() {
           <div className="flex flex-col gap-8">
             {industries.slice(2, 4).map((item, index) => (
               <IndustryCard
-                key={item.title}
+                key={item.titleText}
                 item={item}
                 index={index}
                 direction="right"
@@ -180,7 +253,7 @@ export default function CelebrityManagementIndustries() {
         <div className="mt-12 grid grid-cols-1 gap-5 lg:hidden">
           {industries.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={item.titleText}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
