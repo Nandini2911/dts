@@ -595,8 +595,8 @@ export default function AIVideoProductionVFXPage() {
         <AIVideoVFXPortfolio />
         <AIVideoVFXFAQ />
         <AIVideoVFXCTA />
-        <Footer />
         <ServiceCityLinks serviceSlug="ai-video-vfx" />
+        <Footer />
       </main>
     </>
   );
