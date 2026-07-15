@@ -885,9 +885,10 @@ export default function WebDevelopmentMarketing() {
       <main>
         <Navbar />
         <WebsiteDigitalHero />
+        <WebDevelopmentMarketingFeaturedWork/>
         <CompleteDigitalSolutions />
         <WhatIsWebSeoMarketing />
-        <WebDevelopmentMarketingFeaturedWork/>
+        
         <WebsiteDevelopmentServices />
         <SEOServicesSection />
         <DigitalMarketingServicesSection />
@@ -902,8 +903,9 @@ export default function WebDevelopmentMarketing() {
         <WhyChooseDTSSection />
         <WebsiteMarketingFAQSection />
         <FinalCTASection />
+         <ServiceCityLinks serviceSlug="web-development-marketing" />
         <Footer />
-        <ServiceCityLinks serviceSlug="web-development-marketing" />
+       
       </main>
     </>
   );

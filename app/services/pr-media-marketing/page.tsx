@@ -765,7 +765,7 @@ export default function PRMediaDigitalMarketingPage() {
         <FAQ />
         <FinalCTA />
         <SEOContentBlock />
-         <ServiceCityLinks serviceSlug="pr-media-marketing" />
+        <ServiceCityLinks serviceSlug="pr-media-marketing" />
         <Footer />
       </main>
     </>

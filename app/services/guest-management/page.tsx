@@ -1811,8 +1811,9 @@ export default function GuestManagement() {
         <WhyGuestManagementMatters />
         <GuestManagementFaq />
         <LocalSeoSection />
+        <ServiceCityLinks serviceSlug="guest-management" />
         <Footer />
-              <ServiceCityLinks serviceSlug="guest-management" />
+              
 
       </main>
     </>
