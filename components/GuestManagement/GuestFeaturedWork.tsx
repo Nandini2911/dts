@@ -38,12 +38,10 @@ export default function FeaturedWork() {
 
   return (
     <section className="relative w-full overflow-hidden bg-white px-5 py-16 md:py-24">
-      {/* Background glow */}
       <div className="absolute left-[-180px] top-[-160px] h-[440px] w-[440px] rounded-full bg-[#6288B9]/18 blur-3xl" />
       <div className="absolute right-[-220px] bottom-[-180px] h-[520px] w-[520px] rounded-full bg-[#0D2444]/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-[1280px]">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           whileInView={{ opacity: 1, scale: [0.92, 1.04, 1] }}
@@ -76,7 +74,6 @@ export default function FeaturedWork() {
           </p>
         </motion.div>
 
-        {/* Cards */}
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
@@ -95,14 +92,17 @@ export default function FeaturedWork() {
                   : "border-[#0D2444]/10 bg-gradient-to-br from-white via-[#F4F9FF] to-[#D9E8F7] hover:border-[#6288B9]/55"
               }`}
             >
-              {/* Dark hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#0D2444] via-[#16365F] to-[#6288B9] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-              {/* Soft shine */}
               <div className="absolute left-0 top-0 h-[160px] w-[160px] rounded-full bg-white/70 blur-3xl transition-opacity duration-500 group-hover:opacity-0" />
 
-              {/* Image */}
-              <div className="relative z-10 h-[300px] overflow-hidden rounded-[22px] bg-[#0D2444] shadow-[0_18px_45px_rgba(13,36,68,0.18)]">
+              <a
+                href="https://www.instagram.com/doubletrouble_studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} on Double Trouble Studio Instagram`}
+                className="relative z-10 block h-[300px] overflow-hidden rounded-[22px] bg-[#0D2444] shadow-[0_18px_45px_rgba(13,36,68,0.18)]"
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -110,9 +110,8 @@ export default function FeaturedWork() {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D2444]/60 via-transparent to-transparent" />
-              </div>
+              </a>
 
-              {/* Text */}
               <div className="relative z-10 px-1 pb-3 pt-7">
                 <p className="text-[13px] font-bold uppercase tracking-[0.22em] text-[#315E91] transition-colors duration-500 group-hover:text-[#BFD7F2]">
                   Guest Management
@@ -127,7 +126,6 @@ export default function FeaturedWork() {
                 </p>
               </div>
 
-              {/* Bottom shine */}
               <div className="absolute inset-x-8 bottom-0 z-10 h-px bg-gradient-to-r from-transparent via-[#6288B9]/70 to-transparent opacity-80 transition-opacity duration-500 group-hover:via-white/60" />
             </motion.div>
           ))}
