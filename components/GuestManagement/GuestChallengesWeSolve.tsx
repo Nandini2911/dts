@@ -1,27 +1,105 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
+
+const titleLinkClass =
+  "underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
+
+const descLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
 
 export default function ChallengesWeSolve() {
   const challenges = [
     {
-      title: "Confusion At Entry",
-      desc: "Multiple guest lists, unclear confirmations and long waiting lines.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+          className={titleLinkClass}
+        >
+          Confusion At Entry
+        </Link>
+      ),
+      titleText: "Confusion At Entry",
+      desc: (
+        <>
+          Multiple{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+            className={descLinkClass}
+          >
+            guest lists
+          </Link>
+          , unclear confirmations and long waiting lines.
+        </>
+      ),
     },
     {
-      title: "No Clear Guest Segmentation",
-      desc: "VIPs, media, sponsors and guests arriving through the same process.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+          className={titleLinkClass}
+        >
+          No Clear Guest Segmentation
+        </Link>
+      ),
+      titleText: "No Clear Guest Segmentation",
+      desc: (
+        <>
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={descLinkClass}
+          >
+            VIPs
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={descLinkClass}
+          >
+            media
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={descLinkClass}
+          >
+            sponsors
+          </Link>{" "}
+          and guests arriving through the same process.
+        </>
+      ),
     },
     {
       title: "Last-Minute Chaos",
+      titleText: "Last-Minute Chaos",
       desc: "Constant list changes and no structured escalation system.",
     },
     {
-      title: "Reputation Risk",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/common-guest-management-mistakes-luxury-brand"
+          className={titleLinkClass}
+        >
+          Reputation Risk
+        </Link>
+      ),
+      titleText: "Reputation Risk",
       desc: "Poor entry management creates a poor first impression.",
     },
     {
-      title: "Security Concerns",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/guest-data-privacy-luxury-events"
+          className={titleLinkClass}
+        >
+          Security Concerns
+        </Link>
+      ),
+      titleText: "Security Concerns",
       desc: "Uncontrolled access and inadequate verification.",
     },
   ];
@@ -62,9 +140,34 @@ export default function ChallengesWeSolve() {
             </h2>
 
             <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-[1.75] text-[#203B5C]/75 md:text-[17px]">
-              Guest flow problems usually happen when communication,
-              verification, access and escalation are not connected through one
-              clear system.
+              <Link
+                href="https://www.dtsworld.in/blog/how-to-design-seamless-guest-journey-luxury-events"
+                className={linkClass}
+              >
+                Guest flow problems
+              </Link>{" "}
+              usually happen when{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/event-rsvp-management"
+                className={linkClass}
+              >
+                communication
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                className={linkClass}
+              >
+                verification
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                className={linkClass}
+              >
+                access
+              </Link>{" "}
+              and escalation are not connected through one clear system.
             </p>
 
             <div className="mt-8 hidden max-w-[450px] rounded-[24px] border border-[#0D2444]/10 bg-white/70 p-4 shadow-[0_18px_55px_rgba(13,36,68,0.09)] backdrop-blur-xl md:block">
@@ -92,7 +195,7 @@ export default function ChallengesWeSolve() {
             <div className="space-y-3">
               {challenges.map((item, index) => (
                 <motion.div
-                  key={item.title}
+                  key={item.titleText}
                   initial={{ opacity: 0, x: 36 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{

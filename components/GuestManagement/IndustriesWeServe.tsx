@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const serifFont = {
@@ -8,16 +9,65 @@ const serifFont = {
 
 export function IndustriesWeServe() {
   const industries = [
-    { title: "Luxury Weddings", x: "17%", y: "26%", size: "lg" },
-    { title: "Celebrity Events", x: "50%", y: "13%", size: "xl" },
-    { title: "Corporate Events", x: "82%", y: "26%", size: "lg" },
-    { title: "Brand Launches", x: "14%", y: "54%", size: "md" },
-    { title: "Fashion Events", x: "86%", y: "54%", size: "md" },
-    { title: "Media Events", x: "24%", y: "80%", size: "md" },
-    { title: "Award Nights", x: "50%", y: "88%", size: "lg" },
-    { title: "Private Gatherings", x: "76%", y: "80%", size: "md" },
+    {
+      title: "Luxury Weddings",
+      link: "https://www.dtsworld.in/services/events-weddings",
+      x: "17%",
+      y: "26%",
+      size: "lg",
+    },
+    {
+      title: "Celebrity Events",
+      link: "https://www.dtsworld.in/services/celebrity-management",
+      x: "50%",
+      y: "13%",
+      size: "xl",
+    },
+    {
+      title: "Corporate Events",
+      link: "https://www.dtsworld.in/services/events-weddings",
+      x: "82%",
+      y: "26%",
+      size: "lg",
+    },
+    {
+      title: "Brand Launches",
+      link: "https://www.dtsworld.in/services/pr-media-marketing",
+      x: "14%",
+      y: "54%",
+      size: "md",
+    },
+    {
+      title: "Fashion Events",
+      link: "https://www.dtsworld.in/services/events-weddings",
+      x: "86%",
+      y: "54%",
+      size: "md",
+    },
+    {
+      title: "Media Events",
+      link: "https://www.dtsworld.in/services/pr-media-marketing",
+      x: "24%",
+      y: "80%",
+      size: "md",
+    },
+    {
+      title: "Award Nights",
+      link: "https://www.dtsworld.in/services/events-weddings",
+      x: "50%",
+      y: "88%",
+      size: "lg",
+    },
+    {
+      title: "Private Gatherings",
+      link: "https://www.dtsworld.in/services/events-weddings",
+      x: "76%",
+      y: "80%",
+      size: "md",
+    },
     {
       title: "Founder & Investor Events",
+      link: "https://www.dtsworld.in/services/events-weddings",
       x: "50%",
       y: "52%",
       size: "center",
@@ -134,12 +184,15 @@ export function IndustriesWeServe() {
                 }}
                 viewport={{ once: true }}
                 style={{ left: item.x, top: item.y }}
-                className={`group absolute -translate-x-1/2 -translate-y-1/2 cursor-default ${
+                className={`group absolute -translate-x-1/2 -translate-y-1/2 ${
                   isCenter ? "z-20" : "z-10"
                 }`}
               >
                 {isCenter ? (
-                  <div className="relative flex h-[150px] w-[150px] items-center justify-center rounded-full border border-[#0D2444]/15 bg-white/60 text-center shadow-[0_22px_70px_rgba(13,36,68,0.16)] backdrop-blur-2xl">
+                  <Link
+                    href={item.link}
+                    className="relative flex h-[150px] w-[150px] items-center justify-center rounded-full border border-[#0D2444]/15 bg-white/60 text-center shadow-[0_22px_70px_rgba(13,36,68,0.16)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1 hover:border-[#6288B9]/55 hover:bg-white/75"
+                  >
                     <div className="absolute inset-2.5 rounded-full border border-[#6288B9]/35" />
 
                     <h3
@@ -148,9 +201,12 @@ export function IndustriesWeServe() {
                     >
                       {item.title}
                     </h3>
-                  </div>
+                  </Link>
                 ) : (
-                  <div className="relative flex items-center gap-2.5">
+                  <Link
+                    href={item.link}
+                    className="relative flex items-center gap-2.5"
+                  >
                     <span className="h-2 w-2 rounded-full bg-[#0D2444] shadow-[0_0_18px_rgba(13,36,68,0.45)] transition-all duration-500 group-hover:scale-[1.7] group-hover:bg-[#6288B9]" />
 
                     <h3
@@ -167,7 +223,7 @@ export function IndustriesWeServe() {
                     </h3>
 
                     <span className="absolute -bottom-2 left-5 h-px w-0 bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#6288B9] transition-all duration-500 group-hover:w-full" />
-                  </div>
+                  </Link>
                 )}
               </motion.div>
             );
@@ -183,16 +239,17 @@ export function IndustriesWeServe() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#0D2444]" />
+              <Link href={item.link} className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#0D2444]" />
 
-              <span
-                className="bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#6288B9] bg-clip-text text-[21px] font-semibold leading-none tracking-[-0.05em] text-transparent"
-                style={serifFont}
-              >
-                {item.title}
-              </span>
+                <span
+                  className="bg-gradient-to-r from-[#06172D] via-[#0D2444] to-[#6288B9] bg-clip-text text-[21px] font-semibold leading-none tracking-[-0.05em] text-transparent"
+                  style={serifFont}
+                >
+                  {item.title}
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>

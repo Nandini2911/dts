@@ -1,6 +1,8 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   BadgeCheck,
   BriefcaseBusiness,
@@ -22,40 +24,124 @@ import {
   Wallet,
 } from "lucide-react";
 
+const headingLinkClass =
+  "inline-block underline decoration-[#315E91]/45 underline-offset-8 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-[#0D2444]";
+
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
+
+type UseCaseItem = {
+  title: ReactNode;
+  titleText: string;
+  desc: ReactNode;
+  icon: typeof Hotel;
+  tag: string;
+};
+
 export default function CelebrityUseCasesBookingInfoPremium() {
-  const useCases = [
+  const useCases: UseCaseItem[] = [
     {
-      title: "Luxury Hotel Launch",
-      desc: "Celebrity appearance coordination for hospitality launches, premium guest experiences, media moments, red-carpet entries and social media visibility.",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Luxury Hotel Launch
+        </Link>
+      ),
+      titleText: "Luxury Hotel Launch",
+      desc: (
+        <>
+          Celebrity appearance coordination for hospitality launches, premium
+          guest experiences, media moments,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+            className={textLinkClass}
+          >
+            red-carpet entries
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={textLinkClass}
+          >
+            social media visibility
+          </Link>
+          .
+        </>
+      ),
       icon: Hotel,
       tag: "Hospitality",
     },
     {
-      title: "Fashion Brand Campaign",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Fashion Brand Campaign
+        </Link>
+      ),
+      titleText: "Fashion Brand Campaign",
       desc: "Talent onboarding, campaign scheduling, content planning and influencer coordination for fashion launches, seasonal campaigns and premium brand promotions.",
       icon: Star,
       tag: "Fashion",
     },
     {
-      title: "Corporate Leadership Summit",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Corporate Leadership Summit
+        </Link>
+      ),
+      titleText: "Corporate Leadership Summit",
       desc: "Speaker management, celebrity host coordination, stage flow planning, logistics and on-ground support for business conferences and leadership events.",
       icon: BriefcaseBusiness,
       tag: "Corporate",
     },
     {
-      title: "Restaurant & Nightlife Opening",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Restaurant & Nightlife Opening
+        </Link>
+      ),
+      titleText: "Restaurant & Nightlife Opening",
       desc: "Celebrity and influencer coordination for launch visibility, guest engagement, social media content and PR-driven openings.",
       icon: Utensils,
       tag: "F&B",
     },
     {
-      title: "Product Launch Campaign",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+          className={titleLinkClass}
+        >
+          Product Launch Campaign
+        </Link>
+      ),
+      titleText: "Product Launch Campaign",
       desc: "Celebrity endorsement, event appearance, digital content coordination and media-facing moments for new product introductions.",
       icon: Gift,
       tag: "Launch",
     },
     {
-      title: "Wedding & Private Celebration",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/luxury-event-wedding-planning-mumbai-india-2026"
+          className={titleLinkClass}
+        >
+          Wedding & Private Celebration
+        </Link>
+      ),
+      titleText: "Wedding & Private Celebration",
       desc: "Singer, performer, celebrity guest, host or entertainer coordination for luxury weddings, sangeet nights, receptions and private events.",
       icon: Music2,
       tag: "Private",
@@ -104,10 +190,12 @@ export default function CelebrityUseCasesBookingInfoPremium() {
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
-            Celebrity Management{" "}
-            <span className="bg-gradient-to-r from-[#8ABDF0] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
-              Use Cases
-            </span>
+            
+              Celebrity Management{" "}
+              <span className="bg-gradient-to-r from-[#8ABDF0] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
+                Use Cases
+              </span>
+          
           </h2>
 
           <p className="mx-auto mt-6 max-w-[760px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[17px]">
@@ -124,7 +212,7 @@ export default function CelebrityUseCasesBookingInfoPremium() {
 
             return (
               <motion.div
-                key={item.title}
+                key={item.titleText}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.18 }}
@@ -133,7 +221,7 @@ export default function CelebrityUseCasesBookingInfoPremium() {
                   delay: index * 0.06,
                   ease: "easeOut",
                 }}
-                className={`group relative overflow-hidden rounded-[36px] border border-white/75 bg-white/62 p-6 shadow-[0_24px_80px_rgba(13,36,68,0.09)] backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_100px_rgba(13,36,68,0.16)] sm:p-7 ${
+                className={`group relative overflow-hidden rounded-[36px] border border-white/75 bg-white/62 p-6 shadow-[0_24px_80px_rgba(13,36,68,0.09)] backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-[0_34px_100px_rgba(13,36,68,0.16)] sm:p-7 ${
                   index === 0 || index === 5
                     ? "lg:col-span-6"
                     : "lg:col-span-3"
@@ -148,7 +236,7 @@ export default function CelebrityUseCasesBookingInfoPremium() {
                       {item.tag}
                     </span>
 
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0D2444] text-white shadow-[0_16px_42px_rgba(13,36,68,0.22)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#8ABDF0] group-hover:text-[#0D2444]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0D2444] text-white shadow-[0_16px_42px_rgba(13,36,68,0.22)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:bg-[#8ABDF0] group-hover:text-[#0D2444]">
                       <Icon className="h-5 w-5" />
                     </div>
                   </div>
@@ -235,13 +323,13 @@ export default function CelebrityUseCasesBookingInfoPremium() {
                         delay: index * 0.03,
                         ease: "easeOut",
                       }}
-                      className="group flex items-center gap-4 rounded-[24px] border border-white/10 bg-white/[0.08] p-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_22px_60px_rgba(0,0,0,0.18)]"
+                      className="group flex items-center gap-4 rounded-[24px] border border-white/10 bg-white/[0.08] p-4 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white hover:shadow-[0_22px_60px_rgba(0,0,0,0.18)]"
                     >
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#8ABDF0] text-[#0D2444] transition-all duration-300 group-hover:bg-[#0D2444] group-hover:text-white">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#8ABDF0] text-[#0D2444] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-[#0D2444] group-hover:text-white">
                         <Icon className="h-5 w-5" />
                       </div>
 
-                      <p className="text-[12px] font-black uppercase leading-[1.45] tracking-[0.11em] text-white/82 transition-colors duration-300 group-hover:text-[#0D2444]">
+                      <p className="text-[12px] font-black uppercase leading-[1.45] tracking-[0.11em] text-white/82 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-[#0D2444]">
                         {item.title}
                       </p>
                     </motion.div>

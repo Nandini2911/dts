@@ -1,6 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-white underline underline-offset-4 hover:text-[#C7D7EC]";
+
+const tags = [
+  {
+    title: "Strategic Clarity",
+    href: "",
+  },
+  {
+    title: "Emotional Storytelling",
+    href: "",
+  },
+  {
+    title: "Luxury Positioning",
+    href: "https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india",
+  },
+  {
+    title: "Modern Brand Identity",
+    href: "https://www.dtsworld.in/about",
+  },
+];
 
 export default function WhatWeBelieve() {
   return (
@@ -84,9 +107,7 @@ export default function WhatWeBelieve() {
                 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
             }}
           >
-            <span className="text-white">
-              Building brands
-            </span>
+            <span className="text-white">Building brands</span>
 
             <br />
 
@@ -103,10 +124,7 @@ export default function WhatWeBelieve() {
               with clarity,
             </span>
 
-            <span className="text-white">
-              {" "}
-              emotion &
-            </span>
+            <span className="text-white"> emotion &</span>
 
             <span
               className="
@@ -208,8 +226,21 @@ export default function WhatWeBelieve() {
                     advertising —
                     <span className="text-white font-black">
                       {" "}
-                      they are built through perception, consistency, SEO
-                      visibility and emotional connection.
+                      they are built through perception, consistency,{" "}
+                      <Link
+                        href="https://www.dtsworld.in/blog/what-is-seo-beginners-guide-search-engine-optimization"
+                        className={linkClass}
+                      >
+                        SEO visibility
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="https://www.dtsworld.in/about"
+                        className={linkClass}
+                      >
+                        emotional connection
+                      </Link>
+                      .
                     </span>
                   </p>
 
@@ -223,11 +254,50 @@ export default function WhatWeBelieve() {
                       max-w-[680px]
                     "
                   >
-                    At Double Trouble Studio, brand strategy, storytelling,
-                    public relations, digital marketing, website development,
-                    visual systems and campaign execution work together to
-                    create experiences that feel refined, memorable and
-                    culturally relevant across every platform.
+                    At Double Trouble Studio,{" "}
+                    <Link
+                      href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+                      className={linkClass}
+                    >
+                      brand strategy
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="https://www.dtsworld.in/about"
+                      className={linkClass}
+                    >
+                      storytelling
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="https://www.dtsworld.in/services/pr-media-marketing"
+                      className={linkClass}
+                    >
+                      public relations
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="https://www.dtsworld.in/services/pr-media-marketing"
+                      className={linkClass}
+                    >
+                      digital marketing
+                    </Link>
+                    ,{" "}
+                    <Link
+                      href="https://www.dtsworld.in/services/web-development-marketing"
+                      className={linkClass}
+                    >
+                      website development
+                    </Link>
+                    , visual systems and{" "}
+                    <Link
+                      href="https://www.dtsworld.in/services/pr-media-marketing"
+                      className={linkClass}
+                    >
+                      campaign execution
+                    </Link>{" "}
+                    work together to create experiences that feel refined,
+                    memorable and culturally relevant across every platform.
                   </p>
                 </div>
 
@@ -288,14 +358,9 @@ export default function WhatWeBelieve() {
 
               {/* TAGS */}
               <div className="flex flex-wrap gap-3 mt-8">
-                {[
-                  "Strategic Clarity",
-                  "Emotional Storytelling",
-                  "Luxury Positioning",
-                  "Modern Brand Identity",
-                ].map((item) => (
+                {tags.map((item) => (
                   <div
-                    key={item}
+                    key={item.title}
                     className="
                       px-4
                       py-2.5
@@ -310,7 +375,13 @@ export default function WhatWeBelieve() {
                       shadow-[0_8px_20px_rgba(0,0,0,0.08)]
                     "
                   >
-                    {item}
+                    {item.href ? (
+                      <Link href={item.href} className={linkClass}>
+                        {item.title}
+                      </Link>
+                    ) : (
+                      item.title
+                    )}
                   </div>
                 ))}
               </div>

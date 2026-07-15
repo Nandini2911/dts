@@ -23,10 +23,7 @@ const navigationLinks = [
     label: "Home",
     href: "/",
   },
-  {
-    label: "Services",
-    href: "/guest-management",
-  },
+ 
   {
     label: "Projects",
     href: "/work",

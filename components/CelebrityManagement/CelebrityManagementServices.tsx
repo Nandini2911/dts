@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   BriefcaseBusiness,
   CalendarCheck,
@@ -17,67 +18,142 @@ import {
   UsersRound,
 } from "lucide-react";
 
+const titleLinkClass =
+  "relative z-20 inline-block text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
 export default function CelebrityManagementServices() {
   const services = [
     {
       number: "01",
-      title: "Celebrity Booking & Talent Acquisition",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact"
+          className={titleLinkClass}
+        >
+          Celebrity Booking & Talent Acquisition
+        </Link>
+      ),
+      titleText: "Celebrity Booking & Talent Acquisition",
       desc: "We help brands, event organizers and businesses connect with suitable celebrities, actors, performers, public figures, speakers and digital personalities based on campaign goals, audience profile, event type and budget.",
       icon: Star,
       className: "lg:col-span-2",
     },
     {
       number: "02",
-      title: "Bollywood Celebrity Booking",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/how-to-source-approach-celebrities-agencies-direct-contact"
+          className={titleLinkClass}
+        >
+          Bollywood Celebrity Booking
+        </Link>
+      ),
+      titleText: "Bollywood Celebrity Booking",
       desc: "We coordinate Bollywood celebrity appearances for brand campaigns, product launches, corporate events, luxury experiences, private celebrations, hospitality openings and promotional activities, subject to availability and event requirements.",
       icon: Film,
       className: "",
     },
     {
       number: "03",
-      title: "Celebrity Endorsement Campaigns",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+          className={titleLinkClass}
+        >
+          Celebrity Endorsement Campaigns
+        </Link>
+      ),
+      titleText: "Celebrity Endorsement Campaigns",
       desc: "We manage celebrity endorsement partnerships for advertising campaigns, brand promotions, digital content, product launches, brand ambassador programs and integrated marketing campaigns.",
       icon: Megaphone,
       className: "",
     },
     {
       number: "04",
-      title: "Celebrity Appearance Management",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/managing-celebrity-appearances-logistics-security-coordination"
+          className={titleLinkClass}
+        >
+          Celebrity Appearance Management
+        </Link>
+      ),
+      titleText: "Celebrity Appearance Management",
       desc: "We coordinate celebrity appearances for launches, conferences, private events, award ceremonies, corporate functions, luxury events, weddings and hospitality experiences, including arrival, stage flow, media moments and departure planning.",
       icon: CalendarCheck,
       className: "lg:col-span-2",
     },
     {
       number: "05",
-      title: "Influencer & Creator Collaborations",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Influencer & Creator Collaborations
+        </Link>
+      ),
+      titleText: "Influencer & Creator Collaborations",
       desc: "We help brands collaborate with influencers, content creators and digital personalities for targeted audience engagement across Instagram, YouTube, short-form video, branded content and social media campaigns.",
       icon: Share2,
       className: "lg:col-span-2",
     },
     {
       number: "06",
-      title: "Corporate Event Talent Management",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Corporate Event Talent Management
+        </Link>
+      ),
+      titleText: "Corporate Event Talent Management",
       desc: "We arrange celebrity hosts, anchors, keynote speakers, moderators, performers, comedians, singers, business leaders and motivational speakers for conferences, summits, leadership events and corporate gatherings.",
       icon: BriefcaseBusiness,
       className: "",
     },
     {
       number: "07",
-      title: "Hospitality & Luxury Brand Activations",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/pr-media-marketing"
+          className={titleLinkClass}
+        >
+          Hospitality & Luxury Brand Activations
+        </Link>
+      ),
+      titleText: "Hospitality & Luxury Brand Activations",
       desc: "We manage celebrity and influencer appearances for hotels, restaurants, luxury brands, destination experiences, private previews, premium launches and curated guest experiences.",
       icon: Crown,
       className: "",
     },
     {
       number: "08",
-      title: "Celebrity Host & Anchor Booking",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/celebrity-management-in-india-guide"
+          className={titleLinkClass}
+        >
+          Celebrity Host & Anchor Booking
+        </Link>
+      ),
+      titleText: "Celebrity Host & Anchor Booking",
       desc: "We coordinate celebrity hosts, emcees, anchors and presenters for award nights, corporate events, conferences, product launches, fashion shows and luxury experiences.",
       icon: Mic2,
       className: "lg:col-span-2",
     },
     {
       number: "09",
-      title: "Singer & Performer Booking",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/services/events-weddings"
+          className={titleLinkClass}
+        >
+          Singer & Performer Booking
+        </Link>
+      ),
+      titleText: "Singer & Performer Booking",
       desc: "We help brands and event planners book singers, musicians, performers, comedians and entertainment talent for corporate events, weddings, festivals, private celebrations and large-format experiences.",
       icon: Music2,
       className: "",
@@ -85,6 +161,7 @@ export default function CelebrityManagementServices() {
     {
       number: "10",
       title: "Sports Personality Booking",
+      titleText: "Sports Personality Booking",
       desc: "We coordinate sports personalities and athletes for brand campaigns, sports events, corporate interactions, motivational sessions, product launches and promotional appearances.",
       icon: Trophy,
       className: "",
@@ -92,13 +169,22 @@ export default function CelebrityManagementServices() {
     {
       number: "11",
       title: "Public Figure & Speaker Management",
+      titleText: "Public Figure & Speaker Management",
       desc: "We manage industry experts, motivational speakers, business leaders, thought leaders and public personalities for business events, leadership summits and knowledge-led experiences.",
       icon: UsersRound,
       className: "",
     },
     {
       number: "12",
-      title: "Brand Ambassador Programs",
+      title: (
+        <Link
+          href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+          className={titleLinkClass}
+        >
+          Brand Ambassador Programs
+        </Link>
+      ),
+      titleText: "Brand Ambassador Programs",
       desc: "We help businesses develop long-term talent partnerships aligned with brand identity, campaign objectives, audience relevance and commercial goals.",
       icon: Handshake,
       className: "lg:col-span-2",
@@ -162,7 +248,7 @@ export default function CelebrityManagementServices() {
 
             return (
               <motion.div
-                key={service.number}
+                key={service.titleText}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.18 }}
@@ -171,22 +257,22 @@ export default function CelebrityManagementServices() {
                   delay: index * 0.04,
                   ease: "easeOut",
                 }}
-                className={`group relative overflow-hidden rounded-[30px] border border-[#DCE6F2] bg-white/85 p-6 shadow-[0_18px_55px_rgba(13,36,68,0.07)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#8ABDF0] hover:shadow-[0_30px_85px_rgba(13,36,68,0.14)] ${service.className}`}
+                className={`group relative overflow-hidden rounded-[30px] border border-[#DCE6F2] bg-white/85 p-6 shadow-[0_18px_55px_rgba(13,36,68,0.07)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-[#8ABDF0] hover:shadow-[0_30px_85px_rgba(13,36,68,0.14)] ${service.className}`}
               >
-                {/* HOVER BACKGROUND */}
-                <div className="absolute inset-0 translate-y-full bg-gradient-to-br from-[#0D2444] via-[#173B66] to-[#6288B9] transition-transform duration-500 group-hover:translate-y-0" />
+                {/* SMOOTH HOVER BACKGROUND */}
+                <div className="absolute inset-0 origin-bottom scale-y-0 bg-gradient-to-br from-[#0D2444] via-[#173B66] to-[#6288B9] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100" />
 
                 {/* TOP DECOR */}
-                <div className="absolute right-[-70px] top-[-70px] h-[170px] w-[170px] rounded-full bg-[#8ABDF0]/20 blur-2xl transition-all duration-500 group-hover:bg-white/15" />
+                <div className="absolute right-[-70px] top-[-70px] h-[170px] w-[170px] rounded-full bg-[#8ABDF0]/20 blur-2xl transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-white/15" />
 
                 <div className="relative z-10">
                   <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F0F7FF] text-[#0D2444] transition-all duration-300 group-hover:bg-white group-hover:text-[#0D2444]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F0F7FF] text-[#0D2444] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:bg-white group-hover:text-[#0D2444]">
                       <Icon className="h-5 w-5" />
                     </div>
 
                     <span
-                      className="text-[42px] font-semibold leading-none tracking-[-0.08em] text-[#8ABDF0]/70 transition-colors duration-300 group-hover:text-white/30"
+                      className="text-[42px] font-semibold leading-none tracking-[-0.08em] text-[#8ABDF0]/70 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white/30"
                       style={{
                         fontFamily:
                           'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -197,7 +283,7 @@ export default function CelebrityManagementServices() {
                   </div>
 
                   <h3
-                    className="mt-7 max-w-[520px] text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#0D2444] transition-colors duration-300 group-hover:text-white md:text-[26px]"
+                    className="mt-7 max-w-[520px] text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#0D2444] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white md:text-[26px]"
                     style={{
                       fontFamily:
                         'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -206,7 +292,7 @@ export default function CelebrityManagementServices() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-5 max-w-[620px] text-[14px] font-medium leading-[1.85] text-slate-600 transition-colors duration-300 group-hover:text-white/82 md:text-[15px]">
+                  <p className="mt-5 max-w-[620px] text-[14px] font-medium leading-[1.85] text-slate-600 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-white/82 md:text-[15px]">
                     {service.desc}
                   </p>
                 </div>

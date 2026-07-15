@@ -1,6 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
 
 export default function GuestManagementHero() {
   return (
@@ -30,15 +34,13 @@ export default function GuestManagementHero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1 }}
-              className="mt-7 max-w-[820px] text-[36px] font-semibold leading-[1.05] tracking-[-0.055em] sm:text-[42px] md:text-[34px] lg:text-[44px] "
+              className="mt-7 max-w-[820px] text-[36px] font-semibold leading-[1.05] tracking-[-0.055em] sm:text-[42px] md:text-[34px] lg:text-[44px]"
               style={{
                 fontFamily:
                   'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
               }}
             >
-              <span className="block text-[#0D2444]">
-                Guest Management
-              </span>
+              <span className="block text-[#0D2444]">Guest Management</span>
 
               <span className="block">
                 <span className="bg-gradient-to-r from-[#6288B9] via-[#8FA9C8] to-[#0D2444] bg-clip-text text-transparent">
@@ -61,10 +63,85 @@ export default function GuestManagementHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 max-w-[720px] text-[14px] font-medium leading-[1.8] text-slate-600 sm:text-[15px] md:text-[16px] lg:text-[17px]"
             >
-              Guest Management Services In Mumbai & Across India
-              <br/>
-
-Professional Guest Management Services In Mumbai Including RSVP Management, Guest List Management, Event Registration, VIP Guest Coordination, Check-In Management And Access Control For Weddings, Corporate Events, Celebrity Events And Brand Launches Across India.
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/mumbai"
+                className={linkClass}
+              >
+                Guest Management Services In Mumbai
+              </Link>{" "}
+              & Across India
+              <br />
+              Professional Guest Management Services In Mumbai Including{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/event-rsvp-management"
+                className={linkClass}
+              >
+                RSVP Management
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list"
+                className={linkClass}
+              >
+                Guest List Management
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                className={linkClass}
+              >
+                Event Registration
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/celebrity-management"
+                className={linkClass}
+              >
+                VIP Guest Coordination
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
+                className={linkClass}
+              >
+                Check-In Management
+              </Link>{" "}
+              And{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/contactless-check-in-systems-high-end-events"
+                className={linkClass}
+              >
+                Access Control
+              </Link>{" "}
+              For{" "}
+              <Link
+                href="https://www.dtsworld.in/services/events-weddings"
+                className={linkClass}
+              >
+                Weddings
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/events-weddings"
+                className={linkClass}
+              >
+                Corporate Events
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/celebrity-management"
+                className={linkClass}
+              >
+                Celebrity Events
+              </Link>{" "}
+              And{" "}
+              <Link
+                href="https://www.dtsworld.in/services/pr-media-marketing"
+                className={linkClass}
+              >
+                Brand Launches
+              </Link>{" "}
+              Across India.
             </motion.p>
 
             <motion.div
@@ -73,22 +150,22 @@ Professional Guest Management Services In Mumbai Including RSVP Management, Gues
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:mt-10"
             >
-              <a
-                href="/contact"
+              <Link
+                href="https://www.dtsworld.in/contact"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-[16px] bg-gradient-to-r from-[#0D2444] to-[#6288B9] px-6 py-4 text-[14px] font-bold text-white shadow-[0_18px_45px_rgba(13,36,68,0.25)] transition-all duration-300 hover:-translate-y-1 sm:w-auto sm:rounded-[18px] sm:px-7 sm:text-[15px]"
               >
                 Start A Project
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </Link>
 
-              <a
-                href="/contact"
+              <Link
+                href="https://www.dtsworld.in/contact"
                 className="inline-flex w-full items-center justify-center rounded-[16px] border border-[#D5DFEC] bg-white px-6 py-4 text-[14px] font-bold text-[#0D2444] shadow-[0_14px_34px_rgba(13,36,68,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#6288B9] sm:w-auto sm:rounded-[18px] sm:px-7 sm:text-[15px]"
               >
                 Discuss Your Event
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div

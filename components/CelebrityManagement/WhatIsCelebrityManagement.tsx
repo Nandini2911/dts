@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   BadgeCheck,
   CalendarCheck,
@@ -9,6 +10,12 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+
+const whiteLinkClass =
+  "font-medium text-white underline underline-offset-4 transition-colors duration-300 hover:text-[#B7D9FF]";
+
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
 
 export default function WhatIsCelebrityManagement() {
   const processItems = [
@@ -94,11 +101,49 @@ export default function WhatIsCelebrityManagement() {
               </div>
 
               <p className="text-[17px] font-medium leading-[1.95] text-white/88 md:text-[19px]">
-                Celebrity management is the end-to-end process of identifying,
-                booking and coordinating celebrities or public personalities for
-                events, brand campaigns, endorsements, corporate functions,
-                hospitality launches, luxury experiences and promotional
-                appearances.
+                <Link
+                  href="https://www.dtsworld.in/blog/celebrity-management-in-india-guide"
+                  className={whiteLinkClass}
+                >
+                  Celebrity management
+                </Link>{" "}
+                is the end-to-end process of identifying, booking and
+                coordinating celebrities or public personalities for{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={whiteLinkClass}
+                >
+                  events
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={whiteLinkClass}
+                >
+                  brand campaigns
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+                  className={whiteLinkClass}
+                >
+                  endorsements
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={whiteLinkClass}
+                >
+                  corporate functions
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={whiteLinkClass}
+                >
+                  hospitality launches
+                </Link>
+                , luxury experiences and promotional appearances.
               </p>
             </div>
           </motion.div>
@@ -112,9 +157,35 @@ export default function WhatIsCelebrityManagement() {
             className="rounded-[36px] border border-[#DCE6F2] bg-white/88 p-7 shadow-[0_22px_70px_rgba(13,36,68,0.08)] backdrop-blur-xl sm:p-9 lg:p-10"
           >
             <p className="text-[15px] font-medium leading-[1.95] text-slate-600 md:text-[17px]">
-              It includes talent shortlisting, availability checks, fee
-              negotiation, contracts, usage rights, scheduling, travel planning,
-              hospitality coordination, backstage management, media interaction
+              It includes talent shortlisting, availability checks,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+                className={textLinkClass}
+              >
+                fee negotiation
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+                className={textLinkClass}
+              >
+                contracts
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/negotiating-celebrity-fees-riders-contracts"
+                className={textLinkClass}
+              >
+                usage rights
+              </Link>
+              , scheduling, travel planning, hospitality coordination, backstage
+              management,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/pr-media-marketing"
+                className={textLinkClass}
+              >
+                media interaction
+              </Link>{" "}
               and on-ground execution.
             </p>
 

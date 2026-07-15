@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const serifFont = {
   fontFamily: 'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
@@ -9,25 +10,76 @@ const serifFont = {
 const badgeClass =
   "inline-flex rounded-full border border-white/20 bg-gradient-to-r from-[#0D2444] via-[#16365F] to-[#1F4B7A] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_40px_rgba(13,36,68,0.25)] backdrop-blur-xl sm:px-5 sm:py-3 sm:text-[11px] sm:tracking-[0.24em]";
 
+const textLinkClass =
+  "underline underline-offset-4 decoration-[#6288B9]/35 transition-colors duration-300 hover:text-[#315E91] hover:decoration-[#315E91]";
+
+const cityLinkClass =
+  "rounded-full border border-[#DCE6F2] bg-[#F8FBFF] px-4 py-2 text-[12px] font-bold text-[#0D2444] underline underline-offset-4 shadow-[0_8px_24px_rgba(13,36,68,0.05)] transition-colors duration-300 hover:text-[#315E91] sm:text-[13px]";
+
+const eventLinkClass =
+  "text-[13px] font-bold text-white underline underline-offset-4 transition-colors duration-300 hover:text-[#D9E8F7] sm:text-[14px]";
+
 export default function LocalSeoSection() {
   const cities = [
-    "Mumbai",
-    "Delhi",
-    "Bangalore",
-    "Hyderabad",
-    "Pune",
-    "Ahmedabad",
-    "Goa",
-    "Across India",
+    {
+      title: "Mumbai",
+      href: "https://www.dtsworld.in/services/guest-management/mumbai",
+    },
+    {
+      title: "Delhi",
+      href: "https://www.dtsworld.in/services/guest-management/delhi",
+    },
+    {
+      title: "Bangalore",
+      href: "https://www.dtsworld.in/services/guest-management/bangalore",
+    },
+    {
+      title: "Hyderabad",
+      href: "https://www.dtsworld.in/services/guest-management/hyderabad",
+    },
+    {
+      title: "Pune",
+      href: "https://www.dtsworld.in/services/guest-management/pune",
+    },
+    {
+      title: "Ahmedabad",
+      href: "https://www.dtsworld.in/services/guest-management/ahmedabad",
+    },
+    {
+      title: "Goa",
+      href: "https://www.dtsworld.in/services/guest-management/goa",
+    },
+    {
+      title: "Across India",
+      href: "https://www.dtsworld.in/locations",
+    },
   ];
 
   const events = [
-    "Weddings",
-    "Corporate Events",
-    "Brand Launches",
-    "Celebrity Events",
-    "Private Gatherings",
-    "Investor Events",
+    {
+      title: "Weddings",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Corporate Events",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Brand Launches",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
+    },
+    {
+      title: "Celebrity Events",
+      href: "https://www.dtsworld.in/services/celebrity-management",
+    },
+    {
+      title: "Private Gatherings",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Investor Events",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
   ];
 
   return (
@@ -49,19 +101,78 @@ export default function LocalSeoSection() {
             <span className={badgeClass}>Local SEO Coverage</span>
 
             <h2
-              className="mt-6 max-w-[760px] text-[34px] font-semibold leading-[0.98] tracking-[-0.055em] text-[#0D2444] sm:text-[42px] md:text-[52px] lg:text-[60px]"
+              className="underline underline-offset-4 decoration-[#6288B9]/35 transition-colors duration-300 hover:text-[#315E91] hover:decoration-[#315E91]"
               style={serifFont}
             >
-              Guest Management Services In{" "}
+             
+                Guest Management Services In Mumbai
+              {" "}
               <span className="bg-gradient-to-r from-[#6288B9] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
-                Mumbai & Across India
+                &{" "}
+                
+                  Across India
+            
               </span>
             </h2>
 
             <p className="mt-6 max-w-[760px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[17px]">
-              Double Trouble Studio provides professional guest management
-              services in Mumbai, Delhi, Bangalore, Hyderabad, Pune, Ahmedabad,
-              Goa and across India.
+              Double Trouble Studio provides professional{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/mumbai"
+                className={textLinkClass}
+              >
+                guest management services in Mumbai
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/delhi"
+                className={textLinkClass}
+              >
+                Delhi
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/bangalore"
+                className={textLinkClass}
+              >
+                Bangalore
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/hyderabad"
+                className={textLinkClass}
+              >
+                Hyderabad
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/pune"
+                className={textLinkClass}
+              >
+                Pune
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/ahmedabad"
+                className={textLinkClass}
+              >
+                Ahmedabad
+              </Link>
+              ,{" "}
+              <Link
+                href="https://www.dtsworld.in/services/guest-management/goa"
+                className={textLinkClass}
+              >
+                Goa
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="https://www.dtsworld.in/locations"
+                className={textLinkClass}
+              >
+                across India
+              </Link>
+              .
             </p>
 
             <p className="mt-5 max-w-[760px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[17px]">
@@ -92,12 +203,13 @@ export default function LocalSeoSection() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   {cities.map((city) => (
-                    <span
-                      key={city}
-                      className="rounded-full border border-[#DCE6F2] bg-[#F8FBFF] px-4 py-2 text-[12px] font-bold text-[#0D2444] shadow-[0_8px_24px_rgba(13,36,68,0.05)] sm:text-[13px]"
+                    <Link
+                      key={city.title}
+                      href={city.href}
+                      className={cityLinkClass}
                     >
-                      {city}
-                    </span>
+                      {city.title}
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -113,12 +225,12 @@ export default function LocalSeoSection() {
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {events.map((event) => (
                     <div
-                      key={event}
+                      key={event.title}
                       className="rounded-[18px] border border-white/15 bg-white/10 px-4 py-4 backdrop-blur-xl"
                     >
-                      <p className="text-[13px] font-bold text-white sm:text-[14px]">
-                        {event}
-                      </p>
+                      <Link href={event.href} className={eventLinkClass}>
+                        {event.title}
+                      </Link>
                     </div>
                   ))}
                 </div>

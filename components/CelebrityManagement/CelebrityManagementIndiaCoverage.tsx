@@ -1,25 +1,99 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { MapPin, Navigation, Sparkles } from "lucide-react";
+
+const headingLinkClass =
+  "inline-block underline decoration-[#315E91]/45 underline-offset-8 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-[#0D2444]";
+
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
+
+const chipLinkClass =
+  "rounded-full border border-[#DCE6F2] bg-white/75 px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] text-[#173B66] underline decoration-current/35 underline-offset-4 shadow-[0_10px_28px_rgba(13,36,68,0.05)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:text-[#315E91] hover:decoration-current/80";
+
+const cityLinkClass =
+  "text-[12px] font-bold uppercase tracking-[0.12em] text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
 
 export default function CelebrityManagementIndiaCoverage() {
   const cities = [
-    "Mumbai",
-    "Delhi NCR",
-    "Bangalore",
-    "Hyderabad",
-    "Pune",
-    "Ahmedabad",
-    "Jaipur",
-    "Goa",
-    "Chennai",
-    "Kolkata",
-    "Chandigarh",
-    "Ludhiana",
-    "Amritsar",
-    "Udaipur",
-    "Lucknow",
+    {
+      title: "Mumbai",
+      href: "https://www.dtsworld.in/services/celebrity-management/mumbai",
+    },
+    {
+      title: "Delhi NCR",
+    },
+    {
+      title: "Bangalore",
+      href: "https://www.dtsworld.in/services/celebrity-management/bangalore",
+    },
+    {
+      title: "Hyderabad",
+      href: "https://www.dtsworld.in/services/celebrity-management/hyderabad",
+    },
+    {
+      title: "Pune",
+      href: "https://www.dtsworld.in/services/celebrity-management/pune",
+    },
+    {
+      title: "Ahmedabad",
+      href: "https://www.dtsworld.in/services/celebrity-management/ahmedabad",
+    },
+    {
+      title: "Jaipur",
+      href: "https://www.dtsworld.in/services/celebrity-management/jaipur",
+    },
+    {
+      title: "Goa",
+      href: "https://www.dtsworld.in/services/celebrity-management/goa",
+    },
+    {
+      title: "Chennai",
+      href: "https://www.dtsworld.in/services/celebrity-management/chennai",
+    },
+    {
+      title: "Kolkata",
+      href: "https://www.dtsworld.in/services/celebrity-management/kolkata",
+    },
+    {
+      title: "Chandigarh",
+      href: "https://www.dtsworld.in/services/celebrity-management/chandigarh",
+    },
+    {
+      title: "Ludhiana",
+    },
+    {
+      title: "Amritsar",
+    },
+    {
+      title: "Udaipur",
+      href: "https://www.dtsworld.in/services/celebrity-management/udaipur",
+    },
+    {
+      title: "Lucknow",
+      href: "https://www.dtsworld.in/services/celebrity-management/lucknow",
+    },
+  ];
+
+  const serviceChips = [
+    {
+      title: "Brand Campaigns",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
+    },
+    {
+      title: "Luxury Events",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Corporate Functions",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    {
+      title: "Hospitality Activations",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
+    },
   ];
 
   return (
@@ -51,10 +125,12 @@ export default function CelebrityManagementIndiaCoverage() {
                   'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif',
               }}
             >
-              Celebrity Management & Celebrity Booking Services{" "}
-              <span className="bg-gradient-to-r from-[#8ABDF0] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
-                Across India
-              </span>
+            
+                Celebrity Management & Celebrity Booking Services{" "}
+                <span className="bg-gradient-to-r from-[#8ABDF0] via-[#315E91] to-[#0D2444] bg-clip-text text-transparent">
+                  Across India
+                </span>
+          
             </h2>
 
             <div className="mt-7 max-w-[720px] space-y-5 text-[15px] font-medium leading-[1.9] text-slate-600 md:text-[17px]">
@@ -65,9 +141,49 @@ export default function CelebrityManagementIndiaCoverage() {
               </p>
 
               <p>
-                We support brand campaigns, hospitality activations, luxury
-                events, corporate functions, product launches, private
-                celebrations and promotional appearances nationwide.
+                We support{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={textLinkClass}
+                >
+                  brand campaigns
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={textLinkClass}
+                >
+                  hospitality activations
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  luxury events
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  corporate functions
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className={textLinkClass}
+                >
+                  product launches
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/events-weddings"
+                  className={textLinkClass}
+                >
+                  private celebrations
+                </Link>{" "}
+                and promotional appearances nationwide.
               </p>
 
               <p>
@@ -78,18 +194,10 @@ export default function CelebrityManagementIndiaCoverage() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {[
-                "Brand Campaigns",
-                "Luxury Events",
-                "Corporate Functions",
-                "Hospitality Activations",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-[#DCE6F2] bg-white/75 px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] text-[#173B66] shadow-[0_10px_28px_rgba(13,36,68,0.05)] backdrop-blur-xl"
-                >
-                  {item}
-                </span>
+              {serviceChips.map((item) => (
+                <Link key={item.title} href={item.href} className={chipLinkClass}>
+                  {item.title}
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -134,7 +242,7 @@ export default function CelebrityManagementIndiaCoverage() {
               <div className="relative z-10 mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {cities.map((city, index) => (
                   <motion.div
-                    key={city}
+                    key={city.title}
                     initial={{ opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
@@ -143,12 +251,19 @@ export default function CelebrityManagementIndiaCoverage() {
                       delay: index * 0.035,
                       ease: "easeOut",
                     }}
-                    className="group flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.08] px-4 py-3 text-white/82 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0D2444]"
+                    className="group flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.08] px-4 py-3 text-white/82 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:bg-white hover:text-[#0D2444]"
                   >
-                    <MapPin className="h-4 w-4 shrink-0 text-[#8ABDF0] transition-colors duration-300 group-hover:text-[#0D2444]" />
-                    <span className="text-[12px] font-bold uppercase tracking-[0.12em]">
-                      {city}
-                    </span>
+                    <MapPin className="h-4 w-4 shrink-0 text-[#8ABDF0] transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-[#0D2444]" />
+
+                    {city.href ? (
+                      <Link href={city.href} className={cityLinkClass}>
+                        {city.title}
+                      </Link>
+                    ) : (
+                      <span className="text-[12px] font-bold uppercase tracking-[0.12em]">
+                        {city.title}
+                      </span>
+                    )}
                   </motion.div>
                 ))}
               </div>

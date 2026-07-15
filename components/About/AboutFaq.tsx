@@ -2,43 +2,202 @@
 
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import { Plus } from "lucide-react";
 
-export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+const linkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
 
+export default function FaqSection() {
   const faqs = [
     {
       question: "What makes Double Trouble Studio different from other agencies?",
-      answer:
-        "Double Trouble Studio combines brand strategy, storytelling, premium visual direction, PR, digital marketing and website thinking to build brands that feel culturally relevant, emotionally engaging and intentionally designed for long-term growth.",
+      answer: (
+        <>
+          Double Trouble Studio combines{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+            className={linkClass}
+          >
+            brand strategy
+          </Link>
+          ,{" "}
+          <Link href="https://www.dtsworld.in/about" className={linkClass}>
+            storytelling
+          </Link>
+          , premium visual direction,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            PR
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            digital marketing
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={linkClass}
+          >
+            website thinking
+          </Link>{" "}
+          to build brands that feel culturally relevant, emotionally engaging
+          and intentionally designed for{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/creating-luxury-brand-funnel-awareness-to-conversion"
+            className={linkClass}
+          >
+            long-term growth
+          </Link>
+          .
+        </>
+      ),
     },
     {
       question: "What kind of brands do you usually work with?",
-      answer:
-        "We primarily work with hospitality brands, luxury businesses, restaurants, cafés, wedding companies, creators, lifestyle startups, event brands and modern businesses looking for stronger digital presence, premium positioning, SEO visibility and brand authority.",
+      answer: (
+        <>
+          We primarily work with hospitality brands, luxury businesses,
+          restaurants, cafés, wedding companies, creators, lifestyle startups,
+          event brands and modern businesses looking for stronger digital
+          presence, premium positioning,{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/what-is-seo-beginners-guide-search-engine-optimization"
+            className={linkClass}
+          >
+            SEO
+          </Link>{" "}
+          visibility and brand authority.
+        </>
+      ),
     },
     {
       question: "What is the philosophy behind your creative process?",
-      answer:
-        "Our philosophy is built around clarity over chaos — where every creative decision is guided by brand strategy, audience understanding, market positioning, timeless aesthetics, emotional storytelling and intentional execution.",
+      answer: (
+        <>
+          Our philosophy is built around clarity over chaos — where every
+          creative decision is guided by{" "}
+          <Link
+            href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+            className={linkClass}
+          >
+            brand strategy
+          </Link>
+          , audience understanding, market positioning, timeless aesthetics,{" "}
+          <Link href="https://www.dtsworld.in/about" className={linkClass}>
+            storytelling
+          </Link>{" "}
+          and intentional execution.
+        </>
+      ),
     },
     {
       question: "Do you focus only on aesthetics or strategy as well?",
-      answer:
-        "We believe strong brands need both. Along with premium visuals, we focus heavily on brand positioning, storytelling, perception, PR communication, website structure, digital marketing and experience systems that support real business growth.",
+      answer: (
+        <>
+          We believe strong brands need both. Along with premium visuals, we
+          focus heavily on brand positioning, storytelling, perception,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            PR
+          </Link>{" "}
+          communication,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={linkClass}
+          >
+            website design
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/web-development-marketing"
+            className={linkClass}
+          >
+            website development
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            digital marketing
+          </Link>{" "}
+          and experience systems that support real business growth.
+        </>
+      ),
+    },
+    {
+      question: "Which services does Double Trouble Studio offer?",
+      answer: (
+        <>
+          Our services include{" "}
+          <Link
+            href="https://www.dtsworld.in/services/events-weddings"
+            className={linkClass}
+          >
+            event marketing
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/guest-management"
+            className={linkClass}
+          >
+            guest management
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/celebrity-management"
+            className={linkClass}
+          >
+            celebrity management
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/pr-media-marketing"
+            className={linkClass}
+          >
+            influencer marketing
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/ai-video-vfx"
+            className={linkClass}
+          >
+            AI video production
+          </Link>
+          ,{" "}
+          <Link
+            href="https://www.dtsworld.in/services/ai-video-vfx"
+            className={linkClass}
+          >
+            VFX
+          </Link>
+          , digital campaigns, PR campaigns and premium brand storytelling.
+        </>
+      ),
     },
     {
       question: "Can Double Trouble Studio work with brands remotely?",
-      answer:
-        "Yes. We collaborate with clients across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa, India and internationally through structured workflows, creative planning sessions and smooth remote communication systems.",
+      answer: (
+        <>
+          Yes. We collaborate with clients{" "}
+          <Link href="https://www.dtsworld.in/locations" className={linkClass}>
+            across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune,
+            Ahmedabad, Goa and across India
+          </Link>{" "}
+          and internationally through structured workflows, creative planning
+          sessions and smooth remote communication systems.
+        </>
+      ),
     },
   ];
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <section
@@ -57,15 +216,10 @@ export default function FaqSection() {
               inline-flex
               items-center
               gap-3
-
               text-[#6288B9]
-
               uppercase
-
               tracking-[4px]
-
               text-[11px]
-
               font-semibold
             "
             style={{
@@ -74,7 +228,6 @@ export default function FaqSection() {
             }}
           >
             <span className="w-2 h-2 rounded-full bg-[#6288B9]" />
-
             Frequently Asked Questions
           </span>
 
@@ -82,16 +235,11 @@ export default function FaqSection() {
           <h2
             className="
               mt-7
-
               text-[42px]
               md:text-[60px]
-
               leading-[1]
-
               tracking-[-3px]
-
               font-semibold
-
               text-[#071120]
             "
             style={{
@@ -100,7 +248,6 @@ export default function FaqSection() {
             }}
           >
             Answers to common
-
             <span className="block bg-gradient-to-r from-[#0D2444] to-[#6288B9] bg-clip-text text-transparent">
               questions we get
             </span>
@@ -110,155 +257,121 @@ export default function FaqSection() {
           <p
             className="
               mt-8
-
               text-[17px]
-
               leading-9
-
               text-slate-600
             "
           >
             Everything you need to know about working with Double Trouble
-            Studio, our creative process, brand strategy, digital marketing, PR,
-            website development and premium positioning services.
+            Studio, our creative process,{" "}
+            <Link
+              href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+              className={linkClass}
+            >
+              brand strategy
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className={linkClass}
+            >
+              digital marketing
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className={linkClass}
+            >
+              PR
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/web-development-marketing"
+              className={linkClass}
+            >
+              website development
+            </Link>{" "}
+            and premium positioning services.
           </p>
         </div>
 
-        {/* FAQ LIST */}
+        {/* FAQ LIST - ANSWERS ALWAYS VISIBLE */}
         <div className="mt-20 space-y-5">
           {faqs.map((item, index) => {
-            const isOpen = openIndex === index;
-
             return (
               <article
                 key={index}
                 className="
                   group
-
                   rounded-[28px]
-
                   border border-[#DCE6F3]
-
                   bg-white
-
                   p-7
-
                   transition-all
                   duration-500
                   ease-in-out
-
                   hover:border-[#BCD2EE]
                   hover:shadow-[0_10px_40px_rgba(15,23,42,0.05)]
                 "
                 aria-label={item.question}
               >
-                {/* BUTTON */}
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(index)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${index}`}
+                {/* QUESTION */}
+                <div
                   className="
                     w-full
-
                     flex
                     items-center
                     justify-between
-
                     gap-6
-
                     text-left
                   "
                 >
-                  {/* QUESTION */}
                   <h3
                     className="
                       text-[20px]
-
                       leading-[1.5]
-
                       font-semibold
-
                       text-[#071120]
-
                       font-[family:var(--font-sora)]
                     "
                   >
                     {item.question}
                   </h3>
 
-                  {/* ICON */}
                   <div
-                    className={`
+                    className="
                       min-w-[46px]
                       h-[46px]
-
                       rounded-2xl
-
                       flex
                       items-center
                       justify-center
-
-                      transition-all
-                      duration-500
-
-                      ${
-                        isOpen
-                          ? "bg-[#0D2444] rotate-180"
-                          : "bg-[#EEF4FB]"
-                      }
-                    `}
+                      bg-[#EEF4FB]
+                    "
                   >
                     <Plus
-                      className={`
+                      className="
                         w-5
                         h-5
-
-                        transition-all
-                        duration-500
-
-                        ${
-                          isOpen
-                            ? "text-white rotate-45"
-                            : "text-[#0D2444]"
-                        }
-                      `}
+                        text-[#0D2444]
+                      "
                       aria-hidden="true"
                     />
                   </div>
-                </button>
+                </div>
 
-                {/* ANSWER */}
-                <div
-                  id={`faq-answer-${index}`}
-                  className={`
-                    grid
-                    transition-all
-                    duration-500
-                    ease-in-out
-
-                    ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100 mt-6"
-                        : "grid-rows-[0fr] opacity-0"
-                    }
-                  `}
-                >
-                  <div className="overflow-hidden">
-                    <p
-                      className="
-                        text-[15px]
-
-                        leading-8
-
-                        text-slate-600
-
-                        pr-8
-                      "
-                    >
-                      {item.answer}
-                    </p>
-                  </div>
+                {/* ANSWER ALWAYS VISIBLE */}
+                <div className="mt-6">
+                  <p
+                    className="
+                      text-[15px]
+                      leading-8
+                      text-slate-600
+                      pr-8
+                    "
+                  >
+                    {item.answer}
+                  </p>
                 </div>
               </article>
             );

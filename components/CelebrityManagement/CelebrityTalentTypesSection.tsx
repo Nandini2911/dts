@@ -1,30 +1,55 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+
+const tagLinkClass =
+  "relative z-20 inline-flex items-center gap-3 text-inherit underline decoration-current/35 underline-offset-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:decoration-current/80";
+
+const textLinkClass =
+  "font-medium text-[#0D2444] underline underline-offset-4 transition-colors duration-300 hover:text-[#315E91]";
 
 export default function TalentTypesSection() {
   const talentTypes = [
-    "Bollywood Actors",
-    "Regional Film Actors",
-    "OTT Actors",
-    "Television Personalities",
-    "Sports Personalities",
-    "Influencers",
-    "Content Creators",
-    "Fashion Models",
-    "Luxury Lifestyle Creators",
-    "Motivational Speakers",
-    "Business Leaders",
-    "Industry Experts",
-    "Celebrity Chefs",
-    "Musicians & Singers",
-    "Playback Singers",
-    "Stand-Up Comedians",
-    "Anchors & Hosts",
-    "Reality Show Personalities",
-    "Public Figures",
-    "Digital Creators",
+    { title: "Bollywood Actors" },
+    { title: "Regional Film Actors" },
+    { title: "OTT Actors" },
+    { title: "Television Personalities" },
+    {
+      title: "Sports Personalities",
+      href: "https://www.dtsworld.in/blog/celebrity-management-in-india-guide",
+    },
+    {
+      title: "Influencers",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
+    },
+    {
+      title: "Content Creators",
+      href: "https://www.dtsworld.in/services/pr-media-marketing",
+    },
+    { title: "Fashion Models" },
+    { title: "Luxury Lifestyle Creators" },
+    { title: "Motivational Speakers" },
+    { title: "Business Leaders" },
+    { title: "Industry Experts" },
+    { title: "Celebrity Chefs" },
+    {
+      title: "Musicians & Singers",
+      href: "https://www.dtsworld.in/services/events-weddings",
+    },
+    { title: "Playback Singers" },
+    { title: "Stand-Up Comedians" },
+    {
+      title: "Anchors & Hosts",
+      href: "https://www.dtsworld.in/blog/celebrity-management-in-india-guide",
+    },
+    { title: "Reality Show Personalities" },
+    {
+      title: "Public Figures",
+      href: "https://www.dtsworld.in/blog/celebrity-management-in-india-guide",
+    },
+    { title: "Digital Creators" },
   ];
 
   return (
@@ -108,7 +133,7 @@ export default function TalentTypesSection() {
           <div className="relative z-10 flex flex-wrap justify-center gap-3 sm:gap-4">
             {talentTypes.map((item, index) => (
               <motion.div
-                key={item}
+                key={item.title}
                 initial={{ opacity: 0, scale: 0.92, y: 16 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -117,7 +142,7 @@ export default function TalentTypesSection() {
                   delay: index * 0.025,
                   ease: "easeOut",
                 }}
-                className={`group inline-flex items-center gap-3 rounded-full border px-5 py-3 text-[12px] font-black uppercase tracking-[0.12em] shadow-[0_12px_35px_rgba(13,36,68,0.06)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(13,36,68,0.13)] ${
+                className={`group inline-flex items-center gap-3 rounded-full border px-5 py-3 text-[12px] font-black uppercase tracking-[0.12em] shadow-[0_12px_35px_rgba(13,36,68,0.06)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(13,36,68,0.13)] ${
                   index % 5 === 0
                     ? "border-[#0D2444]/15 bg-[#0D2444] text-white hover:bg-[#173B66]"
                     : index % 3 === 0
@@ -126,7 +151,14 @@ export default function TalentTypesSection() {
                 }`}
               >
                 <span className="h-2 w-2 rounded-full bg-current opacity-45" />
-                {item}
+
+                {item.href ? (
+                  <Link href={item.href} className={tagLinkClass}>
+                    {item.title}
+                  </Link>
+                ) : (
+                  item.title
+                )}
               </motion.div>
             ))}
           </div>
@@ -134,9 +166,21 @@ export default function TalentTypesSection() {
           {/* BOTTOM NOTE */}
           <div className="relative z-10 mt-9 border-t border-[#0D2444]/10 pt-6 text-center">
             <p className="mx-auto max-w-[760px] text-[13px] font-medium leading-[1.8] text-slate-600 md:text-[14px]">
-              Every talent recommendation is filtered by audience relevance,
-              event requirement, brand positioning, availability and campaign
-              objective.
+              Every talent recommendation is filtered by{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/celebrity-endorsement-vs-event-appearance-roi"
+                className={textLinkClass}
+              >
+                audience relevance
+              </Link>
+              , event requirement,{" "}
+              <Link
+                href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+                className={textLinkClass}
+              >
+                brand positioning
+              </Link>
+              , availability and campaign objective.
             </p>
           </div>
         </motion.div>

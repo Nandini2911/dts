@@ -121,12 +121,57 @@ export default function AboutHero() {
               font-medium
             "
           >
-            Double Trouble Studio is a Mumbai-based creative agency, branding
-            agency and digital marketing agency building luxury digital
-            experiences, modern storytelling, PR campaigns, website development,
-            AI video production and high-performance brand systems for
-            hospitality, lifestyle, luxury, restaurant and culture-driven brands
-            across India.
+            Double Trouble Studio is a{" "}
+            <Link
+              href="https://www.dtsworld.in/about"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              Mumbai-based creative agency
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/about"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              branding agency
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              digital marketing agency
+            </Link>{" "}
+            building{" "}
+            <Link
+              href="https://www.dtsworld.in/blog/luxury-website-ux-principles-minimalism-speed-emotional-impact"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              luxury digital experiences
+            </Link>
+            , modern storytelling,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/pr-media-marketing"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              PR campaigns
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/web-development-marketing"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              website development
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.dtsworld.in/services/ai-video-vfx"
+              className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+            >
+              AI video production
+            </Link>{" "}
+            and high-performance brand systems for hospitality, lifestyle,
+            luxury, restaurant and culture-driven brands across India.
           </motion.p>
 
           {/* BUTTONS */}
@@ -147,20 +192,20 @@ export default function AboutHero() {
             "
           >
             <Link
-              href="/contact"
+              href="https://www.dtsworld.in/contact"
               aria-label="Start a branding, website, PR or digital marketing project with Double Trouble Studio"
+              className="primary-btn flex items-center gap-2"
             >
-              <button className="primary-btn flex items-center gap-2">
-                Start Project
-                <ArrowRight size={18} aria-hidden="true" />
-              </button>
+              Start Project
+              <ArrowRight size={18} aria-hidden="true" />
             </Link>
 
             <Link
-              href="/work"
+              href="https://www.dtsworld.in/work"
               aria-label="View Double Trouble Studio branding, web development, events, PR and AI video work"
+              className="secondary-btn"
             >
-              <button className="secondary-btn">View Work</button>
+              View Work
             </Link>
           </motion.div>
         </div>
@@ -240,10 +285,42 @@ export default function AboutHero() {
               </motion.h2>
 
               <p className="mt-8 max-w-[620px] text-black leading-9 text-[17px]">
-                Creating timeless digital experiences with premium aesthetics,
-                emotional storytelling, SEO-ready website systems, PR-led brand
-                communication and modern brand architecture designed for
-                ambitious businesses.
+                Creating timeless digital experiences with{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/designing-high-end-luxury-websites"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                >
+                  premium aesthetics
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/about"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                >
+                  emotional storytelling
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/web-development-marketing"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                >
+                  SEO-ready website systems
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://www.dtsworld.in/services/pr-media-marketing"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                >
+                  PR-led brand communication
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="https://www.dtsworld.in/blog/luxury-brand-strategy-roadmap-india"
+                  className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
+                >
+                  modern brand architecture
+                </Link>{" "}
+                designed for ambitious businesses.
               </p>
             </div>
 
