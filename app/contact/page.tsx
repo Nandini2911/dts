@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { permanentRedirect } from "next/navigation";
+
 import ContactFaq from "@/components/Contact/ContactFaq";
 import ContactHero from "@/components/Contact/ContactHero";
 import ContactInfo from "@/components/Contact/ContactInfo";
@@ -8,10 +10,10 @@ import ServicesSEO from "@/components/Contact/ServicesSEO";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+    absolute:
+      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
   },
 
   description:
@@ -42,13 +44,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+    title:
+      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+
     description:
       "Let's create something amazing. Contact Double Trouble Studio for branding, website design, PR, digital marketing, guest management, AI video production and creative solutions across India.",
+
     url: "https://www.dtsworld.in/contact",
     siteName: "Double Trouble Studio",
     locale: "en_IN",
     type: "website",
+
     images: [
       {
         url: "https://www.dtsworld.in/og/contact-og.png",
@@ -61,15 +67,20 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+
+    title:
+      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+
     description:
       "Get in touch with Double Trouble Studio for branding, website design, digital marketing, PR, guest management, AI video production and business growth solutions.",
+
     images: ["https://www.dtsworld.in/twitter/contact-twitter.png"],
   },
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -80,7 +91,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 const contactSchema = {
   "@context": "https://schema.org",
 
@@ -90,11 +100,8 @@ const contactSchema = {
       "@id": "https://www.dtsworld.in/#logo",
 
       url: "https://www.dtsworld.in/logo.png",
-
       contentUrl: "https://www.dtsworld.in/logo.png",
-
       caption: "Double Trouble Studio Logo",
-
       inLanguage: "en-IN",
     },
 
@@ -103,9 +110,7 @@ const contactSchema = {
       "@id": "https://www.dtsworld.in/#organization",
 
       name: "Double Trouble Studio",
-
       legalName: "Double Trouble Studio Pvt. Ltd.",
-
       alternateName: ["DTS", "DTS World"],
 
       url: "https://www.dtsworld.in/",
@@ -121,14 +126,11 @@ const contactSchema = {
       description:
         "Double Trouble Studio is a Mumbai-based creative agency providing branding, website design, website development, digital marketing, public relations, guest management, celebrity management, event planning, wedding management, AI video production and VFX services across India.",
 
-      slogan:
-        "Creative Agency for Brands, Events and Digital Growth",
+      slogan: "Creative Agency for Brands, Events and Digital Growth",
 
       telephone: "+918000006021",
-
       email: "doubletrouble.studio01@gmail.com",
-
-      priceRange: "Custom project pricing",
+      priceRange: "₹₹₹",
 
       address: {
         "@type": "PostalAddress",
@@ -137,27 +139,19 @@ const contactSchema = {
           "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
 
         addressLocality: "Mumbai",
-
         addressRegion: "Maharashtra",
-
         postalCode: "400061",
-
         addressCountry: "IN",
       },
 
       contactPoint: [
         {
           "@type": "ContactPoint",
-
-          "@id":
-            "https://www.dtsworld.in/contact#project-enquiries",
+          "@id": "https://www.dtsworld.in/contact#project-enquiries",
 
           contactType: "project enquiries",
-
           telephone: "+918000006021",
-
           email: "doubletrouble.studio01@gmail.com",
-
           url: "https://www.dtsworld.in/contact",
 
           areaServed: {
@@ -170,16 +164,11 @@ const contactSchema = {
 
         {
           "@type": "ContactPoint",
-
-          "@id":
-            "https://www.dtsworld.in/contact#general-enquiries",
+          "@id": "https://www.dtsworld.in/contact#general-enquiries",
 
           contactType: "customer service",
-
           telephone: "+918000006021",
-
           email: "hellodoubletroublestudio@gmail.com",
-
           url: "https://www.dtsworld.in/contact",
 
           areaServed: {
@@ -205,7 +194,6 @@ const contactSchema = {
           ],
 
           opens: "10:00",
-
           closes: "19:00",
         },
       ],
@@ -215,34 +203,23 @@ const contactSchema = {
           "@type": "Country",
           name: "India",
         },
-
         {
           "@type": "City",
           name: "Mumbai",
         },
-
         {
           "@type": "City",
           name: "Navi Mumbai",
         },
-
         {
           "@type": "City",
           name: "Thane",
         },
-
         {
           "@type": "City",
           name: "Pune",
         },
       ],
-
-      audience: {
-        "@type": "Audience",
-
-        audienceType:
-          "Startups, founders, hospitality brands, restaurants, cafes, luxury businesses, event organizers, creators, corporate brands and growing companies",
-      },
 
       knowsAbout: [
         "Brand Strategy",
@@ -273,8 +250,7 @@ const contactSchema = {
       ],
 
       hasOfferCatalog: {
-        "@id":
-          "https://www.dtsworld.in/contact#services",
+        "@id": "https://www.dtsworld.in/contact#services",
       },
     },
 
@@ -283,9 +259,7 @@ const contactSchema = {
       "@id": "https://www.dtsworld.in/#website",
 
       url: "https://www.dtsworld.in/",
-
       name: "Double Trouble Studio",
-
       alternateName: ["DTS", "DTS World"],
 
       description:
@@ -300,13 +274,12 @@ const contactSchema = {
 
     {
       "@type": "ContactPage",
-      "@id":
-        "https://www.dtsworld.in/contact#webpage",
+      "@id": "https://www.dtsworld.in/contact#webpage",
 
       url: "https://www.dtsworld.in/contact",
 
       name:
-        "Contact Double Trouble Studio | Branding and Website Design Agency in Mumbai",
+        "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
 
       headline: "Let's Create Something Amazing",
 
@@ -334,21 +307,31 @@ const contactSchema = {
       },
 
       breadcrumb: {
-        "@id":
-          "https://www.dtsworld.in/contact#breadcrumb",
+        "@id": "https://www.dtsworld.in/contact#breadcrumb",
       },
 
       hasPart: [
         {
-          "@id":
-            "https://www.dtsworld.in/contact#services",
+          "@id": "https://www.dtsworld.in/contact#services",
         },
-
         {
-          "@id":
-            "https://www.dtsworld.in/contact#faq",
+          "@id": "https://www.dtsworld.in/contact#faq",
         },
       ],
+
+      audience: {
+        "@type": "BusinessAudience",
+        "@id": "https://www.dtsworld.in/contact#business-audience",
+
+        name:
+          "Businesses seeking branding, marketing and creative agency services",
+
+        audienceType:
+          "Startups, founders, hospitality brands, restaurants, cafes, luxury businesses, event organizers, creators, corporate brands and growing companies",
+
+        description:
+          "Businesses and organizations looking for branding, website development, SEO, digital marketing, public relations, guest management, celebrity management, event planning, AI video production and VFX services.",
+      },
 
       significantLink: [
         "https://www.dtsworld.in/services/guest-management",
@@ -370,27 +353,20 @@ const contactSchema = {
 
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://www.dtsworld.in/contact#breadcrumb",
+      "@id": "https://www.dtsworld.in/contact#breadcrumb",
 
       itemListElement: [
         {
           "@type": "ListItem",
-
           position: 1,
-
           name: "Home",
-
           item: "https://www.dtsworld.in/",
         },
 
         {
           "@type": "ListItem",
-
           position: 2,
-
           name: "Contact",
-
           item: "https://www.dtsworld.in/contact",
         },
       ],
@@ -398,31 +374,24 @@ const contactSchema = {
 
     {
       "@type": "OfferCatalog",
-      "@id":
-        "https://www.dtsworld.in/contact#services",
+      "@id": "https://www.dtsworld.in/contact#services",
 
-      url:
-        "https://www.dtsworld.in/contact#services",
-
+      url: "https://www.dtsworld.in/contact#services",
       name: "Double Trouble Studio Services",
 
       description:
         "Guest management, celebrity management, events and weddings, public relations, digital marketing, website development, AI video production and VFX services.",
 
       numberOfItems: 6,
-
-      itemListOrder:
-        "https://schema.org/ItemListUnordered",
+      itemListOrder: "https://schema.org/ItemListUnordered",
 
       itemListElement: [
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/guest-management#offer",
 
-          url:
-            "https://www.dtsworld.in/services/guest-management",
+          url: "https://www.dtsworld.in/services/guest-management",
 
           seller: {
             "@id": "https://www.dtsworld.in/#organization",
@@ -430,19 +399,13 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/guest-management#service",
 
             name: "Guest Management Services",
-
-            url:
-              "https://www.dtsworld.in/services/guest-management",
-
+            url: "https://www.dtsworld.in/services/guest-management",
             serviceType: "Guest Management",
-
-            category:
-              "Event Guest Management Services",
+            category: "Event Guest Management Services",
 
             description:
               "Guest management services for weddings, corporate events, luxury launches, celebrity events and private gatherings, including RSVP management, VIP coordination, check-in flow and on-ground support.",
@@ -460,12 +423,10 @@ const contactSchema = {
 
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/celebrity-management#offer",
 
-          url:
-            "https://www.dtsworld.in/services/celebrity-management",
+          url: "https://www.dtsworld.in/services/celebrity-management",
 
           seller: {
             "@id": "https://www.dtsworld.in/#organization",
@@ -473,7 +434,6 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/celebrity-management#service",
 
@@ -482,11 +442,8 @@ const contactSchema = {
             url:
               "https://www.dtsworld.in/services/celebrity-management",
 
-            serviceType:
-              "Celebrity Management and Talent Coordination",
-
-            category:
-              "Celebrity Booking and Talent Management",
+            serviceType: "Celebrity Management and Talent Coordination",
+            category: "Celebrity Booking and Talent Management",
 
             description:
               "Celebrity management and talent coordination for brand campaigns, corporate events, weddings, launches, public appearances and influencer collaborations.",
@@ -504,12 +461,10 @@ const contactSchema = {
 
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/events-weddings#offer",
 
-          url:
-            "https://www.dtsworld.in/services/events-weddings",
+          url: "https://www.dtsworld.in/services/events-weddings",
 
           seller: {
             "@id": "https://www.dtsworld.in/#organization",
@@ -517,21 +472,13 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/events-weddings#service",
 
-            name:
-              "Event Management and Wedding Planning",
-
-            url:
-              "https://www.dtsworld.in/services/events-weddings",
-
-            serviceType:
-              "Event Management and Wedding Planning",
-
-            category:
-              "Events and Wedding Services",
+            name: "Event Management and Wedding Planning",
+            url: "https://www.dtsworld.in/services/events-weddings",
+            serviceType: "Event Management and Wedding Planning",
+            category: "Events and Wedding Services",
 
             description:
               "Event planning and wedding management services covering concepts, vendors, production, hospitality, guest experiences and show-flow execution.",
@@ -549,7 +496,6 @@ const contactSchema = {
 
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/pr-media-digital-marketing#offer",
 
@@ -562,12 +508,10 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/pr-media-digital-marketing#service",
 
-            name:
-              "PR, Media and Digital Marketing",
+            name: "PR, Media and Digital Marketing",
 
             url:
               "https://www.dtsworld.in/services/pr-media-digital-marketing",
@@ -575,8 +519,7 @@ const contactSchema = {
             serviceType:
               "Public Relations, Media and Digital Marketing",
 
-            category:
-              "PR and Digital Marketing Services",
+            category: "PR and Digital Marketing Services",
 
             description:
               "Public relations, media outreach, social media marketing, content creation, performance marketing and digital campaign services for modern brands.",
@@ -594,7 +537,6 @@ const contactSchema = {
 
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/web-development-marketing#offer",
 
@@ -607,12 +549,10 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/web-development-marketing#service",
 
-            name:
-              "Website Development and Marketing",
+            name: "Website Development and Marketing",
 
             url:
               "https://www.dtsworld.in/services/web-development-marketing",
@@ -620,8 +560,7 @@ const contactSchema = {
             serviceType:
               "Website Design, Website Development and SEO",
 
-            category:
-              "Website Development and Digital Marketing",
+            category: "Website Development and Digital Marketing",
 
             description:
               "Custom website design, website development, SEO foundations, responsive user experiences, analytics and performance-focused digital platforms.",
@@ -639,12 +578,10 @@ const contactSchema = {
 
         {
           "@type": "Offer",
-
           "@id":
             "https://www.dtsworld.in/services/ai-video-vfx#offer",
 
-          url:
-            "https://www.dtsworld.in/services/ai-video-vfx",
+          url: "https://www.dtsworld.in/services/ai-video-vfx",
 
           seller: {
             "@id": "https://www.dtsworld.in/#organization",
@@ -652,21 +589,13 @@ const contactSchema = {
 
           itemOffered: {
             "@type": "Service",
-
             "@id":
               "https://www.dtsworld.in/services/ai-video-vfx#service",
 
-            name:
-              "AI Video Production and VFX",
-
-            url:
-              "https://www.dtsworld.in/services/ai-video-vfx",
-
-            serviceType:
-              "AI Video Production and Visual Effects",
-
-            category:
-              "AI Video Advertising and VFX",
+            name: "AI Video Production and VFX",
+            url: "https://www.dtsworld.in/services/ai-video-vfx",
+            serviceType: "AI Video Production and Visual Effects",
+            category: "AI Video Advertising and VFX",
 
             description:
               "AI-generated video campaigns, cinematic brand films, product visuals, campaign assets and visual effects for social media and digital advertising.",
@@ -686,11 +615,9 @@ const contactSchema = {
 
     {
       "@type": "FAQPage",
-      "@id":
-        "https://www.dtsworld.in/contact#faq",
+      "@id": "https://www.dtsworld.in/contact#faq",
 
-      url:
-        "https://www.dtsworld.in/contact#faq",
+      url: "https://www.dtsworld.in/contact#faq",
 
       name:
         "Frequently Asked Questions About Contacting Double Trouble Studio",
@@ -699,8 +626,7 @@ const contactSchema = {
         "Answers to common questions about Double Trouble Studio branding, website design, digital marketing, pricing, timelines, remote collaboration and project enquiries.",
 
       isPartOf: {
-        "@id":
-          "https://www.dtsworld.in/contact#webpage",
+        "@id": "https://www.dtsworld.in/contact#webpage",
       },
 
       about: {
@@ -716,7 +642,6 @@ const contactSchema = {
       mainEntity: [
         {
           "@type": "Question",
-
           "@id":
             "https://www.dtsworld.in/contact#faq-branding-services",
 
@@ -733,12 +658,9 @@ const contactSchema = {
 
         {
           "@type": "Question",
+          "@id": "https://www.dtsworld.in/contact#faq-hire-agency",
 
-          "@id":
-            "https://www.dtsworld.in/contact#faq-hire-agency",
-
-          name:
-            "Why should I hire a branding agency in Mumbai?",
+          name: "Why should I hire a branding agency in Mumbai?",
 
           acceptedAnswer: {
             "@type": "Answer",
@@ -750,7 +672,6 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
           "@id":
             "https://www.dtsworld.in/contact#faq-website-cost",
 
@@ -767,7 +688,6 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
           "@id":
             "https://www.dtsworld.in/contact#faq-branding-website",
 
@@ -784,7 +704,6 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
           "@id":
             "https://www.dtsworld.in/contact#faq-digital-marketing",
 
@@ -801,12 +720,9 @@ const contactSchema = {
 
         {
           "@type": "Question",
+          "@id": "https://www.dtsworld.in/contact#faq-startups",
 
-          "@id":
-            "https://www.dtsworld.in/contact#faq-startups",
-
-          name:
-            "Do you work with startups and growing businesses?",
+          name: "Do you work with startups and growing businesses?",
 
           acceptedAnswer: {
             "@type": "Answer",
@@ -818,9 +734,7 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
-          "@id":
-            "https://www.dtsworld.in/contact#faq-timeline",
+          "@id": "https://www.dtsworld.in/contact#faq-timeline",
 
           name:
             "How long does it take to complete a branding or website project?",
@@ -835,12 +749,10 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
           "@id":
             "https://www.dtsworld.in/contact#faq-outside-mumbai",
 
-          name:
-            "Do you work with clients outside Mumbai and India?",
+          name: "Do you work with clients outside Mumbai and India?",
 
           acceptedAnswer: {
             "@type": "Answer",
@@ -852,9 +764,7 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
-          "@id":
-            "https://www.dtsworld.in/contact#faq-why-dts",
+          "@id": "https://www.dtsworld.in/contact#faq-why-dts",
 
           name:
             "Why choose Double Trouble Studio for branding, website design and marketing?",
@@ -869,9 +779,7 @@ const contactSchema = {
 
         {
           "@type": "Question",
-
-          "@id":
-            "https://www.dtsworld.in/contact#faq-quote",
+          "@id": "https://www.dtsworld.in/contact#faq-quote",
 
           name:
             "How can I get a quote for branding, website design or digital marketing services?",
@@ -888,17 +796,42 @@ const contactSchema = {
   ],
 };
 
+type ContactPageProps = {
+  searchParams: Promise<{
+    service?: string | string[];
+    city?: string | string[];
+    [key: string]: string | string[] | undefined;
+  }>;
+};
 
+export default async function Contact({
+  searchParams,
+}: ContactPageProps) {
+  const params = await searchParams;
 
+  /*
+   * Prevent parameter-based duplicate contact pages.
+   *
+   * Example:
+   * /contact?service=events-weddings&city=mumbai
+   * redirects permanently to:
+   * /contact
+   */
+  if (Object.keys(params).length > 0) {
+    permanentRedirect("/contact");
+  }
 
-export default function Contact() {
   return (
     <>
       <script
+        id="contact-structured-data"
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactSchema),
+          __html: JSON.stringify(contactSchema).replace(
+            /</g,
+            "\\u003c",
+          ),
         }}
       />
 

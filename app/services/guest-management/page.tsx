@@ -1799,10 +1799,10 @@ export default function GuestManagement() {
       <main>
         <Navbar />
         <GuestManagementHero />
+        <GuestFeaturedWork />
         <GuestServiceOverview />
         <GuestManagementServices />
         <WhyItMatters />
-        <GuestFeaturedWork />
         <GuestChallengesWeSolve />
         <OurProcess />
         <ResultsOutcomes />

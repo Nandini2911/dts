@@ -300,7 +300,7 @@ export default function Hero() {
              
               offering{" "}
 <Link
-  href="/services/pr-marketing"
+  href="/services/pr-media-marketing"
   className="font-medium text-[#0D2444] underline underline-offset-4 decoration-[#315E91]/40 transition-colors duration-200 hover:text-white hover:decoration-[#0D2444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6288B9]/40"
 >
   PR and digital marketing services
