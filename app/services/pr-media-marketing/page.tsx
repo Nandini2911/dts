@@ -746,9 +746,10 @@ export default function PRMediaDigitalMarketingPage() {
       <main className="bg-[#F8FAFC] text-[#0F172A]">
         <Navbar />
         <PRHero />
+        <PRMediaDigitalFeaturedWork/>
         <PRIntro />
         <PRDefinition />
-        <PRMediaDigitalFeaturedWork/>
+        
         <PRServices />
         <MediaManagement />
         <DigitalMarketingServices />
@@ -764,8 +765,8 @@ export default function PRMediaDigitalMarketingPage() {
         <FAQ />
         <FinalCTA />
         <SEOContentBlock />
+         <ServiceCityLinks serviceSlug="pr-media-marketing" />
         <Footer />
-        <ServiceCityLinks serviceSlug="pr-media-marketing" />
       </main>
     </>
   );

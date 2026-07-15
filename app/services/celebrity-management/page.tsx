@@ -660,10 +660,10 @@ export default function CelebrityManagement() {
       <main>
         <Navbar />
         <CelebrityManagementHero />
+        <CelebrityFeaturedWork/>
         <CelebrityBookingIntro />
         <WhatIsCelebrityManagement />
         <CelebrityManagementServices />
-        <CelebrityFeaturedWork/>
         {/* <WhyBrandsInvestCelebrityManagement /> */}
         <CelebrityEventTypes />
         <CelebrityManagementIndustries />

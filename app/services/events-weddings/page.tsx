@@ -638,9 +638,9 @@ export default function EventsWeddings() {
       <main>
         <Navbar />
         <EventWeddingHero />
+        <EventsWeddingFeaturedWork/>
         <EndToEndEventWeddingServices />
         <OurEventManagementServices />
-        <EventsWeddingFeaturedWork/>
         <OurWeddingPlanningServices />
         <EventsWePlanManage />
         <WhyProfessionalEventManagementMatters />

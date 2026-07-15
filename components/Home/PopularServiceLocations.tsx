@@ -15,7 +15,7 @@ const locationLinks = [
   },
   {
     label: "PR and digital marketing agency in Mumbai",
-    href: "/services/pr-media-digital-marketing/mumbai",
+    href: "/services/pr-media-marketing/mumbai",
   },
   {
     label: "Website development company in Mumbai",
