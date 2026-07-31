@@ -16,6 +16,18 @@ import BlogShareButtons from "@/components/BlogShareButtons";
 export const revalidate = 60;
 export const dynamicParams = true;
 
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.dtsworld.in"
+).replace(/\/$/, "");
+
+const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+
+function safeJsonLd(data: unknown) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 type PageProps = {
   params: Promise<{
     slug: string;
@@ -24,6 +36,8 @@ type PageProps = {
 
 type Post = {
   _id: string;
+  _updatedAt?: string;
+
   title: string;
   slug: string;
   category?: string;
@@ -223,7 +237,6 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -239,6 +252,10 @@ export async function generateMetadata({
     return {
       title: "Blog Not Found | Double Trouble Studio",
       description: "This blog post is not available.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
@@ -248,6 +265,11 @@ export async function generateMetadata({
     post.seoDescription ||
     post.excerpt ||
     "Read insights from Double Trouble Studio.";
+
+  const pageUrl = `${SITE_URL}/blog/${post.slug}`;
+
+  const canonicalUrl =
+    post.canonicalUrl || pageUrl;
 
   const keywords = [
     ...(post.seoKeywords || []),
@@ -261,23 +283,62 @@ export async function generateMetadata({
   ].filter(Boolean) as string[];
 
   const imageUrl = post.mainImage
-    ? urlFor(post.mainImage).width(1200).height(630).url()
+    ? urlFor(post.mainImage)
+        .width(1200)
+        .height(630)
+        .fit("crop")
+        .url()
     : undefined;
 
   return {
     title: `${title} | Double Trouble Studio`,
     description,
+
     keywords,
+
+    authors: [
+      {
+        name: post.authorName || "Double Trouble Studio",
+      },
+    ],
+
+    creator: post.authorName || "Double Trouble Studio",
+    publisher: "Double Trouble Studio",
+
     alternates: {
-      canonical: post.canonicalUrl || `/blog/${post.slug}`,
+      canonical: canonicalUrl,
     },
+
+    robots: {
+      index: true,
+      follow: true,
+
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+
     openGraph: {
       title,
       description,
       type: "article",
-      publishedTime: post.publishedAt,
-      url: `/blog/${post.slug}`,
+
+     url: canonicalUrl,
+
       siteName: "Double Trouble Studio",
+      locale: "en_IN",
+
+      publishedTime: post.publishedAt,
+      modifiedTime: post._updatedAt || post.publishedAt,
+
+      section: post.category,
+
+      tags: keywords,
+
       images: imageUrl
         ? [
             {
@@ -289,6 +350,7 @@ export async function generateMetadata({
           ]
         : undefined,
     },
+
     twitter: {
       card: "summary_large_image",
       title,
@@ -351,45 +413,311 @@ export default async function BlogPostPage({ params }: PageProps) {
   const tableOfContents = getTableOfContents(post.body);
   const readTime = getReadTime(post);
 
-  const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.dtsworld.in";
+  const shareUrl = `${SITE_URL}/blog/${post.slug}`;
 
-const shareUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.slug}`;
+const pageUrl = `${SITE_URL}/blog/${post.slug}`;
 
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.seoDescription || post.excerpt,
-    image: post.mainImage
-      ? urlFor(post.mainImage).width(1200).height(630).url()
-      : undefined,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post.authorName || "Double Trouble Studio",
-    },
-    publisher: {
+const canonicalUrl =
+  post.canonicalUrl || pageUrl;
+
+const articleDescription =
+  post.seoDescription ||
+  post.excerpt ||
+  "Read insights from Double Trouble Studio.";
+
+const datePublished =
+  post.publishedAt;
+
+const dateModified =
+  post._updatedAt ||
+  post.publishedAt;
+
+const authorName =
+  post.authorName ||
+  "Double Trouble Studio";
+
+const isDtsAuthor =
+  authorName.toLowerCase().includes(
+    "double trouble studio"
+  );
+
+const image16x9 = post.mainImage
+  ? urlFor(post.mainImage)
+      .width(1200)
+      .height(675)
+      .fit("crop")
+      .url()
+  : undefined;
+
+const image4x3 = post.mainImage
+  ? urlFor(post.mainImage)
+      .width(1200)
+      .height(900)
+      .fit("crop")
+      .url()
+  : undefined;
+
+const image1x1 = post.mainImage
+  ? urlFor(post.mainImage)
+      .width(1200)
+      .height(1200)
+      .fit("crop")
+      .url()
+  : undefined;
+
+const articleImages = [
+  image1x1,
+  image4x3,
+  image16x9,
+].filter(Boolean);
+
+const schemaKeywords = [
+  post.focusKeyword,
+  ...(post.seoKeywords || []),
+].filter(Boolean);
+
+const wordCount = post.bodyText
+  ? post.bodyText
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean).length
+  : undefined;
+
+const structuredData = {
+  "@context": "https://schema.org",
+
+  "@graph": [
+    // =========================
+    // ORGANIZATION
+    // =========================
+    {
       "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+
       name: "Double Trouble Studio",
+      alternateName: "DTS",
+
+      url: SITE_URL,
+
+      description:
+        "Double Trouble Studio is a creative digital agency in India offering branding, PR, digital marketing, event management, guest management, website development, SEO and AI video production.",
     },
-    mainEntityOfPage: {
+
+    // =========================
+    // WEBSITE
+    // =========================
+    {
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+
+      url: SITE_URL,
+
+      name: "Double Trouble Studio",
+      alternateName: "DTS",
+
+      publisher: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      inLanguage: "en-IN",
+    },
+
+    // =========================
+    // PRIMARY IMAGE
+    // =========================
+    ...(image16x9
+      ? [
+          {
+            "@type": "ImageObject",
+
+            "@id": `${canonicalUrl}#primaryimage`,
+
+            url: image16x9,
+            contentUrl: image16x9,
+
+            width: 1200,
+            height: 675,
+
+            caption:
+              post.mainImage?.alt ||
+              post.title,
+          },
+        ]
+      : []),
+
+    // =========================
+    // BREADCRUMB
+    // =========================
+    {
+      "@type": "BreadcrumbList",
+
+      "@id": `${canonicalUrl}#breadcrumb`,
+
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: SITE_URL,
+        },
+
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${SITE_URL}/blog`,
+        },
+
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: canonicalUrl,
+        },
+      ],
+    },
+
+    // =========================
+    // WEB PAGE
+    // =========================
+    {
       "@type": "WebPage",
-      "@id": `/blog/${post.slug}`,
+
+      "@id": `${canonicalUrl}#webpage`,
+
+      url: canonicalUrl,
+
+      name:
+        post.seoTitle ||
+        post.title,
+
+      description:
+        articleDescription,
+
+      isPartOf: {
+        "@id": WEBSITE_ID,
+      },
+
+      breadcrumb: {
+        "@id": `${canonicalUrl}#breadcrumb`,
+      },
+
+      ...(image16x9
+        ? {
+            primaryImageOfPage: {
+              "@id": `${canonicalUrl}#primaryimage`,
+            },
+          }
+        : {}),
+
+      datePublished,
+
+      dateModified,
+
+      inLanguage: "en-IN",
+
+      mainEntity: {
+        "@id": `${canonicalUrl}#article`,
+      },
     },
-  };
+
+    // =========================
+    // BLOG ARTICLE
+    // =========================
+    {
+      "@type": "BlogPosting",
+
+      "@id": `${canonicalUrl}#article`,
+
+      url: canonicalUrl,
+
+      mainEntityOfPage: {
+        "@id": `${canonicalUrl}#webpage`,
+      },
+
+      headline: post.title,
+
+      name:
+        post.seoTitle ||
+        post.title,
+
+      description:
+        articleDescription,
+
+      ...(articleImages.length
+        ? {
+            image: articleImages,
+          }
+        : {}),
+
+      ...(datePublished
+        ? {
+            datePublished,
+          }
+        : {}),
+
+      ...(dateModified
+        ? {
+            dateModified,
+          }
+        : {}),
+
+      author: {
+        "@type": isDtsAuthor
+          ? "Organization"
+          : "Person",
+
+        name: authorName,
+
+        ...(isDtsAuthor
+          ? {
+              url: SITE_URL,
+            }
+          : {}),
+      },
+
+      publisher: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      ...(post.category
+        ? {
+            articleSection:
+              post.category,
+          }
+        : {}),
+
+      ...(schemaKeywords.length
+        ? {
+            keywords:
+              schemaKeywords.join(", "),
+          }
+        : {}),
+
+      ...(wordCount
+        ? {
+            wordCount,
+          }
+        : {}),
+
+      isAccessibleForFree: true,
+
+      inLanguage: "en-IN",
+    },
+  ],
+};
 
   return (
     <main className="overflow-hidden bg-[#F7FAFF] text-[#0D2444]">
       <Navbar />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
+    <script
+  id="blog-structured-data"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: safeJsonLd(structuredData),
+  }}
+/>
 
       {/* Hero */}
       <section className="relative isolate px-5 pb-12 pt-28 sm:px-6 lg:px-8">
@@ -399,13 +727,45 @@ const shareUrl = `${siteUrl.replace(/\/$/, "")}/blog/${post.slug}`;
 
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-5xl text-center">
-            <Link
-              href="/blog"
-              className="mb-6 inline-flex rounded-full border border-[#C9DAF0] bg-white/80 px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#315E91] shadow-sm backdrop-blur transition hover:bg-[#EAF2FF]"
-            >
-              ← Back to Blog
-            </Link>
 
+  {/* Breadcrumb */}
+  <nav
+    aria-label="Breadcrumb"
+    className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-[#6288B9]"
+  >
+    <Link
+      href="/"
+      className="transition hover:text-[#0D2444]"
+    >
+      Home
+    </Link>
+
+    <span aria-hidden="true">/</span>
+
+    <Link
+      href="/blog"
+      className="transition hover:text-[#0D2444]"
+    >
+      Blog
+    </Link>
+
+    <span aria-hidden="true">/</span>
+
+    <span
+      aria-current="page"
+      className="max-w-[320px] truncate text-[#38506D] sm:max-w-[520px]"
+    >
+      {post.title}
+    </span>
+  </nav>
+
+  {/* Existing Back Button */}
+  <Link
+    href="/blog"
+    className="mb-6 inline-flex rounded-full border border-[#C9DAF0] bg-white/80 px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#315E91] shadow-sm backdrop-blur transition hover:bg-[#EAF2FF]"
+  >
+    ← Back to Blog
+  </Link>
             <div className="mb-5 flex flex-wrap justify-center gap-3">
               <span className="inline-flex rounded-full bg-[#0D2444] px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
                 {post.category || "DTS Insight"}
