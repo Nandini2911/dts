@@ -1,17 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactNode } from "react";
-
 import { motion } from "framer-motion";
 
 import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
-
-const inlineLinkClass =
-      "font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]";
 
 type ServiceFeature = {
   label: string;
@@ -22,324 +17,85 @@ type Service = {
   title: string;
   href: string;
   tag?: string;
-  desc: ReactNode;
+  price: string;
+  desc: string;
   features: ServiceFeature[];
 };
 
 const services: Service[] = [
   {
     title: "Guest Management",
-    href: "https://www.dtsworld.in/services/guest-management",
+    href: "/services/guest-management",
     tag: "Popular",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/guest-management"
-          className={inlineLinkClass}
-        >
-          Premium guest management services
-        </Link>{" "}
-        for weddings, corporate events, luxury launches and celebrity events,
-        including{" "}
-        <Link
-          href="https://www.dtsworld.in/blog/event-rsvp-management"
-          className={inlineLinkClass}
-        >
-          RSVP tracking
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/guest-management"
-          className={inlineLinkClass}
-        >
-          VIP handling
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping"
-          className={inlineLinkClass}
-        >
-          check-in flow
-        </Link>{" "}
-        and on-ground coordination.
-      </>
-    ),
+    price: "Custom Pricing",
+    desc: "From large-scale launches to intimate VIP gatherings, we manage every guest touchpoint so your team can focus on the experience and the brand.",
     features: [
-      {
-        label: "RSVP tracking",
-        href: "https://www.dtsworld.in/blog/event-rsvp-management",
-      },
-      {
-        label: "VIP Segmentation",
-        href: "https://www.dtsworld.in/blog/How-to-build-segment-high-profile-guest-list",
-      },
-      {
-        label: "Entry Coordination",
-        href: "https://www.dtsworld.in/blog/on-site-guest-flow-registration-entry-seating-experience-mapping",
-      },
-      {
-        label: "On-Ground Team",
-        href: "https://www.dtsworld.in/services/guest-management",
-      },
+      { label: "RSVP Tracking", href: "/blog/event-rsvp-management" },
+      { label: "VIP Segmentation", href: "/blog/How-to-build-segment-high-profile-guest-list" },
+      { label: "Entry Coordination", href: "/blog/on-site-guest-flow-registration-entry-seating-experience-mapping" },
+      { label: "On-Ground Team", href: "/services/guest-management" },
     ],
   },
   {
     title: "Celebrity Management",
-    href: "https://www.dtsworld.in/services/celebrity-management",
+    href: "/services/celebrity-management",
     tag: "Popular",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/celebrity-management"
-          className={inlineLinkClass}
-        >
-          Celebrity management and talent coordination
-        </Link>{" "}
-        for brand campaigns, events, weddings, launches and{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          influencer collaborations
-        </Link>{" "}
-        handled with precision, discretion and premium hospitality.
-      </>
-    ),
+    price: "Custom Pricing",
+    desc: "We source, coordinate and manage the right talent for campaigns and events, protecting timelines, brand fit and the complete celebrity experience.",
     features: [
-      {
-        label: "Talent Sourcing",
-        href: "https://www.dtsworld.in/services/celebrity-management",
-      },
-      {
-        label: "Date Locking",
-        href: "https://www.dtsworld.in/services/celebrity-management",
-      },
-      {
-        label: "Briefing & Logistics",
-        href: "https://www.dtsworld.in/services/celebrity-management",
-      },
-      {
-        label: "Contracts Support",
-        href: "https://www.dtsworld.in/services/celebrity-management",
-      },
+      { label: "Talent Sourcing", href: "/services/celebrity-management" },
+      { label: "Date Locking", href: "/services/celebrity-management" },
+      { label: "Briefing & Logistics", href: "/services/celebrity-management" },
+      { label: "Contract Support", href: "/services/celebrity-management" },
     ],
   },
   {
     title: "Events & Weddings",
-    href: "https://www.dtsworld.in/services/events-weddings",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/events-weddings"
-          className={inlineLinkClass}
-        >
-          Luxury event management and wedding planning services
-        </Link>{" "}
-        crafted with flawless execution, premium production,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/guest-management"
-          className={inlineLinkClass}
-        >
-          guest experience design
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/events-weddings"
-          className={inlineLinkClass}
-        >
-          show-flow planning
-        </Link>{" "}
-        and elevated aesthetics.
-      </>
-    ),
+    href: "/services/events-weddings",
+    price: "Custom Pricing",
+    desc: "We turn ambitious concepts into seamless celebrations and brand experiences, aligning creative direction, production, vendors and guest journeys under one plan.",
     features: [
-      {
-        label: "Concept & Theme",
-        href: "https://www.dtsworld.in/services/events-weddings",
-      },
-      {
-        label: "Vendors & Production",
-        href: "https://www.dtsworld.in/services/events-weddings",
-      },
-      {
-        label: "Guest Journey",
-        href: "https://www.dtsworld.in/services/guest-management",
-      },
-      {
-        label: "Show-Flow Execution",
-        href: "https://www.dtsworld.in/services/events-weddings",
-      },
+      { label: "Concept & Theme", href: "/services/events-weddings" },
+      { label: "Vendors & Production", href: "/services/events-weddings" },
+      { label: "Guest Journey", href: "/services/guest-management" },
+      { label: "Show-Flow Execution", href: "/services/events-weddings" },
     ],
   },
   {
     title: "PR & Marketing",
-    href: "https://www.dtsworld.in/services/pr-media-marketing",
+    href: "/services/pr-media-marketing",
     tag: "Popular",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          PR campaigns
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          media outreach
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          social media marketing
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          influencer collaborations
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          paid advertising strategies
-        </Link>{" "}
-        designed for brand visibility, reputation and digital growth.
-      </>
-    ),
+    price: "Custom Retainer",
+    desc: "We build visibility and demand through clear brand narratives, media outreach, social campaigns and performance marketing that work as one growth system.",
     features: [
-      {
-        label: "Press & Features",
-        href: "https://www.dtsworld.in/services/pr-media-marketing",
-      },
-      {
-        label: "Brand Narrative",
-        href: "https://www.dtsworld.in/services/pr-media-marketing",
-      },
-      {
-        label: "Content Strategy",
-        href: "https://www.dtsworld.in/blog/content-strategy-brand-websites-blogs-galleries-lead-magnets",
-      },
-      {
-        label: "Performance Ads",
-        href: "https://www.dtsworld.in/services/pr-media-marketing",
-      },
+      { label: "Press & Features", href: "/services/pr-media-marketing" },
+      { label: "Brand Narrative", href: "/services/pr-media-marketing" },
+      { label: "Content Strategy", href: "/blog/content-strategy-brand-websites-blogs-galleries-lead-magnets" },
+      { label: "Performance Ads", href: "/services/pr-media-marketing" },
     ],
   },
   {
     title: "Web Development & SEO",
-    href: "https://www.dtsworld.in/services/web-development-marketing",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/web-development-marketing"
-          className={inlineLinkClass}
-        >
-          Custom Next.js websites
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels"
-          className={inlineLinkClass}
-        >
-          landing pages
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://www.dtsworld.in/services/web-development-marketing"
-          className={inlineLinkClass}
-        >
-          SEO-optimized digital platforms
-        </Link>{" "}
-        designed to increase{" "}
-        <Link
-          href="https://www.dtsworld.in/blog/what-is-seo-beginners-guide-search-engine-optimization"
-          className={inlineLinkClass}
-        >
-          Google visibility
-        </Link>
-        , improve user experience, generate leads and drive conversions.
-      </>
-    ),
+    href: "/services/web-development-marketing",
+    price: "Custom Pricing",
+    desc: "We build fast, conversion-focused websites with strong SEO foundations so your brand is easier to discover, easier to trust and easier to contact.",
     features: [
-      {
-        label: "Next.js Websites",
-        href: "https://www.dtsworld.in/services/web-development-marketing",
-      },
-      {
-        label: "UI/UX Design",
-        href: "https://www.dtsworld.in/blog/ui-ux-design-principles-for-high-end-brand-websites",
-      },
-      {
-        label: "SEO Foundations",
-        href: "https://www.dtsworld.in/blog/technical-seo-foundations-speed-mobile-core-web-vitals",
-      },
-      {
-        label: "Funnels & Tracking",
-        href: "https://www.dtsworld.in/blog/building-conversion-focused-marketing-funnels",
-      },
+      { label: "Next.js Websites", href: "/services/web-development-marketing" },
+      { label: "UI/UX Design", href: "/blog/ui-ux-design-principles-for-high-end-brand-websites" },
+      { label: "SEO Foundations", href: "/blog/technical-seo-foundations-speed-mobile-core-web-vitals" },
+      { label: "Funnels & Tracking", href: "/blog/building-conversion-focused-marketing-funnels" },
     ],
   },
   {
     title: "AI Video & Video Editing",
-    href: "https://www.dtsworld.in/services/ai-video-vfx",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/ai-video-vfx"
-          className={inlineLinkClass}
-        >
-          AI video production
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/ai-video-vfx"
-          className={inlineLinkClass}
-        >
-          cinematic brand films
-        </Link>
-        ,{" "}
-        <Link
-          href="https://www.dtsworld.in/blog/ai-video-ads-benefits-cost-use-cases"
-          className={inlineLinkClass}
-        >
-          AI-generated video ads
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://www.dtsworld.in/services/ai-video-vfx"
-          className={inlineLinkClass}
-        >
-          VFX content
-        </Link>{" "}
-        created for social media campaigns, product launches, brand storytelling
-        and digital promotions.
-      </>
-    ),
+    href: "/services/ai-video-vfx",
+    price: "Custom Pricing",
+    desc: "We create cinematic, platform-ready visual content that helps brands explain ideas faster, launch with impact and maintain a premium creative presence.",
     features: [
-      {
-        label: "AI Video Ads",
-        href: "https://www.dtsworld.in/blog/ai-video-ads-benefits-cost-use-cases",
-      },
-      {
-        label: "Product Films",
-        href: "https://www.dtsworld.in/services/ai-video-vfx",
-      },
-      {
-        label: "VFX Enhancements",
-        href: "https://www.dtsworld.in/services/ai-video-vfx",
-      },
-      {
-        label: "Fast Turnarounds",
-        href: "https://www.dtsworld.in/services/ai-video-vfx",
-      },
+      { label: "AI Video Ads", href: "/blog/ai-video-ads-benefits-cost-use-cases" },
+      { label: "Product Films", href: "/services/ai-video-vfx" },
+      { label: "VFX Enhancements", href: "/services/ai-video-vfx" },
+      { label: "Fast Turnarounds", href: "/services/ai-video-vfx" },
     ],
   },
 ];
@@ -425,7 +181,7 @@ export default function ServicesSection() {
                 fontFamily: "New York, ui-serif, Georgia, serif",
               }}
             >
-              A Premium Stack for Brands
+              Services That
               <span
                 className="
                   block
@@ -437,7 +193,7 @@ export default function ServicesSection() {
                   to-[#A8BEDB]
                 "
               >
-                That Want Attention - and Respect.
+                Drive Real Growth
               </span>
             </h2>
           </div>
@@ -451,10 +207,9 @@ export default function ServicesSection() {
               text-slate-500
             "
           >
-            From guest management, celebrity management and luxury event
-            planning to PR, digital marketing, web development and AI video
-            production, every service is designed to create consistent
-            visibility, stronger positioning and cultural relevance.
+            Choose one specialist service or build an integrated growth system.
+            Every engagement is shaped around a clear business outcome, defined
+            scope and measurable next step.
           </p>
         </motion.div>
 
@@ -576,6 +331,10 @@ export default function ServicesSection() {
                 {service.desc}
               </p>
 
+              <div className="mt-7 inline-flex rounded-full border border-[#DCE5F0] bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-[1.4px] text-[#31507A]">
+                {service.price}
+              </div>
+
               {/* FEATURES */}
               <div className="space-y-3 mt-8">
                 {service.features.map((feature) => (
@@ -625,7 +384,7 @@ export default function ServicesSection() {
                   text-[#10213D]
                 "
               >
-                {service.title}
+                Learn More
 
                 <div
                   className="
@@ -651,39 +410,6 @@ export default function ServicesSection() {
               </Link>
             </motion.article>
           ))}
-        </div>
-
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio services include guest management, celebrity
-            management, luxury event management, wedding planning, PR agency
-            services, digital marketing, web development, SEO, AI video
-            production and VFX in India.
-          </h2>
-
-          <p>
-            The agency provides premium guest management services for weddings,
-            corporate events, celebrity events, brand launches, investor events
-            and private gatherings with RSVP tracking, VIP segmentation,
-            check-in coordination, access control and on-ground event support.
-          </p>
-
-          <p>
-            Double Trouble Studio provides celebrity management, influencer
-            marketing, public relations, media outreach, social media marketing,
-            performance advertising, custom Next.js website development, landing
-            pages, SEO optimization, AI video ads, product films and VFX content
-            for luxury brands, hospitality brands, restaurants, fashion labels,
-            lifestyle companies and corporate brands.
-          </p>
-
-          <p>
-            Services are available across Mumbai, Delhi, Chandigarh, Bangalore,
-            Hyderabad, Pune, Ahmedabad, Goa and across India for brands looking
-            for premium creative strategy, event execution, digital growth and
-            cultural relevance.
-          </p>
         </div>
       </div>
     </section>

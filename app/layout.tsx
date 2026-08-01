@@ -5,6 +5,7 @@ import { Inter, Sora } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -219,6 +220,7 @@ export default function RootLayout({
         </noscript>
 
         {children}
+             <WhatsAppButton />
 
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-5J6M99HD" />

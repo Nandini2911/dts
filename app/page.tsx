@@ -4,15 +4,18 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Home/Hero";
 import AboutStudio from "@/components/Home/AboutSection";
 import WhyStudio from "@/components/Home/WhyStudio";
-import ServicesSection from "@/components/Home/ServiceSection";
+
 import StudioMethod from "@/components/Home/StudioMethode";
 import FeaturedWork from "@/components/Home/FeaturedWork";
 import StudioDNA from "@/components/Home/StudiaDna";
 import PromiseSection from "@/components/Home/PromiseSection";
 import IndustriesSection from "@/components/Home/IndustriesSection";
-import FAQSection from "@/components/Home/HomeFaq";
+
 import Footer from "@/components/Footer";
 import PopularServiceLocations from "@/components/Home/PopularServiceLocations";
+
+import ServiceSection from "@/components/Home/ServiceSection";
+import FaqSection from "@/components/Home/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -812,19 +815,26 @@ export default function HomePage() {
         }}
       />
 
-      <Navbar />
+        <main>
+          <Navbar />
       <Hero />
       <AboutStudio />
+      <ServiceSection />
+      <FeaturedWork />
       <WhyStudio />
-      <ServicesSection />
+    
       <PopularServiceLocations />
       <StudioMethod />
-      <FeaturedWork />
+   
       <StudioDNA />
       <PromiseSection />
       <IndustriesSection />
-      <FAQSection />
+    
+    
+      <FaqSection />
       <Footer />
+    </main>
     </>
   );
 }
+  
