@@ -72,7 +72,6 @@ export default function ServiceCityLandingPage({
     ALL_SEO_CITY_SLUGS.filter(
       (slug) => slug !== citySlug,
     );
-
   const containedInPlace =
     data.city.schemaType === "City"
       ? {
@@ -84,79 +83,107 @@ export default function ServiceCityLandingPage({
           name: "India",
         };
 
+
+  // =====================================================
+  // FAQ DATA
+  // Automatically changes according to service + city
+  // =====================================================
+
+  const faqItems = [
+    {
+      question: `What is included in ${data.service.shortName} services in ${data.city.name}?`,
+      answer: `Our ${data.service.shortName.toLowerCase()} services in ${data.city.name} include ${data.service.features
+        .map((feature) => feature.title)
+        .join(
+          ", ",
+        )}. The exact scope is customised according to your project requirements, timeline and objectives.`,
+    },
+
+    {
+      question: `Who can use ${data.service.shortName} services in ${data.city.name}?`,
+      answer: `Double Trouble Studio works with ${data.industries.join(
+        ", ",
+      )} and other businesses, brands and organisations that require professional ${data.service.shortName.toLowerCase()} support in ${data.city.name}.`,
+    },
+
+    {
+      question: `Does Double Trouble Studio provide ${data.service.shortName} services across ${data.city.name}?`,
+      answer:
+        data.serviceAreas.length > 0
+          ? `Yes. We support projects across ${data.city.name}, including ${data.serviceAreas.join(
+              ", ",
+            )}. Service availability and execution depend on project requirements, scope and schedule.`
+          : `Yes. Double Trouble Studio works with businesses, brands and organisations serving ${data.city.name}, ${data.city.region}, through consultations, remote coordination and scheduled project execution.`,
+    },
+
+    {
+      question: `How does the ${data.service.shortName} process work?`,
+      answer:
+        "Our process includes discovery, planning, execution and review. We first understand your requirements, audience, objectives and timeline, then create an execution plan, deliver the approved scope and review the results and future opportunities.",
+    },
+
+    {
+      question: `Can ${data.service.shortName} services be customised for my project in ${data.city.name}?`,
+      answer: `Yes. Every project is planned according to your requirements, audience, timeline, deliverables and objectives. Double Trouble Studio creates a customised ${data.service.shortName.toLowerCase()} strategy instead of applying the same package to every project.`,
+    },
+
+    {
+      question: `How can I get a quote for ${data.service.shortName} in ${data.city.name}?`,
+      answer: `You can contact Double Trouble Studio and share your requirements, expected deliverables, timeline and project objectives. Our team will review the brief and recommend an appropriate scope of work for your ${data.service.shortName.toLowerCase()} requirements in ${data.city.name}.`,
+    },
+  ];
+
+
+  // =====================================================
+  // COMPLETE STRUCTURED DATA
+  // Organization + Website + Breadcrumb +
+  // Service + OfferCatalog + FAQ + WebPage
+  // =====================================================
+
   const structuredData = {
     "@context": "https://schema.org",
 
     "@graph": [
+      // =================================================
+      // ORGANIZATION
+      // =================================================
       {
-        "@type": "WebPage",
-        "@id": `${data.canonicalUrl}#webpage`,
-        url: data.canonicalUrl,
-        name: data.title,
-        description: data.metaDescription,
+        "@type": "Organization",
+        "@id": `${SITE.url}/#organization`,
 
-        isPartOf: {
-          "@id": `${SITE.url}/#website`,
-        },
+        name: SITE.name,
 
-        breadcrumb: {
-          "@id": `${data.canonicalUrl}#breadcrumb`,
-        },
+        alternateName: SITE.shortName,
 
-        mainEntity: {
-          "@id": `${data.canonicalUrl}#service`,
-        },
+        url: SITE.url,
+
+        email: SITE.email,
+
       },
 
+      // =================================================
+      // WEBSITE
+      // =================================================
       {
-        "@type": "Service",
-        "@id": `${data.canonicalUrl}#service`,
+        "@type": "WebSite",
+        "@id": `${SITE.url}/#website`,
 
-        name:
-          `${data.service.name} in ${data.city.name}`,
+        url: SITE.url,
 
-        serviceType:
-          data.service.schemaServiceType,
+        name: SITE.name,
 
-        url: data.canonicalUrl,
-        description: data.metaDescription,
+        alternateName: SITE.shortName,
 
-        provider: {
-          "@type": "Organization",
+        publisher: {
           "@id": `${SITE.url}/#organization`,
-          name: SITE.name,
-          url: SITE.url,
-          email: SITE.email,
         },
 
-        areaServed: {
-          "@type": data.city.schemaType,
-          name: data.city.name,
-          containedInPlace,
-        },
-
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-
-          name:
-            `${data.service.name} in ${data.city.name}`,
-
-          itemListElement:
-            data.service.features.map(
-              (feature) => ({
-                "@type": "Offer",
-
-                itemOffered: {
-                  "@type": "Service",
-                  name: feature.title,
-                  description:
-                    feature.description,
-                },
-              }),
-            ),
-        },
+        inLanguage: "en-IN",
       },
 
+      // =================================================
+      // BREADCRUMB
+      // =================================================
       {
         "@type": "BreadcrumbList",
         "@id": `${data.canonicalUrl}#breadcrumb`,
@@ -165,27 +192,193 @@ export default function ServiceCityLandingPage({
           {
             "@type": "ListItem",
             position: 1,
+
             name: "Home",
+
             item: SITE.url,
           },
+
           {
             "@type": "ListItem",
             position: 2,
+
             name: data.service.name,
-            item:
-              `${SITE.url}/services/${serviceSlug}`,
+
+            item: `${SITE.url}/services/${serviceSlug}`,
           },
+
           {
             "@type": "ListItem",
             position: 3,
-            name: data.city.name,
+
+            name: `${data.service.shortName} in ${data.city.name}`,
+
             item: data.canonicalUrl,
           },
         ],
       },
+
+      // =================================================
+      // MAIN SERVICE
+      // =================================================
+      {
+        "@type": "Service",
+        "@id": `${data.canonicalUrl}#service`,
+
+        name: `${data.service.name} in ${data.city.name}`,
+
+        serviceType:
+          data.service.schemaServiceType,
+
+        url: data.canonicalUrl,
+
+        description:
+          data.metaDescription,
+
+        provider: {
+          "@id": `${SITE.url}/#organization`,
+        },
+
+        areaServed: {
+          "@type": data.city.schemaType,
+
+          name: data.city.name,
+
+          containedInPlace,
+        },
+
+        audience: {
+          "@type": "Audience",
+
+          audienceType:
+            data.industries.join(", "),
+        },
+
+        // ===============================================
+        // SERVICE CATALOG
+        // ===============================================
+
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+
+          name:
+            `${data.service.name} Services in ${data.city.name}`,
+
+          itemListElement:
+            data.service.features.map(
+              (feature) => ({
+                "@type": "Offer",
+
+                itemOffered: {
+                  "@type": "Service",
+
+                  name:
+                    feature.title,
+
+                  description:
+                    feature.description,
+
+                  provider: {
+                    "@id":
+                      `${SITE.url}/#organization`,
+                  },
+
+                  areaServed: {
+                    "@type":
+                      data.city.schemaType,
+
+                    name:
+                      data.city.name,
+                  },
+                },
+              }),
+            ),
+        },
+      },
+
+      // =================================================
+      // FAQ PAGE
+      // =================================================
+      {
+        "@type": "FAQPage",
+        "@id": `${data.canonicalUrl}#faq`,
+
+        url: `${data.canonicalUrl}#faq`,
+
+        mainEntity:
+          faqItems.map((faq) => ({
+            "@type": "Question",
+
+            name:
+              faq.question,
+
+            acceptedAnswer: {
+              "@type": "Answer",
+
+              text:
+                faq.answer,
+            },
+          })),
+      },
+
+      // =================================================
+      // WEB PAGE
+      // =================================================
+      {
+        "@type": "WebPage",
+        "@id": `${data.canonicalUrl}#webpage`,
+
+        url:
+          data.canonicalUrl,
+
+        name:
+          data.title,
+
+        description:
+          data.metaDescription,
+
+        isPartOf: {
+          "@id":
+            `${SITE.url}/#website`,
+        },
+
+        publisher: {
+          "@id":
+            `${SITE.url}/#organization`,
+        },
+
+        about: {
+          "@id":
+            `${data.canonicalUrl}#service`,
+        },
+
+        mainEntity: {
+          "@id":
+            `${data.canonicalUrl}#service`,
+        },
+
+        breadcrumb: {
+          "@id":
+            `${data.canonicalUrl}#breadcrumb`,
+        },
+
+        hasPart: {
+          "@id":
+            `${data.canonicalUrl}#faq`,
+        },
+
+        ...(data.lastModified
+          ? {
+              dateModified:
+                data.lastModified,
+            }
+          : {}),
+
+        inLanguage:
+          "en-IN",
+      },
     ],
   };
-
   return (
     <>
       <script
@@ -509,6 +702,56 @@ export default function ServiceCityLandingPage({
                 },
               )}
             </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section
+          id="faq"
+          className="bg-slate-50 px-6 py-20 md:py-28"
+        >
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6288B9]">
+                Frequently Asked Questions
+              </p>
+
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#0D2444] md:text-5xl">
+                {data.service.shortName} in {data.city.name} FAQs
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Answers to common questions about{" "}
+                {data.service.shortName.toLowerCase()} services in{" "}
+                {data.city.name}.
+              </p>
+            </div>
+
+           <div className="mt-12 space-y-4">
+  {faqItems.map((faq) => (
+    <details
+      key={faq.question}
+      open
+      className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-6 text-left font-semibold text-[#0D2444] md:px-8">
+        <span>{faq.question}</span>
+
+        <span
+          aria-hidden="true"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl transition-transform duration-300 group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+
+      <div className="border-t border-slate-100 px-6 py-6 text-base leading-8 text-slate-600 md:px-8">
+        {faq.answer}
+      </div>
+    </details>
+  ))}
+</div>
+
           </div>
         </section>
 
