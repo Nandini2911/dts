@@ -10,13 +10,6 @@ const stats = [
   { value: "8+", label: "Years Experience" },
 ];
 
-const clientLogos = [
-  { src: "/logos/26.webp", alt: "RNK Rentals" },
-  { src: "/BRlogo.webp", alt: "Bharat Reshma" },
-  { src: "/logos/36.webp", alt: "Butterchicken Factory" },
-  { src: "/india.jpg", alt: "India Today" },
-  { src: "/Golf Final Logo - 1.png", alt: "All India Police Golf Tournament" },
-];
 
 export default function Hero() {
   return (
@@ -187,20 +180,9 @@ export default function Hero() {
           <p className="mb-5 text-[10px] font-medium uppercase tracking-[2.5px] text-white/40">
             Trusted by
           </p>
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            {clientLogos.map((client) => (
-              <div
-                key={client.alt}
-                className="flex h-[58px] w-[92px] items-center justify-center rounded-2xl border border-white/10 bg-white/10 px-3 backdrop-blur-xl sm:w-[108px]"
-              >
-                <img
-                  src={client.src}
-                  alt={client.alt}
-                  className="max-h-[34px] max-w-full object-contain brightness-0 invert opacity-80"
-                />
-              </div>
-            ))}
-          </div>
+        
+          
+          
         </motion.div>
       </div>
     </section>
