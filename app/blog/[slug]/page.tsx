@@ -60,6 +60,11 @@ type TocItem = {
   title: string;
 };
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 const blogCategoryOrder = [
   "All",
   "PR & Media",
@@ -105,6 +110,144 @@ function getBlockText(block: any) {
   }
 
   return "";
+}
+
+function normalizeSchemaText(value: string) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function getHeadingLevel(style?: string) {
+  const match = style?.match(/^h([1-6])$/i);
+
+  return match ? Number(match[1]) : null;
+}
+
+function isFaqSectionHeading(value: string) {
+  const heading = normalizeSchemaText(value);
+
+  return (
+    /^faqs?(?:\s*[:\-–—].*)?$/i.test(heading) ||
+    /^frequently\s+asked\s+questions?(?:\s*\(faqs?\))?(?:\s+(?:about|for)\b.*)?$/i.test(
+      heading,
+    )
+  );
+}
+
+function stripFaqQuestionPrefix(value: string) {
+  return normalizeSchemaText(value)
+    .replace(/^(?:q(?:uestion)?\s*)?\d+\s*[.):\-–—]\s*/i, "")
+    .replace(/^question\s*[:\-–—]\s*/i, "")
+    .trim();
+}
+
+function stripFaqAnswerPrefix(value: string) {
+  return normalizeSchemaText(value)
+    .replace(/^(?:ans(?:wer)?)[\s.:\-–—]+/i, "")
+    .trim();
+}
+
+function splitFaqQuestionAndInlineAnswer(value: string) {
+  const cleaned = stripFaqQuestionPrefix(value);
+  const questionMarkIndex = cleaned.indexOf("?");
+
+  if (questionMarkIndex === -1) {
+    return {
+      question: cleaned,
+      inlineAnswer: "",
+    };
+  }
+
+  return {
+    question: cleaned.slice(0, questionMarkIndex + 1).trim(),
+    inlineAnswer: stripFaqAnswerPrefix(
+      cleaned.slice(questionMarkIndex + 1),
+    ),
+  };
+}
+
+function isNumberedFaqQuestion(value: string) {
+  return /^(?:q(?:uestion)?\s*)?\d+\s*[.):\-–—]\s*.+/i.test(
+    normalizeSchemaText(value),
+  );
+}
+
+function extractFaqItems(body: any): FaqItem[] {
+  if (!Array.isArray(body)) return [];
+
+  const faqItems: FaqItem[] = [];
+  let insideFaqSection = false;
+  let faqHeadingLevel = 2;
+  let currentQuestion = "";
+  let currentAnswerParts: string[] = [];
+
+  const saveCurrentFaq = () => {
+    const question = stripFaqQuestionPrefix(currentQuestion);
+    const answer = stripFaqAnswerPrefix(currentAnswerParts.join(" "));
+
+    if (question && answer) {
+      faqItems.push({ question, answer });
+    }
+
+    currentQuestion = "";
+    currentAnswerParts = [];
+  };
+
+  for (const block of body) {
+    if (block?._type !== "block") continue;
+
+    const text = normalizeSchemaText(getBlockText(block));
+    if (!text) continue;
+
+    const style = block.style || "normal";
+    const headingLevel = getHeadingLevel(style);
+
+    if (headingLevel && isFaqSectionHeading(text)) {
+      saveCurrentFaq();
+      insideFaqSection = true;
+      faqHeadingLevel = headingLevel;
+      continue;
+    }
+
+    if (!insideFaqSection) continue;
+
+    if (headingLevel && headingLevel <= faqHeadingLevel) {
+      saveCurrentFaq();
+      break;
+    }
+
+    const isQuestionHeading =
+      headingLevel !== null && headingLevel > faqHeadingLevel;
+    const isQuestionParagraph =
+      headingLevel === null &&
+      (isNumberedFaqQuestion(text) || text.trim().endsWith("?"));
+
+    if (isQuestionHeading || isQuestionParagraph) {
+      saveCurrentFaq();
+
+      const { question, inlineAnswer } =
+        splitFaqQuestionAndInlineAnswer(text);
+
+      currentQuestion = question;
+
+      if (inlineAnswer) {
+        currentAnswerParts.push(inlineAnswer);
+      }
+
+      continue;
+    }
+
+    if (currentQuestion) {
+      currentAnswerParts.push(stripFaqAnswerPrefix(text));
+    }
+  }
+
+  saveCurrentFaq();
+
+  return Array.from(
+    new Map(
+      faqItems.map((item) => [item.question.toLowerCase(), item]),
+    ).values(),
+  );
 }
 
 function slugify(text: string) {
@@ -483,6 +626,8 @@ const wordCount = post.bodyText
       .filter(Boolean).length
   : undefined;
 
+const faqItems = extractFaqItems(post.body);
+
 const structuredData = {
   "@context": "https://schema.org",
 
@@ -619,6 +764,14 @@ const structuredData = {
       mainEntity: {
         "@id": `${canonicalUrl}#article`,
       },
+
+      ...(faqItems.length
+        ? {
+            hasPart: {
+              "@id": `${canonicalUrl}#faq`,
+            },
+          }
+        : {}),
     },
 
     // =========================
@@ -704,6 +857,39 @@ const structuredData = {
 
       inLanguage: "en-IN",
     },
+
+    // =========================
+    // FAQ PAGE
+    // Added only when a visible FAQ section contains valid Q&A pairs.
+    // =========================
+    ...(faqItems.length
+      ? [
+          {
+            "@type": "FAQPage",
+            "@id": `${canonicalUrl}#faq`,
+
+            url: canonicalUrl,
+            name: `${post.title} - Frequently Asked Questions`,
+
+            isPartOf: {
+              "@id": `${canonicalUrl}#webpage`,
+            },
+
+            inLanguage: "en-IN",
+
+            mainEntity: faqItems.map((faq, index) => ({
+              "@type": "Question",
+              "@id": `${canonicalUrl}#faq-question-${index + 1}`,
+              name: faq.question,
+
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          },
+        ]
+      : []),
   ],
 };
 

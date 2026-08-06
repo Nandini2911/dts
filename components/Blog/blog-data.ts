@@ -10,6 +10,7 @@ export const blogCategories = [
   "SEO",
   "AI Video & VFX",
   "Brand Strategy",
+ 
 ];
 
 export const discoverCards = [
