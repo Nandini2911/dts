@@ -764,14 +764,6 @@ const structuredData = {
       mainEntity: {
         "@id": `${canonicalUrl}#article`,
       },
-
-      ...(faqItems.length
-        ? {
-            hasPart: {
-              "@id": `${canonicalUrl}#faq`,
-            },
-          }
-        : {}),
     },
 
     // =========================
@@ -858,40 +850,32 @@ const structuredData = {
       inLanguage: "en-IN",
     },
 
-    // =========================
-    // FAQ PAGE
-    // Added only when a visible FAQ section contains valid Q&A pairs.
-    // =========================
-    ...(faqItems.length
-      ? [
-          {
-            "@type": "FAQPage",
-            "@id": `${canonicalUrl}#faq`,
-
-            url: canonicalUrl,
-            name: `${post.title} - Frequently Asked Questions`,
-
-            isPartOf: {
-              "@id": `${canonicalUrl}#webpage`,
-            },
-
-            inLanguage: "en-IN",
-
-            mainEntity: faqItems.map((faq, index) => ({
-              "@type": "Question",
-              "@id": `${canonicalUrl}#faq-question-${index + 1}`,
-              name: faq.question,
-
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
-          },
-        ]
-      : []),
   ],
 };
+
+const faqStructuredData =
+  faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+
+        url: canonicalUrl,
+        name: `${post.title} - Frequently Asked Questions`,
+        inLanguage: "en-IN",
+
+        mainEntity: faqItems.map((faq, index) => ({
+          "@type": "Question",
+          "@id": `${canonicalUrl}#faq-question-${index + 1}`,
+          name: faq.question,
+
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
 
   return (
     <main className="overflow-hidden bg-[#F7FAFF] text-[#0D2444]">
@@ -904,6 +888,16 @@ const structuredData = {
     __html: safeJsonLd(structuredData),
   }}
 />
+
+      {faqStructuredData && (
+        <script
+          id="blog-faq-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: safeJsonLd(faqStructuredData),
+          }}
+        />
+      )}
 
       {/* Hero */}
       <section className="relative isolate px-5 pb-12 pt-28 sm:px-6 lg:px-8">
