@@ -770,7 +770,7 @@ const structuredData = {
     // BLOG ARTICLE
     // =========================
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
 
       "@id": `${canonicalUrl}#article`,
 
@@ -842,6 +842,12 @@ const structuredData = {
       ...(wordCount
         ? {
             wordCount,
+          }
+        : {}),
+
+      ...(post.bodyText
+        ? {
+            articleBody: post.bodyText,
           }
         : {}),
 

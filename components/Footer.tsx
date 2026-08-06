@@ -25,16 +25,20 @@ const navigationLinks = [
   },
  
   {
-    label: "Projects",
+   label: "About",
+    href: "/about",
+  },
+  {
+      label: "Work",
     href: "/work",
   },
   {
-    label: "Blog",
+   label: "Blog",
     href: "/blog",
   },
   {
-    label: "About",
-    href: "/about",
+    label: "FAQ",
+    href: "/faq",
   },
   {
     label: "Contact",
