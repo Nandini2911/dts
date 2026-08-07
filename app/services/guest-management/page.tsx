@@ -364,303 +364,554 @@ const faqs = [
   },
 ];
 
-const guestManagementSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
+
+const schemaContext = "https://schema.org";
+
+const logoSchema = {
+  "@context": schemaContext,
+  "@type": "ImageObject",
+  "@id": "https://www.dtsworld.in/#logo",
+  url: "https://www.dtsworld.in/logo.png",
+  contentUrl: "https://www.dtsworld.in/logo.png",
+  caption: "Double Trouble Studio Logo",
+  inLanguage: "en-IN",
+};
+
+const primaryImageSchema = {
+  "@context": schemaContext,
+  "@type": "ImageObject",
+  "@id": PRIMARY_IMAGE_ID,
+  url: "https://www.dtsworld.in/guest-management-og.jpg",
+  contentUrl: "https://www.dtsworld.in/guest-management-og.jpg",
+  width: 1200,
+  height: 630,
+  caption:
+    "Guest Management Services for Weddings, Corporate Events and VIP Experiences",
+  representativeOfPage: true,
+  inLanguage: "en-IN",
+};
+
+const organizationSchema = {
+  "@context": schemaContext,
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": ORGANIZATION_ID,
+
+  name: "Double Trouble Studio",
+  legalName: "Double Trouble Studio Pvt. Ltd.",
+  alternateName: ["DTS", "DTS World"],
+  url: SITE_URL,
+
+  logo: {
+    "@id": "https://www.dtsworld.in/#logo",
+  },
+
+  image: {
+    "@id": "https://www.dtsworld.in/#logo",
+  },
+
+  description:
+    "Double Trouble Studio is a Mumbai-based creative agency providing professional guest management, event management, branding, digital marketing, public relations, website development, SEO, AI video production and VFX services across India.",
+
+  slogan: "Creative Agency for Brands, Events and Digital Growth",
+
+  telephone: "+918000006021",
+  email: "hellodoubletroublestudio@gmail.com",
+  priceRange: "Custom quotations",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
+    addressLocality: "Mumbai",
+    addressRegion: "Maharashtra",
+    postalCode: "400061",
+    addressCountry: "IN",
+  },
+
+  contactPoint: {
+    "@type": "ContactPoint",
+    "@id": "https://www.dtsworld.in/#contact-point",
+    contactType: "project enquiries",
+    telephone: "+918000006021",
+    email: "hellodoubletroublestudio@gmail.com",
+    url: "https://www.dtsworld.in/contact",
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
+    availableLanguage: ["English", "Hindi"],
+  },
+
+  areaServed: serviceAreas,
+
+  knowsAbout: [
+    "Guest Management",
+    "RSVP Management",
+    "Guest List Management",
+    "Event Registration",
+    "VIP Guest Coordination",
+    "Check-In Management",
+    "Event Access Control",
+    "Attendee Tracking",
+    "Invitation Management",
+    "Hospitality Coordination",
+    "Guest Communication Management",
+    "Wedding Guest Management",
+    "Corporate Event Guest Management",
+    "Celebrity Event Management",
+    "Brand Launch Guest Management",
+    "Destination Event Guest Management",
+    "VIP Movement Coordination",
+    "Event Hospitality",
+  ],
+
+  hasOfferCatalog: {
+    "@id": CATALOG_ID,
+  },
+};
+
+const websiteSchema = {
+  "@context": schemaContext,
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+
+  url: SITE_URL,
+  name: "Double Trouble Studio",
+  alternateName: ["DTS", "DTS World"],
+
+  description:
+    "Double Trouble Studio is a creative agency in Mumbai providing branding, digital marketing, public relations, event management, guest management, website development, SEO, AI video production and VFX services across India.",
+
+  publisher: {
+    "@id": ORGANIZATION_ID,
+  },
+
+  inLanguage: "en-IN",
+};
+
+const webPageSchema = {
+  "@context": schemaContext,
+  "@type": "WebPage",
+  "@id": WEBPAGE_ID,
+
+  url: PAGE_URL,
+
+  name:
+    "Guest Management Services in Mumbai & India | Double Trouble Studio",
+
+  headline:
+    "Guest Management Services for Weddings, Corporate Events and VIP Experiences",
+
+  description:
+    "Professional guest management services in Mumbai including RSVP management, guest list management, event registration, VIP guest coordination, check-in management and access control for weddings, corporate events, celebrity events and brand launches across India.",
+
+  keywords: [
+    "Guest Management Services",
+    "Guest Management Services Mumbai",
+    "RSVP Management",
+    "Guest List Management",
+    "Event Registration",
+    "VIP Guest Coordination",
+    "Check-In Management",
+    "Event Access Control",
+    "Wedding Guest Management",
+    "Corporate Event Guest Management",
+  ],
+
+  isPartOf: {
+    "@id": WEBSITE_ID,
+  },
+
+  about: {
+    "@id": SERVICE_ID,
+  },
+
+  mainEntity: {
+    "@id": SERVICE_ID,
+  },
+
+  publisher: {
+    "@id": ORGANIZATION_ID,
+  },
+
+  primaryImageOfPage: {
+    "@id": PRIMARY_IMAGE_ID,
+  },
+
+  breadcrumb: {
+    "@id": BREADCRUMB_ID,
+  },
+
+  // hasPart accepts CreativeWork targets.
+  // HowTo and FAQPage are both CreativeWork/WebPage based types.
+  hasPart: [
     {
-      "@type": "Organization",
+      "@id": PROCESS_ID,
+    },
+    {
+      "@id": FAQ_ID,
+    },
+  ],
+
+  // These are valid Things but not CreativeWork, so use mentions.
+  mentions: [
+    {
+      "@id": CATALOG_ID,
+    },
+    {
+      "@id": FEATURED_WORK_ID,
+    },
+    {
+      "@id": INDUSTRIES_ID,
+    },
+    {
+      "@id": LOCATIONS_ID,
+    },
+  ],
+
+  significantLink: [
+    "https://www.dtsworld.in/contact",
+    "https://www.dtsworld.in/work",
+    "https://www.dtsworld.in/services/celebrity-management",
+    "https://www.dtsworld.in/services/events-weddings",
+  ],
+
+  copyrightYear: 2026,
+
+  copyrightHolder: {
+    "@id": ORGANIZATION_ID,
+  },
+
+  inLanguage: "en-IN",
+};
+
+const serviceSchema = {
+  "@context": schemaContext,
+  "@type": "Service",
+  "@id": SERVICE_ID,
+
+  name: "Guest Management Services",
+
+  alternateName: [
+    "Event Guest Management",
+    "Wedding Guest Management",
+    "Corporate Event Guest Management",
+    "VIP Guest Management",
+  ],
+
+  url: PAGE_URL,
+
+  image: {
+    "@id": PRIMARY_IMAGE_ID,
+  },
+
+  serviceType: [
+    "Guest Management",
+    "RSVP Management",
+    "Guest List Management",
+    "Event Registration",
+    "VIP Guest Coordination",
+    "Check-In Management",
+    "Access Control",
+    "Attendee Tracking",
+    "Invitation Management",
+    "Hospitality Coordination",
+    "Guest Communication Management",
+  ],
+
+  category:
+    "Event Guest Management and Hospitality Services",
+
+  description:
+    "Double Trouble Studio provides professional guest management services for weddings, corporate events, celebrity events, brand launches, investor events and private VIP experiences across Mumbai and India. Services include RSVP management, guest list management, event registration, VIP coordination, check-in management, access control, attendee tracking, invitation management and hospitality support.",
+
+  provider: {
+    "@id": ORGANIZATION_ID,
+  },
+
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Event hosts and organizations requiring professional guest management",
+    audienceType:
+      "Wedding hosts, corporate event organizers, celebrity event teams, brand launch teams, hospitality teams, founders, investors and private event hosts",
+  },
+
+  areaServed: serviceAreas,
+
+  hasOfferCatalog: {
+    "@id": CATALOG_ID,
+  },
+
+  mainEntityOfPage: {
+    "@id": WEBPAGE_ID,
+  },
+};
+
+const offerCatalogSchema = {
+  "@context": schemaContext,
+  "@type": "OfferCatalog",
+  "@id": CATALOG_ID,
+
+  url: `${PAGE_URL}#services`,
+
+  name: "Guest Management Services We Provide",
+
+  description:
+    "Guest management solutions covering RSVP tracking, guest databases, VIP handling, event registration, check-ins, access control, attendee tracking, invitations, hospitality and guest communication.",
+
+  numberOfItems: serviceOffers.length,
+
+  itemListOrder:
+    "https://schema.org/ItemListOrderAscending",
+
+  itemListElement: serviceOffers.map((service) => ({
+    "@type": "Offer",
+    "@id": `${PAGE_URL}#${service.offerSlug}`,
+
+    seller: {
       "@id": ORGANIZATION_ID,
-      name: "Double Trouble Studio",
-      legalName: "Double Trouble Studio Pvt. Ltd.",
-      alternateName: ["DTS", "DTS World"],
-      url: SITE_URL,
-      logo: "https://www.dtsworld.in/logo.png",
     },
 
-    {
-      "@type": "ImageObject",
-      "@id": PRIMARY_IMAGE_ID,
-      url: "https://www.dtsworld.in/guest-management-og.jpg",
-      contentUrl: "https://www.dtsworld.in/guest-management-og.jpg",
-      width: 1200,
-      height: 630,
-      caption:
-        "Guest Management Services for Weddings, Corporate Events and VIP Experiences",
-      representativeOfPage: true,
-      inLanguage: "en-IN",
-    },
-
-    {
-      "@type": "WebPage",
-      "@id": WEBPAGE_ID,
-      url: PAGE_URL,
-      name: "Guest Management Services in Mumbai & India | Double Trouble Studio",
-      headline:
-        "Guest Management Services for Weddings, Corporate Events and VIP Experiences",
-      description:
-        "Professional guest management services in Mumbai including RSVP management, guest list management, event registration, VIP guest coordination, check-in management and access control for weddings, corporate events, celebrity events and brand launches across India.",
-      isPartOf: {
-        "@id": WEBSITE_ID,
-      },
-      about: {
-        "@id": SERVICE_ID,
-      },
-      mainEntity: {
-        "@id": SERVICE_ID,
-      },
-      publisher: {
-        "@id": ORGANIZATION_ID,
-      },
-      primaryImageOfPage: {
-        "@id": PRIMARY_IMAGE_ID,
-      },
-      breadcrumb: {
-        "@id": BREADCRUMB_ID,
-      },
-      hasPart: [
-        {
-          "@id": PROCESS_ID,
-        },
-        {
-          "@id": FAQ_ID,
-        },
-      ],
-      mentions: [
-        {
-          "@id": CATALOG_ID,
-        },
-        {
-          "@id": FEATURED_WORK_ID,
-        },
-        {
-          "@id": INDUSTRIES_ID,
-        },
-        {
-          "@id": LOCATIONS_ID,
-        },
-      ],
-      significantLink: [
-        "https://www.dtsworld.in/contact",
-        "https://www.dtsworld.in/work",
-        "https://www.dtsworld.in/services/celebrity-management",
-        "https://www.dtsworld.in/services/events-weddings",
-      ],
-      inLanguage: "en-IN",
-    },
-
-    {
+    itemOffered: {
       "@type": "Service",
-      "@id": SERVICE_ID,
-      name: "Guest Management Services",
-      alternateName: [
-        "Event Guest Management",
-        "Wedding Guest Management",
-        "Corporate Event Guest Management",
-        "VIP Guest Management",
-      ],
-      url: PAGE_URL,
-      image: {
-        "@id": PRIMARY_IMAGE_ID,
-      },
-      serviceType: [
-        "Guest Management",
-        "RSVP Management",
-        "Guest List Management",
-        "Event Registration",
-        "VIP Guest Coordination",
-        "Check-In Management",
-        "Access Control",
-        "Attendee Tracking",
-        "Hospitality Coordination",
-      ],
-      category: "Event Guest Management and Hospitality Services",
-      description:
-        "Double Trouble Studio provides professional guest management services for weddings, corporate events, celebrity events, brand launches, investor events and private VIP experiences across Mumbai and India. Services include RSVP management, guest list management, event registration, VIP coordination, check-in management, access control, attendee tracking, invitation management and hospitality support.",
+      "@id": `${PAGE_URL}#${service.slug}`,
+
+      name: service.name,
+      serviceType: service.serviceType,
+      description: service.description,
+
       provider: {
         "@id": ORGANIZATION_ID,
       },
-      audience: {
-        "@type": "Audience",
-        audienceType:
-          "Wedding hosts, corporate event organizers, celebrity event teams, brand launch teams, hospitality teams, founders, investors and private event hosts",
-      },
-      areaServed: serviceAreas,
-      hasOfferCatalog: {
-        "@id": CATALOG_ID,
-      },
-      mainEntityOfPage: {
-        "@id": WEBPAGE_ID,
+
+      areaServed: {
+        "@type": "Country",
+        name: "India",
       },
     },
+  })),
+};
 
+const breadcrumbSchema = {
+  "@context": schemaContext,
+  "@type": "BreadcrumbList",
+  "@id": BREADCRUMB_ID,
+
+  itemListElement: [
     {
-      "@type": "OfferCatalog",
-      "@id": CATALOG_ID,
-      url: `${PAGE_URL}#services`,
-      name: "Guest Management Services We Provide",
-      description:
-        "Guest management solutions covering RSVP tracking, guest databases, VIP handling, event registration, check-ins, access control, attendee tracking, invitations, hospitality and guest communication.",
-      numberOfItems: serviceOffers.length,
-      itemListOrder: "https://schema.org/ItemListOrderAscending",
-      itemListElement: serviceOffers.map((service) => ({
-        "@type": "Offer",
-        "@id": `${PAGE_URL}#${service.offerSlug}`,
-        seller: {
-          "@id": ORGANIZATION_ID,
-        },
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${PAGE_URL}#${service.slug}`,
-          name: service.name,
-          serviceType: service.serviceType,
-          description: service.description,
-          provider: {
-            "@id": ORGANIZATION_ID,
-          },
-          areaServed: {
-            "@type": "Country",
-            name: "India",
-          },
-        },
-      })),
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL,
     },
-
     {
-      "@type": "BreadcrumbList",
-      "@id": BREADCRUMB_ID,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: SITE_URL,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Guest Management",
-          item: PAGE_URL,
-        },
-      ],
-    },
-
-    {
-      "@type": "HowTo",
-      "@id": PROCESS_ID,
-      url: `${PAGE_URL}#process`,
-      name: "Double Trouble Studio Guest Management Process",
-      description:
-        "A structured guest management process from planning and system setup to communication, on-ground execution and post-event reporting.",
-      isPartOf: {
-        "@id": WEBPAGE_ID,
-      },
-      inLanguage: "en-IN",
-      step: processSteps.map((step, index) => ({
-        "@type": "HowToStep",
-        position: index + 1,
-        name: step.name,
-        text: step.text,
-      })),
-    },
-
-    {
-      "@type": "ItemList",
-      "@id": FEATURED_WORK_ID,
-      url: `${PAGE_URL}#featured-work`,
-      name: "Guest Management in Action",
-      description:
-        "Guest management examples covering weddings, celebrity events, brand launches, corporate events, VIP movements and destination events.",
-      numberOfItems: featuredWork.length,
-      itemListOrder: "https://schema.org/ItemListOrderAscending",
-      itemListElement: featuredWork.map((work, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "CreativeWork",
-          "@id": `${PAGE_URL}#${work.slug}`,
-          name: work.name,
-          description: work.description,
-          creator: {
-            "@id": ORGANIZATION_ID,
-          },
-          about: {
-            "@id": SERVICE_ID,
-          },
-          inLanguage: "en-IN",
-        },
-      })),
-    },
-
-    {
-      "@type": "ItemList",
-      "@id": INDUSTRIES_ID,
-      name: "Events Supported by Guest Management Services",
-      description:
-        "Guest management support for weddings, celebrity events, corporate events, brand launches, fashion events, media events, award nights, private gatherings and investor events.",
-      numberOfItems: industries.length,
-      itemListOrder: "https://schema.org/ItemListUnordered",
-      itemListElement: industries.map((industry, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: industry,
-      })),
-    },
-
-    {
-      "@type": "ItemList",
-      "@id": LOCATIONS_ID,
-      name: "Guest Management Service Locations",
-      numberOfItems: locations.length,
-      itemListOrder: "https://schema.org/ItemListUnordered",
-      itemListElement: locations.map((location, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: location,
-      })),
-    },
-
-    {
-      "@type": "FAQPage",
-      "@id": FAQ_ID,
-      url: `${PAGE_URL}#faq`,
-      name: "Guest Management Frequently Asked Questions",
-      description:
-        "Answers to common questions about guest management services, RSVP tracking, event registration, VIP handling, event check-ins, access control, locations and pricing.",
-      isPartOf: {
-        "@id": WEBPAGE_ID,
-      },
-      about: {
-        "@id": SERVICE_ID,
-      },
-      publisher: {
-        "@id": ORGANIZATION_ID,
-      },
-      inLanguage: "en-IN",
-      mainEntity: faqs.map((faq, index) => ({
-        "@type": "Question",
-        "@id": `${PAGE_URL}#faq-${index + 1}`,
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          "@id": `${PAGE_URL}#faq-${index + 1}-answer`,
-          text: faq.answer,
-        },
-      })),
+      "@type": "ListItem",
+      position: 2,
+      name: "Guest Management",
+      item: PAGE_URL,
     },
   ],
 };
 
+const processSchema = {
+  "@context": schemaContext,
+  "@type": "HowTo",
+  "@id": PROCESS_ID,
+
+  url: `${PAGE_URL}#process`,
+
+  name:
+    "Double Trouble Studio Guest Management Process",
+
+  description:
+    "A structured guest management process from planning and system setup to communication, on-ground execution and post-event reporting.",
+
+  isPartOf: {
+    "@id": WEBPAGE_ID,
+  },
+
+  about: {
+    "@id": SERVICE_ID,
+  },
+
+  inLanguage: "en-IN",
+
+  step: processSteps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.name,
+    text: step.text,
+  })),
+};
+
+const featuredWorkSchema = {
+  "@context": schemaContext,
+  "@type": "ItemList",
+  "@id": FEATURED_WORK_ID,
+
+  url: `${PAGE_URL}#featured-work`,
+
+  name: "Guest Management in Action",
+
+  description:
+    "Guest management examples covering weddings, celebrity events, brand launches, corporate events, VIP movements and destination events.",
+
+  numberOfItems: featuredWork.length,
+
+  itemListOrder:
+    "https://schema.org/ItemListOrderAscending",
+
+  itemListElement: featuredWork.map((work, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+
+    item: {
+      "@type": "CreativeWork",
+      "@id": `${PAGE_URL}#${work.slug}`,
+
+      name: work.name,
+      description: work.description,
+
+      creator: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      about: {
+        "@id": SERVICE_ID,
+      },
+
+      inLanguage: "en-IN",
+    },
+  })),
+};
+
+const industriesSchema = {
+  "@context": schemaContext,
+  "@type": "ItemList",
+  "@id": INDUSTRIES_ID,
+
+  name:
+    "Events Supported by Guest Management Services",
+
+  description:
+    "Guest management support for weddings, celebrity events, corporate events, brand launches, fashion events, media events, award nights, private gatherings and investor events.",
+
+  numberOfItems: industries.length,
+
+  itemListOrder:
+    "https://schema.org/ItemListUnordered",
+
+  itemListElement: industries.map(
+    (industry, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: industry,
+    }),
+  ),
+};
+
+const locationsSchema = {
+  "@context": schemaContext,
+  "@type": "ItemList",
+  "@id": LOCATIONS_ID,
+
+  name:
+    "Guest Management Service Locations",
+
+  description:
+    "Major cities and destinations served by Double Trouble Studio for professional guest management services.",
+
+  numberOfItems: locations.length,
+
+  itemListOrder:
+    "https://schema.org/ItemListUnordered",
+
+  itemListElement: locations.map(
+    (location, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: location,
+    }),
+  ),
+};
+
+const faqSchema = {
+  "@context": schemaContext,
+  "@type": "FAQPage",
+  "@id": FAQ_ID,
+
+  url: `${PAGE_URL}#faq`,
+
+  name:
+    "Guest Management Frequently Asked Questions",
+
+  description:
+    "Answers to common questions about guest management services, RSVP tracking, event registration, VIP handling, event check-ins, access control, locations and pricing.",
+
+  isPartOf: {
+    "@id": WEBPAGE_ID,
+  },
+
+  about: {
+    "@id": SERVICE_ID,
+  },
+
+  publisher: {
+    "@id": ORGANIZATION_ID,
+  },
+
+  inLanguage: "en-IN",
+
+  mainEntity: faqs.map((faq, index) => ({
+    "@type": "Question",
+    "@id": `${PAGE_URL}#faq-${index + 1}`,
+
+    name: faq.question,
+
+    acceptedAnswer: {
+      "@type": "Answer",
+      "@id": `${PAGE_URL}#faq-${index + 1}-answer`,
+      text: faq.answer,
+    },
+  })),
+};
+
+// Separate valid JSON-LD blocks.
+// This keeps the entity graph connected via @id while also allowing
+// validators to surface the major schema types independently.
+const structuredDataBlocks = [
+  logoSchema,
+  primaryImageSchema,
+  organizationSchema,
+  websiteSchema,
+  webPageSchema,
+  serviceSchema,
+  offerCatalogSchema,
+  breadcrumbSchema,
+  processSchema,
+  featuredWorkSchema,
+  industriesSchema,
+  locationsSchema,
+  faqSchema,
+];
+
 export default function GuestManagement() {
   return (
     <>
-      <script
-        id="guest-management-structured-data"
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(guestManagementSchema).replace(/</g, "\\u003c"),
-        }}
-      />
+      {structuredDataBlocks.map((schema, index) => (
+        <script
+          key={`guest-management-schema-${index}`}
+          id={`guest-management-structured-data-${index + 1}`}
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema).replace(
+              /</g,
+              "\\u003c",
+            ),
+          }}
+        />
+      ))}
 
       <main>
         <Navbar />

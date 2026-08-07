@@ -5,10 +5,20 @@ import AboutExperience from "@/components/About/AboutExperience";
 import AboutFaq from "@/components/About/AboutFaq";
 import AboutHero from "@/components/About/AboutHero";
 import AboutStory from "@/components/About/AboutStory";
+import OurTeamSection from "@/components/About/OurTeamSection";
+import WhatWeBelieve from "@/components/About/WhatWeBelive";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import WhatWeBelieve from "@/components/About/WhatWeBelive";
-import OurTeamSection from "@/components/About/OurTeamSection";
+
+const PAGE_URL = "https://www.dtsworld.in/about";
+const ORGANIZATION_ID = "https://www.dtsworld.in/#organization";
+const WEBSITE_ID = "https://www.dtsworld.in/#website";
+const LOGO_ID = "https://www.dtsworld.in/#logo";
+const PAGE_ID = `${PAGE_URL}#webpage`;
+const BREADCRUMB_ID = `${PAGE_URL}#breadcrumb`;
+const TEAM_ID = `${PAGE_URL}#team`;
+const FAQ_ID = `${PAGE_URL}#faq`;
+const PRIMARY_IMAGE_ID = `${PAGE_URL}#primaryimage`;
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +33,7 @@ export const metadata: Metadata = {
   publisher: "Double Trouble Studio",
 
   alternates: {
-    canonical: "https://www.dtsworld.in/about",
+    canonical: PAGE_URL,
   },
 
   keywords: [
@@ -46,7 +56,7 @@ export const metadata: Metadata = {
     title: "About Double Trouble Studio | Creative Agency in Mumbai",
     description:
       "Discover the philosophy, team and expertise behind Double Trouble Studio. We build cultural brands through branding, PR, digital marketing, website development, AI video production and premium storytelling.",
-    url: "https://www.dtsworld.in/about",
+    url: PAGE_URL,
     siteName: "Double Trouble Studio",
     locale: "en_IN",
     type: "website",
@@ -81,16 +91,50 @@ export const metadata: Metadata = {
     },
   },
 };
+
 const aboutSchema = {
   "@context": "https://schema.org",
 
   "@graph": [
     // --------------------------------------------------
-    // ORGANIZATION
+    // LOGO IMAGE
+    // --------------------------------------------------
+    {
+      "@type": "ImageObject",
+      "@id": LOGO_ID,
+
+      url: "https://www.dtsworld.in/logo.png",
+      contentUrl: "https://www.dtsworld.in/logo.png",
+
+      caption: "Double Trouble Studio Logo",
+      inLanguage: "en-IN",
+    },
+
+    // --------------------------------------------------
+    // PRIMARY ABOUT PAGE IMAGE
+    // --------------------------------------------------
+    {
+      "@type": "ImageObject",
+      "@id": PRIMARY_IMAGE_ID,
+
+      url: "https://www.dtsworld.in/og/about-og.jpg",
+      contentUrl: "https://www.dtsworld.in/og/about-og.jpg",
+
+      width: 1200,
+      height: 630,
+
+      caption: "About Double Trouble Studio - Creative Agency in Mumbai",
+      representativeOfPage: true,
+      inLanguage: "en-IN",
+    },
+
+    // --------------------------------------------------
+    // ORGANIZATION / LOCAL BUSINESS
+    // Same canonical entity ID used across the website.
     // --------------------------------------------------
     {
       "@type": ["Organization", "LocalBusiness"],
-      "@id": "https://www.dtsworld.in/#organization",
+      "@id": ORGANIZATION_ID,
 
       name: "Double Trouble Studio",
       legalName: "Double Trouble Studio Pvt. Ltd.",
@@ -99,18 +143,22 @@ const aboutSchema = {
       url: "https://www.dtsworld.in/",
 
       logo: {
-        "@type": "ImageObject",
-        "@id": "https://www.dtsworld.in/#logo",
-        url: "https://www.dtsworld.in/logo.png",
-        contentUrl: "https://www.dtsworld.in/logo.png",
-        caption: "Double Trouble Studio Logo",
+        "@id": LOGO_ID,
+      },
+
+      image: {
+        "@id": LOGO_ID,
       },
 
       description:
-        "Double Trouble Studio is a Mumbai-based creative agency providing branding, digital marketing, public relations, website development, SEO, guest management, event marketing, AI video production and VFX services across India.",
+        "Double Trouble Studio is a Mumbai-based creative agency providing branding, public relations, digital marketing, social media marketing, event and wedding management, guest management, celebrity management, website development, SEO, AI video production and VFX services across India.",
+
+      slogan: "We Build Cultural Brands That Feel Alive",
 
       telephone: "+918000006021",
       email: "hellodoubletroublestudio@gmail.com",
+
+      priceRange: "₹₹₹",
 
       address: {
         "@type": "PostalAddress",
@@ -125,56 +173,135 @@ const aboutSchema = {
       contactPoint: {
         "@type": "ContactPoint",
         "@id": "https://www.dtsworld.in/#contact-point",
+
         contactType: "customer service",
         telephone: "+918000006021",
         email: "hellodoubletroublestudio@gmail.com",
         url: "https://www.dtsworld.in/contact",
-        areaServed: "IN",
+
+        areaServed: {
+          "@type": "Country",
+          name: "India",
+        },
+
         availableLanguage: ["English", "Hindi"],
       },
 
-      areaServed: {
-        "@type": "Country",
-        name: "India",
-      },
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "India",
+        },
+        {
+          "@type": "City",
+          name: "Mumbai",
+        },
+        {
+          "@type": "City",
+          name: "Delhi",
+        },
+        {
+          "@type": "City",
+          name: "Chandigarh",
+        },
+        {
+          "@type": "City",
+          name: "Bengaluru",
+          alternateName: "Bangalore",
+        },
+        {
+          "@type": "City",
+          name: "Hyderabad",
+        },
+        {
+          "@type": "City",
+          name: "Pune",
+        },
+        {
+          "@type": "City",
+          name: "Ahmedabad",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Goa",
+        },
+      ],
 
       knowsAbout: [
         "Brand Strategy",
         "Brand Identity",
+        "Logo Design",
+        "Visual Identity",
+        "Luxury Brand Positioning",
         "Creative Direction",
         "Digital Marketing",
         "Social Media Marketing",
+        "Performance Advertising",
         "Public Relations",
-        "Website Design",
-        "Website Development",
-        "Search Engine Optimization",
-        "Event Marketing",
+        "Media Outreach",
+        "Influencer Marketing",
+        "Content Strategy",
+        "Event Management",
+        "Wedding Management",
         "Guest Management",
         "Celebrity Management",
+        "Website Design",
+        "Website Development",
+        "Next.js Website Development",
+        "User Interface Design",
+        "User Experience Design",
+        "Search Engine Optimization",
+        "Technical SEO",
         "AI Video Production",
+        "AI Video Advertising",
+        "Product Films",
         "Visual Effects",
+        "Brand Storytelling",
       ],
 
       employee: [
         {
-          "@id": "https://www.dtsworld.in/about#ravish-verma",
+          "@id": `${PAGE_URL}#ravish-verma`,
         },
         {
-          "@id": "https://www.dtsworld.in/about#nandini-yadav",
+          "@id": `${PAGE_URL}#nandini-yadav`,
         },
         {
-          "@id": "https://www.dtsworld.in/about#ritika-tiwari",
+          "@id": `${PAGE_URL}#ritika-tiwari`,
         },
         {
-          "@id": "https://www.dtsworld.in/about#simran-salagre",
+          "@id": `${PAGE_URL}#simran-salagre`,
         },
         {
-          "@id": "https://www.dtsworld.in/about#naman-gupta",
+          "@id": `${PAGE_URL}#naman-gupta`,
         },
         {
-          "@id": "https://www.dtsworld.in/about#amitesh-singh",
+          "@id": `${PAGE_URL}#amitesh-singh`,
         },
       ],
+    },
+
+    // --------------------------------------------------
+    // WEBSITE
+    // Retained intentionally to preserve a complete
+    // site-wide entity graph.
+    // --------------------------------------------------
+    {
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+
+      url: "https://www.dtsworld.in/",
+      name: "Double Trouble Studio",
+      alternateName: ["DTS", "DTS World"],
+
+      description:
+        "Double Trouble Studio is a creative agency in Mumbai providing branding, PR, digital marketing, event management, guest management, website development, SEO, AI video production and VFX services across India.",
+
+      publisher: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      inLanguage: "en-IN",
     },
 
     // --------------------------------------------------
@@ -182,45 +309,74 @@ const aboutSchema = {
     // --------------------------------------------------
     {
       "@type": "AboutPage",
-      "@id": "https://www.dtsworld.in/about#webpage",
+      "@id": PAGE_ID,
 
-      url: "https://www.dtsworld.in/about",
+      url: PAGE_URL,
 
       name: "About Double Trouble Studio | Creative Agency in Mumbai",
 
       headline: "We Build Cultural Brands That Feel Alive",
 
       description:
-        "Learn about Double Trouble Studio, a Mumbai creative agency specializing in branding, digital marketing, PR, websites, events, AI video production and VFX.",
+        "Learn about Double Trouble Studio, a Mumbai-based creative agency, branding agency, digital marketing agency, PR agency, website development company, guest management agency, event marketing agency and AI video production studio in India.",
 
       isPartOf: {
-        "@id": "https://www.dtsworld.in/#website",
+        "@id": WEBSITE_ID,
       },
 
       about: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
 
       mainEntity: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
+      },
+
+      primaryImageOfPage: {
+        "@id": PRIMARY_IMAGE_ID,
       },
 
       publisher: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
 
       breadcrumb: {
-        "@id": "https://www.dtsworld.in/about#breadcrumb",
+        "@id": BREADCRUMB_ID,
       },
 
+      // FAQPage is a WebPage/CreativeWork, so hasPart is valid.
       hasPart: [
         {
-          "@id": "https://www.dtsworld.in/about#team",
-        },
-        {
-          "@id": "https://www.dtsworld.in/about#faq",
+          "@id": FAQ_ID,
         },
       ],
+
+      // The team ItemList is a Thing, so mentions is the
+      // safer relationship instead of hasPart.
+      mentions: [
+        {
+          "@id": TEAM_ID,
+        },
+      ],
+
+      audience: {
+        "@type": "BusinessAudience",
+        "@id": `${PAGE_URL}#business-audience`,
+
+        name: "Brands and businesses seeking creative and marketing services",
+
+        audienceType:
+          "Hospitality brands, luxury brands, restaurants, cafes, fashion labels, lifestyle companies, wedding planners, event companies, creators, corporate brands, founders and modern startups",
+
+        description:
+          "Brands and businesses seeking branding, digital marketing, public relations, website development, SEO, guest management, event marketing, celebrity management, AI video production and VFX services.",
+      },
+
+      copyrightYear: 2026,
+
+      copyrightHolder: {
+        "@id": ORGANIZATION_ID,
+      },
 
       inLanguage: "en-IN",
     },
@@ -230,7 +386,7 @@ const aboutSchema = {
     // --------------------------------------------------
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.dtsworld.in/about#breadcrumb",
+      "@id": BREADCRUMB_ID,
 
       itemListElement: [
         {
@@ -244,19 +400,24 @@ const aboutSchema = {
           "@type": "ListItem",
           position: 2,
           name: "About",
-          item: "https://www.dtsworld.in/about",
+          item: PAGE_URL,
         },
       ],
     },
 
     // --------------------------------------------------
-    // TEAM
+    // TEAM ITEM LIST
     // --------------------------------------------------
     {
       "@type": "ItemList",
-      "@id": "https://www.dtsworld.in/about#team",
+      "@id": TEAM_ID,
 
       name: "Double Trouble Studio Team",
+
+      description:
+        "Creative, strategic and execution-driven professionals behind the brand experiences, websites, PR campaigns and creative work delivered by Double Trouble Studio.",
+
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
 
       numberOfItems: 6,
 
@@ -265,171 +426,227 @@ const aboutSchema = {
           "@type": "ListItem",
           position: 1,
           item: {
-            "@id": "https://www.dtsworld.in/about#ravish-verma",
+            "@id": `${PAGE_URL}#ravish-verma`,
           },
         },
         {
           "@type": "ListItem",
           position: 2,
           item: {
-            "@id": "https://www.dtsworld.in/about#nandini-yadav",
+            "@id": `${PAGE_URL}#nandini-yadav`,
           },
         },
         {
           "@type": "ListItem",
           position: 3,
           item: {
-            "@id": "https://www.dtsworld.in/about#ritika-tiwari",
+            "@id": `${PAGE_URL}#ritika-tiwari`,
           },
         },
         {
           "@type": "ListItem",
           position: 4,
           item: {
-            "@id": "https://www.dtsworld.in/about#simran-salagre",
+            "@id": `${PAGE_URL}#simran-salagre`,
           },
         },
         {
           "@type": "ListItem",
           position: 5,
           item: {
-            "@id": "https://www.dtsworld.in/about#naman-gupta",
+            "@id": `${PAGE_URL}#naman-gupta`,
           },
         },
         {
           "@type": "ListItem",
           position: 6,
           item: {
-            "@id": "https://www.dtsworld.in/about#amitesh-singh",
+            "@id": `${PAGE_URL}#amitesh-singh`,
           },
         },
       ],
     },
 
     // --------------------------------------------------
-    // PEOPLE
+    // TEAM MEMBERS
+    // Keep these only while the same people and roles
+    // are visibly shown on the About page.
     // --------------------------------------------------
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#ravish-verma",
+      "@id": `${PAGE_URL}#ravish-verma`,
+
       name: "Ravish Verma",
       jobTitle: "SME — SEO",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#nandini-yadav",
+      "@id": `${PAGE_URL}#nandini-yadav`,
+
       name: "Nandini Yadav",
       jobTitle: "Web Developer",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#ritika-tiwari",
+      "@id": `${PAGE_URL}#ritika-tiwari`,
+
       name: "Ritika Tiwari",
       jobTitle: "Web Developer",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#simran-salagre",
+      "@id": `${PAGE_URL}#simran-salagre`,
+
       name: "Simran Salagre",
       jobTitle: "Head — PR & Communication",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#naman-gupta",
+      "@id": `${PAGE_URL}#naman-gupta`,
+
       name: "Naman Gupta",
       jobTitle: "Video Editor",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     {
       "@type": "Person",
-      "@id": "https://www.dtsworld.in/about#amitesh-singh",
+      "@id": `${PAGE_URL}#amitesh-singh`,
+
       name: "Amitesh Singh",
       jobTitle: "AI Visual Content Creator",
+
       worksFor: {
-        "@id": "https://www.dtsworld.in/#organization",
+        "@id": ORGANIZATION_ID,
       },
     },
 
     // --------------------------------------------------
     // FAQ
+    // Keep only while these exact FAQs are visible in
+    // <AboutFaq />.
     // --------------------------------------------------
     {
       "@type": "FAQPage",
-      "@id": "https://www.dtsworld.in/about#faq",
+      "@id": FAQ_ID,
+
+      url: `${PAGE_URL}#faq`,
+
+      name: "Frequently Asked Questions About Double Trouble Studio",
+
+      description:
+        "Answers to common questions about Double Trouble Studio, its creative process, brand strategy, services, premium positioning and remote collaboration.",
+
+      isPartOf: {
+        "@id": PAGE_ID,
+      },
+
+      about: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      publisher: {
+        "@id": ORGANIZATION_ID,
+      },
+
+      inLanguage: "en-IN",
 
       mainEntity: [
         {
           "@type": "Question",
-          name:
-            "What makes Double Trouble Studio different from other agencies?",
+          "@id": `${PAGE_URL}#faq-difference`,
+
+          name: "What makes Double Trouble Studio different from other agencies?",
 
           acceptedAnswer: {
             "@type": "Answer",
+            "@id": `${PAGE_URL}#faq-difference-answer`,
+
             text:
-              "Double Trouble Studio combines brand strategy, storytelling, premium visual direction, PR, digital marketing and website thinking to build culturally relevant brands designed for long-term growth.",
+              "Double Trouble Studio combines brand strategy, storytelling, premium visual direction, PR, digital marketing and website thinking to build brands that feel culturally relevant, emotionally engaging and intentionally designed for long-term growth.",
           },
         },
 
         {
           "@type": "Question",
+          "@id": `${PAGE_URL}#faq-brands`,
+
           name: "What kind of brands do you usually work with?",
 
           acceptedAnswer: {
             "@type": "Answer",
+            "@id": `${PAGE_URL}#faq-brands-answer`,
+
             text:
-              "Double Trouble Studio works with hospitality, luxury, restaurant, fashion, lifestyle, event, corporate and founder-led brands across India.",
+              "Double Trouble Studio works with hospitality brands, luxury brands, restaurants, cafes, wedding companies, event brands, lifestyle startups, fashion labels, creators, influencers, corporate brands, founders and modern businesses across India.",
           },
         },
 
         {
           "@type": "Question",
+          "@id": `${PAGE_URL}#faq-philosophy`,
+
           name: "What is the philosophy behind your creative process?",
 
           acceptedAnswer: {
             "@type": "Answer",
+            "@id": `${PAGE_URL}#faq-philosophy-answer`,
+
             text:
-              "Our philosophy is built around clarity over chaos, combining strategy, audience understanding, positioning, timeless aesthetics, storytelling and intentional execution.",
+              "Our philosophy is built around clarity over chaos — where every creative decision is guided by brand strategy, audience understanding, market positioning, timeless aesthetics, emotional storytelling and intentional execution.",
           },
         },
 
         {
           "@type": "Question",
+          "@id": `${PAGE_URL}#faq-strategy`,
+
           name: "Do you focus only on aesthetics or strategy as well?",
 
           acceptedAnswer: {
             "@type": "Answer",
+            "@id": `${PAGE_URL}#faq-strategy-answer`,
+
             text:
-              "We focus on both strategy and aesthetics, including positioning, storytelling, PR communication, website structure, digital marketing and experience design.",
+              "We believe strong brands need both. Along with premium visuals, we focus heavily on brand positioning, storytelling, perception, PR communication, website structure, digital marketing and experience systems that support real business growth.",
           },
         },
 
         {
           "@type": "Question",
+          "@id": `${PAGE_URL}#faq-remote`,
+
           name: "Can Double Trouble Studio work with brands remotely?",
 
           acceptedAnswer: {
             "@type": "Answer",
+            "@id": `${PAGE_URL}#faq-remote-answer`,
+
             text:
-              "Yes. Double Trouble Studio works with clients across India and internationally through structured remote collaboration and creative workflows.",
+              "Yes. We collaborate with clients across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa, India and internationally through structured workflows, creative planning sessions and smooth remote communication systems.",
           },
         },
       ],
