@@ -177,7 +177,7 @@ export const metadata: Metadata = {
     images: [
       {
         url:
-          "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+          "https://www.dtsworld.in/og/og-pr-imedia-mage.png",
 
         width:
           1200,
@@ -202,7 +202,7 @@ export const metadata: Metadata = {
       "Integrated PR, media coverage, social media, influencer campaigns, SEO, paid ads and brand communication services across India.",
 
     images: [
-      "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+      "https://www.dtsworld.in/twitter/pr-twitter-image.png",
     ],
   },
 
@@ -705,10 +705,10 @@ const primaryImageSchema = {
   "@id": PRIMARY_IMAGE_ID,
 
   url:
-    "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+    "https://www.dtsworld.in/og/og-pr-imedia-mage.png",
 
   contentUrl:
-    "https://www.dtsworld.in/pr-media-digital-marketing-og.jpg",
+    "https://www.dtsworld.in/og/og-pr-imedia-mage.png",
 
   width: 1200,
   height: 630,
