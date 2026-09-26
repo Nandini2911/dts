@@ -67,3 +67,31 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  animation: heroEnter 650ms ease-out both;
+}
+
+.hero-enter-delay {
+  animation-delay: 100ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-enter-delay {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

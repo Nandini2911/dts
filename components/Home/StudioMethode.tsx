@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -9,62 +7,27 @@ import {
 const steps = [
   {
     number: "01",
+    timeline: "Week 1–2",
     title: "Discover",
-    desc: (
-      <>
-        Brand truth, audience behaviour, market research and{" "}
-        <Link
-          href="/blog/luxury-brand-strategy-roadmap-india"
-          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
-        >
-          category positioning
-        </Link>{" "}
-        for stronger brand strategy.
-      </>
-    ),
+    desc: "Brand audit, competitor analysis, audience research and a clear positioning framework aligned with the business goal.",
   },
   {
     number: "02",
+    timeline: "Week 2–3",
     title: "Design",
-    desc: (
-      <>
-        Brand narrative, visual systems, content direction and strategic
-        digital experience planning.
-      </>
-    ),
+    desc: "Brand narrative, visual direction, content architecture and campaign concepts translated into one consistent creative system.",
   },
   {
     number: "03",
+    timeline: "Week 3–6",
     title: "Develop",
-    desc: (
-      <>
-        SEO-friendly websites, digital campaigns, PR assets and elevated
-        brand experiences built with{" "}
-        <Link
-          href="/blog/on-page-seo-checklist-for-higher-rankings"
-          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
-        >
-          SEO planning
-        </Link>
-        .
-      </>
-    ),
+    desc: "Websites, campaign assets, PR material, content systems and tracking foundations built for launch and conversion.",
   },
   {
     number: "04",
+    timeline: "Launch + Optimise",
     title: "Deploy",
-    desc: (
-      <>
-        Campaign launch, amplification,{" "}
-        <Link
-          href="/blog/conversion-optimization-luxury-brands-high-ticket-funnel"
-          className="font-medium text-white underline underline-offset-4 hover:text-[#315E91]"
-        >
-          performance optimisation
-        </Link>{" "}
-        and long-term digital growth across India.
-      </>
-    ),
+    desc: "Campaign rollout, channel coordination, performance reviews and ongoing refinement based on real audience response.",
   },
 ];
 export default function StudioMethod() {
@@ -190,9 +153,8 @@ export default function StudioMethod() {
               [text-shadow:0_2px_20px_rgba(0,0,0,0.35)]
             "
           >
-            A premium creative agency framework designed for brands that value
-            clarity, brand strategy, digital consistency, cultural relevance,
-            performance marketing and meaningful long-term growth.
+            A clear four-stage system that turns business goals into focused
+            strategy, consistent creative execution and measurable next steps.
           </p>
         </motion.div>
 
@@ -297,7 +259,7 @@ export default function StudioMethod() {
                       text-white/45
                     "
                   >
-                    Step {step.number}
+                    {step.timeline}
                   </span>
 
                   <h3
@@ -352,33 +314,6 @@ export default function StudioMethod() {
               </motion.article>
             ))}
           </div>
-        </div>
-
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio follows a strategic creative agency process
-            for branding, digital marketing, PR campaigns, website development,
-            event marketing, guest management, AI video production and VFX in
-            India.
-          </h2>
-
-          <p>
-            The studio method includes brand discovery, audience research,
-            competitor analysis, category positioning, brand strategy, visual
-            identity design, content systems, website development, SEO planning,
-            PR campaign planning, social media marketing, AI video production,
-            campaign deployment, performance optimisation and long-term brand
-            growth.
-          </p>
-
-          <p>
-            This process helps hospitality brands, luxury brands, restaurants,
-            cafes, fashion labels, lifestyle brands, corporate companies,
-            founders, event brands and wedding brands across Mumbai, Delhi,
-            Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and India
-            build stronger online presence and premium brand positioning.
-          </p>
         </div>
       </div>
     </section>

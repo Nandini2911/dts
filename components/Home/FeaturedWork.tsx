@@ -1,167 +1,66 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 
-const inlineLinkClass =
-  "font-semibold text-[#10213D] underline underline-offset-4 decoration-[#6288B9]/40 hover:decoration-[#10213D] transition-colors";
-
 type Work = {
   logo: string;
-  category: ReactNode;
+  category: string;
   title: string;
   href: string;
-  desc: ReactNode;
+  desc: string;
+  outcome: string;
 };
 
 const works: Work[] = [
   {
     logo: "/logos/26.webp",
-    category: (
-      <>
-        Digital • Web •{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className="transition-colors hover:text-[#10213D]"
-        >
-          PR
-        </Link>
-      </>
-    ),
+    category: "Digital • Web • PR",
     title: "RNK Rentals",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        A complete digital transformation for India’s premier luxury car rental
-        network through brand storytelling, PR communication,{" "}
-        <Link
-          href="https://www.dtsworld.in/services/web-development-marketing"
-          className={inlineLinkClass}
-        >
-          SEO-friendly website development
-        </Link>
-        , performance systems and premium web experience.
-      </>
-    ),
+    href: "/work",
+    desc: "Built an integrated digital ecosystem for a premium chauffeur-driven mobility brand, connecting website experience, brand storytelling and PR communication.",
+    outcome: "Integrated website, PR and brand system",
   },
-
   {
     logo: "/BRlogo.webp",
-    category: (
-      <>
-        Brand • Web •{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className="transition-colors hover:text-[#10213D]"
-        >
-          PR
-        </Link>
-      </>
-    ),
+    category: "Brand • Web • Launch",
     title: "Bharat Reshma",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        Brand positioning, website development and narrative system for a{" "}
-        <Link
-          href="https://www.dtsworld.in/services/celebrity-management"
-          className={inlineLinkClass}
-        >
-          celebrity management platform
-        </Link>{" "}
-        connecting brands with India’s top celebrities, influencers and
-        creators.
-      </>
-    ),
+    href: "/work",
+    desc: "Created launch communication, digital positioning and a premium narrative system designed to make the Mumbai expansion feel distinctive and culturally relevant.",
+    outcome: "Premium launch positioning",
   },
-
   {
     logo: "/logos/36.webp",
-    category: "Social • Events",
+    category: "Social • Hospitality • Content",
     title: "Butterchicken Factory",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        A three-month hospitality brand revamp focused on{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className={inlineLinkClass}
-        >
-          hospitality social media marketing
-        </Link>
-        , café storytelling, event-led experiences, community engagement and
-        modern digital growth.
-      </>
-    ),
+    href: "/work",
+    desc: "Developed a focused hospitality content system combining menu storytelling, social-first campaigns, offers and community-led communication.",
+    outcome: "Three-month hospitality brand revamp",
   },
-
   {
     logo: "/india.jpg",
     category: "Digital • Media • AI",
     title: "India Today",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        <Link
-          href="https://www.dtsworld.in/services/ai-video-vfx"
-          className={inlineLinkClass}
-        >
-          AI-powered media campaign creative assets
-        </Link>
-        , premium visual storytelling and digital media creatives designed for
-        one of India’s leading media platforms.
-      </>
-    ),
+    href: "/work",
+    desc: "Produced AI-led campaign visuals and digital creative assets built for a high-visibility media environment and fast-moving content formats.",
+    outcome: "AI-powered campaign creative",
   },
-
   {
     logo: "/Golf Final Logo - 1.png",
-    category: (
-      <>
-        Events •{" "}
-        <Link
-          href="https://www.dtsworld.in/about"
-          className="transition-colors hover:text-[#10213D]"
-        >
-          branding
-        </Link>{" "}
-        • Production
-      </>
-    ),
+    category: "Events • Branding • Production",
     title: "All India Police Golf Tournament",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        Creative support, event branding, sponsor communication and premium
-        production identity for the prestigious All India Police Golf Tournament
-        Chandigarh 2026.
-      </>
-    ),
+    href: "/work",
+    desc: "Shaped the tournament identity, sponsor communication and event-facing creative system for a prestigious national sporting property.",
+    outcome: "Unified event and sponsor identity",
   },
-
   {
     logo: "/logos/38.webp",
-    category: (
-      <>
-        AI Video • VFX •{" "}
-        <Link
-          href="https://www.dtsworld.in/services/pr-media-marketing"
-          className="transition-colors hover:text-[#10213D]"
-        >
-          PR
-        </Link>
-      </>
-    ),
+    category: "AI Video • VFX • Campaign",
     title: "Spice",
-    href: "https://www.dtsworld.in/work",
-    desc: (
-      <>
-        AI-generated cinematic visuals, VFX-led storytelling and high-impact
-        digital campaign assets designed for premium brand communication.
-      </>
-    ),
+    href: "/work",
+    desc: "Created cinematic AI visuals, VFX-led storytelling and campaign assets designed to increase creative impact across digital touchpoints.",
+    outcome: "Cinematic AI campaign system",
   },
 ];
 
@@ -218,7 +117,7 @@ export default function FeaturedWork() {
             />
 
             <Link
-              href="https://www.dtsworld.in/work"
+              href="/work"
               className="
                 text-[10px]
                 uppercase
@@ -273,85 +172,8 @@ export default function FeaturedWork() {
               max-w-[720px]
             "
           >
-            A curated look at brands, media platforms, event properties and
-            businesses we have helped grow across{" "}
-            <Link
-              href="https://www.dtsworld.in/about"
-              className={inlineLinkClass}
-            >
-              branding
-            </Link>
-            ,{" "}
-            <Link
-              href="https://www.dtsworld.in/services/pr-media-marketing"
-              className={inlineLinkClass}
-            >
-              PR
-            </Link>
-            ,{" "}
-            <Link
-              href="https://www.dtsworld.in/services/web-development-marketing"
-              className={inlineLinkClass}
-            >
-              web development
-            </Link>
-            ,{" "}
-            <Link
-              href="https://www.dtsworld.in/services/pr-media-marketing"
-              className={inlineLinkClass}
-            >
-              social media marketing
-            </Link>
-            ,{" "}
-            <Link
-              href="https://www.dtsworld.in/services/ai-video-vfx"
-              className={inlineLinkClass}
-            >
-              AI video production
-            </Link>{" "}
-            and experiential campaigns — where aesthetics, systems and
-            measurable outcomes work together.
-          </p>
-
-          {/* MINI TEXT */}
-          <p
-            className="
-              mt-6
-              text-[12px]
-              uppercase
-              tracking-[3px]
-              text-slate-400
-            "
-          >
-            Select{" "}
-            <Link
-              href="https://www.dtsworld.in/work"
-              className="transition-colors hover:text-[#10213D]"
-            >
-              case studies
-            </Link>{" "}
-            •{" "}
-            <Link
-              href="https://www.dtsworld.in/about"
-              className="transition-colors hover:text-[#10213D]"
-            >
-              branding
-            </Link>{" "}
-            •{" "}
-            <Link
-              href="https://www.dtsworld.in/services/pr-media-marketing"
-              className="transition-colors hover:text-[#10213D]"
-            >
-              PR
-            </Link>{" "}
-            •{" "}
-            <Link
-              href="https://www.dtsworld.in/services/web-development-marketing"
-              className="transition-colors hover:text-[#10213D]"
-            >
-              web development
-            </Link>{" "}
-            • Events • AI Video
+            Selected projects showing how strategy, creative direction and
+            execution come together to solve real brand and communication goals.
           </p>
         </motion.div>
 
@@ -493,6 +315,10 @@ export default function FeaturedWork() {
                   >
                     {work.desc}
                   </p>
+
+                  <div className="mt-5 inline-flex rounded-full border border-[#D7E2EF] bg-[#F3F7FC] px-4 py-2 text-[12px] font-semibold text-[#31507A]">
+                    Outcome: {work.outcome}
+                  </div>
                 </div>
 
                 {/* LINK BUTTON */}
@@ -524,35 +350,6 @@ export default function FeaturedWork() {
               </div>
             </motion.article>
           ))}
-        </div>
-
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio featured work includes branding, PR campaigns,
-            digital marketing, web development, luxury event branding, guest
-            management, celebrity management, AI video production, VFX and
-            social media marketing case studies in India.
-          </h2>
-
-          <p>
-            Case studies include RNK Rentals for luxury car rental digital
-            transformation and SEO website development, Bharat Reshma for
-            celebrity management platform branding and web development,
-            Butterchicken Factory for restaurant and hospitality social media
-            marketing, India Today for AI-powered media campaign creative
-            assets, All India Police Golf Tournament for premium event branding
-            and sponsor communication, and Spice for AI video production and VFX
-            campaign assets.
-          </p>
-
-          <p>
-            Double Trouble Studio works with hospitality brands, luxury brands,
-            restaurants, cafés, fashion labels, lifestyle companies, media
-            companies, corporate brands, event properties, wedding brands and
-            founders across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad,
-            Pune, Ahmedabad, Goa and across India.
-          </p>
         </div>
       </div>
     </section>

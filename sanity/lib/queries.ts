@@ -1,5 +1,10 @@
 import { defineQuery } from "next-sanity";
 
+
+// ======================================================
+// ALL BLOG POSTS
+// ======================================================
+
 export const POSTS_QUERY = defineQuery(`
   *[
     _type == "post" &&
@@ -43,6 +48,11 @@ export const POSTS_QUERY = defineQuery(`
   }
 `);
 
+
+// ======================================================
+// SINGLE BLOG POST
+// ======================================================
+
 export const POST_QUERY = defineQuery(`
   *[
     _type == "post" &&
@@ -52,6 +62,8 @@ export const POST_QUERY = defineQuery(`
     ) <= dateTime($now)
   ][0] {
     _id,
+    _updatedAt,
+
     title,
     "slug": slug.current,
     category,
@@ -80,6 +92,11 @@ export const POST_QUERY = defineQuery(`
     body
   }
 `);
+
+
+// ======================================================
+// BLOG SITEMAP
+// ======================================================
 
 export const BLOG_SITEMAP_QUERY = defineQuery(`
   *[

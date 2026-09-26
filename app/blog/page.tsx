@@ -285,25 +285,143 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   }
 
 
+  const SITE_URL = "https://www.dtsworld.in";
+  const BLOG_URL = `${SITE_URL}/blog`;
+
+  const schemaPosts = paginatedPosts.map((post, index) => {
+    const postUrl = `${BLOG_URL}/${post.slug}`;
+
+    return {
+      "@type": ["BlogPosting", "Article"],
+      "@id": `${postUrl}#article`,
+      url: postUrl,
+      headline: post.title,
+      name: post.title,
+      ...(post.excerpt ? { description: post.excerpt } : {}),
+      ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+      ...(post.category ? { articleSection: post.category } : {}),
+      author: {
+        "@type": post.authorName ? "Person" : "Organization",
+        name: post.authorName || "Double Trouble Studio",
+      },
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      mainEntityOfPage: {
+        "@id": `${postUrl}#webpage`,
+      },
+      position: index + 1,
+      isAccessibleForFree: true,
+      inLanguage: "en-IN",
+    };
+  });
+
   const blogSchema = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "@id": "https://www.dtsworld.in/blog/#blog",
-  name: "Double Trouble Studio Blog",
-  description:
-    "Insights on branding, PR, digital marketing, SEO, websites, events, celebrity management, guest management and AI video production.",
-  url: "https://www.dtsworld.in/blog",
-  inLanguage: "en-IN",
-  publisher: {
-    "@id": "https://www.dtsworld.in/#organization",
-  },
-};
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "Double Trouble Studio",
+        alternateName: "DTS",
+        url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          "@id": `${SITE_URL}/#logo`,
+          url: `${SITE_URL}/logo.png`,
+          contentUrl: `${SITE_URL}/logo.png`,
+          caption: "Double Trouble Studio",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "Double Trouble Studio",
+        alternateName: "DTS",
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
+        },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${BLOG_URL}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: BLOG_URL,
+          },
+        ],
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": `${BLOG_URL}#webpage`,
+        url: BLOG_URL,
+        name: "Double Trouble Studio Blog",
+        description:
+          "Explore expert insights, strategies, case studies and industry trends from Double Trouble Studio covering branding, PR, celebrity management, event marketing, website development, SEO, digital marketing, social media, AI video production and business growth.",
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`,
+        },
+        breadcrumb: {
+          "@id": `${BLOG_URL}#breadcrumb`,
+        },
+        mainEntity: {
+          "@id": `${BLOG_URL}#blog`,
+        },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "Blog",
+        "@id": `${BLOG_URL}#blog`,
+        name: "Double Trouble Studio Blog",
+        description:
+          "Insights on branding, PR, digital marketing, SEO, websites, events, celebrity management, guest management and AI video production.",
+        url: BLOG_URL,
+        isPartOf: {
+          "@id": `${SITE_URL}/#website`,
+        },
+        publisher: {
+          "@id": `${SITE_URL}/#organization`,
+        },
+        blogPost: schemaPosts.map((post) => ({
+          "@id": post["@id"],
+        })),
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${BLOG_URL}#itemlist`,
+        name: "Double Trouble Studio Blog Posts",
+        numberOfItems: schemaPosts.length,
+        itemListOrder: "https://schema.org/ItemListOrderDescending",
+        itemListElement: schemaPosts.map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@id": post["@id"],
+          },
+        })),
+      },
+      ...schemaPosts,
+    ],
+  };
   return (
   <>
     <script
+      id="blog-page-structured-data"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(blogSchema),
+        __html: JSON.stringify(blogSchema).replace(/</g, "\\u003c"),
       }}
     />
     <main className="overflow-hidden bg-[#F7FAFF] text-[#0D2444]">

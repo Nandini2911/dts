@@ -1,5 +1,3 @@
-// components/IndustriesSection.tsx
-
 import {
   Hotel,
   UtensilsCrossed,
@@ -15,42 +13,55 @@ export default function IndustriesSection() {
   const industries = [
     {
       title: "Hospitality Brands",
-      desc: "Hotels, resorts, boutique stays and premium hospitality brands looking for stronger digital visibility, branding and guest experience.",
+      desc: "Brand, content and digital systems designed to improve discovery, trust and the complete guest journey.",
+      example: "Selected experience: RNK Rentals",
+      logo: "/logos/26.webp",
       icon: Hotel,
     },
     {
       title: "Cafés & Restaurants",
-      desc: "Modern cafés, restaurants, cloud kitchens and food brands built for social media discovery, SEO and customer engagement.",
+      desc: "Social-first storytelling, offers and search visibility that help food brands turn attention into visits and orders.",
+      example: "Selected experience: Butterchicken Factory",
+      logo: "/logos/36.webp",
       icon: UtensilsCrossed,
     },
     {
       title: "Wedding Planners",
-      desc: "Luxury wedding planners, décor brands and celebration businesses focused on premium positioning and high-value clients.",
+      desc: "Premium positioning, lead-focused digital presence and guest experience systems for high-value celebrations.",
+      example: "Strategy for luxury celebration brands",
       icon: Camera,
     },
     {
       title: "Luxury Businesses",
-      desc: "High-end lifestyle, retail and service brands looking for elevated branding, PR, digital marketing and luxury positioning.",
+      desc: "Refined brand systems and campaigns that communicate quality clearly without relying on noise or excess.",
+      example: "Selected experience: RNK Rentals",
+      logo: "/logos/26.webp",
       icon: Gem,
     },
     {
       title: "Creators & Influencers",
-      desc: "Personal brands, artists, creators and influencers with strong digital presence, content strategy and brand collaboration goals.",
+      desc: "Clear positioning, content direction and collaboration-ready communication for personal brands and talent.",
+      example: "Campaign and visibility support",
       icon: Mic2,
     },
     {
       title: "Event Companies",
-      desc: "Event management companies, experiential brands and production houses looking for digital authority and brand-led growth.",
+      desc: "Event identity, sponsor communication and digital promotion built to strengthen attendance and authority.",
+      example: "Selected experience: All India Police Golf Tournament",
+      logo: "/Golf Final Logo - 1.png",
       icon: PartyPopper,
     },
     {
       title: "Fashion & Lifestyle",
-      desc: "Fashion labels, lifestyle brands and aesthetic-first businesses focused on visual identity, culture and online growth.",
+      desc: "Culturally relevant identity, launch communication and premium storytelling for design-led brands.",
+      example: "Selected experience: Bharat Reshma",
+      logo: "/BRlogo.webp",
       icon: Shirt,
     },
     {
       title: "Modern Startups",
-      desc: "Emerging startups, founder-led businesses and premium new-age brands ready to scale with strategy, design and clarity.",
+      desc: "Positioning, websites and growth campaigns that help founder-led businesses enter the market with clarity.",
+      example: "Flexible single-service or integrated support",
       icon: Rocket,
     },
   ];
@@ -137,11 +148,9 @@ export default function IndustriesSection() {
               mx-auto
             "
           >
-            We partner with hospitality brands, cafés, restaurants, wedding
-            planners, luxury businesses, creators, event companies, fashion
-            labels and modern startups looking to build stronger digital
-            presence, sharper brand identity, premium positioning, SEO
-            visibility and long-term brand authority across India.
+            We adapt the strategy to the category, audience and buying journey —
+            then connect the work to a relevant business outcome instead of using
+            the same creative formula for every industry.
           </p>
         </div>
 
@@ -284,6 +293,22 @@ export default function IndustriesSection() {
                   >
                     {item.desc}
                   </p>
+
+                  <div className="mt-5 flex min-h-[48px] items-center gap-3 rounded-2xl border border-[#E2EAF4] bg-[#F8FAFD] px-3 py-2">
+                    {item.logo ? (
+                      <img
+                        src={item.logo}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-8 w-8 shrink-0 object-contain"
+                      />
+                    ) : (
+                      <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#6288B9]" />
+                    )}
+                    <span className="text-[12px] font-medium leading-5 text-[#31507A]">
+                      {item.example}
+                    </span>
+                  </div>
                 </div>
 
                 {/* HOVER LINE */}
@@ -309,40 +334,6 @@ export default function IndustriesSection() {
               </article>
             );
           })}
-        </div>
-
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio works with hospitality brands, cafés,
-            restaurants, wedding planners, luxury businesses, creators,
-            influencers, event companies, fashion brands, lifestyle businesses
-            and modern startups in India.
-          </h2>
-
-          <p>
-            The agency provides branding, digital marketing, social media
-            marketing, SEO, public relations, media campaigns, website
-            development, event marketing, guest management, celebrity
-            management, influencer marketing, AI video production and VFX
-            services for premium brands.
-          </p>
-
-          <p>
-            Industries served include hotels, resorts, boutique stays, cafés,
-            restaurants, cloud kitchens, wedding planners, luxury event
-            companies, fashion labels, lifestyle brands, creators, influencers,
-            corporate brands, media brands, founders and startups across Mumbai,
-            Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and
-            across India.
-          </p>
-
-          <p>
-            Double Trouble Studio helps businesses build premium positioning,
-            stronger online presence, brand authority, SEO visibility, digital
-            growth, social media discovery, PR visibility and long-term cultural
-            relevance.
-          </p>
         </div>
       </div>
     </section>

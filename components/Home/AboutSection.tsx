@@ -74,7 +74,7 @@ export default function AboutStudio() {
                   text-[#31507A]
                 "
               >
-                Strategic Creative Agency India
+                Brand Strategy & Growth
               </span>
             </div>
 
@@ -94,7 +94,7 @@ export default function AboutStudio() {
                   "New York, ui-serif, Georgia, serif",
               }}
             >
-              We Build Brands
+              Brands That Look Premium.
 
               <span
                 className="
@@ -107,54 +107,16 @@ export default function AboutStudio() {
                   to-[#A8BEDB]
                 "
               >
-                That Look Premium
+                Systems That Perform.
               </span>
-
-              And Perform Better
             </h2>
 
             {/* TEXT */}
             <div className="mt-8 max-w-[560px] space-y-5">
               <p className="text-[16px] leading-[32px] text-slate-600">
-  Double Trouble Studio is a{" "}
-  <Link
-    href="/about"
-    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
-  >
-    Mumbai-based creative branding agency
-  </Link>{" "}
-  and{" "}
-  <Link
-    href="/services/pr-media-marketing"
-    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
-  >
-    digital marketing agency in India, 
-  </Link>{" "}
-   helping hospitality, luxury,
-  restaurant, lifestyle and event brands build stronger online presence
-  through{" "}
-  <Link
-    href="/blog/luxury-brand-strategy-roadmap-india"
-    className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
-  >
-    brand strategy, 
-  </Link>{" "}
-  visual identity, PR campaigns, social media
-  marketing, website development and performance-led storytelling.
-</p>
-
-              <p
-                className="
-                  text-[16px]
-                  leading-[32px]
-                  text-slate-500
-                "
-              >
-                We create premium brand systems, digital experiences and
-                marketing communication that feel timeless, emotional and
-                culturally relevant across websites, social media, events,
-                public relations, guest management and every important brand
-                touchpoint.
+                We don&apos;t just design — we build complete brand ecosystems.
+                From strategy to execution, every element works together to
+                generate visibility, trust and revenue.
               </p>
             </div>
           </motion.div>
@@ -215,17 +177,9 @@ export default function AboutStudio() {
                   </h3>
 
                   <p className="mt-5 text-[15px] leading-8 text-slate-500">
-                    We merge{" "}
-                    <Link
-                      href="/blog/luxury-brand-strategy-roadmap-india"
-                      className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
-                    >
-                    brand strategy,{" "}
-                    </Link>
-                    
-                    digital design, storytelling,
-                    culture and marketing intelligence into premium experiences
-                    that feel elevated, memorable and built for growth.
+                    We combine data-driven strategy with creative storytelling
+                    to build brands that not only look premium but also deliver
+                    measurable business growth.
                   </p>
                 </div>
 
@@ -265,14 +219,14 @@ export default function AboutStudio() {
                         href="/locations"
                         className="font-medium text-[#0D2444] underline underline-offset-4 hover:text-[#315E91]"
                       >
-                        India-Wide Presence
+                        Full-Funnel Strategy
                       </Link>{" "}
                       
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-slate-500">
-                      Growth-driven branding, PR, digital marketing and web
-                      experiences designed for modern audiences across India.
+                      One connected roadmap across positioning, content,
+                      campaigns and conversion so every channel supports growth.
                     </p>
                   </div>
 
@@ -304,12 +258,12 @@ export default function AboutStudio() {
                     </div>
 
                     <h4 className="mt-5 text-[16px] font-semibold">
-                      Premium Brand Systems
+                      Premium Creative
                     </h4>
 
                     <p className="mt-2 text-[14px] leading-7 text-white/60">
-                      Timeless visual identity, website design, content systems
-                      and brand communication with clarity and consistency.
+                      Distinctive identities, campaigns and digital experiences
+                      designed to build recognition, trust and preference.
                     </p>
                   </div>
                 </div>
@@ -340,41 +294,15 @@ export default function AboutStudio() {
 
               <div>
                 <h5 className="text-[15px] font-semibold text-[#10213D]">
-                  Luxury Brand Positioning
+                  Performance Marketing
                 </h5>
 
                 <p className="text-xs text-slate-500 mt-1">
-                  Mumbai Creative Agency
+                  Campaigns built to convert
                 </p>
               </div>
             </div>
           </motion.div>
-        </div>
-
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            About Double Trouble Studio, a Mumbai based creative branding
-            agency, digital marketing agency, PR agency, event management
-            company, guest management agency, website development company and AI
-            video production studio in India.
-          </h2>
-
-          <p>
-            Double Trouble Studio provides brand strategy, logo design, visual
-            identity, luxury brand positioning, digital marketing, social media
-            marketing, SEO, public relations, media campaigns, event management,
-            wedding management, guest management, celebrity management, website
-            development, AI video production and VFX services.
-          </p>
-
-          <p>
-            The agency works with hospitality brands, luxury brands, restaurants,
-            cafes, fashion labels, lifestyle businesses, corporate brands,
-            founders, creators, event companies and premium experiences across
-            Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad,
-            Goa and India.
-          </p>
         </div>
       </div>
     </section>
