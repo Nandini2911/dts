@@ -7,6 +7,7 @@ import Script from "next/script";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -168,6 +169,9 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${sora.variable}`}>
+
+       
+
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
