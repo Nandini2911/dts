@@ -6,19 +6,19 @@ const requirements = [
   "Business name",
   "Industry and services",
   "Current website, if any",
-  "Target cities or service areas",
   "Target audience",
-  "Competitor references",
-  "Design references",
+  "Business locations or service areas",
   "Required website pages",
+  "Preferred website structure",
+  "Design references",
   "Brand logo and guidelines",
   "Content availability",
-  "Social media handles",
-  "Marketing goals",
-  "SEO goals",
-  "Advertising budget, if applicable",
+  "Images and media assets",
+  "Required forms and inquiry flow",
+  "Required integrations",
+  "CMS or content update requirements",
+  "Website management requirements",
   "Timeline",
-  "Contact form or lead requirements",
 ];
 
 export default function ProjectRequirementsSection() {
@@ -42,13 +42,13 @@ export default function ProjectRequirementsSection() {
             </span>
 
             <h2 className="mt-7 bg-gradient-to-r from-[#071A31] via-[#244D7A] to-[#8FB4E3] bg-clip-text font-serif text-4xl font-bold leading-tight tracking-tight text-transparent md:text-5xl lg:text-6xl">
-              Information required to start your website or marketing project
+              Information required to start your website project
             </h2>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              To begin planning your website, SEO or digital marketing project,
-              we usually require a few important details about your business,
-              goals, audience and current digital presence.
+              To begin planning your website, we usually require a few important
+              details about your business, audience, content, functionality and
+              long-term website management needs.
             </p>
 
             <div className="mt-9 overflow-hidden rounded-[34px] border border-[#DDE8F5] bg-white shadow-[0_24px_70px_rgba(13,36,68,0.08)]">
@@ -59,8 +59,9 @@ export default function ProjectRequirementsSection() {
                   </p>
 
                   <p className="mt-5 text-base leading-8 text-slate-600">
-                    These details help us plan the right website structure, SEO
-                    strategy and digital marketing approach for your business.
+                    These details help us plan the right website structure,
+                    design direction, functionality, development requirements
+                    and ongoing management approach for your business.
                   </p>
                 </div>
               </div>
@@ -93,7 +94,7 @@ export default function ProjectRequirementsSection() {
                   </div>
 
                   <span className="w-fit rounded-full bg-[#F3F8FF] px-5 py-3 text-sm font-bold text-[#244D7A]">
-                    Website + Marketing
+                    Website Development
                   </span>
                 </div>
 

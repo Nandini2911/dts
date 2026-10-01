@@ -22,10 +22,14 @@ const services = [
     name: "PR, Media & Digital Marketing",
     href: "/services/pr-media-marketing",
   },
-  {
-    name: "Web Development & SEO",
-    href: "/services/web-development-marketing",
-  },
+{
+  name: "Web Development & Management",
+  href: "/services/web-development-marketing",
+},
+{
+  name: "Search Engine Optimization (SEO)",
+  href: "/services/search-engine-optimization",
+},
   {
     name: "AI Video & Video Editing",
     href: "/services/ai-video-vfx",

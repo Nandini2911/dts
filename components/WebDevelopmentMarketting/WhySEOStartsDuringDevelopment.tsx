@@ -2,30 +2,30 @@
 
 import { motion } from "framer-motion";
 
-const seoReasons = [
+const websiteReasons = [
   {
-    title: "Better Search Visibility",
-    text: "When SEO is planned from the beginning, the website structure, pages, content and technical setup can be aligned with how customers search.",
-  },
-  {
-    title: "Cleaner Website Architecture",
-    text: "SEO helps decide what pages should exist, how services should be grouped and how users should move across the website.",
-  },
-  {
-    title: "Stronger Service Pages",
-    text: "SEO-focused content helps each service page clearly answer what the service is, who it is for, what is included, how the process works and why the business is credible.",
+    title: "Clear Website Structure",
+    text: "A well-planned website starts with clear page architecture, service hierarchy and navigation so visitors can quickly understand your business and move through the website naturally.",
   },
   {
     title: "Better User Experience",
-    text: "A good SEO structure also improves navigation, readability, internal linking and content flow for users.",
+    text: "Thoughtful UI/UX planning improves how visitors interact with your website across pages, devices and different stages of their journey.",
   },
   {
-    title: "Faster Indexing Readiness",
-    text: "Technical SEO basics such as crawlable content, sitemap, metadata, schema and clean URLs help search engines understand the website better.",
+    title: "Responsive Across Devices",
+    text: "The website is planned to work smoothly across desktop, tablet and mobile so the experience stays consistent regardless of screen size.",
   },
   {
-    title: "Higher Conversion Potential",
-    text: "When website content is clear, helpful and well-structured, visitors are more likely to understand the offer and take action.",
+    title: "Stronger Performance",
+    text: "Development decisions around structure, assets, interactions and functionality help create a faster, smoother and more reliable website experience.",
+  },
+  {
+    title: "Easier Website Management",
+    text: "A properly structured website is easier to update, manage and expand when you need new pages, content changes, service updates or additional functionality.",
+  },
+  {
+    title: "Long-Term Reliability",
+    text: "Planning development and management together makes it easier to maintain the website, resolve technical issues and keep it current as the business evolves.",
   },
 ];
 
@@ -36,6 +36,7 @@ export default function WhySEOStartsDuringDevelopment() {
       <div className="absolute inset-0 bg-[linear-gradient(135deg,#FFFFFF_0%,#EEF7FF_45%,#FFFFFF_100%)]" />
 
       <div className="absolute left-[-180px] top-[-120px] h-[520px] w-[520px] rounded-full bg-[#BFD5EF]/45 blur-[130px]" />
+
       <div className="absolute bottom-[-160px] right-[-180px] h-[560px] w-[560px] rounded-full bg-[#6288B9]/18 blur-[150px]" />
 
       {/* Blueprint Grid */}
@@ -43,7 +44,7 @@ export default function WhySEOStartsDuringDevelopment() {
 
       {/* Large Background Text */}
       <div className="pointer-events-none absolute left-1/2 top-28 -translate-x-1/2 whitespace-nowrap font-serif text-[80px] font-bold leading-none text-[#0D2444]/[0.035] md:text-[150px] lg:text-[210px]">
-        SEO BUILT IN
+        BUILT RIGHT
       </div>
 
       <div className="relative mx-auto max-w-7xl">
@@ -56,7 +57,7 @@ export default function WhySEOStartsDuringDevelopment() {
             viewport={{ once: true }}
             className="inline-flex rounded-full bg-gradient-to-r from-[#0D2444] via-[#244D7A] to-[#6288B9] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#0D2444]/20"
           >
-            SEO + Website Development
+            Website Development + Management
           </motion.span>
 
           <motion.h2
@@ -67,7 +68,7 @@ export default function WhySEOStartsDuringDevelopment() {
             className="mt-6 font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              Why SEO Should Start During Website Development
+              Why Website Management Should Start With Development
             </span>
           </motion.h2>
 
@@ -78,9 +79,9 @@ export default function WhySEOStartsDuringDevelopment() {
             viewport={{ once: true }}
             className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600"
           >
-            SEO works best when it is planned before the website is built — so
-            your pages, structure, speed and content are ready for search from
-            day one.
+            A website works better when development and long-term management are
+            considered together — from structure and responsive design to
+            updates, performance and ongoing technical support.
           </motion.p>
         </div>
 
@@ -95,7 +96,7 @@ export default function WhySEOStartsDuringDevelopment() {
             </div>
 
             <p className="hidden text-sm font-semibold text-slate-500 md:block">
-              website-development / seo-foundation / launch-ready
+              website-development / website-management / long-term-support
             </p>
 
             <span className="text-sm font-bold text-[#0D2444]">DTS</span>
@@ -115,11 +116,11 @@ export default function WhySEOStartsDuringDevelopment() {
 
               <div className="relative">
                 <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/60">
-                  Foundation Logic
+                  Website Foundation
                 </p>
 
                 <h3 className="mt-6 font-serif text-5xl font-bold leading-tight md:text-6xl">
-                  Plan SEO before the first page is built.
+                  Build for launch. Plan for what comes after.
                 </h3>
               </div>
 
@@ -127,9 +128,9 @@ export default function WhySEOStartsDuringDevelopment() {
                 <div className="mb-6 h-px w-full bg-white/25" />
 
                 <p className="text-lg leading-8 text-white/75">
-                  The strongest websites are not designed first and optimized
-                  later. They are planned with search structure, user journey and
-                  conversion clarity from the beginning.
+                  The strongest websites are not treated as one-time projects.
+                  They are built with clear structure, scalable development and
+                  future updates, maintenance and business changes in mind.
                 </p>
               </div>
             </motion.div>
@@ -139,7 +140,7 @@ export default function WhySEOStartsDuringDevelopment() {
               <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-[#0D2444] via-[#BFD5EF] to-transparent md:block" />
 
               <div className="space-y-5">
-                {seoReasons.map((item, index) => (
+                {websiteReasons.map((item, index) => (
                   <motion.div
                     key={item.title}
                     initial={{ opacity: 0, x: 30 }}
@@ -162,8 +163,9 @@ export default function WhySEOStartsDuringDevelopment() {
                       <div className="border-b border-[#D7E6F8] pb-6">
                         <div className="mb-3 flex items-center gap-3">
                           <span className="h-2 w-2 rounded-full bg-[#6288B9]" />
+
                           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#6288B9]">
-                            SEO Layer
+                            Website Layer
                           </p>
                         </div>
 
@@ -195,8 +197,8 @@ export default function WhySEOStartsDuringDevelopment() {
 
           <p className="font-serif text-3xl font-bold leading-tight md:text-3xl">
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              A website built with SEO from the start is easier to understand,
-              easier to rank and easier to convert.
+              A website built for long-term management is easier to update,
+              easier to maintain and better prepared to grow with your business.
             </span>
           </p>
         </motion.div>

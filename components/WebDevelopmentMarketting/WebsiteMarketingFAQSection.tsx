@@ -17,82 +17,82 @@ const faqs: FaqItem[] = [
   {
     question: "What does a website development company do?",
     answer:
-      "A website development company plans, designs, builds and maintains websites for businesses. It manages structure, design, coding, content placement, mobile responsiveness, forms, integrations and launch support.",
+      "A website development company plans, designs, develops, tests and launches websites for businesses. It can also manage ongoing updates, maintenance, technical improvements, integrations and website support after launch.",
   },
   {
     question: "What is the difference between web design and web development?",
     answer:
-      "Web design focuses on the visual layout, user experience and look of a website. Web development focuses on building the website technically so it works properly across devices and browsers.",
+      "Web design focuses on the visual appearance, layout, user experience and interface of a website. Web development focuses on turning that design into a functional website that works properly across browsers, devices and screen sizes.",
   },
   {
-    question: "Do you provide website development and SEO together?",
+    question: "Do you build completely custom websites?",
     answer:
-      "Yes. Double Trouble Studio provides website development with SEO-ready structure, including service pages, headings, metadata, internal links, FAQs, alt text and technical SEO recommendations.",
-  },
-  {
-    question: "Why is SEO important for a website?",
-    answer:
-      "SEO helps search engines understand your website and helps users find your services online. It improves discoverability, website structure, content quality and long-term organic visibility.",
-  },
-  {
-    question: "Can you build a website that ranks on Google?",
-    answer:
-      "We can build an SEO-ready website with proper structure, content, technical setup and optimization. Rankings depend on competition, content quality, authority, backlinks, technical performance, local signals and ongoing SEO work.",
-  },
-  {
-    question: "How much does website development cost in India?",
-    answer:
-      "Website development cost depends on the number of pages, design complexity, features, content requirements, ecommerce functionality, integrations, SEO setup and timeline.",
-  },
-  {
-    question: "How long does website development take?",
-    answer:
-      "Website timelines depend on project size, page count, design complexity, content availability, feedback speed and technical requirements.",
-  },
-  {
-    question: "Do you provide ecommerce website development?",
-    answer:
-      "Yes. We develop ecommerce websites with product pages, category structure, cart flow, checkout setup, payment integration and conversion-focused design.",
-  },
-  {
-    question: "Do you provide digital marketing after website launch?",
-    answer:
-      "Yes. We support SEO, social media marketing, paid ads, performance marketing, content marketing, influencer campaigns and lead generation after website launch.",
-  },
-  {
-    question: "What is digital marketing?",
-    answer:
-      "Digital marketing is the promotion of a brand online through search engines, social media, paid ads, content, email, websites, influencer collaborations and digital campaigns.",
-  },
-  {
-    question: "Do you provide social media marketing?",
-    answer:
-      "Yes. We manage social media strategy, content calendars, creative direction, captions, reels ideas, posting plans and campaign communication.",
-  },
-  {
-    question: "Do you run Google Ads and Meta Ads?",
-    answer:
-      "Yes. We plan and manage Google Ads and Meta Ads campaigns for awareness, traffic, leads, inquiries, bookings and conversions.",
-  },
-  {
-    question: "How long does SEO take to show results?",
-    answer:
-      "SEO usually takes time because results depend on competition, website quality, content depth, technical health, backlinks, local signals and consistency. It is a long-term visibility strategy.",
-  },
-  {
-    question: "Do you provide local SEO?",
-    answer:
-      "Yes. We help businesses improve local visibility through location keywords, city pages, local content, Google Business Profile recommendations, reviews and service-area optimization.",
+      "Yes. We can plan and develop custom websites based on your brand, services, audience, required pages, functionality, integrations and long-term website requirements.",
   },
   {
     question: "Can you redesign my existing website?",
     answer:
-      "Yes. We can redesign your existing website with better design, stronger structure, improved content, mobile responsiveness, SEO readiness and conversion-focused sections.",
+      "Yes. We can redesign an existing website with improved layouts, clearer navigation, stronger content structure, responsive design, updated functionality and a more modern overall experience.",
+  },
+  {
+    question: "Do you provide responsive website development?",
+    answer:
+      "Yes. We build responsive websites designed to work smoothly across desktop, tablet and mobile devices while maintaining clear navigation, readable content and consistent functionality.",
+  },
+  {
+    question: "How much does website development cost in India?",
+    answer:
+      "Website development cost depends on the number of pages, design complexity, functionality, integrations, content requirements, ecommerce features, CMS requirements and overall project scope.",
+  },
+  {
+    question: "How long does website development take?",
+    answer:
+      "Website timelines depend on the project size, number of pages, design requirements, functionality, content availability, integrations and the speed of approvals and feedback during development.",
+  },
+  {
+    question: "Do you provide ecommerce website development?",
+    answer:
+      "Yes. We develop ecommerce websites with product categories, product pages, shopping cart functionality, checkout flows, payment integrations and responsive customer experiences.",
+  },
+  {
+    question: "Do you build websites with a CMS?",
+    answer:
+      "Yes. Depending on the project, we can build websites with content management functionality so your team can manage selected pages, content, images, products or other website information more easily.",
+  },
+  {
+    question: "Can you integrate forms, booking systems and third-party tools?",
+    answer:
+      "Yes. We can integrate contact forms, enquiry forms, booking systems, analytics tools, CRM connections, payment systems and other third-party services depending on your website requirements.",
+  },
+  {
+    question: "What is website management?",
+    answer:
+      "Website management is the ongoing process of keeping a website updated and functional after launch. It can include content changes, page updates, CMS support, technical fixes, new sections, integration updates and regular improvements.",
   },
   {
     question: "Do you provide website maintenance?",
     answer:
-      "Yes. We provide website maintenance, content updates, page additions, bug fixes, performance checks and ongoing website improvements.",
+      "Yes. We provide website maintenance that can include content updates, technical checks, bug fixes, functionality reviews, page changes, performance improvements and ongoing website support.",
+  },
+  {
+    question: "Can you manage my website after it is launched?",
+    answer:
+      "Yes. We can continue managing the website after launch by handling updates, new pages, content changes, technical requirements, troubleshooting and ongoing website improvements.",
+  },
+  {
+    question: "Can new pages or features be added later?",
+    answer:
+      "Yes. A properly planned website can be expanded over time with new pages, services, sections, forms, integrations or additional functionality as your business requirements change.",
+  },
+  {
+    question: "Do you help with website content and page structure?",
+    answer:
+      "Yes. We can help organize page hierarchy, service sections, content flow, calls to action, FAQs, trust elements and other information needed to make the website easier to understand and navigate.",
+  },
+  {
+    question: "What do you need before starting a website project?",
+    answer:
+      "We usually need information about your business, services, audience, required pages, design references, branding, available content, images, functional requirements, integrations, timeline and any ongoing website management needs.",
   },
 ];
 
@@ -145,9 +145,9 @@ export default function WebsiteDevelopmentFaq() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-[720px] text-[15px] font-medium leading-[1.8] text-slate-600 md:text-[17px]">
-            Everything you need to know about website development, SEO,
-            digital marketing, ecommerce websites, paid ads, local SEO and
-            ongoing website support.
+            Everything you need to know about website development, redesign,
+            responsive websites, ecommerce, website management, maintenance and
+            ongoing technical support.
           </p>
         </motion.div>
 
