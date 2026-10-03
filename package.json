@@ -2,12 +2,12 @@
   "name": "agency-ui",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --hostname 0.0.0.0 --webpack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
+ "scripts": {
+  "dev": "next dev --hostname 0.0.0.0 --webpack",
+  "build": "next build",
+  "start": "next start",
+  "lint": "eslint"
+},
   "dependencies": {
     "@next/third-parties": "^16.2.9",
     "@portabletext/react": "^6.2.0",
