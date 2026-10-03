@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const services = [
-  "Website Development",
-  "SEO Strategy",
-  "Digital Marketing",
-  "Social Media",
-  "Paid Ads",
-  "Lead Generation",
+  "Custom Website Development",
+  "Website Redesign",
+  "Responsive UI/UX",
+  "Ecommerce Development",
+  "Website Management",
+  "Maintenance & Support",
 ];
 
 export default function FinalCTASection() {
@@ -31,23 +31,24 @@ export default function FinalCTASection() {
             {/* Left Content */}
             <div className="p-7 sm:p-9 md:p-12">
               <span className="inline-flex rounded-full border border-[#DCE6F3] bg-[#F7FBFF] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#315E91]">
-                Start Your Digital Growth
+                Start Your Website Project
               </span>
 
               <h2 className="mt-6 max-w-[720px] bg-gradient-to-r from-[#071A31] via-[#315E91] to-[#8FB4E3] bg-clip-text font-serif text-[32px] font-semibold leading-[1.08] tracking-[-0.035em] text-transparent sm:text-[40px] md:text-[48px]">
-  Looking for website development, SEO & digital marketing?
-</h2>
+                Looking for website development or ongoing website management?
+              </h2>
+
               <p className="mt-5 max-w-[680px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[16px]">
-                Whether you need a new website, redesign, SEO strategy, digital
-                marketing campaign, social media management, paid ads or
-                lead-generation support, Double Trouble Studio can help build
-                and grow your online presence.
+                Whether you need a new website, a complete redesign, ecommerce
+                development, responsive UI/UX or improvements to an existing
+                website, Double Trouble Studio can help plan, design and build a
+                digital experience suited to your business.
               </p>
 
               <p className="mt-4 max-w-[680px] text-[15px] font-medium leading-[1.85] text-slate-600 md:text-[16px]">
-                We support businesses, startups, hospitality companies, luxury
-                labels, ecommerce brands and service providers with professional
-                digital growth services across India.
+                We also support websites after launch with content updates,
+                maintenance, technical changes, new pages, integrations and
+                ongoing website management as your business evolves.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -92,8 +93,8 @@ export default function FinalCTASection() {
 
               <div className="mt-8 rounded-[22px] border border-[#DCE6F3] bg-white p-5 shadow-[0_10px_35px_rgba(13,36,68,0.04)]">
                 <p className="text-sm font-medium leading-7 text-slate-600">
-                  A clean, scalable and conversion-focused digital system built
-                  for long-term brand growth.
+                  A modern, responsive and manageable website built to stay
+                  reliable and evolve with your business over time.
                 </p>
               </div>
             </div>

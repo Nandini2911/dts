@@ -12,42 +12,42 @@ const useCases: UseCase[] = [
   {
     title: "New Business Website",
     category: "Launch",
-    text: "Complete website planning, design, development, SEO-ready content and launch support for a new business.",
+    text: "Complete website planning, UI/UX design, responsive development, content setup and launch support for businesses building their digital presence.",
   },
   {
     title: "Website Redesign",
     category: "Upgrade",
-    text: "Improving an outdated website with better design, stronger content, mobile responsiveness, SEO structure and conversion-focused CTAs.",
+    text: "Transform an outdated website with improved layouts, clearer navigation, stronger content structure, responsive design and modern functionality.",
   },
   {
-    title: "Lead Generation Website",
-    category: "Conversion",
-    text: "Building landing pages and service pages designed to support inquiries, calls, consultation bookings and campaign leads.",
+    title: "Service Business Website",
+    category: "Business",
+    text: "Structured websites for service businesses with clear service pages, inquiry forms, calls to action, trust sections and easy customer journeys.",
   },
   {
-    title: "Restaurant Website & Marketing",
-    category: "Local Growth",
-    text: "Website development, menu pages, local SEO, social media content, influencer campaigns and digital promotion for restaurants and cafes.",
+    title: "Hospitality & Restaurant Website",
+    category: "Hospitality",
+    text: "Responsive websites for restaurants, cafés, hotels and hospitality brands with menus, galleries, booking flows, location details and contact journeys.",
   },
   {
     title: "Corporate Website",
     category: "Credibility",
-    text: "Professional website development for companies that need service pages, leadership sections, industry pages, case studies and credibility-focused content.",
+    text: "Professional websites for companies that require service pages, leadership profiles, industry sections, case studies and a stronger corporate presence.",
   },
   {
     title: "Ecommerce Website",
-    category: "Online Sales",
-    text: "Product-based website development with category pages, product pages, checkout flow, SEO structure and digital marketing support.",
+    category: "Commerce",
+    text: "Online stores with product categories, product pages, shopping journeys, checkout integration and responsive experiences across every device.",
   },
   {
-    title: "SEO Growth Campaign",
-    category: "Organic Reach",
-    text: "Keyword research, service-page optimization, blog strategy, local SEO, technical fixes and content improvements for better organic visibility.",
+    title: "Website Management",
+    category: "Ongoing Support",
+    text: "Ongoing management for content updates, page changes, new sections, CMS support, form updates and regular website improvements.",
   },
   {
-    title: "Paid Ads Campaign",
-    category: "Performance",
-    text: "Google Ads, Meta Ads, landing pages, tracking setup and performance optimization for faster traffic and inquiries.",
+    title: "Website Maintenance",
+    category: "Reliability",
+    text: "Technical maintenance, functionality checks, troubleshooting and ongoing support to help keep your website stable, current and dependable.",
   },
 ];
 
@@ -83,17 +83,17 @@ export default function UseCasesSection() {
           className="mx-auto max-w-4xl text-center"
         >
           <span className="inline-flex rounded-full border border-[#D6E5F5] bg-white/80 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-[#244D7A] backdrop-blur">
-            Use Cases
+            Website Use Cases
           </span>
 
-          <h2 className="mx-auto mt-7 bg-gradient-to-r from-[#071A31] via-[#244D7A] to-[#8FB4E3] bg-clip-text font-serif text-4xl font-bold leading-tight tracking-tight text-transparent md:text-5xl ">
-            Digital solutions shaped around your business goals
+          <h2 className="mx-auto mt-7 bg-gradient-to-r from-[#071A31] via-[#244D7A] to-[#8FB4E3] bg-clip-text font-serif text-4xl font-bold leading-tight tracking-tight text-transparent md:text-5xl">
+            Website solutions shaped around your business needs
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            DTS builds websites, SEO systems, paid campaigns and digital growth
-            journeys that help brands look premium, rank better and convert
-            visitors into serious inquiries.
+            DTS designs, develops and manages websites for businesses at
+            different stages — from new launches and redesigns to ecommerce,
+            corporate platforms and ongoing website management.
           </p>
         </motion.div>
 
@@ -101,7 +101,9 @@ export default function UseCasesSection() {
         <div className="relative mx-auto mt-20 hidden min-h-[940px] max-w-7xl xl:block">
           {/* Orbit Lines */}
           <div className="absolute left-1/2 top-[455px] h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D6E5F5]" />
+
           <div className="absolute left-1/2 top-[455px] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E3EEF9]" />
+
           <div className="absolute left-1/2 top-[455px] h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#EEF5FC]" />
 
           {/* Center Hub */}
@@ -117,20 +119,20 @@ export default function UseCasesSection() {
 
             <div className="relative px-8 text-center">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#6288B9]">
-                DTS Growth System
+                DTS Website System
               </p>
 
               <h3 className="mt-5 font-serif text-4xl font-bold leading-tight text-[#071A31]">
-                Strategy.
+                Plan.
                 <br />
-                Design.
+                Build.
                 <br />
-                Performance.
+                Manage.
               </h3>
 
               <p className="mx-auto mt-5 max-w-[220px] text-sm leading-6 text-slate-600">
-                A connected digital foundation built for visibility,
-                credibility and conversion.
+                A complete website lifecycle built around usability,
+                performance and long-term reliability.
               </p>
             </div>
           </motion.div>
@@ -164,6 +166,7 @@ export default function UseCasesSection() {
                   }`}
                 >
                   <div className="h-px w-24 bg-gradient-to-r from-transparent via-[#AFC9E8] to-[#244D7A]" />
+
                   <div className="h-3 w-3 rounded-full bg-[#244D7A] shadow-[0_0_0_8px_rgba(143,180,227,0.18)] transition duration-500 group-hover:scale-125" />
                 </div>
               </div>
@@ -212,16 +215,17 @@ export default function UseCasesSection() {
           className="mx-auto mt-20 max-w-4xl text-center"
         >
           <p className="text-xs font-bold uppercase tracking-[0.34em] text-[#6288B9]">
-            Build Better. Rank Better. Convert Better.
+            Build Better. Manage Better. Grow Confidently.
           </p>
 
           <h3 className="mt-5 bg-gradient-to-r from-[#071A31] via-[#244D7A] to-[#8FB4E3] bg-clip-text font-serif text-3xl font-bold leading-tight text-transparent md:text-5xl">
-            Need a website or campaign built for growth?
+            Need a website built, redesigned or professionally managed?
           </h3>
 
           <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-600">
-            DTS helps businesses create premium digital platforms that improve
-            credibility, visibility and inquiry generation.
+            DTS helps businesses create and manage modern websites that combine
+            strong design, responsive development, reliable functionality and
+            ongoing support.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">

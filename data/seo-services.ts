@@ -215,51 +215,101 @@ export const SEO_SERVICES = {
   },
 
   "web-development-marketing": {
-    name: "Web Development & SEO",
-    shortName: "Web Development & SEO",
-    seoName: "Web Development & SEO Services",
+    name: "Web Development & Management",
+    shortName: "Web Development & Management",
+    seoName: "Website Development & Management Services",
     schemaServiceType:
-      "Website Development and Search Engine Optimization",
+      "Website Development and Website Management",
 
     metaDescription: (city: string) =>
-      `Website development and SEO services in ${city} for responsive websites, technical SEO, local visibility and stronger online conversions.`,
+      `Website development and management services in ${city} for custom websites, redesigns, responsive development, maintenance and ongoing website support.`,
 
     heroDescription: (city: string) =>
-      `Build a fast, professional and search-optimised website for your business in ${city} with modern development, technical SEO and conversion-focused design.`,
+      `Build and manage a professional website for your business in ${city} with custom development, responsive design, website maintenance and ongoing technical support.`,
 
     defaultIntroduction: (city: string) =>
-      `Double Trouble Studio develops professional websites and SEO strategies for businesses serving customers in ${city}.`,
+      `Double Trouble Studio provides website development, redesign, management and maintenance services for businesses in ${city}.`,
 
     features: [
       {
-        title: "Next.js Development",
+        title: "Custom Website Development",
         description:
-          "Modern, responsive and scalable business websites developed using Next.js.",
+          "Modern, responsive and scalable websites developed around your business requirements.",
       },
       {
         title: "Website Design",
         description:
-          "Professional website experiences aligned with your brand and audience.",
+          "Professional website experiences aligned with your brand, audience and user journey.",
       },
+      {
+        title: "Website Redesign",
+        description:
+          "Modern redesigns for outdated websites with improved structure, usability and responsiveness.",
+      },
+      {
+        title: "Website Management",
+        description:
+          "Ongoing management of website pages, content, forms, CMS updates and functionality.",
+      },
+      {
+        title: "Website Maintenance",
+        description:
+          "Technical checks, bug fixes, updates and ongoing support to keep your website reliable.",
+      },
+      {
+        title: "Performance & Support",
+        description:
+          "Website performance improvements, troubleshooting and technical support for long-term stability.",
+      },
+    ],
+  },
+
+  "search-engine-optimization": {
+    name: "Search Engine Optimization",
+    shortName: "Search Engine Optimization(SEO)",
+    seoName: "Search Engine Optimization Services",
+    schemaServiceType:
+      "Search Engine Optimization",
+
+    metaDescription: (city: string) =>
+      `Search Engine Optimization services in ${city} for technical SEO, on-page optimization, keyword research, local search visibility, content strategy and long-term organic growth.`,
+
+    heroDescription: (city: string) =>
+      `Improve your business visibility in ${city} with Search Engine Optimization services covering technical SEO, on-page optimization, keyword strategy, local search and content-led organic growth.`,
+
+    defaultIntroduction: (city: string) =>
+      `Double Trouble Studio provides professional Search Engine Optimization services for businesses in ${city}, including technical SEO, on-page optimization, keyword research, local SEO and content strategy.`,
+
+    features: [
       {
         title: "Technical SEO",
         description:
-          "Crawlability, indexing, performance and site-architecture optimisation.",
+          "Crawlability, indexing, site architecture, performance and technical search optimization.",
       },
       {
         title: "On-Page SEO",
         description:
-          "Metadata, content, headings and keyword-focused page optimisation.",
+          "Optimization of titles, metadata, headings, content structure, internal links and page relevance.",
+      },
+      {
+        title: "Keyword Research",
+        description:
+          "Search-intent research to identify relevant keywords, topics and opportunities for your business.",
       },
       {
         title: "Local SEO",
         description:
-          "Location-focused optimisation for relevant regional search visibility.",
+          "Location-focused optimization to improve visibility for relevant local and regional searches.",
       },
       {
-        title: "Conversion Optimisation",
+        title: "Content SEO",
         description:
-          "Clear calls to action, user journeys and enquiry-focused structures.",
+          "SEO-focused service pages, content planning, topic development and internal linking strategy.",
+      },
+      {
+        title: "SEO Monitoring",
+        description:
+          "Ongoing review of organic visibility, indexing, technical issues and opportunities for improvement.",
       },
     ],
   },

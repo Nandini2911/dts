@@ -5,23 +5,30 @@ import { motion } from "framer-motion";
 const processSteps = [
   {
     title: "Website Strategy",
-    text: "We plan your website structure, service flow, user journey and content hierarchy before design begins.",
+    text: "We plan the website structure, page flow, user journey, content hierarchy and functional requirements before design begins.",
   },
   {
-    title: "UI/UX & Development",
-    text: "We build premium, mobile-friendly websites that load smoothly and represent your brand clearly.",
+    title: "UI/UX Design",
+    text: "We create clear, modern and responsive interfaces that reflect your brand and make the website easy to navigate.",
   },
   {
-    title: "SEO Foundation",
-    text: "We structure pages with SEO content, keyword planning, technical optimization and search-friendly architecture.",
+    title: "Website Development",
+    text: "We develop fast, scalable and responsive websites with clean functionality, smooth interactions and reliable performance.",
   },
   {
-    title: "Digital Marketing",
-    text: "We support the website with social media marketing, paid advertising and conversion-focused communication.",
+    title: "Website Management",
+    text: "We support your website after launch with updates, maintenance, content changes, technical support and ongoing improvements.",
   },
 ];
 
-const orbitItems = ["Website", "SEO", "UX", "Ads", "Leads", "Growth"];
+const orbitItems = [
+  "Strategy",
+  "UI/UX",
+  "Development",
+  "Responsive",
+  "Maintenance",
+  "Management",
+];
 
 export default function CompleteDigitalSolutions() {
   return (
@@ -55,7 +62,7 @@ export default function CompleteDigitalSolutions() {
             viewport={{ once: true }}
             className="inline-flex rounded-full bg-gradient-to-r from-[#0D2444] via-[#244D7A] to-[#6288B9] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#0D2444]/20"
           >
-            Complete Digital Solutions
+            Complete Website Solutions
           </motion.span>
 
           <motion.h2
@@ -66,7 +73,7 @@ export default function CompleteDigitalSolutions() {
             className="mt-6 font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              Complete Web Development, SEO & Digital Marketing Solutions
+              Website Development & Management Built Around Your Business
             </span>
           </motion.h2>
         </div>
@@ -84,45 +91,46 @@ export default function CompleteDigitalSolutions() {
 
             <div className="space-y-7 text-base leading-8 text-slate-600 md:text-lg">
               <p>
-                <span className="text-3xl font-serif font-bold text-[#0D2444]">
+                <span className="font-serif text-3xl font-bold text-[#0D2444]">
                   A website
                 </span>{" "}
-                is often the first place where customers judge a brand. It
-                should not only look good, but also load smoothly, explain your
-                services clearly, rank on search engines and convert visitors
-                into inquiries.
+                is often the first serious interaction a customer has with your
+                business. It should communicate your brand clearly, work
+                smoothly across devices and make it easy for visitors to
+                understand your services and take the next step.
               </p>
 
               <p>
-                Double Trouble Studio helps businesses create websites and
-                digital marketing systems that work together. We combine website
-                strategy, UI/UX planning, SEO content, technical optimization,
-                social media marketing, paid advertising and conversion-focused
-                communication.
+                Double Trouble Studio helps businesses plan, design, develop and
+                manage websites from one place. We combine website strategy,
+                UI/UX design, responsive development, content structure,
+                functionality and technical performance to create a website that
+                feels complete rather than assembled in parts.
               </p>
 
               <p>
-                Our approach is simple: build a website that represents your
-                brand properly, optimize it for search visibility and support it
-                with digital marketing campaigns that bring the right audience.
+                Our work continues beyond launch. We also support website
+                updates, content changes, maintenance, performance improvements
+                and ongoing technical management so your website stays current,
+                reliable and ready to evolve with your business.
               </p>
             </div>
 
             <div className="mt-12">
               <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#6288B9]">
-                Growth Method
+                Our Website Approach
               </p>
 
               <h3 className="mt-4 max-w-2xl text-3xl font-bold leading-tight text-[#0D2444] md:text-4xl">
-                Strategy first. Design with purpose. SEO from the foundation.
-                Marketing for results.
+                Plan with clarity. Design with purpose. Develop for performance.
+                Manage for the long term.
               </h3>
             </div>
 
             <div className="mt-10 h-px w-full bg-gradient-to-r from-transparent via-[#BFD5EF] to-[#0D2444]" />
           </motion.div>
 
-          {/* Right Animated AI Orbit */}
+          {/* Right Animated Orbit */}
           <motion.div
             initial={{ opacity: 0, x: 34 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,7 +155,11 @@ export default function CompleteDigitalSolutions() {
                 strokeWidth="1"
                 strokeDasharray="8 12"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                transition={{
+                  duration: 40,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
                 style={{ transformOrigin: "center" }}
               />
 
@@ -160,20 +172,26 @@ export default function CompleteDigitalSolutions() {
                 strokeWidth="1"
                 strokeDasharray="5 10"
                 animate={{ rotate: -360 }}
-                transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
+                transition={{
+                  duration: 34,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
                 style={{ transformOrigin: "center" }}
               />
-
-              
             </motion.svg>
 
             {/* Center */}
             <motion.div
               animate={{ scale: [1, 1.06, 1] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               className="relative z-10 flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-[#0D2444] via-[#244D7A] to-[#7FA6D4] text-2xl font-bold text-white shadow-2xl shadow-[#0D2444]/25"
             >
-              DTS
+              WEB
             </motion.div>
 
             {/* Orbit Text */}
@@ -212,8 +230,9 @@ export default function CompleteDigitalSolutions() {
         <div className="mt-24">
           <div className="mb-10 flex items-center gap-5">
             <span className="text-sm font-bold uppercase tracking-[0.28em] text-[#6288B9]">
-              What We Combine
+              What We Deliver
             </span>
+
             <div className="h-px flex-1 bg-gradient-to-r from-[#BFD5EF] to-transparent" />
           </div>
 
@@ -223,11 +242,14 @@ export default function CompleteDigitalSolutions() {
                 key={item.title}
                 initial={{ opacity: 0, y: 26 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, delay: index * 0.08 }}
+                transition={{
+                  duration: 0.65,
+                  delay: index * 0.08,
+                }}
                 viewport={{ once: true }}
                 className="relative border-t border-[#CFE0F4] pt-7"
               >
-                <span className="absolute -top-4 left-0 bg-[#F8FBFF] pr-4 text-3xl font-serif font-bold text-[#6288B9]">
+                <span className="absolute -top-4 left-0 bg-[#F8FBFF] pr-4 font-serif text-3xl font-bold text-[#6288B9]">
                   0{index + 1}
                 </span>
 

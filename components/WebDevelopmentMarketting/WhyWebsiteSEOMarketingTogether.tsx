@@ -5,31 +5,31 @@ import { motion } from "framer-motion";
 const reasons = [
   {
     title: "Website Builds Credibility",
-    text: "A professional website helps customers understand your brand, services, portfolio, contact details and trust signals.",
+    text: "A professional website helps customers understand your brand, services, portfolio, contact details and the value your business provides.",
   },
   {
-    title: "SEO Brings Search Visibility",
-    text: "SEO helps your website appear for relevant searches when people are looking for your services.",
+    title: "Good Structure Improves Usability",
+    text: "Clear page hierarchy, navigation and content flow make it easier for visitors to understand your services and move through the website.",
   },
   {
-    title: "Digital Marketing Builds Reach",
-    text: "Social media, paid ads and content marketing help your brand reach people across platforms where they spend time.",
+    title: "Responsive Development Improves Experience",
+    text: "A responsive website adapts across desktop, tablet and mobile so users get a consistent and smooth experience on every device.",
   },
   {
-    title: "Content Builds Trust",
-    text: "Helpful service pages, blogs, FAQs, case studies and social content help customers make informed decisions.",
+    title: "Performance Supports Reliability",
+    text: "Clean development, optimized assets and efficient functionality help the website load smoothly and perform reliably for users.",
   },
   {
-    title: "Paid Ads Bring Faster Traffic",
-    text: "Performance marketing can support faster reach, inquiries and campaign visibility while SEO builds long-term organic growth.",
+    title: "Website Management Keeps Content Current",
+    text: "Ongoing website management helps keep service pages, content, forms, contact details and business information updated over time.",
   },
   {
-    title: "Analytics Improve Decisions",
-    text: "Tracking website and campaign performance helps improve marketing decisions and conversion strategy.",
+    title: "Maintenance Supports Long-Term Stability",
+    text: "Regular checks, troubleshooting, updates and technical improvements help keep the website functional, stable and ready for future changes.",
   },
 ];
 
-const pillars = ["Website", "SEO", "Marketing"];
+const pillars = ["Development", "Management", "Maintenance"];
 
 export default function WhyWebsiteSEOMarketingTogether() {
   return (
@@ -42,7 +42,6 @@ export default function WhyWebsiteSEOMarketingTogether() {
         }}
       />
 
-     
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mx-auto max-w-5xl text-center">
@@ -53,7 +52,7 @@ export default function WhyWebsiteSEOMarketingTogether() {
             viewport={{ once: true }}
             className="inline-flex rounded-full bg-gradient-to-r from-[#0D2444] via-[#244D7A] to-[#6288B9] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#0D2444]/20"
           >
-            Complete Digital Growth System
+            Complete Website Lifecycle
           </motion.span>
 
           <motion.h2
@@ -64,7 +63,7 @@ export default function WhyWebsiteSEOMarketingTogether() {
             className="mt-6 font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              Why Businesses Need Website + SEO + Marketing Together
+              Why Businesses Need Website Development & Management Together
             </span>
           </motion.h2>
 
@@ -75,9 +74,9 @@ export default function WhyWebsiteSEOMarketingTogether() {
             viewport={{ once: true }}
             className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600"
           >
-            A website builds trust, SEO brings visibility and marketing creates
-            consistent reach. Together, they create a stronger digital growth
-            system.
+            Website development creates the foundation, website management keeps
+            it updated and maintenance helps it remain reliable as your business
+            evolves.
           </motion.p>
         </div>
 
@@ -108,9 +107,9 @@ export default function WhyWebsiteSEOMarketingTogether() {
                 </p>
 
                 <p className="mt-2 text-xs font-bold uppercase tracking-[0.24em] text-[#6288B9]">
-                  {index === 0 && "Credibility"}
-                  {index === 1 && "Visibility"}
-                  {index === 2 && "Growth"}
+                  {index === 0 && "Build"}
+                  {index === 1 && "Update"}
+                  {index === 2 && "Maintain"}
                 </p>
               </motion.div>
             ))}
@@ -170,8 +169,9 @@ export default function WhyWebsiteSEOMarketingTogether() {
 
           <p className="font-serif text-3xl font-bold leading-tight md:text-3xl">
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              When your website, SEO and marketing work together, your online
-              presence becomes clearer, stronger and more conversion-focused.
+              When development, management and maintenance work together, your
+              website stays clear, reliable and ready to evolve with your
+              business.
             </span>
           </p>
         </motion.div>

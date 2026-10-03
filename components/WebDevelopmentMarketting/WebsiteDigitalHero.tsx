@@ -1,240 +1,467 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  MonitorSmartphone,
+  RefreshCw,
+  ShieldCheck,
+} from "lucide-react";
 
-const heroHighlights = [
+const serifFont =
+  'New York, ui-serif, Georgia, Cambria, "Times New Roman", serif';
+
+const services = [
   "Custom Website Development",
-  "SEO-Ready Structure",
-  "Social Media Marketing",
-  "Paid Ads",
-  "Lead Generation",
+  "Responsive UI/UX",
+  "Website Management",
+  "Maintenance & Support",
 ];
 
-const growthCards = [
-  {
-    title: "Website",
-    text: "Modern, responsive and conversion-focused websites.",
-  },
-  {
-    title: "SEO",
-    text: "Search-ready structure for stronger Google visibility.",
-  },
-  {
-    title: "Marketing",
-    text: "Performance campaigns planned for measurable growth.",
-  },
-];
-
-const aiNodes = [
-  "Brand",
-  "Website",
-  "SEO",
-  "Content",
-  "Ads",
-  "Leads",
-  "Growth",
-];
-
-const WebsiteDigitalHero = () => {
+export default function WebsiteDigitalHero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#EEF7FF] px-6 py-24 md:px-12 lg:px-20">
-      {/* Main Premium Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(98,136,185,0.45),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(13,36,68,0.25),transparent_32%),radial-gradient(circle_at_50%_90%,rgba(255,255,255,0.95),transparent_35%)]" />
+    <section className="relative overflow-hidden bg-white">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#FFFFFF_0%,#F7FAFD_58%,#EEF4F9_100%)]" />
 
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.85),rgba(234,244,255,0.72),rgba(255,255,255,0.62))]" />
-
-      {/* Animated Grid */}
-      <motion.div
-        animate={{ backgroundPosition: ["0px 0px", "72px 72px"] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 opacity-[0.16] bg-[linear-gradient(to_right,#0D2444_1px,transparent_1px),linear-gradient(to_bottom,#0D2444_1px,transparent_1px)] bg-[size:72px_72px]"
-      />
-
-      {/* Blur Glow Elements */}
-      <motion.div
-        animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, 20, 0] }}
-        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute left-[-160px] top-[-140px] h-[460px] w-[460px] rounded-full bg-[#6288B9]/35 blur-[100px]"
-      />
-
-      <motion.div
-        animate={{ scale: [1, 1.18, 1], x: [0, -35, 0], y: [0, 30, 0] }}
-        transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute right-[-180px] bottom-[-160px] h-[540px] w-[540px] rounded-full bg-[#0D2444]/25 blur-[120px]"
-      />
-
-      {/* AI Animated Orbit Design */}
-      <div className="pointer-events-none absolute left-1/2 top-[52%] hidden h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 lg:block">
+        {/* Smaller Animated Grid Lines */}
         <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 38, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 rounded-full border border-[#0D2444]/10"
+          animate={{ backgroundPosition: ["0px 0px", "38px 38px"] }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            inset-0
+            opacity-[0.08]
+            bg-[linear-gradient(to_right,#0D2444_1px,transparent_1px),linear-gradient(to_bottom,#0D2444_1px,transparent_1px)]
+            bg-[size:38px_38px]
+          "
+        />
+
+        {/* Soft Glow */}
+        <motion.div
+          animate={{
+            scale: [1, 1.12, 1],
+            x: [0, 24, 0],
+            y: [0, 16, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute left-[-180px] top-[-100px] h-[440px] w-[440px] rounded-full bg-[#6288B9]/18 blur-[130px]"
         />
 
         <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-16 rounded-full border border-[#6288B9]/20"
+          animate={{
+            scale: [1, 1.15, 1],
+            x: [0, -20, 0],
+            y: [0, 20, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute right-[-200px] bottom-[-120px] h-[480px] w-[480px] rounded-full bg-[#0D2444]/12 blur-[140px]"
         />
-
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 58, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-32 rounded-full border border-white/70"
-        />
-
-        {/* Center AI Core */}
-        <motion.div
-          animate={{ scale: [1, 1.08, 1] }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[32px] border border-white/70 bg-white/55 shadow-2xl shadow-[#0D2444]/15 backdrop-blur-xl"
-        >
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0D2444] via-[#244D7A] to-[#6F91BD] text-xl font-bold text-white">
-            AI
-          </div>
-        </motion.div>
-
-        {/* Orbit Nodes */}
-        {aiNodes.map((node, index) => {
-          const angle = (index / aiNodes.length) * 360;
-          const radius = 260;
-
-          return (
-            <motion.div
-              key={node}
-              animate={{ y: [0, -10, 0] }}
-              transition={{
-                duration: 3 + index * 0.25,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              style={{
-                transform: `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`,
-              }}
-              className="absolute left-1/2 top-1/2"
-            >
-              <div className="glass -translate-x-1/2 -translate-y-1/2 rounded-full px-4 py-2 text-xs font-bold text-[#0D2444] shadow-lg shadow-[#0D2444]/10">
-                {node}
-              </div>
-            </motion.div>
-          );
-        })}
       </div>
 
-      {/* Content */}
-      <div className="relative mx-auto flex min-h-[78vh] max-w-7xl flex-col items-center justify-center text-center">
-        {/* Badge */}
-       <motion.div
-  initial={{ opacity: 0, y: 18 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  className="mt-10 mb-8 inline-flex rounded-full bg-gradient-to-r from-[#0D2444] via-[#244D7A] to-[#6288B9] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#0D2444]/20"
->
-  Website Development • SEO • Digital Marketing
-</motion.div>
+      <div className="relative z-10 mx-auto max-w-[1450px] px-5 pb-[70px] pt-[120px] sm:px-6 md:px-8 lg:px-10 lg:pb-[90px] lg:pt-[135px]">
+        {/* =========================================================
+            HEADER
+        ========================================================= */}
 
-        {/* H1 */}
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.1 }}
-          className="max-w-6xl font-serif text-4xl font-bold leading-[1.02] tracking-tight md:text-5xl"
-        >
-          <span className="bg-gradient-to-r from-[#071A33] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-            Website Development, SEO & Digital Marketing Services in India
-          </span>
-        </motion.h1>
-
-        {/* Content Box */}
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.22 }}
-          className="mt-8 max-w-5xl rounded-[32px] border border-white/60 bg-white/45 p-6 shadow-2xl shadow-[#0D2444]/10 backdrop-blur-xl md:p-8"
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-[1050px] text-center"
         >
-          <div className="space-y-5">
-            <p className="text-lg font-medium leading-8 text-[#24364B] md:text-xl">
-              Double Trouble Studio provides website development, SEO and
-              digital marketing services for businesses, brands, startups,
-              hospitality companies, event businesses, luxury brands and growing
-              organizations across India.
-            </p>
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-px w-10 bg-[#6288B9]" />
 
-            <p className="text-base leading-8 text-slate-600 md:text-lg">
-              We build websites that are visually strong, mobile-friendly,
-              SEO-ready and designed to support business growth. From custom
-              website development and landing pages to search engine
-              optimization, social media marketing, paid ads and lead-generation
-              campaigns, our team helps brands create a stronger digital
-              presence.
-            </p>
+            <span className="text-[9px] font-semibold uppercase tracking-[3px] text-[#456A9E]">
+              Website Development & Management
+            </span>
 
-            <p className="text-base leading-8 text-slate-600 md:text-lg">
-              Whether you need a new website, a better online identity, more
-              search visibility, stronger social media presence or
-              performance-focused marketing, we help plan and execute the
-              complete digital growth journey.
-            </p>
+            <div className="h-px w-10 bg-[#6288B9]" />
           </div>
+
+          <h1
+            className="
+              mt-6
+              text-[40px]
+              font-bold
+              leading-[1.03]
+              tracking-[-2px]
+              text-[#0D2444]
+              sm:text-[48px]
+              md:text-[56px]
+              lg:text-[62px]
+            "
+            style={{ fontFamily: serifFont }}
+          >
+            Websites That Look Premium,
+            <span className="text-[#6288B9]">
+              {" "}
+              Feel Effortless and Stay Reliable.
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-[760px] text-[15px] leading-[1.85] text-[#5B6472] sm:text-[17px]">
+            Double Trouble Studio designs, develops and manages modern websites
+            for businesses that need a strong digital presence, smooth user
+            experience and dependable long-term support.
+          </p>
+
+          <p className="mx-auto mt-3 max-w-[700px] text-[13px] leading-[1.8] text-[#718094] sm:text-[14px]">
+            From custom website builds and landing pages to responsive design,
+            updates, maintenance and technical management, we handle the full
+            website lifecycle.
+          </p>
 
           {/* CTA */}
-          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/contact" className="primary-btn text-center">
-              Build Your Website
-            </a>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/contact"
+              className="
+                group
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                rounded-[13px]
+                bg-[#0D2444]
+                px-6
+                py-[14px]
+                text-[13px]
+                font-semibold
+                text-white
+                shadow-[0_14px_30px_rgba(13,36,68,0.18)]
+                transition-all
+                duration-300
+                hover:-translate-y-[2px]
+                hover:bg-[#17365F]
+              "
+            >
+              Start Your Website
 
-            <a href="/services" className="secondary-btn text-center">
-              Start Digital Growth
-            </a>
+              <ArrowUpRight className="h-[15px] w-[15px] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
+
+            <Link
+              href="/work"
+              className="
+                group
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                rounded-[13px]
+                border
+                border-[#CAD6E2]
+                bg-white
+                px-6
+                py-[14px]
+                text-[13px]
+                font-semibold
+                text-[#0D2444]
+                transition-all
+                duration-300
+                hover:-translate-y-[2px]
+                hover:border-[#AFC1D3]
+              "
+            >
+              View Our Work
+
+              <ArrowRight className="h-[14px] w-[14px] transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
         </motion.div>
 
-        {/* Highlight Pills */}
+        {/* =========================================================
+            WEBSITE SHOWCASE
+        ========================================================= */}
+
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.34 }}
-          className="mt-10 flex max-w-5xl flex-wrap justify-center gap-3"
+          transition={{ duration: 0.85, delay: 0.14 }}
+          className="relative mx-auto mt-12 max-w-[1080px]"
         >
-          {heroHighlights.map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-white/70 bg-white/60 px-5 py-3 text-sm font-semibold text-[#0D2444] shadow-md shadow-[#0D2444]/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white"
+          <div className="absolute -inset-[18px] rounded-[36px] bg-gradient-to-br from-[#6288B9]/10 via-white/50 to-[#0D2444]/6" />
+
+          <div className="relative min-h-[390px] sm:min-h-[450px]">
+            {/* LEFT SMALL FRAME */}
+            <div
+              className="
+                absolute
+                left-[10px]
+                top-[76px]
+                hidden
+                w-[28%]
+                rotate-[-3deg]
+                overflow-hidden
+                rounded-[20px]
+                border
+                border-[#D8E2EB]
+                bg-white
+                shadow-[0_22px_50px_rgba(13,36,68,0.11)]
+                md:block
+              "
             >
-              {item}
-            </span>
+              <div className="border-b border-[#E6EDF3] bg-[#F8FAFC] px-3 py-2.5">
+                <div className="flex gap-1.5">
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                </div>
+              </div>
+
+              <div className="bg-[#F4F8FC] p-4">
+                <div className="flex items-center justify-between">
+                  <div
+                    className="text-[13px] font-bold text-[#0D2444]"
+                    style={{ fontFamily: serifFont }}
+                  >
+                    Atelier.
+                  </div>
+
+                  <div className="h-[20px] w-[54px] rounded-full bg-[#0D2444]" />
+                </div>
+
+                <div className="mt-6">
+                  <div className="h-[12px] w-[90%] rounded-[4px] bg-[#0D2444]" />
+                  <div className="mt-2 h-[12px] w-[68%] rounded-[4px] bg-[#0D2444]" />
+
+                  <div className="mt-4 h-[4px] w-[88%] rounded-full bg-[#BEC9D4]" />
+                  <div className="mt-2 h-[4px] w-[72%] rounded-full bg-[#D0D9E1]" />
+
+                  <div className="mt-5 h-[105px] rounded-[15px] bg-gradient-to-br from-[#0D2444] via-[#315E91] to-[#8FA8C2]" />
+                </div>
+              </div>
+            </div>
+
+            {/* CENTER MAIN WEBSITE */}
+            <div
+              className="
+                relative
+                z-20
+                mx-auto
+                w-full
+                max-w-[690px]
+                overflow-hidden
+                rounded-[28px]
+                border
+                border-[#D5E0EA]
+                bg-white
+                shadow-[0_32px_80px_rgba(13,36,68,0.15)]
+              "
+            >
+              <div className="flex items-center justify-between border-b border-[#E5ECF2] bg-[#F8FAFC] px-4 py-3">
+                <div className="flex gap-2">
+                  <span className="h-[7px] w-[7px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[7px] w-[7px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[7px] w-[7px] rounded-full bg-[#CBD5DF]" />
+                </div>
+
+                <div className="h-[23px] w-[46%] rounded-full border border-[#E0E7EE] bg-white" />
+
+                <div className="h-[22px] w-[22px] rounded-full border border-[#E0E7EE] bg-white" />
+              </div>
+
+              <div className="relative overflow-hidden bg-[#F4F8FC] p-5 sm:p-6">
+                <div className="absolute right-[-60px] top-[-60px] h-[220px] w-[220px] rounded-full bg-[#6288B9]/16 blur-[65px]" />
+
+                <div className="relative z-10 flex items-center justify-between">
+                  <div
+                    className="text-[17px] font-bold text-[#0D2444]"
+                    style={{ fontFamily: serifFont }}
+                  >
+                    Studio.
+                  </div>
+
+                  <div className="hidden items-center gap-4 sm:flex">
+                    <span className="h-[4px] w-[28px] rounded-full bg-[#AAB7C4]" />
+                    <span className="h-[4px] w-[28px] rounded-full bg-[#AAB7C4]" />
+                    <span className="h-[4px] w-[28px] rounded-full bg-[#AAB7C4]" />
+
+                    <div className="h-[25px] w-[66px] rounded-full bg-[#0D2444]" />
+                  </div>
+                </div>
+
+                <div className="relative z-10 mt-8 grid gap-6 sm:grid-cols-[1fr_0.9fr] sm:items-center">
+                  <div>
+                    <div className="h-[5px] w-[78px] rounded-full bg-[#6288B9]" />
+
+                    <div className="mt-4 h-[16px] w-[92%] rounded-[5px] bg-[#0D2444]" />
+                    <div className="mt-3 h-[16px] w-[72%] rounded-[5px] bg-[#0D2444]" />
+
+                    <div className="mt-5 space-y-2">
+                      <div className="h-[4px] w-[90%] rounded-full bg-[#BDC9D4]" />
+                      <div className="h-[4px] w-[82%] rounded-full bg-[#CAD4DD]" />
+                      <div className="h-[4px] w-[65%] rounded-full bg-[#D3DBE3]" />
+                    </div>
+
+                    <div className="mt-6 flex gap-3">
+                      <div className="h-[29px] w-[96px] rounded-[8px] bg-[#0D2444]" />
+                      <div className="h-[29px] w-[80px] rounded-[8px] border border-[#D1DBE4] bg-white" />
+                    </div>
+                  </div>
+
+                  <div className="aspect-[4/5] rounded-[20px] bg-gradient-to-br from-[#0D2444] via-[#315E91] to-[#8EA9C5] p-4">
+                    <div className="flex h-full flex-col justify-between">
+                      <div className="ml-auto flex h-[34px] w-[34px] items-center justify-center rounded-full border border-white/20 bg-white/10">
+                        <MonitorSmartphone className="h-[14px] w-[14px] text-white/80" />
+                      </div>
+
+                      <div>
+                        <div className="h-[4px] w-[52%] rounded-full bg-white/50" />
+                        <div className="mt-3 h-[11px] w-[86%] rounded-[4px] bg-white" />
+                        <div className="mt-2 h-[11px] w-[64%] rounded-[4px] bg-white/80" />
+                        <div className="mt-4 h-[26px] w-[78px] rounded-full bg-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT SMALL FRAME */}
+            <div
+              className="
+                absolute
+                right-[10px]
+                top-[96px]
+                hidden
+                w-[26%]
+                rotate-[3deg]
+                overflow-hidden
+                rounded-[20px]
+                border
+                border-[#D8E2EB]
+                bg-white
+                shadow-[0_22px_50px_rgba(13,36,68,0.11)]
+                lg:block
+              "
+            >
+              <div className="border-b border-[#E6EDF3] bg-[#F8FAFC] px-3 py-2.5">
+                <div className="flex gap-1.5">
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                  <span className="h-[6px] w-[6px] rounded-full bg-[#CBD5DF]" />
+                </div>
+              </div>
+
+              <div className="bg-[#F5F9FC] p-4">
+                <div className="flex items-center justify-between">
+                  <div
+                    className="text-[13px] font-bold text-[#0D2444]"
+                    style={{ fontFamily: serifFont }}
+                  >
+                    Nova.
+                  </div>
+
+                  <div className="h-[20px] w-[54px] rounded-full bg-[#0D2444]" />
+                </div>
+
+                <div className="mt-6 h-[92px] rounded-[15px] bg-gradient-to-br from-[#315E91] to-[#91ABC6]" />
+
+                <div className="mt-5 h-[11px] w-[82%] rounded-[4px] bg-[#0D2444]" />
+                <div className="mt-2 h-[11px] w-[58%] rounded-[4px] bg-[#0D2444]" />
+
+                <div className="mt-4 h-[4px] w-[92%] rounded-full bg-[#C3CDD7]" />
+                <div className="mt-2 h-[4px] w-[70%] rounded-full bg-[#D3DBE2]" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* =========================================================
+            SERVICE RAIL
+        ========================================================= */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.28 }}
+          className="mt-10 grid border-y border-[#D5E0EA] sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {services.map((item, index) => (
+            <div
+              key={item}
+              className={`
+                flex
+                items-center
+                gap-3
+                py-4
+                sm:px-5
+
+                ${
+                  index !== 0
+                    ? "border-t border-[#D5E0EA] sm:border-l sm:border-t-0"
+                    : ""
+                }
+              `}
+            >
+              <div className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-full bg-[#EAF1F7]">
+                <Check className="h-[10px] w-[10px] text-[#456A9E]" />
+              </div>
+
+              <span className="text-[11px] font-semibold text-[#596879]">
+                {item}
+              </span>
+            </div>
           ))}
         </motion.div>
 
-        {/* Bottom Cards */}
+        {/* =========================================================
+            MANAGEMENT NOTE
+        ========================================================= */}
+
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.46 }}
-          className="mt-12 grid w-full max-w-5xl gap-5 md:grid-cols-3"
+          transition={{ duration: 0.65, delay: 0.34 }}
+          className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
         >
-          {growthCards.map((card) => (
-            <div
-              key={card.title}
-              className="group rounded-[28px] border border-white/70 bg-white/65 p-6 text-left shadow-xl shadow-[#0D2444]/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:bg-white"
-            >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0D2444] via-[#244D7A] to-[#6288B9] text-lg font-bold text-white shadow-lg shadow-[#0D2444]/20">
-                {card.title.charAt(0)}
-              </div>
-
-              <h3 className="text-xl font-bold text-[#0D2444]">
-                {card.title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                {card.text}
-              </p>
+          <div className="flex items-center gap-3">
+            <div className="flex h-[36px] w-[36px] items-center justify-center rounded-[11px] bg-[#EDF3F8] text-[#456A9E]">
+              <RefreshCw className="h-[14px] w-[14px]" />
             </div>
-          ))}
+
+            <div>
+              <span className="block text-[8px] font-semibold uppercase tracking-[2px] text-[#8B99A8]">
+                Website Management
+              </span>
+
+              <span className="mt-1 block text-[11px] font-bold text-[#0D2444]">
+                Updates, Maintenance & Ongoing Support
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="h-[14px] w-[14px] text-[#6288B9]" />
+
+            <span
+              className="text-[15px] font-bold text-[#0D2444]"
+              style={{ fontFamily: serifFont }}
+            >
+              Built to stay useful after launch.
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default WebsiteDigitalHero;
+}

@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 const processSteps = [
   {
     title: "Business Discovery",
-    text: "We understand your business, services, target audience, competitors, locations, goals, current website and digital marketing requirements.",
+    text: "We understand your business, services, audience, brand positioning, current website, technical requirements and the goals your new website needs to support.",
   },
   {
     title: "Website Structure Planning",
-    text: "We plan the page structure, service hierarchy, navigation, user journey, content sections, CTAs and internal linking strategy.",
+    text: "We plan the sitemap, page hierarchy, navigation, service flow, user journey, content sections, calls to action and functional requirements before design begins.",
   },
   {
     title: "UI/UX & Design Direction",
-    text: "We create a design direction based on your brand identity, audience expectations, industry style and conversion goals.",
+    text: "We define the visual direction, layouts, typography, spacing and interaction style so the website reflects your brand while remaining clear and easy to use.",
   },
   {
-    title: "Content & SEO Planning",
-    text: "We plan keywords, headings, service content, FAQs, metadata, location sections and SEO-friendly page structure.",
+    title: "Content & Page Planning",
+    text: "We organize the content required for each page, including service information, brand messaging, FAQs, trust elements, forms and conversion-focused sections.",
   },
   {
     title: "Website Development",
-    text: "We build the website with responsive layouts, clean sections, forms, integrations, speed considerations and mobile-friendly design.",
+    text: "We build the website with responsive layouts, clean functionality, forms, integrations, CMS requirements, mobile-friendly behaviour and performance considerations.",
   },
   {
-    title: "On-Page SEO Setup",
-    text: "We optimize titles, meta descriptions, headings, URLs, internal links, image alt text, sitemap recommendations and schema requirements.",
+    title: "Functionality & Integration Setup",
+    text: "We configure forms, booking flows, enquiry systems, analytics, third-party tools, CMS functionality and other integrations required for the website to operate properly.",
   },
   {
     title: "Testing & Launch",
-    text: "We test the website for responsiveness, forms, page flow, links, speed, content errors and basic technical readiness before launch.",
+    text: "We test the website across devices and browsers, check forms, links, navigation, page flow, responsiveness, content accuracy and technical stability before launch.",
   },
   {
-    title: "Digital Marketing Execution",
-    text: "After launch, we support the website with SEO, social media marketing, paid ads, content marketing and lead-generation campaigns.",
+    title: "Website Management",
+    text: "After launch, we handle content updates, page changes, maintenance, troubleshooting, new sections, CMS support and ongoing technical improvements when required.",
   },
   {
-    title: "Reporting & Optimization",
-    text: "We review performance, traffic, inquiries, rankings, ad results and user behavior to improve future campaigns and website performance.",
+    title: "Maintenance & Improvement",
+    text: "We continue reviewing website performance, usability, functionality and content so the site stays current, reliable and aligned with the evolving needs of the business.",
   },
 ];
 
@@ -58,7 +58,9 @@ export default function WebDevelopmentMarketingProcess() {
     <section className="relative overflow-hidden bg-[#F8FBFF] px-6 py-28 md:px-12 lg:px-20">
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(135deg,#FFFFFF_0%,#EEF7FF_48%,#FFFFFF_100%)]" />
+
       <div className="absolute -left-44 top-24 h-[460px] w-[460px] rounded-full bg-[#BFD5EF]/45 blur-[130px]" />
+
       <div className="absolute -right-44 bottom-20 h-[520px] w-[520px] rounded-full bg-[#6288B9]/15 blur-[150px]" />
 
       {/* Big Background Word */}
@@ -87,7 +89,7 @@ export default function WebDevelopmentMarketingProcess() {
             className="mt-6 font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              Our Web Development & Marketing Process
+              Our Website Development & Management Process
             </span>
           </motion.h2>
 
@@ -98,9 +100,9 @@ export default function WebDevelopmentMarketingProcess() {
             viewport={{ once: true }}
             className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600"
           >
-            From business discovery to website launch and digital marketing
-            execution, every step is planned to create a stronger online
-            presence and better conversion flow.
+            From business discovery and website planning to development, launch
+            and ongoing management, every stage is structured to create a
+            reliable website that can continue evolving with your business.
           </motion.p>
         </div>
 
@@ -114,7 +116,7 @@ export default function WebDevelopmentMarketingProcess() {
             preserveAspectRatio="none"
           >
             <motion.path
-              d="M95 85 C310 30 390 190 565 120 C745 48 835 110 1070 70 
+              d="M95 85 C310 30 390 190 565 120 C745 48 835 110 1070 70
                  M1080 290 C820 350 720 230 580 325 C430 430 285 260 110 360
                  M105 595 C300 520 430 670 585 590 C760 500 855 640 1085 555
                  M1100 820 C850 900 735 760 590 845 C420 945 290 765 110 875"
@@ -204,19 +206,25 @@ export default function WebDevelopmentMarketingProcess() {
           className="mt-24 overflow-hidden rounded-full border border-[#D7E6F8] bg-white/75 px-5 py-4 shadow-xl shadow-[#0D2444]/5 backdrop-blur-xl"
         >
           <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-            {["Discover", "Plan", "Design", "Develop", "Optimize", "Launch", "Grow"].map(
-              (item, index) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="rounded-full bg-[#EEF7FF] px-5 py-2 text-sm font-bold text-[#0D2444]">
-                    {item}
-                  </span>
+            {[
+              "Discover",
+              "Plan",
+              "Design",
+              "Develop",
+              "Test",
+              "Launch",
+              "Manage",
+            ].map((item, index) => (
+              <div key={item} className="flex items-center gap-3">
+                <span className="rounded-full bg-[#EEF7FF] px-5 py-2 text-sm font-bold text-[#0D2444]">
+                  {item}
+                </span>
 
-                  {index !== 6 && (
-                    <span className="hidden h-px w-8 bg-gradient-to-r from-[#6288B9] to-transparent sm:block" />
-                  )}
-                </div>
-              )
-            )}
+                {index !== 6 && (
+                  <span className="hidden h-px w-8 bg-gradient-to-r from-[#6288B9] to-transparent sm:block" />
+                )}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

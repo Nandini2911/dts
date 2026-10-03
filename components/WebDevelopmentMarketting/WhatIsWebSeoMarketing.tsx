@@ -6,25 +6,25 @@ const definitions = [
   {
     label: "01",
     title: "Website Development",
-    text: "Website development is the process of planning, designing, building and maintaining a website for a business, brand or organization. It includes website structure, user experience, design, coding, mobile responsiveness, speed, content placement, forms, integrations and technical setup.",
+    text: "Website development is the process of planning, designing and building a website around the needs of a business, brand or organization. It includes website structure, page hierarchy, user experience, responsive design, frontend and backend development, forms, integrations, content placement, CMS setup and technical configuration.",
   },
   {
     label: "02",
-    title: "SEO",
-    text: "SEO, or search engine optimization, helps improve how easily search engines and users can understand and discover your website. It includes keyword research, service-page content, technical SEO, on-page SEO, local SEO, internal linking, metadata, image optimization and content strategy.",
+    title: "Website Management",
+    text: "Website management keeps the website updated, reliable and useful after launch. It includes content updates, page changes, technical maintenance, CMS management, performance checks, backups, bug fixes, security monitoring and ongoing improvements as the business evolves.",
   },
   {
     label: "03",
-    title: "Digital Marketing",
-    text: "Digital marketing is the process of promoting a brand online through social media, search engines, paid ads, content marketing, email campaigns, influencer collaborations and performance campaigns.",
+    title: "Website Performance & Support",
+    text: "Website performance and support focus on keeping the website fast, responsive and technically stable across devices. This includes speed improvements, mobile usability, functionality checks, troubleshooting, integration support and continuous technical assistance when changes are required.",
   },
 ];
 
 const focusWords = [
-  "Visibility",
-  "Search Rankings",
-  "Lead Generation",
-  "Online Presence",
+  "User Experience",
+  "Performance",
+  "Website Management",
+  "Long-Term Reliability",
 ];
 
 export default function WhatIsWebSeoMarketing() {
@@ -59,7 +59,7 @@ export default function WhatIsWebSeoMarketing() {
             viewport={{ once: true }}
             className="inline-flex rounded-full bg-gradient-to-r from-[#0D2444] via-[#244D7A] to-[#6288B9] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#0D2444]/20"
           >
-            Understanding The Digital Foundation
+            Understanding The Website Foundation
           </motion.span>
 
           <motion.h2
@@ -70,7 +70,7 @@ export default function WhatIsWebSeoMarketing() {
             className="mt-6 font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
             <span className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text text-transparent">
-              What Is Website Development, SEO & Digital Marketing?
+              What Is Website Development & Website Management?
             </span>
           </motion.h2>
 
@@ -81,9 +81,9 @@ export default function WhatIsWebSeoMarketing() {
             viewport={{ once: true }}
             className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600"
           >
-            Together, these three services create the base of a strong digital
-            presence — from how your brand looks online to how easily customers
-            can discover and contact you.
+            A strong website is not only designed and launched. It also needs
+            the right structure, responsive development, ongoing updates and
+            technical care to remain useful as the business grows.
           </motion.p>
         </div>
 
@@ -100,17 +100,18 @@ export default function WhatIsWebSeoMarketing() {
             <div className="mb-8 h-px w-full bg-gradient-to-r from-[#0D2444] via-[#BFD5EF] to-transparent" />
 
             <p className="bg-gradient-to-r from-[#06172C] via-[#244D7A] to-[#7FA6D4] bg-clip-text font-serif text-5xl font-bold leading-tight text-transparent md:text-7xl">
-  Build.
-  <br />
-  Rank.
-  <br />
-  Grow.
-</p>
+              Plan.
+              <br />
+              Build.
+              <br />
+              Manage.
+            </p>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-              A website gives your brand a professional digital home. SEO helps
-              that website get discovered. Digital marketing brings the right
-              audience and turns attention into business opportunities.
+              A website starts with clear planning and thoughtful design, but it
+              should also be easy to manage, update and improve over time. We
+              focus on both the initial build and the long-term health of the
+              website.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -170,9 +171,9 @@ export default function WhatIsWebSeoMarketing() {
           className="mt-24 border-y border-[#D7E6F8] py-10 text-center"
         >
           <h3 className="mx-auto max-w-5xl font-serif text-3xl font-bold leading-tight text-[#0D2444] md:text-3xl">
-            Together, website development, SEO and digital marketing help
-            businesses build visibility, generate inquiries and create a
-            stronger online presence.
+            Website development creates the digital foundation. Website
+            management keeps that foundation current, reliable and ready to
+            support the business over time.
           </h3>
         </motion.div>
       </div>
