@@ -6,23 +6,31 @@ export type ServiceCityContentKey =
 
 export type ServiceCityContent = {
   indexable: boolean;
-
   metaDescription?: string;
-
-  introduction: string;
-  localContext: string;
-
-  serviceAreas: readonly string[];
-  industries: readonly string[];
-
-  lastModified: string;
+  introduction?: string;
+  localContext?: string;
+  serviceAreas?: readonly string[];
+  industries?: readonly string[];
+  lastModified?: string;
 };
 
 export const SERVICE_CITY_CONTENT: Partial<
   Record<ServiceCityContentKey, ServiceCityContent>
 > = {
+
+   "ai-video-vfx:udaipur": {
+    indexable: false,
+  },
+
+  
+  "web-development-marketing:patna": {
+  indexable: false,
+},
+
   "guest-management:mumbai": {
     indexable: true,
+
+    
 
     metaDescription:
       "Professional guest management services in Mumbai for weddings, corporate events, launches and premium celebrations, including RSVP, travel and hospitality coordination.",
