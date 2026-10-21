@@ -61,6 +61,84 @@ const nextConfig = {
     "/blog/measuring-and-adjusting-tools-and-metrics-for-roadmap-success",
   permanent: true,
 },
+{
+  source:
+    "/blog/case-studies-website-transformations-for-automotive-hospitality-clients",
+  destination:
+    "/blog/automotive-hospitality-website-transformation-case-studies",
+  permanent: true,
+},
+{
+  source: "/services/events-and-weddings/ahmedabad",
+  destination: "/services/events-weddings/ahmedabad",
+  permanent: true,
+},
+{
+  source:
+    "/blog/ai-video-professional-video-editing-luxury-brand-storytelling",
+  destination:
+    "/blog/ai-video-video-editing-luxury-brand-storytelling",
+  permanent: true,
+},
+{
+  source: "/services/pr-media-digital-marketing/coimbatore",
+  destination: "/services/pr-media-marketing/coimbatore",
+  permanent: true,
+},
+{
+  source: "/services/events-and-weddings/raipur",
+  destination: "/services/events-weddings/raipur",
+  permanent: true,
+},
+{
+  source: "/services/pr-media-digital-marketing/udaipur",
+  destination: "/services/pr-media-marketing/udaipur",
+  permanent: true,
+},
+{
+  source: "/Team",
+  destination: "/about",
+  permanent: true,
+},
+{
+  source: "/services/pr-media-digital-marketing",
+  destination: "/services/pr-media-marketing",
+  permanent: true,
+},
+{
+  source:
+    "/blog/seo-for-luxury-brands-positioning-keywords-authority-building",
+  destination:
+    "/blog/seo-for-luxury-brands-positioning-keywords-authority",
+  permanent: true,
+},
+{
+  source: "/team",
+  destination: "/about",
+  permanent: true,
+},
+{
+  source: "/Client",
+  destination: "/work",
+  permanent: true,
+},
+{
+  source:
+    "/blog/building-a-luxury-brand-from-scratch-roadmap-identity-market-entry",
+  destination:
+    "/blog/building-luxury-brand-from-scratch-roadmap-identity-market-entry",
+  permanent: true,
+},
+{
+  source: "/blog/managing-complex-guest-lists-for-luxury-events",
+  destination: "/blog/managing-complex-guest-lists-luxury-events",
+  permanent: true,
+},
+{
+  source: "/clients",
+  destination: "/work",
+  permanent: true,
+},
     ];
   },
 };
