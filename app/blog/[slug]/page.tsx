@@ -391,16 +391,18 @@ export async function generateMetadata({
     now,
   });
 
-  if (!post) {
-    return {
-      title: "Blog Not Found | Double Trouble Studio",
-      description: "This blog post is not available.",
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
-  }
+ if (!post) {
+  return {
+    title: {
+  absolute: "Blog Not Found",
+},
+    description: "This blog post is not available.",
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
+}
 
   const title = post.seoTitle || post.title;
 
@@ -433,13 +435,16 @@ export async function generateMetadata({
         .url()
     : undefined;
 
-  return {
-    title: `${title} | Double Trouble Studio`,
-    description,
+ return {
+  title: {
+    absolute: title,
+  },
 
-    keywords,
+  description,
 
-    authors: [
+  keywords,
+
+  authors: [
       {
         name: post.authorName || "Double Trouble Studio",
       },
