@@ -22,11 +22,53 @@ export const SERVICE_CITY_CONTENT: Partial<
     indexable: false,
   },
 
+  "ai-video-vfx:chandigarh": {
+  indexable: false,
+},
+"ai-video-vfx:goa": {
+  indexable: false,
+},
   
+"ai-video-vfx:indore": {
+  indexable: false,
+},
+"ai-video-vfx:noida": {
+  indexable: false,
+},
+"ai-video-vfx:vadodara": {
+  indexable: false,
+},
   "web-development-marketing:patna": {
   indexable: false,
 },
 
+"celebrity-management:darjeeling": {
+  indexable: false,
+},
+"celebrity-management:rishikesh": {
+  indexable: false,
+},
+"celebrity-management:thane": {
+  indexable: false,
+},
+"celebrity-management:udaipur": {
+  indexable: false,
+},
+"events-weddings:jaipur": {
+  indexable: false,
+},
+"events-weddings:manali": {
+  indexable: false,
+},
+"guest-management:goa": {
+  indexable: false,
+},
+"guest-management:surat": {
+  indexable: false,
+},
+"guest-management:udaipur": {
+  indexable: false,
+},
   "guest-management:mumbai": {
     indexable: true,
 
