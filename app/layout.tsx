@@ -1,12 +1,10 @@
 
-
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,19 +66,24 @@ export const metadata: Metadata = {
 
   category: "Creative and Digital Marketing Agency",
 
-  alternates: {
-    canonical: "/",
-  },
+  // FIX #1:
+  // No global canonical here.
+  // Each indexable page should define its own canonical.
 
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteUrl,
     siteName: "Double Trouble Studio",
+
+    // Removed the homepage-specific URL.
+    // Individual pages should provide their own Open Graph URL.
+
     title:
       "Double Trouble Studio | Creative, Digital Marketing & PR Agency",
+
     description:
       "A Mumbai-based creative agency specializing in brand strategy, digital marketing, PR, celebrity management, events, website development, SEO, AI video production and VFX.",
+
     images: [
       {
         url: "/og/home-og.jpg",
@@ -93,10 +96,13 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title:
       "Double Trouble Studio | Creative, Digital Marketing & PR Agency",
+
     description:
       "Creative strategy, digital marketing, PR, celebrity management, events, websites, SEO, AI video production and VFX.",
+
     images: ["/twitter/home-twitter.jpg"],
   },
 
@@ -138,9 +144,6 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // Add Google Search Console verification later if required:
-    // google: "YOUR_GOOGLE_VERIFICATION_CODE",
-
     other: {
       "facebook-domain-verification":
         "fckd8j06ue7776jrx86hmtj0cdg4rs",
@@ -169,9 +172,6 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${sora.variable}`}>
-
-       
-
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
@@ -224,7 +224,8 @@ export default function RootLayout({
         </noscript>
 
         {children}
-             <WhatsAppButton />
+
+        <WhatsAppButton />
 
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-5J6M99HD" />

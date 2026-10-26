@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 import {
@@ -28,12 +29,20 @@ const DEFAULT_INDUSTRIES = [
   "Events",
 ] as const;
 
+// ========================================
+// BUILD SERVICE CITY URL
+// ========================================
+
 export function buildServiceCityUrl(
   serviceSlug: string,
   citySlug: string,
 ): string {
   return `${SITE.url}/services/${serviceSlug}/${citySlug}`;
 }
+
+// ========================================
+// GET SERVICE CITY DATA
+// ========================================
 
 export function getServiceCityData(
   serviceValue: string,
@@ -71,7 +80,10 @@ export function getServiceCityData(
     city,
     canonicalUrl,
 
-   indexable: customContent?.indexable ?? true,
+    // Error #29: Respect the configured indexable flag.
+    // Default remains true until specific pages
+    // are marked false in service-city-content.ts.
+    indexable: customContent?.indexable ?? true,
 
     title:
       `${service.seoName} in ${city.name} | ${SITE.shortName}`,
@@ -100,6 +112,10 @@ export function getServiceCityData(
   };
 }
 
+// ========================================
+// BUILD SERVICE CITY METADATA
+// ========================================
+
 export function buildServiceCityMetadata(
   serviceSlug: string,
   citySlug: string,
@@ -109,9 +125,12 @@ export function buildServiceCityMetadata(
     citySlug,
   );
 
+  // Invalid city/service combination
   if (!data) {
     return {
-      title: `Page Not Found | ${SITE.name}`,
+      title: {
+        absolute: `Page Not Found | ${SITE.name}`,
+      },
 
       robots: {
         index: false,
@@ -121,13 +140,18 @@ export function buildServiceCityMetadata(
   }
 
   return {
-    title: data.title,
+    // Error #2: Prevent duplicate brand suffix.
+    title: {
+      absolute: data.title,
+    },
+
     description: data.metaDescription,
 
     alternates: {
       canonical: data.canonicalUrl,
     },
 
+    // Error #29: Noindex support
     robots: {
       index: data.indexable,
       follow: true,
@@ -166,6 +190,10 @@ export function buildServiceCityMetadata(
     },
   };
 }
+
+// ========================================
+// GET INDEXABLE SERVICE CITY PAGES
+// ========================================
 
 export function getPublishedServiceCityPages() {
   return ALL_SEO_SERVICE_SLUGS.flatMap(

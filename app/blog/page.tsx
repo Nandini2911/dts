@@ -319,20 +319,44 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const blogSchema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}/#organization`,
-        name: "Double Trouble Studio",
-        alternateName: "DTS",
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          "@id": `${SITE_URL}/#logo`,
-          url: `${SITE_URL}/logo.png`,
-          contentUrl: `${SITE_URL}/logo.png`,
-          caption: "Double Trouble Studio",
-        },
-      },
+     
+{
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+
+  name: "Double Trouble Studio",
+  alternateName: "DTS",
+  url: SITE_URL,
+
+  email: "info@dtsworld.in",
+  telephone: "+91 80000 06021",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
+    addressLocality: "Mumbai",
+    addressRegion: "Maharashtra",
+    postalCode: "400061",
+    addressCountry: "IN",
+  },
+
+  sameAs: [
+    "https://www.instagram.com/doubletrouble_studio/",
+    "https://www.facebook.com/profile.php?id=61585435434487",
+    "https://www.linkedin.com/company/doubletrouble-studio/",
+    "https://x.com/trouble90100",
+  ],
+
+  logo: {
+    "@type": "ImageObject",
+    "@id": `${SITE_URL}/#logo`,
+    url: `${SITE_URL}/logo.png`,
+    contentUrl: `${SITE_URL}/logo.png`,
+    caption: "Double Trouble Studio",
+  },
+},
+
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,

@@ -195,8 +195,8 @@ const faqCategories: FAQCategory[] = [
         question: "Does Double Trouble Studio provide website SEO services?",
         answer:
           "Yes. DTS can support keyword mapping, technical audits, on-page optimisation, metadata, heading structure, internal linking, schema markup, content recommendations, image SEO, indexation checks, local SEO and search-performance tracking.",
-        href: "/services/web-development-marketing",
-        linkLabel: "Explore website and SEO services",
+       href: "/services/search-engine-optimization",
+linkLabel: "Explore SEO services",
       },
     ],
   },
@@ -503,31 +503,53 @@ export const metadata: Metadata = {
   },
 };
 
+
+const socialProfileUrls = [
+  "https://www.instagram.com/doubletrouble_studio/",
+  "https://www.facebook.com/profile.php?id=61585435434487",
+  "https://www.linkedin.com/company/doubletrouble-studio/",
+  "https://x.com/trouble90100",
+];
+
+
 const pageStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": ORGANIZATION_ID,
-      name: "Double Trouble Studio",
-      alternateName: "DTS",
-      url: SITE_URL,
-      email: "info@dtsworld.in",
-      telephone: "+91 80000 06021",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
-        addressLocality: "Mumbai",
-        addressRegion: "Maharashtra",
-        postalCode: "400061",
-        addressCountry: "IN",
-      },
-      areaServed: {
-        "@type": "Country",
-        name: "India",
-      },
-    },
+    
+{
+  "@type": "Organization",
+  "@id": ORGANIZATION_ID,
+
+  name: "Double Trouble Studio",
+  alternateName: "DTS",
+
+  url: SITE_URL,
+
+  email: "info@dtsworld.in",
+  telephone: "+91 80000 06021",
+
+  address: {
+    "@type": "PostalAddress",
+
+    streetAddress:
+      "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
+
+    addressLocality: "Mumbai",
+    addressRegion: "Maharashtra",
+    postalCode: "400061",
+    addressCountry: "IN",
+  },
+
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+
+  ...(socialProfileUrls.length > 0
+    ? { sameAs: socialProfileUrls }
+    : {}),
+},
+
     {
       "@type": "WebSite",
       "@id": WEBSITE_ID,

@@ -380,6 +380,22 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
+
+function cleanSeoTitle(value: string): string {
+  const title = value.trim();
+
+  const withoutRepeatedBrand = title.replace(
+    /(?:\s*\|\s*(?:Double Trouble Studio|DTS))+$/i,
+    ""
+  ).trim();
+
+  const brandSuffix = " | Double Trouble Studio";
+
+  return withoutRepeatedBrand
+    ? `${withoutRepeatedBrand}${brandSuffix}`
+    : "Double Trouble Studio";
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -404,7 +420,7 @@ export async function generateMetadata({
   };
 }
 
-  const title = post.seoTitle || post.title;
+  const title = cleanSeoTitle(post.seoTitle || post.title);
 
   const description =
     post.seoDescription ||

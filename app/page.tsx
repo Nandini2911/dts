@@ -120,6 +120,14 @@ const homeSchema = {
 
       priceRange: "₹₹₹",
 
+sameAs: [
+  "https://www.instagram.com/doubletrouble_studio/",
+  "https://www.facebook.com/profile.php?id=61585435434487",
+  "https://www.linkedin.com/company/doubletrouble-studio/",
+  "https://x.com/trouble90100",
+],
+
+
       address: {
         "@type": "PostalAddress",
 
@@ -709,98 +717,7 @@ const homeSchema = {
       ],
     },
 
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.dtsworld.in/#faq",
-
-      url: "https://www.dtsworld.in/#faq",
-
-      name: "Frequently Asked Questions About Double Trouble Studio",
-
-      description:
-        "Answers to common questions about Double Trouble Studio services, project timelines, startups, social media content creation and remote collaboration.",
-
-      isPartOf: {
-        "@id": "https://www.dtsworld.in/#webpage",
-      },
-
-      about: {
-        "@id": "https://www.dtsworld.in/#organization",
-      },
-
-      publisher: {
-        "@id": "https://www.dtsworld.in/#organization",
-      },
-
-      inLanguage: "en-IN",
-
-      mainEntity: [
-        {
-          "@type": "Question",
-
-          name: "What services does Double Trouble Studio offer?",
-
-          acceptedAnswer: {
-            "@type": "Answer",
-
-            text:
-              "Double Trouble Studio offers branding, website design, website development, SEO, social media management, PR, digital marketing campaigns, creative direction, event marketing, guest management, celebrity management, AI video production, VFX and premium visual identity systems tailored for modern brands.",
-          },
-        },
-
-        {
-          "@type": "Question",
-
-          name: "Do you work with startups and small businesses?",
-
-          acceptedAnswer: {
-            "@type": "Answer",
-
-            text:
-              "Yes. We work with modern startups, founder-led businesses, small businesses, growing companies and established brands that want stronger digital presence, premium positioning, better brand identity, SEO visibility and long-term growth.",
-          },
-        },
-
-        {
-          "@type": "Question",
-
-          name: "How long does a branding or website project take?",
-
-          acceptedAnswer: {
-            "@type": "Answer",
-
-            text:
-              "Project timelines depend on the scope, but most branding, website design and website development projects typically take between 2–6 weeks with strategy, UI/UX direction, content structure, SEO foundations, design revisions and launch support included.",
-          },
-        },
-
-        {
-          "@type": "Question",
-
-          name: "Do you provide social media content creation?",
-
-          acceptedAnswer: {
-            "@type": "Answer",
-
-            text:
-              "Yes. We create premium social media strategies, visual content systems, reels direction, campaign ideas, content calendars, digital assets, influencer campaign support and high-performing content for hospitality, luxury, restaurant, fashion, lifestyle and event brands.",
-          },
-        },
-
-        {
-          "@type": "Question",
-
-          name: "Can we work together remotely?",
-
-          acceptedAnswer: {
-            "@type": "Answer",
-
-            text:
-              "Yes. We work with clients across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa, India and internationally through smooth remote collaboration, structured communication, organized workflows and clear project timelines.",
-          },
-        },
-      ],
-    },
+   
   ],
 };
 
