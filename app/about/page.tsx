@@ -25,8 +25,9 @@ export const metadata: Metadata = {
     absolute: "About Double Trouble Studio | Creative Agency in Mumbai",
   },
 
-  description:
-    "Learn about Double Trouble Studio, a Mumbai-based creative agency specializing in branding, digital marketing, PR, website development, guest management, event marketing, AI video production and VFX across India.",
+  
+description:
+  "Learn about Double Trouble Studio, a Mumbai creative agency specialising in branding, digital marketing, PR, websites, guest management and events.",
 
   applicationName: "Double Trouble Studio",
   creator: "Double Trouble Studio",
@@ -156,8 +157,8 @@ const aboutSchema = {
       slogan: "We Build Cultural Brands That Feel Alive",
 
       telephone: "+918000006021",
-      email: "hellodoubletroublestudio@gmail.com",
-
+    
+  email: "info@dtsworld.in",
       priceRange: "₹₹₹",
 
       address: {
@@ -176,7 +177,7 @@ const aboutSchema = {
 
         contactType: "customer service",
         telephone: "+918000006021",
-        email: "hellodoubletroublestudio@gmail.com",
+        email: "info@dtsworld.in",
         url: "https://www.dtsworld.in/contact",
 
         areaServed: {

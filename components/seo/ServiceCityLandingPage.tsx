@@ -490,14 +490,9 @@ export default function ServiceCityLandingPage({
                 Premium Services
               </p>
 
-              <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
-
-                {data.service.name} in{" "}
-
-                {data.city.name}
-
-              </h1>
-
+             <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
+  {data.h1}
+</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-white/85 md:text-xl">
 
                 {data.service.heroDescription(

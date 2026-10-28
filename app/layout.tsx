@@ -1,24 +1,9 @@
 
-
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  display: "swap",
-});
 
 const siteUrl = "https://www.dtsworld.in";
 
@@ -67,10 +52,6 @@ export const metadata: Metadata = {
   ],
 
   category: "Creative and Digital Marketing Agency",
-
-  alternates: {
-    canonical: "/",
-  },
 
   openGraph: {
     type: "website",
@@ -138,7 +119,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // Add Google Search Console verification later if required:
+    // Add Google Search Console verification if required.
     // google: "YOUR_GOOGLE_VERIFICATION_CODE",
 
     other: {
@@ -168,10 +149,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body className={`${inter.variable} ${sora.variable}`}>
-
-       
-
+      <body
+        style={
+          {
+            "--font-inter": "Arial, Helvetica, sans-serif",
+            "--font-sora": "Arial, Helvetica, sans-serif",
+          } as React.CSSProperties
+        }
+      >
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
@@ -224,7 +209,8 @@ export default function RootLayout({
         </noscript>
 
         {children}
-             <WhatsAppButton />
+
+        <WhatsAppButton />
 
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId="GTM-5J6M99HD" />

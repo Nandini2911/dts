@@ -756,7 +756,7 @@ const organizationSchema = {
     "+918000006021",
 
   email:
-    "hellodoubletroublestudio@gmail.com",
+    "info@dtsworld.in",
 
   priceRange:
     "Custom quotations",
@@ -795,7 +795,7 @@ const organizationSchema = {
       "+918000006021",
 
     email:
-      "hellodoubletroublestudio@gmail.com",
+      "info@dtsworld.in",
 
     url:
       "https://www.dtsworld.in/contact",
@@ -1129,54 +1129,22 @@ const offerCatalogSchema = {
 };
 
 const breadcrumbSchema = {
-  "@context":
-    schemaContext,
-
-  "@type":
-    "BreadcrumbList",
-
-  "@id":
-    BREADCRUMB_ID,
+  "@context": schemaContext,
+  "@type": "BreadcrumbList",
+  "@id": BREADCRUMB_ID,
 
   itemListElement: [
     {
-      "@type":
-        "ListItem",
-
-      position:
-        1,
-
-      name:
-        "Home",
-
-      item:
-        SITE_URL,
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL,
     },
     {
-      "@type":
-        "ListItem",
-
-      position:
-        2,
-
-      name:
-        "Services",
-
-      item:
-        "https://www.dtsworld.in/services",
-    },
-    {
-      "@type":
-        "ListItem",
-
-      position:
-        3,
-
-      name:
-        "Events & Weddings",
-
-      item:
-        PAGE_URL,
+      "@type": "ListItem",
+      position: 2,
+      name: "Events & Weddings",
+      item: PAGE_URL,
     },
   ],
 };

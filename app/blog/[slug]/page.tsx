@@ -11,7 +11,24 @@ import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERY, POSTS_QUERY } from "@/sanity/lib/queries";
 import BlogShareButtons from "@/components/BlogShareButtons";
 
+function hasValidSanityImage(source: any): boolean {
+  if (!source || typeof source !== "object") {
+    return false;
+  }
 
+  const asset = source.asset;
+
+  return Boolean(
+    asset &&
+    typeof asset === "object" &&
+    (
+      (typeof asset._ref === "string" &&
+        asset._ref.startsWith("image-")) ||
+      (typeof asset.url === "string" &&
+        asset.url.startsWith("https://"))
+    )
+  );
+}
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -277,21 +294,23 @@ function getTableOfContents(body: any): TocItem[] {
 
 const portableTextComponents: PortableTextComponents = {
   types: {
-    image: ({ value }) => {
-      if (!value) return null;
+ image: ({ value }) => {
+  if (!value?.asset?._ref && !value?.asset?.url) {
+    return null;
+  }
 
-      return (
-        <div className="relative my-10 h-[260px] w-full overflow-hidden rounded-[28px] bg-[#DDE8F7] sm:h-[420px]">
-          <Image
-            src={urlFor(value).width(1400).height(850).url()}
-            alt={value.alt || "Double Trouble Studio blog image"}
-            fill
-            className="object-cover"
-          />
-        </div>
-      );
-    },
-  },
+  return (
+    <div className="relative my-10 h-[260px] w-full overflow-hidden rounded-[28px] bg-[#DDE8F7] sm:h-[420px]">
+      <Image
+        src={urlFor(value).width(1400).height(850).url()}
+        alt={value.alt || "Double Trouble Studio blog image"}
+        fill
+        className="object-cover"
+      />
+    </div>
+  );
+},
+},
 
   block: {
     h2: ({ children, value }: any) => {
@@ -393,7 +412,9 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Blog Not Found | Double Trouble Studio",
+    title: {
+  absolute: "Blog Not Found | Double Trouble Studio",
+},
       description: "This blog post is not available.",
       robots: {
         index: false,
@@ -433,17 +454,26 @@ export async function generateMetadata({
         .url()
     : undefined;
 
-  return {
-    title: `${title} | Double Trouble Studio`,
-    description,
+ return {
+ 
+title: {
+  absolute:
+    title.toLowerCase().includes("double trouble studio") ||
+    /\|\s*dts\s*$/i.test(title.trim())
+      ? title
+      : `${title} | Double Trouble Studio`,
+},
 
-    keywords,
 
-    authors: [
-      {
-        name: post.authorName || "Double Trouble Studio",
-      },
-    ],
+  description,
+
+  keywords,
+
+  authors: [
+    {
+      name: post.authorName || "Double Trouble Studio",
+    },
+  ],
 
     creator: post.authorName || "Double Trouble Studio",
     publisher: "Double Trouble Studio",

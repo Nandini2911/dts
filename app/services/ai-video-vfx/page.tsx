@@ -25,8 +25,10 @@ import ServiceCityLinks from "@/components/seo/ServiceCityLinks";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "AI Video Production, CGI Ads & VFX Services India | DTS",
+title: {
+  absolute:
+    "AI Video Production, CGI Ads & VFX Services India | Double Trouble Studio",
+},
 
   description:
     "AI video production, CGI ads, VFX, motion graphics and cinematic brand films for product launches, reels, events and digital campaigns across India.",
@@ -174,26 +176,30 @@ const aiVideoVFXSchema = {
       image: "https://www.dtsworld.in/og-image.jpg",
       description:
         "Double Trouble Studio is an India-based creative agency offering AI video production, CGI ads, VFX services, brand films, product launch videos, social media videos, digital marketing, website development, PR and event marketing services.",
-      email: "hello@dtsworld.in",
+      email: "info@dtsworld.in",
       telephone: "+918000006021",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Mumbai",
-        addressRegion: "Maharashtra",
-        addressCountry: "IN",
-      },
+     address: {
+  "@type": "PostalAddress",
+  streetAddress:
+    "Plot No. 177, 1st Floor, Aaram Nagar Part 2, Seven Bungalows, J. P. Road, Versova, Andheri West",
+  addressLocality: "Mumbai",
+  addressRegion: "Maharashtra",
+  postalCode: "400061",
+  addressCountry: "IN",
+},
       areaServed: {
         "@type": "Country",
         name: "India",
       },
       contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+918000006021",
-        email: "hello@dtsworld.in",
-        contactType: "customer service",
-        areaServed: "IN",
-        availableLanguage: ["English", "Hindi"],
-      },
+  "@type": "ContactPoint",
+  "@id": "https://www.dtsworld.in/#contact-point",
+  telephone: "+918000006021",
+  email: "info@dtsworld.in",
+  contactType: "customer service",
+  areaServed: "IN",
+  availableLanguage: ["English", "Hindi"],
+},
       knowsAbout: [
         "AI Video Production",
         "CGI Ads",
@@ -228,7 +234,7 @@ const aiVideoVFXSchema = {
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#service",
       name: "AI Video Production and VFX Services",
       serviceType: "AI Video Production, CGI Ads and VFX Production",
-      url: "https://www.dtsworld.in/services/ai-video-vfx/",
+      url: "https://www.dtsworld.in/services/ai-video-vfx",
       description:
         "Double Trouble Studio creates AI videos, CGI ads, VFX-led brand films, product launch videos, event teasers, Instagram reels, YouTube videos, website hero videos and cinematic visual campaigns for brands across India.",
       provider: {
@@ -239,30 +245,26 @@ const aiVideoVFXSchema = {
         name: "India",
       },
     },
+    
+{
+  "@type": "BreadcrumbList",
+  "@id": "https://www.dtsworld.in/services/ai-video-vfx#breadcrumb",
+  itemListElement: [
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.dtsworld.in/services/ai-video-vfx/#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.dtsworld.in/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: "https://www.dtsworld.in/services/",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "AI Video & VFX",
-          item: "https://www.dtsworld.in/services/ai-video-vfx/",
-        },
-      ],
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.dtsworld.in/",
     },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "AI Video & VFX",
+      item: "https://www.dtsworld.in/services/ai-video-vfx",
+    },
+  ],
+},
+
     {
       "@type": "HowTo",
       "@id": "https://www.dtsworld.in/services/ai-video-vfx/#process",

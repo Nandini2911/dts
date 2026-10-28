@@ -189,33 +189,7 @@ export default function StudioDNA() {
           </p>
         </motion.div>
 
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio builds premium brand architecture through
-            brand strategy, creative direction, digital marketing, public
-            relations, SEO, website development, event marketing, guest
-            management, AI video production and VFX in India.
-          </h2>
-
-          <p>
-            The studio DNA is built on category intelligence, signature identity
-            and long-term value. Services include market research, audience
-            behaviour analysis, competitor mapping, luxury brand positioning,
-            visual identity design, brand communication, website strategy,
-            social media marketing, PR campaigns, influencer marketing, SEO
-            planning, performance marketing, event branding, guest experience
-            design, AI video ads and VFX-led campaign assets.
-          </p>
-
-          <p>
-            Double Trouble Studio works with hospitality brands, luxury brands,
-            restaurants, cafés, fashion labels, lifestyle businesses, media
-            companies, corporate brands, founders, creators, event companies and
-            wedding brands across Mumbai, Delhi, Chandigarh, Bangalore,
-            Hyderabad, Pune, Ahmedabad, Goa and across India.
-          </p>
-        </div>
+       
       </div>
     </section>
   );

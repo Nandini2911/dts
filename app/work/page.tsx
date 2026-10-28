@@ -11,11 +11,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Our Work & Projects | Double Trouble Studio",
+    absolute: "Our Work: Creative Agency Portfolio, Mumbai | Double Trouble Studio",
   },
 
-  description:
-    "Explore branding, website design, SEO, PR, social media marketing, AI video production and creative projects delivered by Double Trouble Studio for luxury, hospitality, restaurant and lifestyle brands across India.",
+ 
+description:
+  "Explore branding, website design, SEO, PR, social media and AI video projects by Double Trouble Studio for luxury, hospitality, retail and lifestyle brands.",
 
   applicationName: "Double Trouble Studio",
   creator: "Double Trouble Studio",
@@ -511,7 +512,7 @@ const organizationSchema = {
     "+918000006021",
 
   email:
-    "hellodoubletroublestudio@gmail.com",
+    "info@dtsworld.in",
 
   priceRange:
     "Custom project pricing",
@@ -550,7 +551,7 @@ const organizationSchema = {
       "+918000006021",
 
     email:
-      "hellodoubletroublestudio@gmail.com",
+      "info@dtsworld.in",
 
     url:
       "https://www.dtsworld.in/contact",
@@ -717,14 +718,15 @@ const collectionPageSchema = {
   url:
     PAGE_URL,
 
-  name:
-    "Double Trouble Studio Work | Branding, Website Design and Digital Marketing Projects",
+  
+name:
+  "Our Work: Creative Agency Portfolio, Mumbai | DTS",
 
-  headline:
-    "Luxury Branding, Website Design & Digital Marketing Projects",
+headline:
+  "Luxury Branding, Website Design & Digital Marketing Projects",
 
-  description:
-    "Explore premium branding, website design, PR campaigns, AI content and digital marketing projects created by Double Trouble Studio for hospitality, luxury, restaurant, automotive, media, beauty and lifestyle brands across India.",
+description:
+  "Explore branding, website design, SEO, PR, social media and AI video projects by Double Trouble Studio for luxury, hospitality, retail and lifestyle brands.",
 
   isPartOf: {
     "@id":
@@ -792,7 +794,7 @@ const collectionPageSchema = {
   significantLink: [
     SITE_URL,
     "https://www.dtsworld.in/about",
-    "https://www.dtsworld.in/services",
+  
     "https://www.dtsworld.in/blog",
     "https://www.dtsworld.in/contact",
     "https://www.dtsworld.in/services/web-development-marketing",

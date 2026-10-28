@@ -378,32 +378,7 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Frequently asked questions about Double Trouble Studio, a creative
-            agency, branding agency, digital marketing agency, PR agency,
-            website development company, event marketing agency, guest
-            management agency and AI video production studio in India.
-          </h2>
-
-          <p>
-            Double Trouble Studio helps brands through brand strategy, visual
-            identity, luxury brand positioning, digital marketing, social media
-            marketing, public relations, media campaigns, website design,
-            website development, SEO, event marketing, guest management,
-            celebrity management, influencer marketing, AI video production, VFX
-            and premium storytelling.
-          </p>
-
-          <p>
-            The agency works with hospitality brands, luxury brands, restaurants,
-            cafés, wedding companies, event brands, lifestyle startups, fashion
-            labels, creators, influencers, corporate brands, founders and modern
-            businesses across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad,
-            Pune, Ahmedabad, Goa and across India.
-          </p>
-        </div>
+        
       </div>
     </section>
   );

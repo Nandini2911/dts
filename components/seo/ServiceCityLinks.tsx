@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getServiceCityData } from "@/lib/service-city";
 
 import {
   ALL_SEO_CITY_SLUGS,
@@ -18,7 +19,9 @@ export default function ServiceCityLinks({
   serviceSlug,
 }: ServiceCityLinksProps) {
   const service = SEO_SERVICES[serviceSlug];
-
+const indexableCities = ALL_SEO_CITY_SLUGS.filter(
+  (city) => getServiceCityData(serviceSlug, city)?.indexable === true
+);
   return (
     <section className="bg-slate-50 px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
@@ -37,7 +40,7 @@ export default function ServiceCityLinks({
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {ALL_SEO_CITY_SLUGS.map((city) => (
+         {indexableCities.map((city) => (
             <Link
               key={city}
               href={`/services/${serviceSlug}/${city}`}

@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 import {
@@ -18,6 +19,7 @@ import {
 } from "@/data/service-city-content";
 
 import { SITE } from "@/lib/site";
+import { CITY_SEO_AUDIT_OVERRIDES } from "@/data/service-city-audit-overrides";
 
 const DEFAULT_INDUSTRIES = [
   "Hospitality",
@@ -28,12 +30,88 @@ const DEFAULT_INDUSTRIES = [
   "Events",
 ] as const;
 
+// --------------------------------------------------
+// MUMBAI SEO OVERRIDES — AUDIT #37
+// --------------------------------------------------
+
+const MUMBAI_SEO_OVERRIDES: Record<
+  string,
+  {
+    title: string;
+    description: string;
+    h1: string;
+  }
+> = {
+  "celebrity-management": {
+    title:
+      "Celebrity Management Agency in Mumbai | DTS",
+
+    description:
+      "Celebrity management company in Mumbai for celebrity bookings, Bollywood artist appearances, brand endorsements, performances and influencer collaborations.",
+
+    h1:
+      "Celebrity Management Company in Mumbai",
+  },
+
+  "guest-management": {
+    title:
+      "Guest Management Services in Mumbai | Double Trouble Studio",
+
+    description:
+      "Guest management company in Mumbai for weddings, corporate events and launches: RSVP, guest lists, check-in, hospitality desks and VIP travel coordination.",
+
+    h1:
+      "Guest Management Company in Mumbai",
+  },
+
+  "events-weddings": {
+    title:
+      "Event Management Company in Mumbai | Double Trouble Studio",
+
+    description:
+      "Event management company in Mumbai for luxury weddings, corporate events, brand launches and private celebrations, covering planning, production and guests.",
+
+    h1:
+      "Event Management Company in Mumbai for Weddings & Corporate Events",
+  },
+
+  "pr-media-marketing": {
+    title:
+      "PR Agency in Mumbai for Luxury & Hospitality Brands | DTS",
+
+    description:
+      "PR agency in Mumbai for luxury, hospitality and lifestyle brands: media relations, launch PR, founder profiles, influencer outreach and crisis communication.",
+
+    h1:
+      "PR Agency in Mumbai for Luxury, Hospitality & Lifestyle Brands",
+  },
+
+  "ai-video-vfx": {
+    title:
+      "AI Video Production Company in Mumbai | DTS",
+
+    description:
+      "AI video production company in Mumbai for AI video ads, CGI product films, VFX and reels, from script to final edit and faster than traditional shoots.",
+
+    h1:
+      "AI Video Production Company in Mumbai",
+  },
+};
+
+// --------------------------------------------------
+// BUILD SERVICE CITY URL
+// --------------------------------------------------
+
 export function buildServiceCityUrl(
   serviceSlug: string,
   citySlug: string,
 ): string {
   return `${SITE.url}/services/${serviceSlug}/${citySlug}`;
 }
+
+// --------------------------------------------------
+// GET SERVICE CITY DATA
+// --------------------------------------------------
 
 export function getServiceCityData(
   serviceValue: string,
@@ -64,6 +142,14 @@ export function getServiceCityData(
     cityValue,
   );
 
+  // Apply overrides only to the 5 selected
+  // Mumbai service pages.
+ 
+
+const seoOverride =
+  CITY_SEO_AUDIT_OVERRIDES[contentKey];
+
+
   return {
     serviceSlug: serviceValue,
     citySlug: cityValue,
@@ -71,14 +157,25 @@ export function getServiceCityData(
     city,
     canonicalUrl,
 
-   indexable: customContent?.indexable ?? true,
+    // Preserve existing noindex configuration.
+    indexable:
+      customContent?.indexable ?? true,
 
+    // SEO title.
     title:
+      seoOverride?.title ??
       `${service.seoName} in ${city.name} | ${SITE.shortName}`,
 
+    // Meta description.
     metaDescription:
+      seoOverride?.description ??
       customContent?.metaDescription ??
       service.metaDescription(city.name),
+
+    // H1 text available to the page component.
+    h1:
+      seoOverride?.h1 ??
+      `${service.name} in ${city.name}`,
 
     introduction:
       customContent?.introduction ??
@@ -100,6 +197,10 @@ export function getServiceCityData(
   };
 }
 
+// --------------------------------------------------
+// BUILD SEO METADATA
+// --------------------------------------------------
+
 export function buildServiceCityMetadata(
   serviceSlug: string,
   citySlug: string,
@@ -111,7 +212,10 @@ export function buildServiceCityMetadata(
 
   if (!data) {
     return {
-      title: `Page Not Found | ${SITE.name}`,
+      title: {
+        absolute:
+          `Page Not Found | ${SITE.name}`,
+      },
 
       robots: {
         index: false,
@@ -121,11 +225,16 @@ export function buildServiceCityMetadata(
   }
 
   return {
-    title: data.title,
-    description: data.metaDescription,
+    title: {
+      absolute: data.title,
+    },
+
+    description:
+      data.metaDescription,
 
     alternates: {
-      canonical: data.canonicalUrl,
+      canonical:
+        data.canonicalUrl,
     },
 
     robots: {
@@ -153,7 +262,8 @@ export function buildServiceCityMetadata(
           url: SITE.ogImage,
           width: 1200,
           height: 630,
-          alt: `${data.service.name} in ${data.city.name}`,
+          alt:
+            `${data.service.name} in ${data.city.name}`,
         },
       ],
     },
@@ -167,14 +277,19 @@ export function buildServiceCityMetadata(
   };
 }
 
+// --------------------------------------------------
+// PUBLISHED / INDEXABLE CITY PAGES
+// --------------------------------------------------
+
 export function getPublishedServiceCityPages() {
   return ALL_SEO_SERVICE_SLUGS.flatMap(
     (serviceSlug) =>
-      ALL_SEO_CITY_SLUGS.map((citySlug) =>
-        getServiceCityData(
-          serviceSlug,
-          citySlug,
-        ),
+      ALL_SEO_CITY_SLUGS.map(
+        (citySlug) =>
+          getServiceCityData(
+            serviceSlug,
+            citySlug,
+          ),
       ).filter(
         (
           page,

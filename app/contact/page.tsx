@@ -13,11 +13,12 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+      "Contact Double Trouble Studio | Andheri West, Mumbai",
   },
 
-  description:
-    "Contact Double Trouble Studio, a Mumbai-based branding, website design, PR and digital marketing agency. Get in touch for branding, web development, guest management, celebrity management, AI video production and creative marketing services.",
+
+description:
+  "Contact Double Trouble Studio in Versova, Andheri West, Mumbai. Call +91 8000006021 or email info@dtsworld.in for branding, PR, events, web and SEO.",
 
   applicationName: "Double Trouble Studio",
   creator: "Double Trouble Studio",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+      "Contact Double Trouble Studio | Andheri West, Mumbai",
 
     description:
       "Let's create something amazing. Contact Double Trouble Studio for branding, website design, PR, digital marketing, guest management, AI video production and creative solutions across India.",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+      "Contact Double Trouble Studio | Andheri West, Mumbai",
 
     description:
       "Get in touch with Double Trouble Studio for branding, website design, digital marketing, PR, guest management, AI video production and business growth solutions.",
@@ -700,7 +701,7 @@ const contactPageSchema = {
     PAGE_URL,
 
   name:
-    "Contact Double Trouble Studio | Branding & Digital Marketing Agency",
+    "Contact Double Trouble Studio | Andheri West, Mumbai",
 
   headline:
     "Let's Create Something Amazing",

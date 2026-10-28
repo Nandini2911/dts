@@ -138,7 +138,7 @@ export default function AIVideoVFXJsonLd() {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: "https://www.dtsworld.in/services",
+        
       },
       {
         "@type": "ListItem",

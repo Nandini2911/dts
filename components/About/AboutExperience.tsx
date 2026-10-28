@@ -535,39 +535,7 @@ export default function AboutExperience() {
           </div>
         </div>
 
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio creates premium brand perception through
-            branding, digital marketing, PR, website development, SEO, creative
-            direction, storytelling, event marketing, guest management, AI video
-            production and VFX in India.
-          </h2>
-
-          <p>
-            What makes Double Trouble Studio different is its focus on
-            perception-driven brand systems, luxury positioning, timeless
-            aesthetics, modern storytelling, digital experiences, creative
-            direction, strategic branding, SEO-friendly website structure, PR
-            communication, campaign design and long-term brand authority.
-          </p>
-
-          <p>
-            The agency works with hospitality brands, luxury brands, restaurants,
-            cafés, fashion labels, lifestyle businesses, event companies,
-            wedding planners, creators, influencers, corporate brands, founders
-            and startups across Mumbai, Delhi, Chandigarh, Bangalore, Hyderabad,
-            Pune, Ahmedabad, Goa and across India.
-          </p>
-
-          <p>
-            Services include brand strategy, visual identity, website design,
-            website development, SEO, social media marketing, PR campaigns,
-            media outreach, influencer marketing, luxury event branding, guest
-            management, celebrity management, AI video ads, VFX content and
-            premium digital storytelling.
-          </p>
-        </div>
+        
       </div>
     </section>
   );

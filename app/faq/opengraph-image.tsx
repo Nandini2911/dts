@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
             flexDirection: "column",
             justifyContent: "space-between",
             width: "100%",
-            zIndex: 2,
+          
           }}
         >
           <div

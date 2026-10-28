@@ -444,38 +444,7 @@ export default function AboutStory() {
           ))}
         </div>
 
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio philosophy is built on strategic thinking,
-            premium execution and cultural relevance for modern branding,
-            digital marketing, PR, website development, SEO, guest management,
-            event marketing, AI video production and VFX in India.
-          </h2>
-
-          <p>
-            The agency builds brands through brand strategy, audience research,
-            market positioning, luxury brand positioning, visual identity,
-            website design, website development, SEO foundations, social media
-            marketing, public relations, media campaigns, event branding, guest
-            management, celebrity management, influencer marketing, AI video
-            production, VFX and premium content systems.
-          </p>
-
-          <p>
-            Double Trouble Studio works with hospitality brands, luxury brands,
-            restaurants, cafés, fashion labels, lifestyle businesses, wedding
-            planners, event companies, creators, influencers, corporate brands,
-            founders and modern startups across Mumbai, Delhi, Chandigarh,
-            Bangalore, Hyderabad, Pune, Ahmedabad, Goa and across India.
-          </p>
-
-          <p>
-            The studio helps businesses build clarity, digital presence, brand
-            authority, SEO visibility, premium positioning, cultural relevance,
-            long-term growth and emotional connection with modern audiences.
-          </p>
-        </div>
+       
       </div>
     </section>
   );

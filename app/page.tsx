@@ -116,8 +116,7 @@ const homeSchema = {
 
       telephone: "+918000006021",
 
-      email: "hellodoubletroublestudio@gmail.com",
-
+     email: "info@dtsworld.in",
       priceRange: "₹₹₹",
 
       address: {
@@ -141,7 +140,7 @@ const homeSchema = {
 
           telephone: "+918000006021",
 
-          email: "hellodoubletroublestudio@gmail.com",
+          email: "info@dtsworld.in",
 
           url: "https://www.dtsworld.in/contact",
 

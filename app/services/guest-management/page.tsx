@@ -415,7 +415,7 @@ const organizationSchema = {
   slogan: "Creative Agency for Brands, Events and Digital Growth",
 
   telephone: "+918000006021",
-  email: "hellodoubletroublestudio@gmail.com",
+  email: "info@dtsworld.in",
   priceRange: "Custom quotations",
 
   address: {
@@ -433,7 +433,7 @@ const organizationSchema = {
     "@id": "https://www.dtsworld.in/#contact-point",
     contactType: "project enquiries",
     telephone: "+918000006021",
-    email: "hellodoubletroublestudio@gmail.com",
+    email: "info@dtsworld.in",
     url: "https://www.dtsworld.in/contact",
     areaServed: {
       "@type": "Country",

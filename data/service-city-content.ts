@@ -17,6 +17,91 @@ export type ServiceCityContent = {
 export const SERVICE_CITY_CONTENT: Partial<
   Record<ServiceCityContentKey, ServiceCityContent>
 > = {
+  
+  // ----------------------------------------
+  // SEO AUDIT #29 — 67 NOINDEX CITY PAGES
+  // Source: Noindex sheet, 27 October 2026
+  // ----------------------------------------
+
+  // Guest Management — 6
+  "guest-management:delhi": { indexable: false },
+  "guest-management:pune": { indexable: false },
+  "guest-management:kolkata": { indexable: false },
+  "guest-management:shimla": { indexable: false },
+  "guest-management:darjeeling": { indexable: false },
+  "guest-management:coimbatore": { indexable: false },
+
+  // Celebrity Management — 5
+  "celebrity-management:lucknow": { indexable: false },
+  "celebrity-management:goa": { indexable: false },
+  "celebrity-management:shimla": { indexable: false },
+  "celebrity-management:surat": { indexable: false },
+  "celebrity-management:kochi": { indexable: false },
+
+  // Events & Weddings — 12
+  "events-weddings:delhi": { indexable: false },
+  "events-weddings:new-delhi": { indexable: false },
+  "events-weddings:bangalore": { indexable: false },
+  "events-weddings:pune": { indexable: false },
+  "events-weddings:gurgaon": { indexable: false },
+  "events-weddings:noida": { indexable: false },
+  "events-weddings:thane": { indexable: false },
+  "events-weddings:chandigarh": { indexable: false },
+  "events-weddings:lucknow": { indexable: false },
+  "events-weddings:vadodara": { indexable: false },
+  "events-weddings:coimbatore": { indexable: false },
+  "events-weddings:bhubaneswar": { indexable: false },
+
+  // Web Development & Marketing — 16
+  "web-development-marketing:delhi": { indexable: false },
+  "web-development-marketing:bangalore": { indexable: false },
+  "web-development-marketing:pune": { indexable: false },
+  "web-development-marketing:chennai": { indexable: false },
+  "web-development-marketing:kolkata": { indexable: false },
+  "web-development-marketing:gurgaon": { indexable: false },
+  "web-development-marketing:indore": { indexable: false },
+  "web-development-marketing:chandigarh": { indexable: false },
+  "web-development-marketing:lucknow": { indexable: false },
+  "web-development-marketing:goa": { indexable: false },
+  "web-development-marketing:darjeeling": { indexable: false },
+  "web-development-marketing:kerala": { indexable: false },
+  "web-development-marketing:surat": { indexable: false },
+  "web-development-marketing:nagpur": { indexable: false },
+  "web-development-marketing:kochi": { indexable: false },
+  "web-development-marketing:bhubaneswar": { indexable: false },
+
+  // Search Engine Optimization — 24
+  "search-engine-optimization:new-delhi": { indexable: false },
+  "search-engine-optimization:kolkata": { indexable: false },
+  "search-engine-optimization:noida": { indexable: false },
+  "search-engine-optimization:thane": { indexable: false },
+  "search-engine-optimization:navi-mumbai": { indexable: false },
+  "search-engine-optimization:indore": { indexable: false },
+  "search-engine-optimization:jaipur": { indexable: false },
+  "search-engine-optimization:chandigarh": { indexable: false },
+  "search-engine-optimization:lucknow": { indexable: false },
+  "search-engine-optimization:goa": { indexable: false },
+  "search-engine-optimization:udaipur": { indexable: false },
+  "search-engine-optimization:manali": { indexable: false },
+  "search-engine-optimization:shimla": { indexable: false },
+  "search-engine-optimization:darjeeling": { indexable: false },
+  "search-engine-optimization:kerala": { indexable: false },
+  "search-engine-optimization:rishikesh": { indexable: false },
+  "search-engine-optimization:surat": { indexable: false },
+  "search-engine-optimization:vadodara": { indexable: false },
+  "search-engine-optimization:nagpur": { indexable: false },
+  "search-engine-optimization:coimbatore": { indexable: false },
+  "search-engine-optimization:kochi": { indexable: false },
+  "search-engine-optimization:bhubaneswar": { indexable: false },
+  "search-engine-optimization:patna": { indexable: false },
+  "search-engine-optimization:raipur": { indexable: false },
+
+  // AI Video & VFX — 4
+  "ai-video-vfx:shimla": { indexable: false },
+  "ai-video-vfx:darjeeling": { indexable: false },
+  "ai-video-vfx:kerala": { indexable: false },
+  "ai-video-vfx:rishikesh": { indexable: false },
+
 
    "ai-video-vfx:udaipur": {
     indexable: false,

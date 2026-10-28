@@ -382,32 +382,7 @@ export default function AboutStudio() {
           </motion.div>
         </div>
 
-        {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            About Double Trouble Studio, a Mumbai based creative branding
-            agency, digital marketing agency, PR agency, event management
-            company, guest management agency, website development company and AI
-            video production studio in India.
-          </h2>
-
-          <p>
-            Double Trouble Studio helps luxury brands, hospitality brands,
-            restaurants, cafes, fashion labels, lifestyle brands, corporate
-            companies, founders, event brands and wedding brands grow through
-            branding, digital marketing, social media marketing, SEO, public
-            relations, media campaigns, event management, guest management,
-            celebrity management, website development, AI video production and
-            VFX.
-          </p>
-
-          <p>
-            Services are available across Mumbai, Delhi, Chandigarh, Bangalore,
-            Hyderabad, Pune, Ahmedabad, Goa and across India for brands looking
-            for premium creative strategy, luxury brand positioning, modern web
-            design, digital campaigns and cultural storytelling.
-          </p>
-        </div>
+       
       </div>
     </section>
   );

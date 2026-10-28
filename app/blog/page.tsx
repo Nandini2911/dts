@@ -24,8 +24,9 @@ export const metadata: Metadata = {
     absolute: "Blog | Branding, PR, Digital Marketing & AI Insights",
   },
 
-  description:
-    "Explore expert insights, strategies, case studies and industry trends from Double Trouble Studio covering branding, PR, celebrity management, event marketing, website development, SEO, digital marketing, social media, AI video production and business growth.",
+ 
+description:
+  "Insights, playbooks and case studies from Double Trouble Studio on branding, PR, celebrity management, events, websites, SEO and AI video for premium brands.",
 
   applicationName: "Double Trouble Studio",
   creator: "Double Trouble Studio",
@@ -367,8 +368,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         "@id": `${BLOG_URL}#webpage`,
         url: BLOG_URL,
         name: "Double Trouble Studio Blog",
-        description:
-          "Explore expert insights, strategies, case studies and industry trends from Double Trouble Studio covering branding, PR, celebrity management, event marketing, website development, SEO, digital marketing, social media, AI video production and business growth.",
+        
+description:
+  "Insights, playbooks and case studies from Double Trouble Studio on branding, PR, celebrity management, events, websites, SEO and AI video for premium brands.",
+
         isPartOf: {
           "@id": `${SITE_URL}/#website`,
         },

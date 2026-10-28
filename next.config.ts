@@ -18,6 +18,29 @@ const nextConfig = {
   async redirects() {
     return [
       {
+  source: "/services/search-engine-optimization/mumbai",
+  destination: "/services/search-engine-optimization",
+  permanent: true,
+},
+{
+  source: "/services/web-development-marketing/mumbai",
+  destination: "/services/web-development-marketing",
+  permanent: true,
+},
+{
+  source: "/blog/technical-seo-complete-website-optimization-guide",
+  destination:
+    "/blog/technical-seo-foundations-speed-mobile-core-web-vitals",
+  permanent: true,
+},
+{
+  source:
+    "/blog/technical-seo-foundations-speed-mobile-core-web-vitals-2026",
+  destination:
+    "/blog/technical-seo-foundations-speed-mobile-core-web-vitals",
+  permanent: true,
+},
+      {
         source: "/blog/Behind-the-Scenes-of-celebrity-management",
         destination: "/blog/behind-the-scenes-celebrity-management",
         permanent: true,
@@ -59,6 +82,106 @@ const nextConfig = {
   source: "/blog/measuring-adjusting-tools-metrics-for-roadmap-success",
   destination:
     "/blog/measuring-and-adjusting-tools-and-metrics-for-roadmap-success",
+  permanent: true,
+},
+{
+  source:
+    "/blog/building-conversion-focused-marketing-funnels-on-your-site",
+  destination:
+    "/blog/building-conversion-focused-marketing-funnels",
+  permanent: true,
+},
+{
+  source:
+    "/blog/website-security-maintenance-ecommerce-booking-sites",
+  destination:
+    "/blog/ecommerce-booking-website-security-maintenance",
+  permanent: true,
+},
+{
+  source:
+    "/blog/complete-ai-video-production-professional-video-editing-workflow",
+  destination:
+    "/blog/end-to-end-ai-video-production-professional-video-editing-workflow",
+  permanent: true,
+},
+{
+  source: "/blog/test-1",
+  destination: "/blog",
+  permanent: true,
+},
+{
+  source:
+    "/blog/how-much-does-pr-cost-in-india-agency-retainer-guide",
+  destination:
+    "/blog/how-much-does-pr-cost-in-india-agency-pricing-retainer-guide",
+  permanent: true,
+},
+{
+  source: "/blog/luxury-brand-case-studies",
+  destination:
+    "/blog/luxury-brand-case-studies-what-successful-brands-do-differently",
+  permanent: true,
+},
+{
+  source: "/services/crisis-management",
+  destination: "/services/pr-media-marketing",
+  permanent: true,
+},
+{
+  source: "/services/strategic-roadmap",
+  destination: "/",
+  permanent: true,
+},
+{
+  source: "/services/strategic-roadmap/kolkata",
+  destination: "/",
+  permanent: true,
+},
+{
+  source: "/services/ai-vfx/gurgaon",
+  destination: "/services/ai-video-vfx/gurgaon",
+  permanent: true,
+},
+{
+  source: "/services/bhubaneswar",
+  destination: "/locations",
+  permanent: true,
+},
+{
+  source:
+    "/blog/measuring-adjusting-tools-metrics-roadmap-success",
+  destination:
+    "/blog/measuring-and-adjusting-tools-and-metrics-for-roadmap-success",
+  permanent: true,
+},
+{
+  source:
+    "/blog/case-studies-website-transformations-for-automotive-hospitality-clients",
+  destination:
+    "/blog/automotive-hospitality-website-transformation-case-studies",
+  permanent: true,
+},
+{
+  source:
+    "/blog/building-secure-websites-premium-clients-data-protection-trust-signals",
+  destination:
+    "/blog/building-secure-websites-premium-clients",
+  permanent: true,
+},
+{
+  source:
+    "/blog/content-strategy-brand-websites-blogs-galleries",
+  destination:
+    "/blog/content-strategy-brand-websites-blogs-galleries-lead-magnets",
+  permanent: true,
+},
+
+{
+  source:
+    "/blog/ui-ux-design-principles-for-high-brand-websites",
+  destination:
+    "/blog/ui-ux-design-principles-for-high-end-brand-websites",
   permanent: true,
 },
 {
@@ -132,6 +255,11 @@ const nextConfig = {
 {
   source: "/blog/managing-complex-guest-lists-for-luxury-events",
   destination: "/blog/managing-complex-guest-lists-luxury-events",
+  permanent: true,
+},
+{
+  source: "/services",
+  destination: "/#services",
   permanent: true,
 },
 {

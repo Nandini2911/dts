@@ -24,17 +24,19 @@ export default function BlogHero({ recentPost, searchQuery }: BlogHeroProps) {
               Double Trouble Studio
             </p>
 
-            <h1
-              className="text-[42px] font-black leading-[0.95] tracking-[-0.07em] text-[#0D2444] sm:text-6xl md:text-7xl lg:text-8xl"
-              style={{
-                fontFamily: "New York, ui-serif, Georgia, serif",
-              }}
-            >
-              From Real Projects to
-              <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
-                Real Insights.
-              </span>
-            </h1>
+            
+<h1
+  className="text-[42px] font-black leading-[0.95] tracking-[-0.07em] text-[#0D2444] sm:text-6xl md:text-7xl lg:text-8xl"
+  style={{
+    fontFamily: "New York, ui-serif, Georgia, serif",
+  }}
+>
+  From Real Projects to{" "}
+  <span className="block bg-gradient-to-r from-[#0D2444] via-[#315E91] to-[#6288B9] bg-clip-text text-transparent">
+    Real Insights
+  </span>
+</h1>
+
 
             <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-[#38506D] sm:text-lg lg:mx-0 lg:max-w-2xl">
               Explore how DTS executes PR, celebrity management, events, web,

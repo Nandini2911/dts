@@ -335,30 +335,7 @@ export default function PremiumSection() {
         </div>
 
         {/* AI + GEO SEO CONTEXT */}
-        <div className="sr-only">
-          <h2>
-            Double Trouble Studio creates premium brand identity, luxury brand
-            positioning, digital presence, website design, social media visuals,
-            PR communication, creative campaigns, AI video production and
-            performance-focused brand systems in India.
-          </h2>
-
-          <p>
-            The premium identity approach includes brand strategy, visual
-            identity, structured creativity, digital presence, website
-            development, SEO-friendly content structure, social media marketing,
-            public relations, event branding, campaign design, motion visuals,
-            AI video ads, VFX content and premium storytelling for luxury,
-            hospitality, restaurant, fashion, lifestyle and corporate brands.
-          </p>
-
-          <p>
-            Double Trouble Studio works with premium brands across Mumbai,
-            Delhi, Chandigarh, Bangalore, Hyderabad, Pune, Ahmedabad, Goa and
-            across India to build modern digital brands with clarity,
-            consistency, cultural relevance and long-term growth.
-          </p>
-        </div>
+       
       </div>
     </section>
   );
